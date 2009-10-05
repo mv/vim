@@ -182,7 +182,7 @@
     nmap <leader>n :set invhls<CR>
 
     set nolist              " [no]list invisible chars
-    set listchars=tab:>-,trail:Â·,eol:_,extends:>,precedes:<
+    set listchars=tab:>-,trail:·,eol:_,extends:>,precedes:<
     "             |      |       |     |         +-- line befor left margin: <
     "             |      |       |     +-- line beyond right margin: >
     "             |      |       +-- EOF: _
@@ -518,7 +518,16 @@
         let NERDTreeWinSize           = 35
         let NERDTreeHijackNetrw       = 1
     " }
-" }
+
+    " Bash-support {
+        let BASH_Root = 'B&ash.'         " original
+        let BASH_Root = '&Plugin.B&ash.' " mine.
+    " }
+
+    " Perl-support {
+        let Perl_Root = '&Perl.'          " original
+        let Perl_Root = '&Plugin.&Perl.'  " mine.
+    " }
 
 " Test {
     if has("perl")

@@ -13,7 +13,7 @@
 .DS_Store
 .netrwhist
 .VimballRecord
-doc/tags
+dot.vim/doc/tags
 
 *.[oa]
 *.log
