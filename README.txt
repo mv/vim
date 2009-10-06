@@ -49,11 +49,11 @@ master
 
         # Ingo Karkat
         IndentCommentPrefix
-                        1.01.009 - needs repeat.vim
+                        1.02 - needs repeat.vim
                                 http://www.vim.org/scripts/script.php?script_id=2529
         Mark            2.3.1   http://www.vim.org/scripts/script.php?script_id=2666
         ReplaceWithRegister
-                        1.0     http://www.vim.org/scripts/script.php?script_id=2703
+                        1.01    http://www.vim.org/scripts/script.php?script_id=2703
 
         writebackup     2.10    http://www.vim.org/scripts/script.php?script_id=1828
         writebackupVersionControl
