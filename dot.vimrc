@@ -204,6 +204,9 @@
      set statusline+=]\ "
      set statusline+=%=                             " break
     "set statusline+=asc:[%3.(%b%)\ %4.(0x%B%)]     " current char
+     if filereadable(expand("~/.vim/plugin/fugitive.vim"))
+         set statusline+=%{fugitive#statusline()}
+     endif
      if filereadable(expand("~/.vim/plugin/taglist.vim"))
          set statusline+=%(tag:[%{Tlist_Get_Tagname_By_Line()}]%)
      endif
