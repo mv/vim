@@ -23,6 +23,12 @@ vim-dev
         cpan            2.0     http://www.vim.org/scripts/script.php?script_id=2786
         vicle           1.1     http://www.vim.org/scripts/script.php?script_id=2551
 
+        fugitive        1.1     http://www.vim.org/scripts/script.php?script_id=2975
+        dbext           11.01   http://www.vim.org/scripts/script.php?script_id=356
+
+      ? project         1.4.1   http://www.vim.org/scripts/script.php?script_id=69
+      ? NERDTree        4.1.0   http://www.vim.org/scripts/script.php?script_id=1658
+
 master
     plugin
         ack             0.3.1   http://www.vim.org/scripts/script.php?script_id=2572
