@@ -2,7 +2,8 @@
 " mvf: ferreira.mv[ at ]gmail.com
 " -------------------------------
 
-set autochdir                   " always switch to the current file directory
+set autochdir   " always switch to the current file directory
+set nopaste     " default: gvim detects paste from type
 
 " Plugins {
 

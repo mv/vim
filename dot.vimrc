@@ -119,7 +119,8 @@
     set fileformats=unix,dos,mac    " support all three, in this order
     set history=300                 " history size
     set nohidden                    " you can change buffers without saving
-    set modeline
+    set modeline                    " modeline on
+    set paste                       " terminal vim: does not detect paste from typing
 
     " (XXX: #VIM/tpope warns the line below could break things)
     set iskeyword+=_,$,@,%,#        " none of these are word dividers
