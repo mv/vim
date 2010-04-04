@@ -6,7 +6,7 @@ Master
         NERDTree        4.1.0   http://www.vim.org/scripts/script.php?script_id=1658
 
         # jeff lanzarotta
-*       bufexplorer     7.2.6   http://www.vim.org/scripts/script.php?script_id=42
+        bufexplorer     7.2.6   http://www.vim.org/scripts/script.php?script_id=42
 
         # Yegappan Lakshmanan
         taglist         4.5     http://www.vim.org/scripts/script.php?script_id=273
