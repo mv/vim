@@ -1,5 +1,3 @@
-
-
 " Header and Notes {
 "
 "   vim: set foldmarker={,} foldlevel=0 nospell:
@@ -81,11 +79,16 @@
     command! Helptags   helptags ~/.vim/doc
     command! Color      echo g:colors_name
 
-    map <leader>id1 <C-R>=strftime("%c") "   nmap <leader>ifp :e <C-R>=expand("%:p:h") .'/' <C-R>
-"   map <leader>ifp <C-R>=expand("%:p:h") .'/' <C-R>
-
     " Command line map
     cmap %/ <C-R>
+
+    " Identation map
+    """ Normal mode:
+    nmap <D-[> <<
+    nmap <D-]> >>
+    """ Visual mode - gv: keeps selection
+    vmap <D-[> <gv
+    vmap <D-]> >gv
 
 " }
 
@@ -113,9 +116,9 @@
 
     "et autochdir                   " always switch to the current file directory
     set backup                      " make backup files
-    set backupdir=~/var             " where to put backup files
+    set backupdir=/tmp              " where to put backup files
     set clipboard+=unnamed          " share windows clipboard
-    set directory=~/var             " directory to place swap files in
+    set directory=/tmp              " directory to place swap files in
     set fileformats=unix,dos,mac    " support all three, in this order
     set history=300                 " history size
     set nohidden                    " you can change buffers without saving
@@ -130,6 +133,9 @@
     set wildmode=list:longest   " turn on wild mode huge list
     set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png,*~,*.lo
                                 " ignore these list file extensions
+
+    set grepprg=ack
+    set grepformat=%f:%l:%m
 
     " what to save via :mksession {
     set sessionoptions=blank,buffers,curdir,folds,globals,options,resize,tabpages,winsize
@@ -180,19 +186,25 @@
     set incsearch           " Highlight dynamically as they are typed.
     set nohlsearch          " Highlight search terms: off on start
     " Highlight on/off
-    nmap <leader>n :set invhls<CR>
+    nmap <leader>h :set invhls<CR>
+   "nmap <leader>n :set invhls<CR>      " Jamis Buck
 
     set nolist              " [no]list invisible chars
-    set listchars=tab:>-,trail:�,eol:_,extends:>,precedes:<
+"   set listchars=tab:>-,trail:Â·,eol:_,extends:>,precedes:<
+"   set listchars=tab:▸\ ,eol:
+"   set listchars=tab:▸\ ,trail:·,eol:¬,extends:>,precedes:<
     "             |      |       |     |         +-- line befor left margin: <
     "             |      |       |     +-- line beyond right margin: >
     "             |      |       +-- EOF: _
     "             |      +-- spaces at end of line: ....
     "             +-- each tab: >----
     " list invisibles on/off
-    nmap <leader>v :set invlist  <CR>
-    nmap <C-V><C-V>:set invlist  <CR>
+    nmap <leader>l :set invlist  <CR>
+    nmap <leader>l :set list!  <CR>
 
+" }
+
+" Status Line {
     " My status line
     " --------------
      set laststatus=2   " always show statusline
@@ -214,7 +226,7 @@
 "    if filereadable(expand("~/.vim/plugin/git-branch-info.vim"))
 "        set statusline+=\ [%{GitBranchInfoString()]}
 "    endif
-     set statusline+=\ [%3.(%c%)\ %-7.(%l/%L%)]\ %P
+     set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
      if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
         set statusline+=\ %{VimBuddy()} " vim buddy
      endif
@@ -224,10 +236,7 @@
 
 " }
 
-" Text Formatting/Layout {
-
-    set grepprg=ack
-    set grepformat=%f:%l:%m
+" Coding {
 
     set completeopt=menu,preview,longest    " completion menu
     set formatoptions=rq                    " default: tcq vide fo-table
@@ -239,14 +248,16 @@
     set infercase           " if there are caps adjust auto-completion
     set smartcase           " if there are caps go insensitive
 
-    set expandtab           " no tabs - space in place of tabstops
+    " set ts=4 sts=4 sw=4 et   sta   nolist - spaces
+    " set ts=8 sts=0 sw=8 noet nosta list   - tabs
+    set tabstop=4           " real tabs will show 8 spaces
     set softtabstop=4       " how many spaces in a tabstop
-    set tabstop=8           " real tabs will show 8 spaces
+    set shiftwidth=4        " sw: indent size
+    set expandtab           " no tabs - space in place of tabstops
+    set smarttab            " sta: space in place of tabs in a new line
 
     set autoindent          " ai: pre-req for si
     set smartindent         " si: on
-    set shiftwidth=4        " sw: indent size
-    set smarttab            " sta: space in place of tabs in a new line
     set shiftround          " round indent to shiftwidth
 
     set backspace=indent,eol,start      " make backspace a more flexible
@@ -312,14 +323,14 @@
         " http://www.oracledba.ru/notes_vim_en.html
         autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
         "
-        autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
+      " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
         autocmd BufRead *sql set efm=%E%l/%c%m,%C%m,%Z
 
     " }
 
     " Make {
-        autocmd BufRead     qpx.inc     set filetype=make
-        autocmd FileType    make        set noet nosta
+        autocmd BufRead     qpx.inc     setlocal filetype=make
+        autocmd FileType    make        setlocal ts=8 sts=0 sw=8 noet nosta list
     " }
 
     " Mail {
@@ -387,27 +398,45 @@
     " MVF_TerminateLastLine {
     "     Last line of a file must be a \n
     :function! MVF_TerminateLastLine()
-    :   let s:cur = line(".")
-    :   let s:lst = line("$")
-    :   let s:str = getline( s:lst )
-    :   if s:str !~ '^$'
-    "       " save current position
-    :       normal mz
-    "       " Go last line, add new, del comments
-    :       normal Go
-    :       normal Gd$
-    "       " restore position
-    :       normal 'z
-    :   endif
-    "   echo "Line " [s:lst] [s:str]
+    :    " save state
+    :    let _s=@/
+    :    let l = line(".")
+    :    let c = col(".")
+    :
+    :    " last line
+    :    let s:lst = line("$")
+    :    let s:str = getline( s:lst )
+    :    if s:str !~ '^$'
+    :        " Go last line, add new, del comments
+    :        normal Go
+    :        normal Gd$
+    :    endif
+    :    echo "Line " [s:lst] [s:str]
+    :    " Restore state
+    :    let @/=_s
+    :    call cursor(l, c)
     :endfunction
 
-    :if exists( 'MVF_TerminateLastLine' )
-    :   autocmd BufWritePre   * execute TerminateLastLine()
-    :   autocmd BufWritePost  * execute normal 'z
-    :endif
+    if exists( 'MVF_TerminateLastLine()' )
+       autocmd BufWritePre   * execute MVF_TerminateLastLine()
+    endif
 
     map <leader>last :call TerminateLastLine() <CR>
+    " }
+
+    " MVF_StripTrailingWhitespaces {
+    "    http://vimcasts.org/episodes/tidying-whitespace/
+    function! MVF_StripTrailingWhitespaces()
+        " Preparation: save last search, and cursor position.
+        let _s=@/
+        let l = line(".")
+        let c = col(".")
+        " Do the business:
+        %s/\s\+$//e
+        " Clean up: restore previous search history, and cursor position
+        let @/=_s
+        call cursor(l, c)
+    endfunction
     " }
 
 " }
@@ -431,13 +460,21 @@
             \ laborum
 
     "
+    "   nmap <leader>id1 <C-R>=strftime("%c")
+    "   nmap <leader>ifp :e <C-R>=expand("%:p:h") .'/' <C-R>
+    "   nmap <leader>ifp <C-R>=expand("%:p:h") .'/' <C-R>
+
+" }
+
+" Unicode {
+        " Char  CTRL-V+u    i+CTRL-V+digit
+        " ¬       ac        U+00AC          not
+        " ▸     25b8        U+25B8          black right triangle
+        " ☠     2620        U+2620          skull and bones
+        " ❤     2764        U+2764          heavy black heart
 " }
 
 " Plugins {
-
-    " autoclose {
-        map <leader>a :AutoCloseToggle <CR>
-    " }
 
     " autocomplpop {
         let g:AutoComplPop_NotEnableAtStartup    = 0
@@ -445,8 +482,13 @@
         let g:AutoComplPop_BehaviorKeywordLength = 5
         let g:AutoComplPop_BehaviorFileLength    = 3
 
-        map <leader>ace :AutoComplPopEnable <CR>
-        map <leader>acd :AutoComplPopDisable <CR>
+        let g:acp_enableAtStartup       = 1
+        let g:acp_mappingDriven         = 0
+        let g:acp_behaviorKeywordLength = 2
+        let g:acp_behaviorFileLength    = 0
+
+        map <leader>al :AcpLock <CR>
+        map <leader>au :AcpUnlock <CR>
     " }
 
     " bufexplorer {
@@ -455,23 +497,6 @@
         let g:bufExplorerShowUnlisted    = 0    " Do not show unlisted buffers.
         let g:bufExplorerSortBy          ='name'
         let g:bufExplorerShowDirectories = 1    " Show directories.
-    " }
-
-    " grep {
-        let Grep_Path = 'grep'
-        let Grep_Find_Path = 'find'
-        let Grep_Xargs_Path = 'xargs'
-
-        let Grep_Default_Filelist = '*'
-        let Grep_Skip_Dirs  = 'RCS CVS SCCS .svn .git'
-        let Grep_Skip_Files = '*.bak *~ *,v'
-
-        let Grep_Default_Options = '-i'
-
-        let Grep_Xargs_Options = '--null'
-        " let Grep_Xargs_Options = '--print0'
-        " let Grep_Null_Device = '/dev/null'
-
     " }
 
     " openssl (password safe) {
@@ -532,6 +557,7 @@
         let Perl_Root = '&Perl.'          " original
         let Perl_Root = '&Plugin.&Perl.'  " mine.
     " }
+" }
 
 " Test {
     if has("perl")
