@@ -83,8 +83,11 @@ sandbox
 
         # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
         rails                   http://www.vim.org/scripts/script.php?script_id=1567
-        endwise
-        ragtag
+        endwise         1.0     http://www.vim.org/scripts/script.php?script_id=2386
+        ragtag          2.0     http://www.vim.org/scripts/script.php?script_id=1896
+        abolish         1.0     http://www.vim.org/scripts/script.php?script_id=1545
+        capslock        1.1     http://www.vim.org/scripts/script.php?script_id=1725
+        unimpaired      1.1     http://www.vim.org/scripts/script.php?script_id=1590
         abolish         1.0     http://www.vim.org/scripts/script.php?script_id=1545
 
         # Ingo Karkat
@@ -112,6 +115,7 @@ sandbox
             AlignPlugin
         AnsiEsc.vba     9       http://www.vim.org/scripts/script.php?script_id=302
         cecutil         17      http://www.vim.org/scripts/script.php?script_id=1066
+        LargeFile       4       http://www.vim.org/scripts/script.php?script_id=1506
 
         # Hongli Gao
         readcsv         6.0     http://www.vim.org/scripts/script.php?script_id=2108
