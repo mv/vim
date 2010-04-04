@@ -12,7 +12,7 @@ Master
         taglist         4.5     http://www.vim.org/scripts/script.php?script_id=273
 
         # Charles Campbell
-*       vimballPlugin   30      http://www.vim.org/scripts/script.php?script_id=1502
+        vimballPlugin   30      http://www.vim.org/scripts/script.php?script_id=1502
 
         # Peter Bagyinszki
         dbext           11.01   http://www.vim.org/scripts/script.php?script_id=356
