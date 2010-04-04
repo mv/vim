@@ -1,5 +1,5 @@
 
-vim-default
+Master
     plugin
         # Marty Grenfell
         NERD_commenter  2.2.2   http://www.vim.org/scripts/script.php?script_id=1218
@@ -38,6 +38,13 @@ vim-default
             repeat      1.0     http://www.vim.org/scripts/script.php?script_id=2136
         fugitive        1.1     http://www.vim.org/scripts/script.php?script_id=2975
 
+        # Flemming Madsen
+        vimbuddy        0.9.2   http://www.vim.org/scripts/script.php?script_id=8
+
+        # Fritz Mehner
+*       bash-support    3.1.1   http://www.vim.org/scripts/script.php?script_id=365
+*       perl-support    4.7     http://www.vim.org/scripts/script.php?script_id=556
+
     color
         ir-black3
     syntax
@@ -48,13 +55,6 @@ vim-default
 
 vim-dev
     plugin
-        # Fritz Mehner
-*       bash-support    3.1.1   http://www.vim.org/scripts/script.php?script_id=365
-*       perl-support    4.7     http://www.vim.org/scripts/script.php?script_id=556
-
-        # Flemming Madsen
-        vimbuddy        0.9.2   http://www.vim.org/scripts/script.php?script_id=8
-
         # Benji Fisher
         matchit         1.13.2  http://www.vim.org/scripts/script.php?script_id=39
 
