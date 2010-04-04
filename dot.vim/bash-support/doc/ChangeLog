@@ -1,4 +1,39 @@
 =======================================================================================
+  RELEASE NOTES FOR VERSION 3.1
+=======================================================================================
+- The plugin now handles different template styles without editing and
+  reloading the main template file.
+- New hotkey and ex-command to switch template styles.
+- New global List/Dictionnary g:BASH_AlsoBash: add filename pattern (and
+  styles) for files not named *.sh .
+- Minor improvements.
+- Bugfixes: missing redraws in some cases. 
+
+=======================================================================================
+  RELEASE NOTES FOR VERSION 3.0.1
+=======================================================================================
+- New global variable g:BASH_Errorformat: adapt the error format used to parse
+  runtime messages to your locale setting.
+- Bugfix (Windows only): missing internal variable prevents proper initialization.
+
+=======================================================================================
+  RELEASE NOTES FOR VERSION 3.0
+=======================================================================================
++ Completely new template system. User can change templates on the fly.
++ Additional mapping Ctrl-j : jump behind parenthesis or strings in the current line.
++ A few Posix character classes have better shortcuts.
++ Bugfix: insert mode for Posix character classes.
+
+=======================================================================================
+  RELEASE NOTES FOR VERSION 2.14
+=======================================================================================
++ Debugging: ddd always called with bashdb(1).
++ More complete adaption to Bash 4.0: options, builtins, environment variables.
++ Bugfix: running and starting the debugger causes error if working directory is not
+  the directory of the current file.
++ Minor improvements.
+
+=======================================================================================
   RELEASE NOTES FOR VERSION 2.13
 =======================================================================================
 + New menu item 'array element'.

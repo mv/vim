@@ -42,8 +42,8 @@ Master
         vimbuddy        0.9.2   http://www.vim.org/scripts/script.php?script_id=8
 
         # Fritz Mehner
-*       bash-support    3.1.1   http://www.vim.org/scripts/script.php?script_id=365
-*       perl-support    4.7     http://www.vim.org/scripts/script.php?script_id=556
+        bash-support    3.1.1   http://www.vim.org/scripts/script.php?script_id=365
+        perl-support    4.7     http://www.vim.org/scripts/script.php?script_id=556
 
     color
         ir-black3
