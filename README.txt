@@ -1,12 +1,43 @@
 
 vim-default
     plugin
-        NERDTree        3.1.1   http://www.vim.org/scripts/script.php?script_id=1658
-        bufexplorer     7.2.2   http://www.vim.org/scripts/script.php?script_id=42
+        # Marty Grenfell
+        NERD_commenter  2.2.2   http://www.vim.org/scripts/script.php?script_id=1218
+        NERDTree        4.1.0   http://www.vim.org/scripts/script.php?script_id=1658
+
+        # jeff lanzarotta
+*       bufexplorer     7.2.6   http://www.vim.org/scripts/script.php?script_id=42
+
+        # Yegappan Lakshmanan
         taglist         4.5     http://www.vim.org/scripts/script.php?script_id=273
-        vimballPlugin   26      http://www.vim.org/scripts/script.php?script_id=1502
-        vimbuddy        0.9.2   http://www.vim.org/scripts/script.php?script_id=8
-        matchit         1.13.2  http://www.vim.org/scripts/script.php?script_id=39
+
+        # Charles Campbell
+*       vimballPlugin   30      http://www.vim.org/scripts/script.php?script_id=1502
+
+        # Peter Bagyinszki
+        dbext           11.01   http://www.vim.org/scripts/script.php?script_id=356
+
+        # Miles Sterrett
+        ack             0.3.1   http://www.vim.org/scripts/script.php?script_id=2572
+
+        # Srinath Avadhanula
+        increment       1.3     http://www.vim.org/scripts/script.php?script_id=156
+
+        # Chris Russell
+        SearchComplete  1.1     http://www.vim.org/scripts/script.php?script_id=474
+
+        # Noah Spurrier
+        openssl         3.2     http://www.vim.org/scripts/script.php?script_id=2012
+
+        # Takeshi Nishida
+        autocomplpop    2.8.1   http://www.vim.org/scripts/script.php?script_id=1879
+
+        # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
+        speeddating 20081016    http://www.vim.org/scripts/script.php?script_id=2120
+        surround        1.34    http://www.vim.org/scripts/script.php?script_id=1697
+            repeat      1.0     http://www.vim.org/scripts/script.php?script_id=2136
+        fugitive        1.1     http://www.vim.org/scripts/script.php?script_id=2975
+
     color
         ir-black3
     syntax
@@ -14,58 +45,61 @@ vim-default
         nagios          1.8     http://www.vim.org/scripts/script.php?script_id=2261
     after/syntax
         css.vim         0.7     http://www.vim.org/scripts/script.php?script_id=2150
+
 vim-dev
     plugin
-        bash-support    2.14    http://www.vim.org/scripts/script.php?script_id=365
-        perl-support    4.4     http://www.vim.org/scripts/script.php?script_id=556
-        NERD_commenter  2.2.2   http://www.vim.org/scripts/script.php?script_id=1218
+        # Fritz Mehner
+*       bash-support    3.1.1   http://www.vim.org/scripts/script.php?script_id=365
+*       perl-support    4.7     http://www.vim.org/scripts/script.php?script_id=556
+
+        # Flemming Madsen
+        vimbuddy        0.9.2   http://www.vim.org/scripts/script.php?script_id=8
+
+        # Benji Fisher
+        matchit         1.13.2  http://www.vim.org/scripts/script.php?script_id=39
 
         cpan            2.0     http://www.vim.org/scripts/script.php?script_id=2786
         vicle           1.1     http://www.vim.org/scripts/script.php?script_id=2551
 
-        fugitive        1.1     http://www.vim.org/scripts/script.php?script_id=2975
-        dbext           11.01   http://www.vim.org/scripts/script.php?script_id=356
-
-      ? project         1.4.1   http://www.vim.org/scripts/script.php?script_id=69
-      ? NERDTree        4.1.0   http://www.vim.org/scripts/script.php?script_id=1658
-
-master
+sandbox
     plugin
-        ack             0.3.1   http://www.vim.org/scripts/script.php?script_id=2572
-        increment       1.3     http://www.vim.org/scripts/script.php?script_id=156
-        SearchComplete  1.1     http://www.vim.org/scripts/script.php?script_id=474
+        # Yasuhiro Matsumoto
+*       calendar        2.1     http://www.vim.org/scripts/script.php?script_id=52
 
-        calendar        1.7     http://www.vim.org/scripts/script.php?script_id=52
+        # Yuheng Xie
         mark            1.1.8g  http://www.vim.org/scripts/script.php?script_id=1238
-        openssl         3.2     http://www.vim.org/scripts/script.php?script_id=2012
+
+        # Teemu Likonen
         textformat      2.1     http://www.vim.org/scripts/script.php?script_id=2324
+
+        # Tomasz Kalkosinsk
         txt             1.2     http://www.vim.org/scripts/script.php?script_id=1532
 
+        # Marty Grenfell
+        syntastic       1.1.0   http://www.vim.org/scripts/script.php?script_id=2736
+
         # Takeshi Nishida
-        autocomplpop    2.8.1   http://www.vim.org/scripts/script.php?script_id=1879
-        fuzzyfinder     3.2     http://www.vim.org/scripts/script.php?script_id=1984
+        fuzzyfinder     3.5     http://www.vim.org/scripts/script.php?script_id=1984
 
         # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
-        speeddating 20081016    http://www.vim.org/scripts/script.php?script_id=2120
-        surround        1.34    http://www.vim.org/scripts/script.php?script_id=1697
-            repeat      1.0     http://www.vim.org/scripts/script.php?script_id=2136
         rails                   http://www.vim.org/scripts/script.php?script_id=1567
         endwise
-        allml
+        ragtag
+        abolish         1.0     http://www.vim.org/scripts/script.php?script_id=1545
 
         # Ingo Karkat
         IndentCommentPrefix
                         1.02 - needs repeat.vim
                                 http://www.vim.org/scripts/script.php?script_id=2529
-        Mark            2.3.1   http://www.vim.org/scripts/script.php?script_id=2666
+        SearchPosition  1.10    http://www.vim.org/scripts/script.php?script_id=2634
+*       Mark            2.3.3   http://www.vim.org/scripts/script.php?script_id=2666
         ReplaceWithRegister
-                        1.01    http://www.vim.org/scripts/script.php?script_id=2703
+                        1.02    http://www.vim.org/scripts/script.php?script_id=2703
 
-        writebackup     2.10    http://www.vim.org/scripts/script.php?script_id=1828
-        writebackupVersionControl
-                        2.22    http://www.vim.org/scripts/script.php?script_id=1829
-
+        # Karl Guertin
         autoclose       1.2     http://www.vim.org/scripts/script.php?script_id=1849
+
+        # Thiago Alves
         AutoClose       1.4     http://www.vim.org/scripts/script.php?script_id=2009
 
         # Yegappan Lakshmanan
