@@ -1,4 +1,4 @@
-README for perl-support.vim (Version 4.5) / October 4 2009
+README for perl-support.vim (Version 4.7) / March 02 2010
 
   *  INSTALLATION
   *  RELEASE NOTES 
@@ -33,9 +33,11 @@ for LINUX/UNIX ($VIM/vimfiles/ for Windows; find the value of $VIM with
 
       unzip perl-support.zip
 
-    If you have already an older version of perl-support and you have modified
-    the template files you may want to save your templates first or copy the 
-    files from the archive by hand.
+    If you have already an older version of bash-support and you have modified
+    the template files you may want to save your templates first and suppress
+    overwriting them with
+
+      unzip perl-support.zip  -x *Templates *.template
 
 (2) Loading of plugin files must be enabled. If not use
       :filetype plugin on
@@ -94,16 +96,11 @@ For a system-wide installation please see the help file 'doc/perlsupport.txt'.
 =======================================================================================
 
 ---------------------------------------------------------------------------------------
-  RELEASE NOTES FOR VERSION 4.5
+  RELEASE NOTES FOR VERSION 4.7
 ---------------------------------------------------------------------------------------
-- Profiler NYTProf: menu item and ex-command to start a html-viewer.
-- New conversion: Pod to Pdf (if Pod::Pdf is installed).
-- Perltidy,  v-mode: can be used in non-perl files (for embedded Perl).
-- Bugfix: hotkey \ifu not working.
-- Bugfix: running and starting the debugger causes error if working directory is not
-  the directory of the current file.
-- Bugfix: missing variable Perl_TimestampFormat.
-- Minor improvements.
+- Run make (+arguments) from the 'Run' menu; 2 additional hotkeys.
+- Bugfix (Windows): syntax check does not catch error message if a closing
+	brace is missing (thanks to Dave DelGreco for fixing this bug).
 
 ---------------------------------------------------------------------------------------
   OLDER RELEASE NOTES : see file 'ChangeLog'

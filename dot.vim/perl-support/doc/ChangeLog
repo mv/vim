@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------
+  RELEASE NOTES FOR VERSION 4.6
+---------------------------------------------------------------------------------------
+- The profilers Devel::SmallProf and Devel::NYTProf can now be used under Windows.
+- New profiler menu.
+- New hotkeys for calling podchecker and the pod2xxx converter.
+- Pathnames can contain blanks.
+- Template completion: behavior of Ctrl-j improved.
+- Template system: new attributes 'indent', 'noindent'
+- Comment alignment improved.
+- Bugfix (Windows). snippet directory unreachable.
+- Minor improvements.
+
+---------------------------------------------------------------------------------------
+  RELEASE NOTES FOR VERSION 4.5
+---------------------------------------------------------------------------------------
+- Profiler NYTProf: menu item and ex-command to start a html-viewer.
+- New conversion: Pod to Pdf (if Pod::Pdf is installed).
+- Perltidy,  v-mode: can be used in non-perl files (for embedded Perl).
+- Bugfix: hotkey \ifu not working.
+- Bugfix: running and starting the debugger causes error if working directory is not
+  the directory of the current file.
+- Bugfix: missing variable Perl_TimestampFormat.
+- Minor improvements.
+
+---------------------------------------------------------------------------------------
   RELEASE NOTES FOR VERSION 4.4
 ---------------------------------------------------------------------------------------
 - Hotkeys are shown in the menus.
