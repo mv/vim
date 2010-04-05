@@ -16,6 +16,7 @@ Master
         AnsiEsc.vba     9       http://www.vim.org/scripts/script.php?script_id=302
         Align.vba       35/41   http://www.vim.org/scripts/script.php?script_id=294
         cecutil         17      http://www.vim.org/scripts/script.php?script_id=1066
+        LargeFile       4       http://www.vim.org/scripts/script.php?script_id=1506
 
         # Peter Bagyinszki
         dbext           11.01   http://www.vim.org/scripts/script.php?script_id=356
@@ -111,9 +112,6 @@ sandbox
         # Yegappan Lakshmanan
         scratch         1.0     http://www.vim.org/scripts/script.php?script_id=664
         grep            1.9     http://www.vim.org/scripts/script.php?script_id=311
-
-        # Charles Campbell - Dr.Chip's
-        LargeFile       4       http://www.vim.org/scripts/script.php?script_id=1506
 
         # Hongli Gao
         readcsv         6.0     http://www.vim.org/scripts/script.php?script_id=2108

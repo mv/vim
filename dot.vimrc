@@ -192,7 +192,7 @@
     set nolist              " [no]list invisible chars
 "   set listchars=tab:>-,trail:Â·,eol:_,extends:>,precedes:<
 "   set listchars=tab:▸\ ,eol:
-"   set listchars=tab:▸\ ,trail:·,eol:¬,extends:>,precedes:<
+    set listchars=tab:▸\ ,trail:·,eol:¬,extends:>,precedes:<
     "             |      |       |     |         +-- line befor left margin: <
     "             |      |       |     +-- line beyond right margin: >
     "             |      |       +-- EOF: _
@@ -529,6 +529,11 @@
         map <leader>ffbm :FuzzyFinderBookmark  <CR>
         map <leader>fft  :FuzzyFinderTag       <CR>
         map <leader>fftf :FuzzyFinderTaggedFile<CR>
+    " }
+
+    " LargeFile {
+        " in megabytes
+        let g:LargeFile= 200
     " }
 
     " NerdCommenter {
