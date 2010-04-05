@@ -13,6 +13,7 @@ Master
 
         # Charles Campbell
         vimballPlugin   30      http://www.vim.org/scripts/script.php?script_id=1502
+        AnsiEsc.vba     9       http://www.vim.org/scripts/script.php?script_id=302
 
         # Peter Bagyinszki
         dbext           11.01   http://www.vim.org/scripts/script.php?script_id=356
@@ -113,7 +114,6 @@ sandbox
         Align.vba       35/41   http://www.vim.org/scripts/script.php?script_id=294
             AlignMapsPlugin
             AlignPlugin
-        AnsiEsc.vba     9       http://www.vim.org/scripts/script.php?script_id=302
         cecutil         17      http://www.vim.org/scripts/script.php?script_id=1066
         LargeFile       4       http://www.vim.org/scripts/script.php?script_id=1506
 
