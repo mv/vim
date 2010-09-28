@@ -770,7 +770,8 @@
     " }
 
     " Align {
-		let g:DrChipTopLvlMenu= "Plugin."
+		let g:DrChipTopLvlMenu     = "Plugin."
+		let g:alignmaps_euronumber = 1
     " }
 
     " dbext {
