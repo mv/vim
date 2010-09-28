@@ -715,15 +715,6 @@
         let g:openssl_timeout = 301000
     " }
 
-    " taglist {
-        let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-        let Tlist_File_Fold_Auto_Close = 1
-        let Tlist_Show_Menu = 1
-        map <leader>t   :TlistToggle     <CR>
-        map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
-        map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
-    " }
-
     " FuzzyFinder {
         " let g:fuzzy_ignore         = "*.log"
         " let g:fuzzy_matching_limit = 70
@@ -778,8 +769,45 @@
         let Perl_Root = '&Plugin.&Perl.'  " mine.
     " }
 
+    " Align {
+    " }
+
+    " dbext {
+    " }
+
+    " increment.vim {
+    " }
+
+    " SearchComplete {
+        let loaded_search_complete = 1
+    " }
+
+    " repeat.vim {
+        let g:loaded_repeat = 0
+    " }
+
+    " speeddating.vim {
+        let g:loaded_speeddating      = 0 " 0: activate
+        let g:speeddating_no_mappings = 0 " 0: maps to <C-A>/<C-X>
+    " }
+
+    " surround.vim {
+        let g:loaded_surround = 0 " 0: activate
+    " }
+
+    " taglist {
+        let loaded_taglist = 1 " 0: activate / 1: do not load
+        let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+        let Tlist_File_Fold_Auto_Close = 1
+        let Tlist_Show_Menu = 1
+
+        map <leader>t   :TlistToggle     <CR>
+        map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
+        map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
+    " }
+
     " Rainbows {
-        nmap <leader>R :RainbowParenthesesToggle<CR>
+        " nmap <leader>R :RainbowParenthesesToggle<CR>
     " }
 
 " }
