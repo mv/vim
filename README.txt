@@ -12,11 +12,12 @@ Master
         taglist         4.5     http://www.vim.org/scripts/script.php?script_id=273
 
         # Charles Campbell
-        vimballPlugin   30      http://www.vim.org/scripts/script.php?script_id=1502
-        AnsiEsc.vba     9       http://www.vim.org/scripts/script.php?script_id=302
         Align.vba       35/41   http://www.vim.org/scripts/script.php?script_id=294
-        cecutil         17      http://www.vim.org/scripts/script.php?script_id=1066
+            vis         19      http://www.vim.org/scripts/script.php?script_id=1195
+            cecutil     17      http://www.vim.org/scripts/script.php?script_id=1066
+        AnsiEsc.vba     9       http://www.vim.org/scripts/script.php?script_id=302
         LargeFile       4       http://www.vim.org/scripts/script.php?script_id=1506
+        vimballPlugin   30      http://www.vim.org/scripts/script.php?script_id=1502
 
         # Peter Bagyinszki
         dbext           12.00   http://www.vim.org/scripts/script.php?script_id=356

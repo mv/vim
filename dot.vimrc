@@ -770,6 +770,7 @@
     " }
 
     " Align {
+		let g:DrChipTopLvlMenu= "Plugin."
     " }
 
     " dbext {
