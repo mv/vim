@@ -725,19 +725,19 @@
     " }
 
     " FuzzyFinder {
-        let g:fuzzy_ignore         = "*.log"
-        let g:fuzzy_matching_limit = 70
-        let g:fuzzy_ceiling = 95000
-        map <leader>tm   :FuzzyFinderTextMate  <CR>
-        map <leader>ffb  :FuzzyFinderBuffer    <CR> " Buffer
-        map <leader>fff  :FuzzyFinderFile      <CR> " File
-        map <leader>ffmf :FuzzyFinderMruFile   <CR> " Recent
-        map <leader>ffc  :FuzzyFinderCmd       <CR> " CoMmand
-        map <leader>ffmc :FuzzyFinderMruCmd    <CR> " Command
-        map <leader>ffd  :FuzzyFinderDir       <CR>
-        map <leader>ffbm :FuzzyFinderBookmark  <CR>
-        map <leader>fft  :FuzzyFinderTag       <CR>
-        map <leader>fftf :FuzzyFinderTaggedFile<CR>
+        " let g:fuzzy_ignore         = "*.log"
+        " let g:fuzzy_matching_limit = 70
+        " let g:fuzzy_ceiling = 95000
+        " map <leader>tm   :FuzzyFinderTextMate  <CR>
+        " map <leader>ffb  :FuzzyFinderBuffer    <CR> " Buffer
+        " map <leader>fff  :FuzzyFinderFile      <CR> " File
+        " map <leader>ffmf :FuzzyFinderMruFile   <CR> " Recent
+        " map <leader>ffc  :FuzzyFinderCmd       <CR> " CoMmand
+        " map <leader>ffmc :FuzzyFinderMruCmd    <CR> " Command
+        " map <leader>ffd  :FuzzyFinderDir       <CR>
+        " map <leader>ffbm :FuzzyFinderBookmark  <CR>
+        " map <leader>fft  :FuzzyFinderTag       <CR>
+        " map <leader>fftf :FuzzyFinderTaggedFile<CR>
     " }
 
     " LargeFile {
@@ -746,8 +746,14 @@
     " }
 
     " NerdCommenter {
-        map <leader>c <plug>NERDCommenterToggle
+        " Turn it off
+        " let loaded_nerd_comments=1
+
+        let NERDCreateDefaultMappings = 1
+        let NERDRemoveExtraSpaces = 1
         let NERDSpaceDelims = 1
+        let NERDMenuMode = 0
+
     " }
 
     " NerdTree {
