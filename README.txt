@@ -19,7 +19,7 @@ Master
         LargeFile       4       http://www.vim.org/scripts/script.php?script_id=1506
 
         # Peter Bagyinszki
-        dbext           11.01   http://www.vim.org/scripts/script.php?script_id=356
+        dbext           12.00   http://www.vim.org/scripts/script.php?script_id=356
 
         # Miles Sterrett
         ack             0.3.1   http://www.vim.org/scripts/script.php?script_id=2572
