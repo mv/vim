@@ -741,7 +741,7 @@
     " }
 
     " LargeFile {
-        " in megabytes
+        " in megabytes - :Large/:Unlarge
         let g:LargeFile= 200
     " }
 
