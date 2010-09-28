@@ -716,7 +716,7 @@
     " }
 
     " taglist {
-        let Tlist_Ctags_Cmd = '/opt/local/bin/ctags'
+        let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
         let Tlist_File_Fold_Auto_Close = 1
         let Tlist_Show_Menu = 1
         map <leader>t   :TlistToggle     <CR>
