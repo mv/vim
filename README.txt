@@ -34,7 +34,7 @@ Master
         openssl         3.2     http://www.vim.org/scripts/script.php?script_id=2012
 
         # Takeshi Nishida
-        autocomplpop    2.8.1   http://www.vim.org/scripts/script.php?script_id=1879
+        autocomplpop    2.14.1  http://www.vim.org/scripts/script.php?script_id=1879
 
         # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
         speeddating 20081016    http://www.vim.org/scripts/script.php?script_id=2120
