@@ -48,7 +48,7 @@ Master
 
         # Fritz Mehner
         bash-support    3.1.1   http://www.vim.org/scripts/script.php?script_id=365
-        perl-support    4.7     http://www.vim.org/scripts/script.php?script_id=556
+        perl-support    4.8     http://www.vim.org/scripts/script.php?script_id=556
 
     color
         ir-black3

@@ -51,7 +51,7 @@
 "                  PURPOSE.
 "                  See the GNU General Public License version 2 for more details.
 "        Credits:  see perlsupport.txt
-"       Revision:  $Id: perl-support.vim,v 1.100 2010/03/02 13:33:19 mehner Exp $
+"       Revision:  $Id: perl-support.vim,v 1.107 2010/05/29 16:41:47 mehner Exp $
 "-------------------------------------------------------------------------------
 "
 " Prevent duplicate loading:
@@ -59,7 +59,7 @@
 if exists("g:Perl_Version") || &compatible
 	finish
 endif
-let g:Perl_Version= "4.6.2"
+let g:Perl_Version= "4.8"
 "
 "#################################################################################
 "
@@ -116,7 +116,7 @@ else
 	" user / system wide installation
 	"
 	let s:installation	= 'local'
-	if match( expand("<sfile>"), $VIM ) >= 0
+	if match( expand("<sfile>"), $VIM ) == 0
 		" system wide installation
 		let s:plugin_dir  	= $VIM.'/vimfiles/'
 		let s:installation	= 'system'
@@ -330,14 +330,11 @@ function! Perl_LineEndComment ( comment )
   " ----- trim whitespaces -----
 	exe 's/\s*$//'
   let linelength= virtcol("$") - 1
-  if linelength < b:Perl_LineEndCommentColumn
-    let diff  = b:Perl_LineEndCommentColumn -1 -linelength
-    exe "normal ".diff."A "
-  endif
-  " append at least one blank
-  if linelength >= b:Perl_LineEndCommentColumn
-    exe "normal A "
-  endif
+	let	diff	= 1
+	if linelength < b:Perl_LineEndCommentColumn
+		let diff	= b:Perl_LineEndCommentColumn -1 -linelength
+	endif
+	exe "normal	".diff."A "
   exe "normal A# ".a:comment
 endfunction   " ---------- end of function  Perl_LineEndComment  ----------
 "
@@ -461,38 +458,22 @@ function! Perl_MultiLineEndComments ()
   "
   let pos0  = line("'<")
   let pos1  = line("'>")
+	"
   " ----- trim whitespaces -----
-  :'<,'>s/\s*$//
+  exe pos0.','.pos1.'s/\s*$//'
+	"
   " ----- find the longest line -----
-  let maxlength   = 0
-  let linenumber  = pos0
-  normal '<
-  while linenumber <= pos1
-    if  getline(".") !~ "^\\s*$"  && maxlength<virtcol("$")
-      let maxlength= virtcol("$")
-    endif
-    let linenumber=linenumber+1
-    normal j
-  endwhile
-  "
-  if maxlength < b:Perl_LineEndCommentColumn
-    let maxlength = b:Perl_LineEndCommentColumn
-  else
-    let maxlength = maxlength+1   " at least 1 blank
-  endif
-  "
+	let maxlength	= max( map( range(pos0, pos1), "virtcol([v:val, '$'])" ) )
+	let	maxlength	= max( [b:Perl_LineEndCommentColumn, maxlength+1] )
+	"
   " ----- fill lines with blanks -----
-  let linenumber  = pos0
-  normal '<
-  while linenumber <= pos1
-    if getline(".") !~ "^\\s*$"
-      let diff  = maxlength - virtcol("$")
-      exe "normal ".diff."A "
-      exe "normal $A# "
-    endif
-    let linenumber=linenumber+1
-    normal j
-  endwhile
+	for linenumber in range( pos0, pos1 )
+		let line	= getline(linenumber)
+		if line !~ '^\s*$'
+			let diff  = maxlength - virtcol( [ linenumber, '$'] )
+			call setline( linenumber, line.repeat( ' ', diff).'# ' )
+		endif
+	endfor
   " ----- back to the begin of the marked block -----
   normal '<
 endfunction   " ---------- end of function  Perl_MultiLineEndComments  ----------
@@ -2378,7 +2359,7 @@ endfunction    " ----------  end of function Perl_RemoveGuiMenus  ----------
 "  tag a new file (Perl::Tags)
 "------------------------------------------------------------------------------
 function! Perl_do_tags( filename, tagfile )
-	perl <<EOF
+	perl <<PERL_DO_TAGS
 	my $filename	= VIM::Eval('a:filename');
 
 	$naive_tagger->process(files => $filename, refresh=>1 );
@@ -2388,7 +2369,7 @@ function! Perl_do_tags( filename, tagfile )
 
 	# of course, it may not even output, for example, if there's nothing new to process
 	$naive_tagger->output( outfile => $tagsfile );
-EOF
+PERL_DO_TAGS
 endfunction    " ----------  end of function Perl_do_tags  ----------
 "
 "------------------------------------------------------------------------------
@@ -2438,8 +2419,11 @@ let g:Perl_PerlRegexAnalyser			= 'yes'
 "-------------------------------------------------------------------------------
 function! Perl_InitializePerlInterface( )
 	if has('perl')
-    perl <<EOF
+    perl <<INITIALIZE_PERL_INTERFACE
 		#
+    use utf8;                                   # Perl pragma to enable/disable UTF-8 in source
+		use encoding ("utf8");
+
 		# ---------------------------------------------------------------
 		# find out the version of the Perl interface
 		# ---------------------------------------------------------------
@@ -2460,10 +2444,10 @@ function! Perl_InitializePerlInterface( )
 			VIM::DoCommand("let g:Perl_PerlRegexAnalyser = 'no'");
 			}
 		#
-EOF
+INITIALIZE_PERL_INTERFACE
 
 		if g:Perl_PerlTags == 'enabled'
-			perl <<EOF
+			perl <<INITIALIZE_PERL_TAGS
 					# ---------------------------------------------------------------
 					# initialize Perl::Tags usage
 					# ---------------------------------------------------------------
@@ -2475,7 +2459,7 @@ EOF
 						$naive_tagger = Perl::Tags::Naive->new( max_level=>2 );
 						# only go one level down by default
 					}
-EOF
+INITIALIZE_PERL_TAGS
 
 		" if g:Perl_PerlTags is still enabled
 		if g:Perl_PerlTags == 'enabled'
