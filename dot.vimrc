@@ -397,7 +397,8 @@
     nmap <leader>v  :vsplit<CR>
     nmap <leader>o  :only <CR>
 
-    nmap <leader>sb :set scrollbind<CR>
+    nmap <leader>sb  :set scrollbind<CR>
+    nmap <leader>nsb :set noscrollbind<CR>
 
     map <C-j> <C-W>j
     map <C-k> <C-W>k
