@@ -1,4 +1,4 @@
-" Header and Notes {
+" " Header and Notes {
 "
 "   vim: set foldmarker={,} foldlevel=0 nospell:
 "
@@ -38,12 +38,12 @@
     set cpoptions-=n
     "              +-- column for 'number' does not show wrapped text
 
-    "et autochdir                   " always switch to the current file directory
+    set autochdir                   " always switch to the current file directory
     set nobackup                    " [donot] make backup files
     set backupdir=/tmp              " where to put backup files
     set noswapfile                  " do not use swap files (brave mode on!)
     set directory=/tmp              " directory to place swap files in
-    set clipboard+=unnamed          " share windows clipboard
+    set clipboard+=unnamed          " yy, D, p: share OS clipboard
     set encoding=utf-8 nobomb       " BOM often causes trouble
     set fileformats=unix,dos,mac    " support all three, in this order
     set history=300                 " history size
@@ -287,6 +287,10 @@
     command! Helptags   helptags ~/.vim/doc
 
     command! Color      echo g:colors_name
+
+    " start/stop sharing OS clipboard
+    command! Clipon     set clipboard+=unnamed
+    command! Clipoff    set clipboard-=unnamed
 
 " }
 
@@ -776,6 +780,10 @@
     " }
 
     " dbext {
+    " }
+
+    " fugitive.vim {
+        let g:loaded_fugitive = 0 " 0/1: on/off
     " }
 
     " increment.vim {
