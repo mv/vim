@@ -36,6 +36,8 @@ Master
 
         # Takeshi Nishida
         autocomplpop    2.14.1  http://www.vim.org/scripts/script.php?script_id=1879
+        fuzzyfinder     4.2.2   http://www.vim.org/scripts/script.php?script_id=1984
+            l9          1.1     http://www.vim.org/scripts/script.php?script_id=3252
 
         # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
         speeddating 20081016    http://www.vim.org/scripts/script.php?script_id=2120

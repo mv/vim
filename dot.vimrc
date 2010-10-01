@@ -190,9 +190,9 @@
     " imap <C-K> <ESC>D
 
     " CTRL-S for saving, also in Insert mode
-    "noremap  <C-S>		:update<CR>
-    "vnoremap <C-S>	<C-C>:update<CR>
-    "inoremap <C-S>	<C-O>:update<CR>
+    "noremap  <C-S>        :update<CR>
+    "vnoremap <C-S>    <C-C>:update<CR>
+    "inoremap <C-S>    <C-O>:update<CR>
 
     " CTRL-A is Select all
     "noremap <C-A> gggH<C-O>G
@@ -267,8 +267,8 @@
     " Command line map
     cmap %/ <C-R>
 
-	" Command mode: path of the currently edited file
-	cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+    " Command mode: path of the currently edited file
+    cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
    " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
     nmap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
@@ -740,6 +740,29 @@
         " map <leader>ffbm :FuzzyFinderBookmark  <CR>
         " map <leader>fft  :FuzzyFinderTag       <CR>
         " map <leader>fftf :FuzzyFinderTaggedFile<CR>
+
+        " let g:fuzzy_ignore         = "*.log"
+        " let g:fuzzy_matching_limit = 70
+        " let g:fuzzy_ceiling = 95000
+
+        map  <leader>ffb   :FufBuffer          <CR>
+        map  <leader>ffbd  :FufBookmarkDir     <CR>
+        map  <leader>ffbf  :FufBookmarkFile    <CR>
+        map  <leader>ffbm  :FufBookmark        <CR>
+        map  <leader>ffbt  :FufBufferTag       <CR>
+        map  <leader>ffcf  :FufCoverageFile    <CR>
+        map  <leader>ffcl  :FufChangeList      <CR>
+        map  <leader>ffd   :FufDir             <CR>
+        map  <leader>fff   :FufFile            <CR>
+        map  <leader>ffh   :FufHelp            <CR>
+        map  <leader>ffj   :FufJumpList        <CR>
+        map  <leader>ffl   :FufLine            <CR>
+        map  <leader>ffmc  :FufMruCmd          <CR>
+        map  <leader>ffmf  :FufMruFile         <CR>
+        map  <leader>ffq   :FufQuickfix        <CR>
+        map  <leader>fft   :FufTag             <CR>
+        map  <leader>fftf  :FufTaggedFile      <CR>
+
     " }
 
     " LargeFile {
