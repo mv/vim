@@ -1,4 +1,4 @@
-" " Header and Notes {
+" Header and Notes {
 "
 "   vim: set foldmarker={,} foldlevel=0 nospell:
 "
@@ -23,20 +23,23 @@
     filetype plugin indent on
 
     " vi compatible options {
-    set cpoptions=aABceFsmq
-    "             |||||||||
+    set cpoptions=aABcefFmqs
+    "             |||||||||+-- Set buffer options when entering the buffer
     "             ||||||||+-- When joining lines, leave the cursor between joined lines
     "             |||||||+-- When a new match is created (showmatch) pause for .5
-    "             ||||||+-- Set buffer options when entering the buffer
-    "             |||||+-- :write command updates current file name
+    "             ||||||+-- :write command updates current file name
+    "             |||||+-- :read command updates current file name
     "             ||||+-- Automatically add <CR> to the last line when using :@r
     "             |||+-- Searching continues at the end of the match at the cursor position
     "             ||+-- A backslash has no special meaning in mappings
     "             |+-- :write updates alternative file name
     "             +-- :read updates alternative file name
-    " }
+    set cpoptions+=#
+    "              |
+    "              +-- A count before "D", "o" and "O" has no effect.
     set cpoptions-=n
     "              +-- column for 'number' does not show wrapped text
+    " }
 
     set autochdir                   " always switch to the current file directory
     set nobackup                    " [donot] make backup files
@@ -49,7 +52,7 @@
     set history=300                 " history size
     set modeline                    " modeline on
     set paste                       " terminal vim: does not detect paste from typing
-    set timeoutlen=5000             " ms to complete a mapped key combination
+    set timeoutlen=5000             " time in ms to complete a mapped key combination
     set writeany                    " write on readonly files
 
     set undofile                    " keep a permanent undofile (vide :wundo/:rundo)
@@ -59,7 +62,7 @@
     set breakat=\ ^I!@*-+;:,./?     " when wrapping, break at these characters
     set showbreak=…                 " what to show at the start of a wrapped line
 
-    " (XXX: #VIM/tpope warns the line below could break things)
+    set iskeyword+=48-57,192-255
     set iskeyword+=_,$,@,%,#        " none of these are word dividers
 
     set showcmd                 " show command line
@@ -296,21 +299,21 @@
 
 " Vim-UI {
     set title           " set window name as titlestring
-    "et title titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
+    set titlestring=%F\ [%R%H%M%w]\ buf:%n
 
-    set ruler           " show cursor line/col position
-    "et rulerformat=%15(%c%V\ %p%%%)
+    " set ruler           " show cursor line/col position
+    " set rulerformat=[col:%c\ lin:%-7.(%l/%L%)]\ %P
 
     set number              " linenumber
     set numberwidth=5       " linenumber width
+    "et relativenumber      " relative number
 
-    set cursorline          "
-    set cursorcolumn
+    set cursorline          " horizontal highlight
+    set cursorcolumn        " vertical highlight
 
     set virtualedit=block   " allow moving past end of line in block selection mode
-    "et virtualedit=all     " allow moving past end of line
 
-    set nostartofline       " keep cursor where it was
+    set nostartofline       " keep cursor in same column where moving up/down
     set scrolloff=3         " keep 3 lines scrolling up/down
     set sidescrolloff=10    " keep 10 lines scrolling left/right
 
@@ -332,6 +335,7 @@
     "             |       +-- trailing spaces: ....
     "             +-- each tab: >----
 
+    set formatoptions=rq                    " default: tcq vide fo-table
 " }
 
 " GUI Settings {
@@ -434,16 +438,18 @@
     " --------------
      set laststatus=2   " always show statusline
 
-     set statusline =%<buf:[%n]\ %f\ %h%m%r         " buffer, filename, flags
-     set statusline+=\ \ ft:[
+     set statusline =\ %f\                          " filename
+"    set statusline+=%h%m%r                         " flags
+     set statusline+=[
+     set statusline+=buf:%n\|                       " buffer name
      set statusline+=%{strlen(&ft)?&ft:'none'}      " filetype
 "    set statusline+=,%{&encoding}                  " encoding
 "    set statusline+=,%{&fileformat}                " file format
-     set statusline+=]\ "
-     set statusline+=%=                             " break
-"    set statusline+=asc:[%3.(%b%)\ %3.(x%B%)]     " current char (ga)
+     set statusline+=]
+"    set statusline+=%0                             " break
+"    set statusline+=asc:[%3.(%b%)\ %3.(x%B%)]      " current char (ga)
      if filereadable(expand("~/.vim/plugin/fugitive.vim"))
-         set statusline+=%{fugitive#statusline()}
+         set statusline+=\ %{fugitive#statusline()}
      endif
 "    if filereadable(expand("~/.vim/plugin/taglist.vim"))
 "        set statusline+=%(tag:[%{Tlist_Get_Tagname_By_Line()}]%)
@@ -463,8 +469,7 @@
 
 " Coding Rules {
 
-    set completeopt=menu,preview,longest    " completion menu
-    set formatoptions=rq                    " default: tcq vide fo-table
+    set completeopt=menu,preview,longest    " <C-N>/acp: completion popup menu options
 
     set gdefault            " global search/replace by default
 
@@ -546,6 +551,7 @@
     " }
 
     " LogFiles {
+        " goto end of file
         autocmd BufReadPost  *.log      normal G
     " }
 
@@ -555,7 +561,7 @@
         autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
         "
       " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
-        autocmd BufRead *sql set efm=%E%l/%c%m,%C%m,%Z
+        autocmd BufRead *sql set errorformat=%E%l/%c%m,%C%m,%Z
 
     " }
 
@@ -593,56 +599,56 @@
 
 " MyLib {
 
-    " MVF_AddLineNumbers {
-    "     Add explict line numbers to the left
-    :function! MVF_AddLineNumbers()
-    :    exec ":% !awk '{printf \"\\%3d \\%s\\n\", NR, $0}'"
-    :endfunction
+    " MVF_addlinenumbers {
+    "     add explict line numbers to the left
+    ":function! MVF_addlinenumbers()
+    ":    exec ":% !awk '{printf \"\\%3d \\%s\\n\", nr, $0}'"
+    ":endfunction
     " }
 
     " MVF_TerminateLastLine {
-    "     Last line of a file must be a \n
-    :function! MVF_TerminateLastLine()
-    :    " save state
-    :    let _s=@/
-    :    let l = line(".")
-    :    let c = col(".")
-    :
-    :    " last line
-    :    let s:lst = line("$")
-    :    let s:str = getline( s:lst )
-    :    if s:str !~ '^$'
-    :        " Go last line, add new, del comments
-    :        normal Go
-    :        normal Gd$
-    :    endif
-    :    echo "Line " [s:lst] [s:str]
-    :    " Restore state
-    :    let @/=_s
-    :    call cursor(l, c)
-    :endfunction
+    "    Last line of a file must be a \n
+    "function! MVF_TerminateLastLine()
+    "   " save state
+    "   let _s=@/
+    "   let l = line(".")
+    "   let c = col(".")
 
-    if exists( 'MVF_TerminateLastLine()' )
-       autocmd BufWritePre   * execute MVF_TerminateLastLine()
-    endif
+    "   " last line
+    "   let s:lst = line("$")
+    "   let s:str = getline( s:lst )
+    "   if s:str !~ '^$'
+    "       " Go last line, add new, del comments
+    "       normal Go
+    "       normal Gd$
+    "   endif
+    "   echo "Line " [s:lst] [s:str]
+    "   " Restore state
+    "   let @/=_s
+    "   call cursor(l, c)
+    "endfunction
 
-    map <leader>last :call TerminateLastLine() <CR>
+    "if exists( 'MVF_TerminateLastLine()' )
+    "   autocmd BufWritePre   * execute MVF_TerminateLastLine()
+    "endif
+
+    "map <leader>last :call TerminateLastLine() <CR>
     " }
 
     " MVF_StripTrailingWhitespaces {
     "    http://vimcasts.org/episodes/tidying-whitespace/
-    function! MVF_StripTrailingWhitespaces()
-        " Preparation: save last search, and cursor position.
-        let _s=@/
-        let l = line(".")
-        let c = col(".")
-        " Do the business:
-        %s/\s\+$//e
-        " Clean up: restore previous search history, and cursor position
-        let @/=_s
-        call cursor(l, c)
-    endfunction
-    " }
+    "function! MVF_StripTrailingWhitespaces()
+    "    " Preparation: save last search, and cursor position.
+    "    let _s=@/
+    "    let l = line(".")
+    "    let c = col(".")
+    "    " Do the business:
+    "    %s/\s\+$//e
+    "    " Clean up: restore previous search history, and cursor position
+    "    let @/=_s
+    "    call cursor(l, c)
+    "endfunction
+    "" }
 
 " }
 
@@ -655,14 +661,14 @@
 
     " define :Lorem command to dump in a paragraph of lorem ipsum
     " by Willa! http://github.com/willian/willvim/tree/master
-    command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
-            \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            \ proident, sunt in culpa qui officia deserunt mollit anim id est
-            \ laborum
+    " command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
+    "         \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    "         \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    "         \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    "         \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    "         \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    "         \ proident, sunt in culpa qui officia deserunt mollit anim id est
+    "         \ laborum
 
     "
     "   nmap <leader>id1 <C-R>=strftime("%c")
@@ -717,7 +723,7 @@
         " ms: 15000 - 15s
         "     30000 - 20s
         "    300000 -  5m
-        let g:openssl_timeout = 301000
+        "let g:openssl_timeout = 301000
     " }
 
     " FuzzyFinder {
@@ -742,7 +748,7 @@
     " }
 
     " NerdCommenter {
-        " Turn it off
+        " Turn it off:
         " let loaded_nerd_comments=1
 
         let NERDCreateDefaultMappings = 1
@@ -753,8 +759,6 @@
     " }
 
     " NerdTree {
-        map <leader>d  :NERDTreeToggle <CR> " Dir tree
-        map <leader>dd :NERDTreeMirror <CR> " Dir tree
         let NERDTreeCaseSensitiveSort = 1
         let NERDTreeChDirMode         = 0
         let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git']
@@ -762,6 +766,9 @@
         let NERDTreeShowLineNumbers   = 0
         let NERDTreeWinSize           = 35
         let NERDTreeHijackNetrw       = 1
+
+        map <leader>d  :NERDTreeToggle <CR> " Dir tree
+        map <leader>dd :NERDTreeMirror <CR> " Dir tree
     " }
 
     " Bash-support {
@@ -775,46 +782,52 @@
     " }
 
     " Align {
-		let g:DrChipTopLvlMenu     = "Plugin."
-		let g:alignmaps_euronumber = 1
+        let g:DrChipTopLvlMenu     = "Plugin."
+        let g:alignmaps_euronumber = 1
     " }
 
     " dbext {
     " }
 
     " fugitive.vim {
-        let g:loaded_fugitive = 0 " 0/1: on/off
+        " Turn it off:
+        " let g:loaded_fugitive = 1
     " }
 
     " increment.vim {
     " }
 
     " SearchComplete {
-        let loaded_search_complete = 1
+        " Turn it off:
+        " let loaded_search_complete = 1
     " }
 
     " repeat.vim {
-        let g:loaded_repeat = 0
+        " Turn it off:
+        " let g:loaded_repeat = 1
     " }
 
     " speeddating.vim {
-        let g:loaded_speeddating      = 0 " 0: activate
-        let g:speeddating_no_mappings = 0 " 0: maps to <C-A>/<C-X>
+        " Turn it off:
+        " let g:loaded_speeddating      = 1
+        " 0: maps to <C-A>/<C-X>
+        let g:speeddating_no_mappings = 0
     " }
 
     " surround.vim {
-        let g:loaded_surround = 0 " 0: activate
+        " Turn it off:
+        " let g:loaded_surround = 1
     " }
 
     " taglist {
-        let loaded_taglist = 1 " 0: activate / 1: do not load
-        let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-        let Tlist_File_Fold_Auto_Close = 1
-        let Tlist_Show_Menu = 1
+        " let loaded_taglist = 1 " 0: activate / 1: do not load
+        " let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+        " let Tlist_File_Fold_Auto_Close = 1
+        " let Tlist_Show_Menu = 1
 
-        map <leader>t   :TlistToggle     <CR>
-        map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
-        map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
+        " map <leader>t   :TlistToggle     <CR>
+        " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
+        " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
     " }
 
     " Rainbows {
