@@ -782,6 +782,9 @@
     " }
 
     " NerdTree {
+        " Turn it off:
+        " let loaded_nerd_tree=1
+
         let NERDTreeCaseSensitiveSort = 1
         let NERDTreeChDirMode         = 0
         let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git']
