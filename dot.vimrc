@@ -63,8 +63,7 @@
     set showbreak=…                 " what to show at the start of a wrapped line
 
     set iskeyword+=48-57,192-255
-    set iskeyword-=_,$,@,%,#        " these ARE word dividers (best for coding)
-    "et iskeyword+=_,$,@,%,#        " none of these are word dividers
+    set iskeyword+=_,$,@,%,#        " none of these are word dividers
 
     set showcmd                 " show command line
     set wildmenu                " turn on command line completion wild style
