@@ -1,6 +1,6 @@
 " Header and Notes {
 "
-"   vim: set foldmarker={,} foldlevel=0 nospell:
+"   vim: set foldenable foldmarker={,} foldlevel=0 nospell:
 "
 "   vi/vim: dot.vimrc
 "   mvf: ferreira.mv[ at ]gmail.com
@@ -63,7 +63,8 @@
     set showbreak=…                 " what to show at the start of a wrapped line
 
     set iskeyword+=48-57,192-255
-    set iskeyword+=_,$,@,%,#        " none of these are word dividers
+    set iskeyword-=_,$,@,%,#        " these ARE word dividers (best for coding)
+    "et iskeyword+=_,$,@,%,#        " none of these are word dividers
 
     set showcmd                 " show command line
     set wildmenu                " turn on command line completion wild style
@@ -866,4 +867,5 @@
 " }
 
 " vim: set foldmarker={,} foldlevel=0 nospell:
+
 
