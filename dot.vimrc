@@ -299,7 +299,7 @@
 
 " Vim-UI {
     set title           " set window name as titlestring
-    set titlestring=%F\ [%R%H%M%w]\ buf:%n
+    set titlestring=%F\ [%R%H%M%w]\ %{v:servername}
 
     " set ruler           " show cursor line/col position
     " set rulerformat=[col:%c\ lin:%-7.(%l/%L%)]\ %P
@@ -441,7 +441,7 @@
      set statusline =\ %f\                          " filename
 "    set statusline+=%h%m%r                         " flags
      set statusline+=[
-     set statusline+=buf:%n\|                       " buffer name
+     set statusline+=%n:                            " buffer number
      set statusline+=%{strlen(&ft)?&ft:'none'}      " filetype
 "    set statusline+=,%{&encoding}                  " encoding
 "    set statusline+=,%{&fileformat}                " file format
