@@ -29,6 +29,8 @@ dot.vim/doc/tags
 *.arj
 *.a[0-9][0-9]
 
+*~
+
 # file links at ~/bin/
 mate
 mvim
