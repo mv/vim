@@ -335,7 +335,13 @@
     "             |       +-- trailing spaces: ....
     "             +-- each tab: >----
 
-    set formatoptions=rq                    " default: tcq vide fo-table
+    "et formatoptions=rq                    " default: tcq vide 'help fo-table'
+    set formatoptions=tcqrn
+    "                 ||||+- recognize numbered lists
+    "                 |||+-- insert comment leader after <Enter> in Insert mode
+    "                 ||+--- allow formatting using gq
+    "                 |+---- auto-wrap comments
+    "                 +----- auto-wrap text
 " }
 
 " GUI Settings {
@@ -365,7 +371,7 @@
         set tabpagemax=100      " tpm: max nro of tab windows
         set gtl=%t gtt=%F       " guitablabel/guitabtooltip
 
-        set colorcolumn=85
+        set colorcolumn=+1,+2,+3
         set columns=178
         set lines=44
         set transp=4
@@ -537,7 +543,7 @@
 
     " all files {
         " Strip white space
-        autocmd BufWritePre *  :%s/\s\+$//e
+        " autocmd BufWritePre *  :%s/\s\+$//e
 
         " Come back to last position
         autocmd BufReadPost *   if line("'\"") > 0
@@ -547,7 +553,11 @@
     " }
 
     " Text {
-        autocmd BufNewFile,BufRead *.txt set tw=78 ts=4 sts=4 sw=4 et   sta   nolist
+        autocmd BufNewFile,BufRead *.txt set tw=78 cc=+1 ts=4 sts=4 sw=4 et wrap
+        autocmd BufNewFile,BufRead *.txt set fo+=t2n colorscheme torte
+        "                                        ||+- recognize numbered lists
+        "                                        |+-- indent based on 2o. paragraph
+        "                                        +--- auto-wrap text
     " }
 
     " LogFiles {
@@ -661,14 +671,14 @@
 
     " define :Lorem command to dump in a paragraph of lorem ipsum
     " by Willa! http://github.com/willian/willvim/tree/master
-    " command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
-    "         \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-    "         \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    "         \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-    "         \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-    "         \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    "         \ proident, sunt in culpa qui officia deserunt mollit anim id est
-    "         \ laborum
+    command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
+            \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            \ proident, sunt in culpa qui officia deserunt mollit anim id est
+            \ laborum
 
     "
     "   nmap <leader>id1 <C-R>=strftime("%c")
