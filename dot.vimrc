@@ -41,11 +41,12 @@
     "              +-- column for 'number' does not show wrapped text
     " }
 
-    set autochdir                   " always switch to the current file directory
     set nobackup                    " [donot] make backup files
     set backupdir=/tmp              " where to put backup files
+
     set noswapfile                  " do not use swap files (brave mode on!)
     set directory=/tmp              " directory to place swap files in
+
     set clipboard+=unnamed          " yy, D, p: share OS clipboard
     set encoding=utf-8 nobomb       " BOM often causes trouble
     set fileformats=unix,dos,mac    " support all three, in this order
@@ -55,8 +56,17 @@
     set timeoutlen=5000             " time in ms to complete a mapped key combination
     set writeany                    " write on readonly files
 
-    set undofile                    " keep a permanent undofile (vide :wundo/:rundo)
-    set undodir=/tmp
+    " New in 7.3 !
+    if version >= 703
+        set autochdir               " always switch to the current file directory
+    endif
+    if has('persistent_undo')
+        set undofile                " keep a permanent undofile (vide :wundo/:rundo)
+        set undodir=/tmp
+        " if ! isdirectory(&undodir)
+        "     call mkdir(&undodir, 'p')
+        " endif
+    endif
 
     set linebreak                   " when wrapping, uses chars listed in breakt
     set breakat=\ ^I!@*-+;:,./?     " when wrapping, break at these characters
@@ -163,12 +173,17 @@
     " }
 
     " Identation {
-      " Normal mode:
+
+    """ Normal mode:
     nmap <D-[> <<
     nmap <D-]> >>
-      " Visual mode - gv: keeps selection
+
+    """ Visual mode - gv: keeps selection
+    vnoremap > ><CR>gv
+    vnoremap < <<CR>gv
     vmap <D-[> <gv
     vmap <D-]> >gv
+
     " }
 
     " Shortcuts {
@@ -299,7 +314,12 @@
 
 " Vim-UI {
     set title           " set window name as titlestring
-    set titlestring=%F\ [%R%H%M%w]\ %{v:servername}
+    " set titlestring=%F\ [%R%H%M%w]\ %{v:servername}
+    " let &titlestring=expand("%:p")." - ".v:servername
+
+    if has("gui_running")
+        auto BufEnter * let &titlestring=expand("%:p")." - ".v:servername
+    endif
 
     " set ruler           " show cursor line/col position
     " set rulerformat=[col:%c\ lin:%-7.(%l/%L%)]\ %P
@@ -336,12 +356,13 @@
     "             +-- each tab: >----
 
     "et formatoptions=rq                    " default: tcq vide 'help fo-table'
-    set formatoptions=tcqrn
-    "                 ||||+- recognize numbered lists
-    "                 |||+-- insert comment leader after <Enter> in Insert mode
-    "                 ||+--- allow formatting using gq
-    "                 |+---- auto-wrap comments
-    "                 +----- auto-wrap text
+    set formatoptions=tcqron
+    "                 |||||+- recognize numbered lists
+    "                 ||||+-- insert comment leader after 'o'/'O' in Insert mode
+    "                 |||+--- insert comment leader after <Enter> in Insert mode
+    "                 ||+---- allow formatting using gq
+    "                 |+----- auto-wrap comments
+    "                 +------ auto-wrap text
 " }
 
 " GUI Settings {
@@ -366,18 +387,29 @@
         set mouse=a
         set mousehide
 
-        set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
         set guifont=Monaco:h12  " MacVim
+        set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
         set tabpagemax=100      " tpm: max nro of tab windows
         set gtl=%t gtt=%F       " guitablabel/guitabtooltip
 
-        set colorcolumn=+1,+2,+3
+        set colorcolumn=+1,+2,+3,+4,+5
         set columns=178
         set lines=44
         set transp=4
 
-
         set browsedir=buffer    " open filebrowser on directory of curent buffer
+
+        " Set font according to system
+        "   Ref: http://amix.dk/vim/vimrc.html
+        " if MySys() == "mac"
+        "     set gfn=Menlo:h14
+        "     set shell=/bin/bash
+        " elseif MySys() == "windows"
+        "     set gfn=Bitstream\ Vera\ Sans\ Mono:h10
+        " elseif MySys() == "linux"
+        "     set gfn=Monospace\ 10
+        "     set shell=/bin/bash
+        " endif
 
     endif
 
@@ -460,7 +492,8 @@
 "    if filereadable(expand("~/.vim/plugin/taglist.vim"))
 "        set statusline+=%(tag:[%{Tlist_Get_Tagname_By_Line()}]%)
 "    endif
-     set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
+"    set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
+     set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
 "    if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
 "       set statusline+=\ %{VimBuddy()} " vim buddy
 "    endif
@@ -504,6 +537,7 @@
     set nrformats=alpha,octal,hex   " C-A/C-X: increment/decrement
 
     " wrap {
+    set textwidth=78        " tw
     set nowrap sidescroll=1         " [no] wrap long lines
     "et whichwrap=b,s,h,l,<,>,~,[,] " everything wraps
     "             | | | | | | | | |
@@ -553,11 +587,24 @@
     " }
 
     " Text {
-        autocmd BufNewFile,BufRead *.txt set tw=78 cc=+1 ts=4 sts=4 sw=4 et wrap
-        autocmd BufNewFile,BufRead *.txt set fo+=t2n colorscheme torte
-        "                                        ||+- recognize numbered lists
-        "                                        |+-- indent based on 2o. paragraph
-        "                                        +--- auto-wrap text
+        autocmd BufNewFile,BufRead *.txt setlocal filetype=txt
+        autocmd FileType           txt   setlocal tw=78 cc=+1,+2,+3,+4,+5 ts=4 sts=4 sw=4 et wrap
+        autocmd FileType           txt   setlocal fo=tcqronl2
+        "                                            |||||||+- indent as 2nd line of paragraph
+        "                                            ||||||+-- long line do not break in insert mod
+        "                                            |||||+--- recognize numbered lists
+        "                                            ||||+---- insert comment leader after 'o'/'O' in Insert mode
+        "                                            |||+----- insert comment leader after <Enter> in Insert mode
+        "                                            ||+------ allow formatting using gq
+        "                                            |+------- auto-wrap comments
+        "                                            +-------- auto-wrap text
+        " formatoptions=tcroqn2l
+        " help fo-table
+    " }
+
+    " Ruby {
+        autocmd BufNewFile,BufRead *.rb  setlocal filetype=ruby
+        autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
     " }
 
     " LogFiles {
@@ -575,9 +622,21 @@
 
     " }
 
-    " Make {
-        autocmd BufRead     qpx.inc     setlocal filetype=make
-        autocmd FileType    make        setlocal ts=8 sts=0 sw=8 noet nosta list
+    " Makefile {
+        autocmd BufRead     [Mm]akefile*    setlocal filetype=make
+        autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
+    " }
+
+    " Programming settings {
+    " http://www.mattrope.com/computers/conf/vimrc.html
+    " augroup prog
+    "     au!
+    "     au BufRead *.c,*.cc,*.cpp,*.h,*.java set formatoptions=croql cindent nowrap nofoldenable
+    "     au BufEnter *.java                      map <C-Return> :w\|:!javac %<CR>
+    "     au BufEnter *.c                         map <C-Return> :w\|:!gcc %<CR>
+    "     au BufEnter *.cc,*.cpp                  map <C-Return> :w\|:!g++ %<CR>
+    "     au BufLeave *.java,*.c,*.cc             unmap <C-Return>
+    " augroup END
     " }
 
     " Mail {
@@ -591,7 +650,7 @@
     " }
 
     " git.git/contrib {
-        autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
+    "   autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
     " }
 
     " Rehash:
@@ -666,8 +725,9 @@
     " :0 put =range(1,15)
     " :for in in range(1,15) | put ='192.168.1.'.i | endfor
 
-    " tab to spaces: :set et|retab
-    " spaces to tab: :set noet:retab!
+    " tab to spaces to tab
+    command! TabOn   :set noexpandtab|retab!
+    command! TabOff  :set expandtab|retab!
 
     " define :Lorem command to dump in a paragraph of lorem ipsum
     " by Willa! http://github.com/willian/willvim/tree/master
