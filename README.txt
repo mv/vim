@@ -52,6 +52,9 @@ Master
         bash-support    3.1.1   http://www.vim.org/scripts/script.php?script_id=365
         perl-support    4.8     http://www.vim.org/scripts/script.php?script_id=556
 
+        # Thiago Alves
+        AutoClose       1.4     http://www.vim.org/scripts/script.php?script_id=2009
+
     color
         ir-black3
     syntax
@@ -108,9 +111,6 @@ sandbox
 
         # Karl Guertin
         autoclose       1.2     http://www.vim.org/scripts/script.php?script_id=1849
-
-        # Thiago Alves
-        AutoClose       1.4     http://www.vim.org/scripts/script.php?script_id=2009
 
         # Yegappan Lakshmanan
         scratch         1.0     http://www.vim.org/scripts/script.php?script_id=664
