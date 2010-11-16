@@ -217,10 +217,6 @@
     "snoremap <C-A> <C-C>gggH<C-O>G
     "xnoremap <C-A> <C-C>ggVG
 
-
-    nmap <leader>r  :Rehash<CR>
-    nmap <leader>rg :Rehashg<CR>
-
     " linenumber on/off
     nmap <leader>nu  :set invnumber<CR>
     " relativenumber on/off
@@ -229,7 +225,6 @@
     nmap <leader>cuc :set invcuc   <CR>
     " Highlight search on/off
     nmap <leader>h :set invhls<CR>
-    nmap <leader>/ :set invhls<CR>
     " list invisibles on/off
     nmap <leader>l :set invlist  <CR>
      " }
