@@ -772,8 +772,10 @@
         let g:acp_behaviorKeywordLength  = 2
         let g:acp_behaviorFileLength     = 0
 
-        map <leader>al :AcpLock <CR>
-        map <leader>au :AcpUnlock <CR>
+        map <leader>ae :AcpEnable <CR>
+        map <leader>ad :AcpDisable <CR>
+        " map <leader>al :AcpLock <CR>
+        " map <leader>au :AcpUnlock <CR>
     " }
 
     " bufexplorer {
@@ -877,6 +879,13 @@
         let g:alignmaps_euronumber = 1
     " }
 
+    " autoclose.vim {
+        " Turn it off:
+        " let g:loaded_AutoClose = 1
+
+        map <leader>a :AutoCloseToggle <CR>
+    " }
+
     " dbext {
     " }
 
@@ -929,6 +938,11 @@
         " map <leader>t   :TlistToggle     <CR>
         " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
         " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
+    " }
+
+    " unimpaired.vim {
+        " Turn it off:
+        " let g:loaded_unimpaired = 1
     " }
 
     " Rainbows {
