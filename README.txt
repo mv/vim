@@ -55,6 +55,9 @@ Master
         # Thiago Alves
         AutoClose       1.4     http://www.vim.org/scripts/script.php?script_id=2009
 
+        # Hongli Gao
+        marks_corey     1.4     http://www.vim.org/scripts/script.php?script_id=2194
+
     color
         ir-black3
     syntax
@@ -118,6 +121,5 @@ sandbox
 
         # Hongli Gao
         readcsv         6.0     http://www.vim.org/scripts/script.php?script_id=2108
-        marks_corey     1.3     http://www.vim.org/scripts/script.php?script_id=2194
 
 
