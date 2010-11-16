@@ -1,6 +1,6 @@
 
-Master
-    plugin
+Master # {
+    plugin # {
         # Marty Grenfell
         NERD_commenter  2.2.2   http://www.vim.org/scripts/script.php?script_id=1218
         NERDTree        4.1.0   http://www.vim.org/scripts/script.php?script_id=1658
@@ -44,6 +44,8 @@ Master
         surround        1.34    http://www.vim.org/scripts/script.php?script_id=1697
             repeat      1.0     http://www.vim.org/scripts/script.php?script_id=2136
         fugitive        1.1     http://www.vim.org/scripts/script.php?script_id=2975
+        rails           4.3     http://www.vim.org/scripts/script.php?script_id=1567
+        unimpaired      1.1     http://www.vim.org/scripts/script.php?script_id=1590
 
         # Flemming Madsen
         vimbuddy        0.9.2   http://www.vim.org/scripts/script.php?script_id=8
@@ -60,6 +62,7 @@ Master
 
         # Hongli Gao
         marks_corey     1.4     http://www.vim.org/scripts/script.php?script_id=2194
+    # }
 
     color
         ir-black3
@@ -68,16 +71,18 @@ Master
         nagios          1.8     http://www.vim.org/scripts/script.php?script_id=2261
     after/syntax
         css.vim         0.7     http://www.vim.org/scripts/script.php?script_id=2150
+# }
 
-vim-dev
+vim-dev # {
     plugin
         # Benji Fisher
         matchit         1.13.2  http://www.vim.org/scripts/script.php?script_id=39
 
         cpan            2.0     http://www.vim.org/scripts/script.php?script_id=2786
         vicle           1.1     http://www.vim.org/scripts/script.php?script_id=2551
+# }
 
-sandbox
+sandbox # {
     plugin
         # Yasuhiro Matsumoto
 *       calendar        2.1     http://www.vim.org/scripts/script.php?script_id=52
@@ -98,13 +103,10 @@ sandbox
         fuzzyfinder     3.5     http://www.vim.org/scripts/script.php?script_id=1984
 
         # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
-        rails                   http://www.vim.org/scripts/script.php?script_id=1567
         endwise         1.0     http://www.vim.org/scripts/script.php?script_id=2386
         ragtag          2.0     http://www.vim.org/scripts/script.php?script_id=1896
         abolish         1.0     http://www.vim.org/scripts/script.php?script_id=1545
         capslock        1.1     http://www.vim.org/scripts/script.php?script_id=1725
-        unimpaired      1.1     http://www.vim.org/scripts/script.php?script_id=1590
-        abolish         1.0     http://www.vim.org/scripts/script.php?script_id=1545
 
         # Ingo Karkat
         IndentCommentPrefix
@@ -123,5 +125,5 @@ sandbox
 
         # Hongli Gao
         readcsv         6.0     http://www.vim.org/scripts/script.php?script_id=2108
-
+# }
 
