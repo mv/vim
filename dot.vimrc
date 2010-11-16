@@ -889,6 +889,11 @@
     " dbext {
     " }
 
+    " endwise.vim {
+        " Turn it off:
+        " let g:loaded_endwise = 1
+    " }
+
     " fugitive.vim {
         " Turn it off:
         " let g:loaded_fugitive = 1

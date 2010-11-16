@@ -43,6 +43,7 @@ Master # {
         speeddating 20081016    http://www.vim.org/scripts/script.php?script_id=2120
         surround        1.34    http://www.vim.org/scripts/script.php?script_id=1697
             repeat      1.0     http://www.vim.org/scripts/script.php?script_id=2136
+        endwise         1.0     http://www.vim.org/scripts/script.php?script_id=2386
         fugitive        1.1     http://www.vim.org/scripts/script.php?script_id=2975
         rails           4.3     http://www.vim.org/scripts/script.php?script_id=1567
         unimpaired      1.1     http://www.vim.org/scripts/script.php?script_id=1590
@@ -103,7 +104,6 @@ sandbox # {
         fuzzyfinder     3.5     http://www.vim.org/scripts/script.php?script_id=1984
 
         # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
-        endwise         1.0     http://www.vim.org/scripts/script.php?script_id=2386
         ragtag          2.0     http://www.vim.org/scripts/script.php?script_id=1896
         abolish         1.0     http://www.vim.org/scripts/script.php?script_id=1545
         capslock        1.1     http://www.vim.org/scripts/script.php?script_id=1725
