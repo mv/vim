@@ -471,27 +471,44 @@
     " --------------
      set laststatus=2   " always show statusline
 
-     set statusline =\ %f\                          " filename
+     set statusline=\                               " one blank
+
+"    set statusline+=\ %f\                          " filename
 "    set statusline+=%h%m%r                         " flags
+
      set statusline+=[
      set statusline+=%n:                            " buffer number
      set statusline+=%{strlen(&ft)?&ft:'none'}      " filetype
 "    set statusline+=,%{&encoding}                  " encoding
 "    set statusline+=,%{&fileformat}                " file format
      set statusline+=]
+
+     set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)\ %P] " col lin/tot perc
+
+     if filereadable(expand("~/.vim/plugin/fugitive.vim"))
+         set statusline+=\ %{fugitive#statusline()}     " git branch
+     endif
+
+     set statusline+=\ %f                               " filename
+
+     if filereadable(expand("~/.vim/plugin/capslock.vim"))
+         set statusline+=\ %{CapsLockStatusline()}      " capslock.vim
+     endif
+
 "    set statusline+=%0                             " break
 "    set statusline+=asc:[%3.(%b%)\ %3.(x%B%)]      " current char (ga)
-     if filereadable(expand("~/.vim/plugin/fugitive.vim"))
-         set statusline+=\ %{fugitive#statusline()}
-     endif
+
 "    if filereadable(expand("~/.vim/plugin/taglist.vim"))
 "        set statusline+=%(tag:[%{Tlist_Get_Tagname_By_Line()}]%)
 "    endif
+
+"    set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
 "    set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
-     set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
-"    if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
-"       set statusline+=\ %{VimBuddy()} " vim buddy
-"    endif
+
+     if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
+        set statusline+=%=%{VimBuddy()} " vim buddy
+     endif
+
 "   if has("perl")
 "       set statusline+=\ perl
 "   endif
@@ -889,6 +906,11 @@
     " dbext {
     " }
 
+    " capslock.vim {
+        " Turn it off:
+        " let g:loaded_capslock = 1
+    " }
+
     " endwise.vim {
         " Turn it off:
         " let g:loaded_endwise = 1
@@ -960,5 +982,4 @@
 " }
 
 " vim: set foldmarker={,} foldlevel=0 nospell:
-
 
