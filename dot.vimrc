@@ -888,6 +888,16 @@
     " increment.vim {
     " }
 
+    " mark.vim {
+        " Turn it off:
+        " let g:loaded_mark = 1
+    " }
+
+    " marks_corey.vim {
+        " Turn it off:
+        " let g:loaded_marks_corey = 1
+    " }
+
     " SearchComplete {
         " Turn it off:
         " let loaded_search_complete = 1
