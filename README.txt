@@ -55,6 +55,9 @@ Master
         # Thiago Alves
         AutoClose       1.4     http://www.vim.org/scripts/script.php?script_id=2009
 
+        # Ingo Karkat
+        Mark            2.4.0   http://www.vim.org/scripts/script.php?script_id=2666
+
         # Hongli Gao
         marks_corey     1.4     http://www.vim.org/scripts/script.php?script_id=2194
 
@@ -108,7 +111,6 @@ sandbox
                         1.02 - needs repeat.vim
                                 http://www.vim.org/scripts/script.php?script_id=2529
         SearchPosition  1.10    http://www.vim.org/scripts/script.php?script_id=2634
-*       Mark            2.3.3   http://www.vim.org/scripts/script.php?script_id=2666
         ReplaceWithRegister
                         1.02    http://www.vim.org/scripts/script.php?script_id=2703
 
