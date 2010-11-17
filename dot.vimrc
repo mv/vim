@@ -485,11 +485,16 @@
 
      set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)\ %P] " col lin/tot perc
 
+"    set statusline+=\ %f                               " filename
+     set statusline+=\ [%t]                             " filename
+
+     if filereadable(expand("~/.vim/plugin/rails.vim"))
+         set statusline+=\ %{rails#statusline(1)}      " rails.vim
+     endif
+
      if filereadable(expand("~/.vim/plugin/fugitive.vim"))
          set statusline+=\ %{fugitive#statusline()}     " git branch
      endif
-
-     set statusline+=\ %f                               " filename
 
      if filereadable(expand("~/.vim/plugin/capslock.vim"))
          set statusline+=\ %{CapsLockStatusline()}      " capslock.vim
@@ -937,6 +942,13 @@
     " SearchComplete {
         " Turn it off:
         " let loaded_search_complete = 1
+    " }
+
+    " rails.vim {
+        " Turn it off:
+        " let g:loaded_rails = 1
+        let g:rails_menu = 1
+	    let g:rails_history_size = 9
     " }
 
     " repeat.vim {
