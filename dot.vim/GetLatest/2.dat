@@ -1,0 +1,48 @@
+642 8136 :AutoInstall: getscript.vim
+--------------------------
+273   7701   taglist
+1502  11981  vimballPlugin
+294   10110  align
+1879  11894  autocomplpop
+42    14208  bufexplorer
+1195  5847   vis
+1066  7618   cecutil
+302   13236  AnsiEsc.vba
+
+356   13339  dbext
+
+2572  10433  ack
+156   469    increment
+8     7481   vimbuddy
+
+2009  9223   AutoClose
+2666  13424  Mark
+2194  13689  marks_corey
+
+1682  7062   Indexedsearch
+474   1388   SearchComplete
+39    8196   matchit
+
+2261  8770   nagios
+2150  8846   css.vim
+
+1984  13961  fuzzyfinder
+3252  13948  l9
+1506  9277   LargeFile
+365   14185  bash-support
+556   13075  perl-support
+
+
+2012  8564   openssl
+
+2786  12688  cpan
+2551  14060  vicle
+52    12959  calendar
+1238  8603   mark
+2324  9247   textformat
+1532  6580   txt
+2529  11491  IndentCommentPrefix
+2634  14028  SearchPosition
+2703  11890  ReplaceWithRegister
+1849  10873  autoclose
+2108  8085   readcsv

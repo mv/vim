@@ -1,0 +1,58 @@
+ScriptID  SourceID  Filename
+--------  --------  --------
+
+## Charles Campbell
+1502      11981     vimballPlugin
+294       10110     align
+1195      5847      vis
+1066      7618      cecutil
+302       13236     AnsiEsc
+1506      9277      LargeFile
+
+## jeff lanzarotta
+42        14208     bufexplorer
+
+## Peter Bagyinszki
+356       13339     dbext
+
+### Fritz Mehner
+365       14185     bash-support
+556       13075     perl-support
+
+### Utils
+156       469       increment
+8         7481      vimbuddy
+273       7701      taglist
+2666      13424     Mark-ik
+2194      13689     marks_corey
+
+1682      7062      Indexedsearch
+474       1388      SearchComplete
+39        8196      matchit
+
+# Thiago Alves: 2008-09-04
+2009      9223      autoclose-ta
+
+# Karl Guertin: 2009-06-19
+1849      10873     autoclose-kg
+
+
+### Syntax
+2261      8770      nagios
+2150      8846      css.vim
+
+
+### Dev?
+2012      8564      openssl
+2786      12688     cpan
+2551      14060     vicle
+52        12959     calendar
+1238      8603      mark-yx
+2324      9247      textformat
+1532      6580      txt
+2529      11491     IndentCommentPrefix
+2634      14028     SearchPosition
+2703      11890     ReplaceWithRegister
+2108      8085      readcsv
+#
+

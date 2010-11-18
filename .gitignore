@@ -14,6 +14,8 @@
 .netrwhist
 .VimballRecord
 dot.vim/doc/tags
+dot.vim/GetLatest/*vim
+dot.vim/GetLatest/*vba
 
 *.[oa]
 *.log
@@ -21,13 +23,13 @@ dot.vim/doc/tags
 *.pid
 *.swp
 
-*.tar
-*.[t]gz
-*.[t]bz
-*.[t]bz2
-*.zip
-*.arj
-*.a[0-9][0-9]
+*tar
+*gz
+*bz
+*bz2
+*zip
+*arj
+*a[0-9][0-9]
 
 *~
 
