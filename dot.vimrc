@@ -891,10 +891,12 @@ set nocompatible
         let g:BASH_Root = 'B&ash.'         " original
         let g:BASH_Root = '&Plugin.B&ash.' " mine.
 
-        let g:BASH_GlobalTemplateFile      = '~/.vim/bundle/bash-support/templates/Templates'
-        let g:BASH_LocalTemplateFile       = '~/.vim/bundle/bash-support/templates/Templates'
-        let g:BASH_CodeSnippets            = '~/.vim/bundle/bash-support/codesnippets'
-        let g:BASH_Dictionary_File         = '~/.vim/bundle/bash-support/wordlists/bash.list'
+        let g:BASH_Support_Root_Dir        = $HOME.'/.vim/bundle/bash-support'
+
+        let g:BASH_GlobalTemplateFile      = '/codework/bash/templates.sh'
+        let g:BASH_LocalTemplateFile       = '/codework/bash/templates.sh'
+        let g:BASH_CodeSnippets            = '/codework/bash/codesnippets.sh'
+        let g:BASH_Dictionary_File         = '/codework/bash/bash.dict.txt'
        "let g:BASH_MapLeader               '\'
        "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
     " }
@@ -903,8 +905,12 @@ set nocompatible
         let g:Perl_Root = '&Perl.'          " original
         let g:Perl_Root = '&Plugin.&Perl.'  " mine.
 
+        let g:Perl_Support_Root_Dir        = $HOME.'/.vim/bundle/perl-support'
+
         let g:Perl_GlobalTemplateFile      = '~/.vim/bundle/perl-support/templates/Templates'
         let g:Perl_LocalTemplateFile       = '~/.vim/bundle/perl-support/templates/Templates'
+        let g:Perl_GlobalTemplateFile      = '/dev/null'
+        let g:Perl_LocalTemplateFile       = '/dev/null'
         let g:Perl_CodeSnippets            = '~/.vim/bundle/perl-support/codesnippets/'
         let g:Perl_Dictionary_File         = '~/.vim/bundle/perl-support/wordlists/perl.list'
         let g:Perl_PerlModuleList          = '~/.vim/bundle/perl-support/modules/perl-modules.list'
