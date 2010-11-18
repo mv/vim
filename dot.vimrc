@@ -888,13 +888,34 @@ set nocompatible
     " }
 
     " Bash-support {
-        let BASH_Root = 'B&ash.'         " original
-        let BASH_Root = '&Plugin.B&ash.' " mine.
+        let g:BASH_Root = 'B&ash.'         " original
+        let g:BASH_Root = '&Plugin.B&ash.' " mine.
+
+        let g:BASH_GlobalTemplateFile      = '~/.vim/bundle/bash-support/templates/Templates'
+        let g:BASH_LocalTemplateFile       = '~/.vim/bundle/bash-support/templates/Templates'
+        let g:BASH_CodeSnippets            = '~/.vim/bundle/bash-support/codesnippets'
+        let g:BASH_Dictionary_File         = '~/.vim/bundle/bash-support/wordlists/bash.list'
+       "let g:BASH_MapLeader               '\'
+       "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
     " }
 
     " Perl-support {
-        let Perl_Root = '&Perl.'          " original
-        let Perl_Root = '&Plugin.&Perl.'  " mine.
+        let g:Perl_Root = '&Perl.'          " original
+        let g:Perl_Root = '&Plugin.&Perl.'  " mine.
+
+        let g:Perl_GlobalTemplateFile      = '~/.vim/bundle/perl-support/templates/Templates'
+        let g:Perl_LocalTemplateFile       = '~/.vim/bundle/perl-support/templates/Templates'
+        let g:Perl_CodeSnippets            = '~/.vim/bundle/perl-support/codesnippets/'
+        let g:Perl_Dictionary_File         = '~/.vim/bundle/perl-support/wordlists/perl.list'
+        let g:Perl_PerlModuleList          = '~/.vim/bundle/perl-support/modules/perl-modules.list'
+        let g:Perl_PerlModuleListGenerator = '~/.vim/bundle/perl-support/scripts/pmdesc3.pl'
+       "let g:Perl_Printheader             = "%<%f%h%m%<  %=%{strftime('%x %X')}     Page %N"
+       "let g:Perl_PerlcriticSeverity      = 5
+       "let g:Perl_PerlcriticVerbosity     = 5
+       "let g:Perl_PerlcriticOptions       = ""
+       "let g:Perl_PerlRegexSubstitution   = '$+'
+       "let g:Perl_MapLeader               = '\'
+
     " }
 
     " Align {
