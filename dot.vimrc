@@ -8,17 +8,18 @@
 "
 " }
 
-" PATHogen {
-    "filetype off
+set nocompatible
+
+" Pathogen {
+    filetype off
+
     " Use pathogen to easily modify the runtime path to include all
     " plugins under the ~/.vim/bundle directory
-    "call pathogen#helptags()
-    "call pathogen#runtime_append_all_bundles()
+    call pathogen#helptags()
+    call pathogen#runtime_append_all_bundles()
 " }
 
 " General {
-    set nocompatible
-
     syntax on
     filetype plugin indent on
 
@@ -903,9 +904,7 @@
 
     " autoclose.vim {
         " Turn it off:
-        " let g:loaded_AutoClose = 1
-
-        map <leader>a :AutoCloseToggle <CR>
+        " let g:autoclose_loaded = 1
     " }
 
     " dbext {
