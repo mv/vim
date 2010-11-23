@@ -53,7 +53,6 @@ set nocompatible
     set fileformats=unix,dos,mac    " support all three, in this order
     set history=300                 " history size
     set modeline                    " modeline on
-    set paste                       " terminal vim: does not detect paste from typing
     set timeoutlen=5000             " time in ms to complete a mapped key combination
     set writeany                    " write on readonly files
 
@@ -1022,6 +1021,8 @@ set nocompatible
 
 " Test {
 " }
+
+set paste                       " terminal vim: does not detect paste from typing
 
 " vim: set foldmarker={,} foldlevel=0 nospell:
 
