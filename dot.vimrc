@@ -907,14 +907,12 @@ set nocompatible
 
         let g:Perl_Support_Root_Dir        = $HOME.'/.vim/bundle/perl-support'
 
-        let g:Perl_GlobalTemplateFile      = '~/.vim/bundle/perl-support/templates/Templates'
-        let g:Perl_LocalTemplateFile       = '~/.vim/bundle/perl-support/templates/Templates'
-        let g:Perl_GlobalTemplateFile      = '/dev/null'
-        let g:Perl_LocalTemplateFile       = '/dev/null'
-        let g:Perl_CodeSnippets            = '~/.vim/bundle/perl-support/codesnippets/'
-        let g:Perl_Dictionary_File         = '~/.vim/bundle/perl-support/wordlists/perl.list'
-        let g:Perl_PerlModuleList          = '~/.vim/bundle/perl-support/modules/perl-modules.list'
-        let g:Perl_PerlModuleListGenerator = '~/.vim/bundle/perl-support/scripts/pmdesc3.pl'
+        let g:Perl_GlobalTemplateFile      = '/codework/perl/templates.pl'
+        let g:Perl_LocalTemplateFile       = '/codework/perl/templates.pl'
+        let g:Perl_CodeSnippets            = '/codework/perl/snippets.pl'
+        let g:Perl_Dictionary_File         = '/codework/perl/perl.dict.txt'
+        let g:Perl_PerlModuleList          = '/codework/perl/perl.list.txt'
+        let g:Perl_PerlModuleListGenerator = '/codework/perl/perl.list.txt'
        "let g:Perl_Printheader             = "%<%f%h%m%<  %=%{strftime('%x %X')}     Page %N"
        "let g:Perl_PerlcriticSeverity      = 5
        "let g:Perl_PerlcriticVerbosity     = 5
