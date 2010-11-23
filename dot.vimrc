@@ -804,9 +804,14 @@ set nocompatible
     " bufexplorer {
         " ,be / ,bv / ,bs
         let g:bufExplorerReverseSort     = 0
-        let g:bufExplorerShowUnlisted    = 0    " Do not show unlisted buffers.
+        let g:bufExplorerShowUnlisted    = 1    " Do not show unlisted buffers.
         let g:bufExplorerSortBy          ='name'
         let g:bufExplorerShowDirectories = 1    " Show directories.
+        let g:bufExplorerFindActive      = 0    " Do not go to active window.
+        let g:bufExplorerShowDirectories = 0    " Don't show directories.
+        let g:bufExplorerShowUnlisted    = 1    " Show unlisted buffers.
+        let g:bufExplorerSplitBelow      = 1    " Split new window below current.
+        let g:bufExplorerSplitRight      = 1    " Split right.
     " }
 
     " openssl (password safe) {
