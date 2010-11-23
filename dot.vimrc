@@ -795,6 +795,8 @@ set nocompatible
         let g:acp_behaviorKeywordLength  = 2
         let g:acp_behaviorFileLength     = 0
 
+  		let g:acp_behavior = { 'repeat': 1}
+
         map <leader>ae :AcpEnable <CR>
         map <leader>ad :AcpDisable <CR>
         " map <leader>al :AcpLock <CR>
