@@ -10,19 +10,19 @@
 " make a mark, or delete it: 
 "                            ctrl + F2
 "                            mm
-" move to ahead mark:          
-"                            shift + F2
-"                            mv
 " move to next mark:                           
 "                            F2
-"                            mb
+"                            mj
+" move to previous mark:          
+"                            shift + F2
+"                            mk
 " moving a mark:
 "                            m.
 "  (press m. to mark a mark, and move the cursor to new line, 
 "   press the m. again, you can moving a mark.)
 "
 " delete all marks:
-"                            F4
+"                            md
 "
 " If you want to save the marks to a file. Do it like this:
 " Add
@@ -413,18 +413,21 @@ nnoremap <silent> <script> <Plug>Place_sign :call Place_sign()<cr>
 
 if !hasmapto('<Plug>Goto_next_sign') 
   map <unique> <F2> <Plug>Goto_next_sign
-  map <silent> <unique> mb <Plug>Goto_next_sign
+  "ap <silent> <unique> mb <Plug>Goto_next_sign
+  map <silent> <unique> mj <Plug>Goto_next_sign
 endif
 nnoremap <silent> <script> <Plug>Goto_next_sign :call Goto_next_sign()<cr>
 
 if !hasmapto('<Plug>Goto_prev_sign') 
   map <unique> <s-F2> <Plug>Goto_prev_sign
-  map <silent> <unique> mv <Plug>Goto_prev_sign
+  "ap <silent> <unique> mv <Plug>Goto_prev_sign
+  map <silent> <unique> mk <Plug>Goto_prev_sign
 endif
 nnoremap <silent> <script> <Plug>Goto_prev_sign :call Goto_prev_sign()<cr>
 
 if !hasmapto('<Plug>Remove_all_signs') 
-  map <unique> <F4> <Plug>Remove_all_signs
+  "ap <unique> <F4> <Plug>Remove_all_signs
+  map <silent> <unique> md <Plug>Remove_all_signs
 endif
 nnoremap <silent> <script> <Plug>Remove_all_signs :call Remove_all_signs()<cr>
 
