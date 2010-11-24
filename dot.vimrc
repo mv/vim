@@ -913,6 +913,11 @@ set nocompatible
         " let g:loaded_marks_corey = 1
     " }
 
+    " matchit.vim {
+        " Turn it off:
+	    " let loaded_matchit = 1
+    " }
+
     " SearchComplete {
         " Turn it off:
         " let loaded_search_complete = 1
