@@ -14,42 +14,49 @@ esac    # --- end of case ---
 
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.elif ==
-elif <CURSOR> ; then
+elif <CURSOR> 
+then
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.for-in ==
-for <CURSOR> in ; do
+for <CURSOR> in 
+do
 <SPLIT>done
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.for ==
-for (( CNTR=0; CNTR<<CURSOR>0; CNTR+=1 )); do
+for (( CNTR=0; CNTR<<CURSOR>0; CNTR+=1 ))
+do
 <SPLIT>done
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.if ==
-if <CURSOR> ; then
+if <CURSOR>
+then
 <SPLIT>fi
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.if-else ==
-if <CURSOR> ; then
+if <CURSOR>
+then
 <SPLIT><-IF PART->
 else
 	<+ELSE PART+>
 fi
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.select ==
-select <CURSOR> in ; do
+select <CURSOR> in
+do
 <SPLIT>done
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.until ==
-until <CURSOR> ; do
+until <CURSOR>
+do
 <SPLIT>done
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.while ==
-while <CURSOR> ; do
+while <CURSOR>
+do
 <SPLIT>done
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == statements.function ==
-|?FUNCTION_NAME| ()
-{
+|?FUNCTION_NAME| () {
 <CURSOR><SPLIT>
 }	# ----------  end of function |FUNCTION_NAME|  ----------
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

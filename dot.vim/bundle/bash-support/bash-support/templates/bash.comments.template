@@ -16,26 +16,19 @@
 #===============================================================================
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == comment.file-description == start ==
-#!/bin/bash - 
-#===============================================================================
-#
-#          FILE:  |FILENAME|
-# 
-#         USAGE:  ./|FILENAME| 
-# 
-#   DESCRIPTION:  <CURSOR>
-# 
-#       OPTIONS:  ---
-#  REQUIREMENTS:  ---
-#          BUGS:  ---
-#         NOTES:  ---
-#        AUTHOR: |AUTHOR| (|AUTHORREF|), |EMAIL|
-#       COMPANY: |COMPANY|
-#       CREATED: |DATE| |TIME|
-#      REVISION:  ---
-#===============================================================================
+#!/bin/bash -
 
-set -o nounset                              # Treat unset variables as an error
+###
+### |FILENAME|
+###     <CURSOR> (input description)
+###
+###     Usage: ./|FILENAME| -f
+###
+### |AUTHOR| (|AUTHORREF|)               |EMAIL|
+### |YEAR|/|MONTH|
+###
+
+set -o nounset                           # Treat unset variables as an error
 
 §%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == comment.keyword-bug == append ==

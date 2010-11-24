@@ -843,10 +843,10 @@ set nocompatible
 
         let g:BASH_Support_Root_Dir        = $HOME.'/.vim/bundle/bash-support'
 
-        let g:BASH_GlobalTemplateFile      = '/codework/bash/templates.sh'
-        let g:BASH_LocalTemplateFile       = '/codework/bash/templates.sh'
-        let g:BASH_CodeSnippets            = '/codework/bash/codesnippets.sh'
-        let g:BASH_Dictionary_File         = '/codework/bash/bash.dict.txt'
+        let g:BASH_GlobalTemplateFile      = '/codework/bash/templates'
+        let g:BASH_LocalTemplateFile       = '/codework/bash/templates'
+        let g:BASH_CodeSnippets            = '/codework/bash/snippets'
+       "let g:BASH_Dictionary_File         = '/codework/bash/bash.dict.txt'
        "let g:BASH_MapLeader               '\'
        "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
     " }
