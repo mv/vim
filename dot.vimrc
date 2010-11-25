@@ -600,12 +600,15 @@ set nocompatible
                               \ && line("'\"") <= line("$") |
                               \    exe "normal! g'\""       |
                               \ endif
+
+        " no extension: treat as txt file
+        autocmd BufRead,BufNewFile *  setfiletype txt
     " }
 
     " Text {
         autocmd BufNewFile,BufRead *.txt setlocal filetype=txt
-        autocmd FileType           txt   setlocal tw=78 cc=+1,+2,+3,+4,+5 ts=4 sts=4 sw=4 et
-        autocmd FileType           txt   setlocal fo=cqrnl2
+        autocmd FileType             txt setlocal tw=78 cc=+1,+2,+3,+4,+5 ts=4 sts=4 sw=4 et
+        autocmd FileType             txt setlocal fo=cqrnl2
         "                                            ||||||
         "                                            |||||+-- indent as 2nd line of paragraph
         "                                            ||||+--- long line do not break in insert mod
