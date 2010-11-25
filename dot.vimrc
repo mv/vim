@@ -958,6 +958,11 @@ set nocompatible
         " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
     " }
 
+    " textformat.vim {
+        " Turn it off:
+        " let g:loaded_textformat = 1
+    " }
+
     " unimpaired.vim {
         " Turn it off:
         " let g:loaded_unimpaired = 1
