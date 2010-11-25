@@ -971,8 +971,9 @@ set nocompatible
         " let g:loaded_unimpaired = 1
     " }
 
-    " Rainbows {
-        " nmap <leader>R :RainbowParenthesesToggle<CR>
+    " RainbowPlugin {
+        " Turn it off:
+        " let g:loaded_Rainbow = 1
     " }
 
 " }
@@ -980,7 +981,7 @@ set nocompatible
 " Test {
 " }
 
-set paste                       " terminal vim: does not detect paste from typing
+set paste  " terminal: do the right thing when executing paste
 
 " vim: set foldmarker={,} foldlevel=0 nospell:
 
