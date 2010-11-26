@@ -593,7 +593,7 @@ set nocompatible
 
     " all files {
         " Strip white space
-        " autocmd BufWritePre *  :%s/\s\+$//e
+        autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
         " Come back to last position
         autocmd BufReadPost *   if line("'\"") > 0
@@ -692,6 +692,19 @@ set nocompatible
     " tab to spaces to tab
     command! TabOn   :set noexpandtab|retab!
     command! TabOff  :set expandtab|retab!
+
+    " http://vimcasts.org/episodes/tidying-whitespace/
+    function! <SID>StripTrailingWhitespaces()
+        " Preparation: save last search, and cursor position.
+        let _s=@/
+        let l = line(".")
+        let c = col(".")
+        " Do the business:
+        %s/\s\+$//e
+        " Clean up: restore previous search history, and cursor position
+        let @/=_s
+        call cursor(l, c)
+    endfunction
 
     " define :Lorem command to dump in a paragraph of lorem ipsum
     " by Willa! http://github.com/willian/willvim/tree/master
