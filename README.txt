@@ -31,12 +31,17 @@ Bundle Via hg:
 --------------
 
         # Takeshi Nishida
-        autocomplpop    2.14.1  http://www.vim.org/scripts/script.php?script_id=1879
-        fuzzyfinder     4.2.2   http://www.vim.org/scripts/script.php?script_id=1984
-            l9          1.1     http://www.vim.org/scripts/script.php?script_id=3252
+        - autocomplpop    2.14.1
+            hg clone https://bitbucket.org/ns9tks/vim-autocomplpop
+
+        - fuzzyfinder     4.2.2
+            hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder
+
+        - l9              1.1
+            hg clone https://bitbucket.org/ns9tks/vim-l9
 
 
-Bundle via Download and/or GetLatestScripts
+Bundle via Download and/or get-script (GLVS)
 -------------------------------------------
 
         # Charles Campbell
