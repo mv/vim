@@ -38,8 +38,12 @@
 " Distributed under the GNU General Public License.
 " ---------------------------------------------------------------------
 
+if exists('g:loaded_marks_corey') || &cp || v:version < 700
+  finish
+endif
+let g:loaded_marks_corey = 1
+
 if !has("signs")
-  echoerr "Sorry, your vim does not support signs!"
   finish
 endif
 
