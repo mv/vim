@@ -1,0 +1,3 @@
+[submodule "dot.vim/bundle/vim-zencoding"]
+	path = dot.vim/bundle/vim-zencoding
+	url = git://github.com/mattn/zencoding-vim.git
