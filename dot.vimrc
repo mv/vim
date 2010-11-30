@@ -825,7 +825,7 @@ set nocompatible
         let g:acp_behaviorKeywordLength  = 2
         let g:acp_behaviorFileLength     = 0
 
-  		let g:acp_behavior = { 'repeat': 1}
+        let g:acp_behavior = { 'repeat': 1}
 
         map <leader>ae :AcpEnable <CR>
         map <leader>ad :AcpDisable <CR>
@@ -975,7 +975,7 @@ set nocompatible
 
     " matchit.vim {
         " Turn it off:
-	    " let loaded_matchit = 1
+        " let loaded_matchit = 1
     " }
 
     " NerdCommenter {
@@ -1037,7 +1037,7 @@ set nocompatible
         " Turn it off:
         " let g:loaded_rails = 1
         let g:rails_menu = 1
-	    let g:rails_history_size = 9
+        let g:rails_history_size = 9
     " }
 
     " repeat.vim {
@@ -1081,6 +1081,55 @@ set nocompatible
     " unimpaired.vim {
         " Turn it off:
         " let g:loaded_unimpaired = 1
+    " }
+
+    " Zen-Coding {
+        " Turn it off:
+        " let g:loaded_zencoding_vim = 1
+
+        let g:use_zen_complete_tag = 1
+        let g:user_zen_leader_key  = '<c-y>'
+
+        " let g:user_zen_balancetagoutward_key = 'ta'
+        " let g:user_zen_balancetaginward_key  = 'ti'
+        " let g:user_zen_prev_key              = 'p'
+        " let g:user_zen_removetag_key         = 'd'
+
+        " Default Mappings
+        " let g:user_zen_expandabbr_key         [ , ]
+        " let g:user_zen_expandword_key         [ , ]
+        " let g:user_zen_balancetagoutward_key  [ D ]
+        " let g:user_zen_balancetaginward_key   [ d ]
+        " let g:user_zen_next_key               [ n ]
+        " let g:user_zen_prev_key               [ N ]
+        " let g:user_zen_imagesize_key          [ i ]
+        " let g:user_zen_togglecomment_key      [ / ]
+        " let g:user_zen_splitjointag_key       [ j ]
+        " let g:user_zen_removetag_key          [ k ]
+        " let g:user_zen_anchorizeurl_key       [ a ]
+        " let g:user_zen_anchorizesummary_key   [ A ]
+
+        let g:user_zen_settings = {
+            \  'html' : {
+            \    'filters' : 'html, e',
+            \    'indentation' : '    '
+            \  },
+            \  'css' : {
+            \    'filters' : 'fc',
+            \    'indentation' : '  '
+            \  },
+            \  'xml' : {
+            \    'extends' : 'html',
+            \  },
+            \  'haml' : {
+            \    'extends' : 'html',
+            \  },
+            \  'php' : {
+            \    'extends' : 'html',
+            \    'filters' : 'html,c',
+            \    'indentation' : '    '
+            \  },
+            \}
     " }
 
     " RainbowPlugin {
