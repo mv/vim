@@ -1,7 +1,6 @@
 " Header and Notes {
 "
 "   vim: set foldenable foldmarker={,} foldlevel=0 nospell:
-"
 "   vi/vim: dot.vimrc
 "   mvf: ferreira.mv[ at ]gmail.com
 "   based on http://vi-improved.org/vimrc.php
@@ -109,49 +108,44 @@ set nocompatible
 " }
 
 " Mappings {
+    " Tip: D  : command key
+    "      D-S: command+shift key
+
+    let mapleader=","
 
     " http://items.sjbach.com/319/configuring-vim-right
     " scroll viewpoint by 'n' lines
     nnoremap <C-j> 5<C-e>
     nnoremap <C-k> 5<C-y>
 
-    " Avoid accidental hits of <F1> while aiming for <Esc>
-    map! <F1> <Esc>
-    " inoremap <F1> <ESC>
-    " nnoremap <F1> <ESC>
-    " vnoremap <F1> <ESC>
-
-
     " Increase/Decrease: <C-A>/<C-X>
     " Omni completion: <C-n>
     " Complete whole filenames/lines with a quicker shortcut key in insert mode
-    imap <C-f> <C-x><C-f>
-    imap <C-l> <C-x><C-l>
+    " imap <C-F> <C-X><C-F>
+    " imap <C-L> <C-X><C-L>
 
     " space / shift-space scroll in normal mode
-"   noremap <S-space> <C-b>
-"   noremap <space>   <C-f>
+    " noremap <S-space> <C-b>
+    " noremap <space>   <C-f>
 
     " Quick yanking to the end of the line
     nmap Y y$
 
     " Yank/paste to the OS clipboard with ,y and ,p
-    nmap <leader>y "+y
-    nmap <leader>Y "+yy
-    nmap <leader>p "+p
-    nmap <leader>P "+P
+    " nmap <leader>y "+y
+    " nmap <leader>Y "+yy
+    " nmap <leader>p "+p
+    " nmap <leader>P "+P
 
     " Quickly get out of insert mode without your fingers having to leave the
     " home row (either use 'jj' or 'jk')
-    inoremap jj <Esc>
-    inoremap jk <Esc>
+    " inoremap jj <Esc>
+    " inoremap jk <Esc>
 
     " Quick alignment of text
-    nmap <leader>al :left<CR>
-    nmap <leader>ar :right<CR>
-    nmap <leader>ac :center<CR>
-
-    let mapleader=","
+    " nmap <leader>al :left<CR>
+    " nmap <leader>ar :right<CR>
+    " nmap <leader>ac :center<CR>
 
     " edit files {
     nmap <leader>ev :e $MYVIMRC<CR>
@@ -198,6 +192,9 @@ set nocompatible
 "   cmap w!! w !sudo tee % >/dev/null
 
     nmap <leader>mk :marks<CR>
+
+    " \w => :w
+    nmap \ :
 
     " CTRL-K:  delete so the end of line
     map  <C-K> D
@@ -420,10 +417,37 @@ set nocompatible
 " }
 
 " Buffers {
-    set hidden                  " hide buffer instead of closing
-    "et nohidden                " close buffer
+    " Tip:
+    "     :e!       ignore changes, restore original file
+    "     :bd  [n]  buf del [number n]
+    "     :bd! [n]  buf del, discard changes
+    "     <C-^>     switch to alternate file
 
-    nmap <leader>ls :ls<CR>
+    set hidden                  " hide buffer instead of closing
+    "et nohidden                " close buffer always
+
+    " new buffer
+    " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
+    nmap <leader>b<left>   :leftabove  vnew<CR>
+    nmap <leader>b<right>  :rightbelow vnew<CR>
+    nmap <leader>b<up>     :leftabove   new<CR>
+    nmap <leader>b<down>   :rightbelow  new<CR>
+
+    " new buffer at top 'x'
+    nmap <leader>bt<left>  :topleft    vnew<CR>
+    nmap <leader>bt<right> :botright   vnew<CR>
+    nmap <leader>bt<up>    :topleft     new<CR>
+    nmap <leader>bt<down>  :botright    new<CR>
+
+    " v2
+    nmap <leader>bh   :leftabove   vnew<CR>
+    nmap <leader>bl   :rightbelow  vnew<CR>
+    nmap <leader>bk   :leftabove    new<CR>
+    nmap <leader>bj   :rightbelow   new<CR>
+    nmap <leader>bth  :topleft     vnew<CR>
+    nmap <leader>btl  :botright    vnew<CR>
+    nmap <leader>btk  :topleft      new<CR>
+    nmap <leader>btj  :botright     new<CR>
 
 " }
 
@@ -433,35 +457,74 @@ set nocompatible
     set splitright          " spr: split new window to the right
     set noequalalways       " ea: resize all windows to same size to fit a new one
 
-    nmap <leader>s  :split<CR>
-    nmap <leader>v  :vsplit<CR>
-    nmap <leader>o  :only <CR>
+    " Tip:
+    " CTRL-W =   : equal all windows sizes
+    " CTRL-W x   : swap split up/down
+    "
+    " :split #   : open alternate buf down
+    " :vsplit #  : open alternate buf right
+    "
+    " sf[ind] /work/*/dev
+    " sf[ind] /work/**/dev
 
+    nmap <leader>o   :only <CR>
     nmap <leader>sb  :set scrollbind<CR>
     nmap <leader>nsb :set noscrollbind<CR>
 
-    map <C-j> <C-W>j
-    map <C-k> <C-W>k
-    map <C-h> <C-W>h
-    map <C-l> <C-W>l
-
+    " Look MA! No arrow keys in Vim!!!
     map <down>  <C-W>j
     map <up>    <C-W>k
     map <left>  <C-W>h
     map <right> <C-W>l
 
+    " Shortcut: move cursor
+    map <C-J> <C-W>j
+    map <C-K> <C-W>k
+    map <C-H> <C-W>h
+    map <C-L> <C-W>l
+
+    " Shortcut: move split window to top L/R/U/D
+    nmap <leader>spJ <C-W>J
+    nmap <leader>spK <C-W>K
+    nmap <leader>spH <C-W>H
+    nmap <leader>spL <C-W>L
+
+    " split: set equal size
+    nmap <leader>sp= <C-W>=
+
+    " new split
+    " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
+    nmap <leader>sp<left>   :leftabove  vsplit<CR>
+    nmap <leader>sp<right>  :rightbelow vsplit<CR>
+    nmap <leader>sp<up>     :leftabove  split<CR>
+    nmap <leader>sp<down>   :rightbelow split<CR>
+
+    " new split, v2
+    nmap <leader>sph        :leftabove  vsplit<CR>
+    nmap <leader>spl        :rightbelow vsplit<CR>
+    nmap <leader>spk        :leftabove  split<CR>
+    nmap <leader>spj        :rightbelow split<CR>
+
     " }
 
 " Windows Tabs {
-    " tab: D  : command key
-    "      D-S: command+shift key
-    "map <D-S-]> gt
-    "map <D-S-[> gT
+    " Tip: :tabs
+    "      :tabfirst
+    "      :tablast
+    "      :tabonly
+    "      :tabf[ind]
 
-    map <leader>tb :tabs<CR>
-    map <leader>tf :tabfirst<CR>
-    map <leader>tl :tablast<CR>
-    map <leader>to :tabonly<CR>
+    " next/previous tab
+    " <C-PageDown>/<C-PageUP>
+    map <C-[> gT
+    " map <C-]> gt
+
+    " split buf to new tab
+    map <leader>ts :tab split<CR>
+    " move buf to new tab
+    map <leader>tm <C-W>T
+    " open file under cursor to new tab: /etc/hosts
+    map <leader>tf <C-W>gf
 
 " }
 
@@ -593,7 +656,7 @@ set nocompatible
 
     " all files {
         " Strip white space
-        autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+        autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
         " Come back to last position
         autocmd BufReadPost *   if line("'\"") > 0
@@ -694,17 +757,20 @@ set nocompatible
     command! TabOff  :set expandtab|retab!
 
     " http://vimcasts.org/episodes/tidying-whitespace/
-    function! <SID>StripTrailingWhitespaces()
+    function! Preserve(command)
         " Preparation: save last search, and cursor position.
         let _s=@/
         let l = line(".")
         let c = col(".")
         " Do the business:
-        %s/\s\+$//e
+        execute a:command
         " Clean up: restore previous search history, and cursor position
         let @/=_s
         call cursor(l, c)
     endfunction
+
+    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+    nmap _= :call Preserve("normal gg=G")<CR>
 
     " define :Lorem command to dump in a paragraph of lorem ipsum
     " by Willa! http://github.com/willian/willvim/tree/master
@@ -1025,6 +1091,7 @@ set nocompatible
 " }
 
 " Test {
+    map <Esc> <Esc>
 " }
 
 set paste  " terminal: do the right thing when executing paste
