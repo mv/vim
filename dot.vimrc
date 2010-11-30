@@ -813,6 +813,11 @@ set nocompatible
 
 " Plugins {
 
+    " align, alignmaps {
+        let g:DrChipTopLvlMenu     = "Plugin."
+        let g:alignmaps_euronumber = 1
+    " }
+
     " acp/autocomplpop {
         let g:acp_enableAtStartup        = 1
         let g:acp_mappingDriven          = 0
@@ -828,6 +833,25 @@ set nocompatible
         " map <leader>au :AcpUnlock <CR>
     " }
 
+    " autoclose.vim {
+        " Turn it off:
+        " let g:autoclose_loaded = 1
+    " }
+
+    " Bash-support {
+        let g:BASH_Root = 'B&ash.'         " original
+        let g:BASH_Root = '&Plugin.B&ash.' " mine.
+
+        let g:BASH_Support_Root_Dir        = $HOME.'/.vim/bundle/bash-support'
+
+        let g:BASH_GlobalTemplateFile      = '/codework/bash/templates'
+        let g:BASH_LocalTemplateFile       = '/codework/bash/templates'
+        let g:BASH_CodeSnippets            = '/codework/bash/snippets'
+       "let g:BASH_Dictionary_File         = '/codework/bash/bash.dict.txt'
+       "let g:BASH_MapLeader               '\'
+       "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
+    " }
+
     " bufexplorer {
         " ,be / ,bv / ,bs
         let g:bufExplorerReverseSort     = 0
@@ -841,11 +865,22 @@ set nocompatible
         let g:bufExplorerSplitRight      = 1    " Split right.
     " }
 
-    " openssl (password safe) {
-        " ms: 15000 - 15s
-        "     30000 - 20s
-        "    300000 -  5m
-        "let g:openssl_timeout = 301000
+    " capslock.vim {
+        " Turn it off:
+        " let g:loaded_capslock = 1
+    " }
+
+    " dbext {
+    " }
+
+    " endwise.vim {
+        " Turn it off:
+        " let g:loaded_endwise = 1
+    " }
+
+    " fugitive.vim {
+        " Turn it off:
+        " let g:loaded_fugitive = 1
     " }
 
     " FuzzyFinder {
@@ -920,9 +955,27 @@ set nocompatible
 
     " }
 
+    " increment.vim {
+    " }
+
     " LargeFile {
         " in megabytes - :Large/:Unlarge
         let g:LargeFile= 200
+    " }
+
+    " mark.vim {
+        " Turn it off:
+        " let g:loaded_mark = 1
+    " }
+
+    " marks_corey.vim {
+        " Turn it off:
+        " let g:loaded_marks_corey = 1
+    " }
+
+    " matchit.vim {
+        " Turn it off:
+	    " let loaded_matchit = 1
     " }
 
     " NerdCommenter {
@@ -952,18 +1005,11 @@ set nocompatible
         map <leader>dd :NERDTreeMirror <CR> " Dir tree
     " }
 
-    " Bash-support {
-        let g:BASH_Root = 'B&ash.'         " original
-        let g:BASH_Root = '&Plugin.B&ash.' " mine.
-
-        let g:BASH_Support_Root_Dir        = $HOME.'/.vim/bundle/bash-support'
-
-        let g:BASH_GlobalTemplateFile      = '/codework/bash/templates'
-        let g:BASH_LocalTemplateFile       = '/codework/bash/templates'
-        let g:BASH_CodeSnippets            = '/codework/bash/snippets'
-       "let g:BASH_Dictionary_File         = '/codework/bash/bash.dict.txt'
-       "let g:BASH_MapLeader               '\'
-       "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
+    " openssl (password safe) {
+        " ms: 15000 - 15s
+        "     30000 - 20s
+        "    300000 -  5m
+        "let g:openssl_timeout = 301000
     " }
 
     " Perl-support {
@@ -987,57 +1033,6 @@ set nocompatible
 
     " }
 
-    " Align {
-        let g:DrChipTopLvlMenu     = "Plugin."
-        let g:alignmaps_euronumber = 1
-    " }
-
-    " autoclose.vim {
-        " Turn it off:
-        " let g:autoclose_loaded = 1
-    " }
-
-    " dbext {
-    " }
-
-    " capslock.vim {
-        " Turn it off:
-        " let g:loaded_capslock = 1
-    " }
-
-    " endwise.vim {
-        " Turn it off:
-        " let g:loaded_endwise = 1
-    " }
-
-    " fugitive.vim {
-        " Turn it off:
-        " let g:loaded_fugitive = 1
-    " }
-
-    " increment.vim {
-    " }
-
-    " mark.vim {
-        " Turn it off:
-        " let g:loaded_mark = 1
-    " }
-
-    " marks_corey.vim {
-        " Turn it off:
-        " let g:loaded_marks_corey = 1
-    " }
-
-    " matchit.vim {
-        " Turn it off:
-	    " let loaded_matchit = 1
-    " }
-
-    " SearchComplete {
-        " Turn it off:
-        " let loaded_search_complete = 1
-    " }
-
     " rails.vim {
         " Turn it off:
         " let g:loaded_rails = 1
@@ -1048,6 +1043,11 @@ set nocompatible
     " repeat.vim {
         " Turn it off:
         " let g:loaded_repeat = 1
+    " }
+
+    " searchcomplete {
+        " Turn it off:
+        " let loaded_search_complete = 1
     " }
 
     " speeddating.vim {
