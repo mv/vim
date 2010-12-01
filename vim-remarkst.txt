@@ -1,5 +1,3 @@
-set statusline=<%f%h%m%r=%b\ 0x%B\ \ %l,%c%V\ %P
-set statusline=%f\ %F\ %c\ %l,%L
 
 Files
 -----
@@ -31,10 +29,10 @@ Shell
 Moving
 ------
 by word
-	w forward by word, punctuation include 
-	W forward by word, no punctuation 
-	b backward by word, punctuation include  
-	B backward by word, no punctuation 
+	w forward by word, punctuation include
+	W forward by word, no punctuation
+	b backward by word, punctuation include
+	B backward by word, no punctuation
 	e end of next word
 	E end of next word, no punctuation
 
@@ -83,7 +81,7 @@ Screen Moves
 Mark Moves
 ------------
 	mx	- mark current line in bookmark x
-	'x	- moves back to bookmark x 
+	'x	- moves back to bookmark x
 	`x	- moves back to line of bookmark x
 	''	- previous position
 	``	- previous pos
@@ -137,7 +135,7 @@ Simple Edits
 	a
 	I	- insert at the beginning of line
 	A	- append to the end of line
-	p 
+	p
 	P
 
 	y<>	- yank <obj>
@@ -149,7 +147,7 @@ Simple Edits
 
 	.	- repeat last edit command
 
-	J	- join lines	
+	J	- join lines
 
 More Edits
 ----------
@@ -224,7 +222,7 @@ ex commands
 	:6,80g/patt - search for patt between lines 6 and 80
 
 	:10,20w /tmp/1.txt - save line 10 to 20 into newfile
-	:10,$w newfile	   - save from line 10 to the end into newfile	
+	:10,$w newfile	   - save from line 10 to the end into newfile
 	:10,$w >> newfile  - append to newfile
 
 	:r /tmp/1.txt	- insert 1.txt into current line
@@ -252,7 +250,7 @@ Replacement
 
 Code Programming
 ----------------
-	set shiftwidth=4 - 
+	set shiftwidth=4 -
 	<<		- shift line left
 	>>		- shift line right
 	7>>		- shift block right
@@ -260,7 +258,7 @@ Code Programming
 	ctrl+d		- indent left
 	^ ctrl+d	- cursor to position 0, resume indent on next line
 	0 ctrl+d	- cursor to position 0, resets indentation
-	
+
 	%		- highlight matching () [] {}
 	ctrl]		- search tag for current word
 
@@ -342,7 +340,7 @@ http://www.linux.com/articles/114138
 http://www.vim.org/scripts/script.php?script_id=311
 http://www.oualline.com/vim-cook.html#copy_block
 http://thomer.com/vi/vi.html
-http://web.bilkent.edu.tr/Online/uworld/archives/95/      
+http://web.bilkent.edu.tr/Online/uworld/archives/95/
 http://www.networkcomputing.com/unixworld/tutorial/009/009.html
 
 " http://vim.wikia.com/wiki/Using_marks
