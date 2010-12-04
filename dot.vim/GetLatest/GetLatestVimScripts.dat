@@ -15,6 +15,9 @@ ScriptID  SourceID  Filename
 ## Peter Bagyinszki
 356 13339 dbext
 
+## David Fishburn
+492 13576 sqlutil
+
 ### Fritz Mehner
 365 14185 bash-support
 556 13075 perl-support
