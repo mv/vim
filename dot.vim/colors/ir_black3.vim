@@ -97,8 +97,8 @@ let colors_name = "ir_black3"
  hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=BOLD      ctermfg=black       ctermbg=cyan        cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
-  hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-  hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+" hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+" hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
 
   hi CursorLine     guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi CursorColumn   guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD

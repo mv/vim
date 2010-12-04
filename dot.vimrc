@@ -128,10 +128,26 @@ set nocompatible
     " noremap <S-space> <C-b>
     " noremap <space>   <C-f>
 
+    " \w => :w
+    nmap \ :
+
     " Quick yanking to the end of the line
     nmap Y y$
 
-    " Yank/paste to the OS clipboard with ,y and ,p
+    " K = inverted J: join line up
+    map K ddpkJ
+
+    " row up/down if wrap active
+    " http://nvie.com/posts/how-i-boosted-my-vim/
+    nnoremap j gj
+    nnoremap k gk
+
+    " CTRL-K:  delete so the end of line
+    map  <C-K> D
+    " DOES NOT WORK
+    " imap <C-K> <ESC>D
+
+     " Yank/paste to the OS clipboard with ,y and ,p
     " nmap <leader>y "+y
     " nmap <leader>Y "+yy
     " nmap <leader>p "+p
@@ -142,20 +158,12 @@ set nocompatible
     " inoremap jj <Esc>
     " inoremap jk <Esc>
 
-    " Quick alignment of text
-    " nmap <leader>al :left<CR>
-    " nmap <leader>ar :right<CR>
-    " nmap <leader>ac :center<CR>
-
-    " edit files {
+    " edit files
     nmap <leader>ev :e $MYVIMRC<CR>
     nmap <leader>eg :e $MYGVIMRC<CR>
 
-    nmap <leader>sv :source $MYVIMRC<CR>
-    nmap <leader>sg :source $MYGVIMRC<CR>
-    " }
-
-    " fold {
+    " fold
+    " Tip: fold toggle: za
     nmap <leader>fc :foldclose<CR>
     nmap <leader>fo :foldopen<CR>
 
@@ -163,8 +171,12 @@ set nocompatible
     nmap <leader>f1 :set foldlevel=1<CR>
     nmap <leader>f2 :set foldlevel=2<CR>
     nmap <leader>f3 :set foldlevel=3<CR>
+    nmap <leader>f4 :set foldlevel=3<CR>
+    nmap <leader>f5 :set foldlevel=3<CR>
+    nmap <leader>f6 :set foldlevel=3<CR>
+    nmap <leader>f7 :set foldlevel=3<CR>
+    nmap <leader>f8 :set foldlevel=3<CR>
     nmap <leader>f9 :set foldlevel=9<CR>
-    " }
 
     " Identation {
 
@@ -180,7 +192,7 @@ set nocompatible
 
     " }
 
-    " Shortcuts {
+    " Shortcuts
     nmap <leader>q  :q <CR>
     nmap <leader>q1 :q!<CR>
     nmap <leader>w  :w <CR>
@@ -191,15 +203,16 @@ set nocompatible
 
 "   cmap w!! w !sudo tee % >/dev/null
 
-    nmap <leader>mk :marks<CR>
-
-    " \w => :w
-    nmap \ :
-
-    " CTRL-K:  delete so the end of line
-    map  <C-K> D
-    " DOES NOT WORK
-    " imap <C-K> <ESC>D
+    " linenumber on/off
+    nmap <leader>nu  :set invnumber<CR>
+    " relativenumber on/off
+    nmap <leader>rnu :set invrnu   <CR>
+    " set cursorcolumn/nocursorcolumn
+    nmap <leader>cuc :set invcuc   <CR>
+    " Highlight search on/off
+    nmap <leader>h :set invhls<CR>
+    " list invisibles on/off
+    nmap <leader>l :set invlist  <CR>
 
     " CTRL-S for saving, also in Insert mode
     "noremap  <C-S>        :update<CR>
@@ -214,27 +227,6 @@ set nocompatible
     "snoremap <C-A> <C-C>gggH<C-O>G
     "xnoremap <C-A> <C-C>ggVG
 
-    " linenumber on/off
-    nmap <leader>nu  :set invnumber<CR>
-    " relativenumber on/off
-    nmap <leader>rnu :set invrnu   <CR>
-    " set cursorcolumn/nocursorcolumn
-    nmap <leader>cuc :set invcuc   <CR>
-    " Highlight search on/off
-    nmap <leader>h :set invhls<CR>
-    " list invisibles on/off
-    nmap <leader>l :set invlist  <CR>
-     " }
-
-    " Misc {
-    " K = inverted J: join line up
-    map K ddpkJ
-
-    " row up/down if wrap active
-    " http://nvie.com/posts/how-i-boosted-my-vim/
-    nnoremap j gj
-    nnoremap k gk
-
     " Underline header
     map <leader>= yypVr=
     map <leader>- yypVr-
@@ -244,10 +236,10 @@ set nocompatible
     " Perl Regex
     nnoremap / /\v
     vnoremap / /\v
+
     " <TAB> for matching brackets
     nnoremap <tab> %
     vnoremap <tab> %
-
 
     " Creating underline/overline headings for markup languages
     " Inspired by http://sphinx.pocoo.org/rest.html#sections
@@ -258,30 +250,20 @@ set nocompatible
     "nnoremap <leader>5 yypVr^
     "nnoremap <leader>6 yypVr"
 
-
    " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
     nmap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
 
-     " Remove trailing spaces
-    nmap <leader>remove :%s/\s*$//g   <CR>
+    " Command mode: path of the currently edited file
+    " cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
+    " Command line map
+    cmap %/ <C-R>
 
     " dos2,nix
     nmap <leader>unix   :%s/\r$//     <CR>
 
    " rot all text
     nmap <leader>rot ggg?G
-
-    " Command line map
-    cmap %/ <C-R>
-
-    " Command mode: path of the currently edited file
-    cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-   " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-    nmap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
-
-    " }
-
 
 " }
 
@@ -321,7 +303,7 @@ set nocompatible
     "et relativenumber      " relative number
 
     set cursorline          " horizontal highlight
-    set cursorcolumn        " vertical highlight
+    set nocursorcolumn      " vertical highlight
 
     set virtualedit=block   " allow moving past end of line in block selection mode
 
@@ -374,7 +356,7 @@ set nocompatible
         colorscheme ir_black3
         endif
 
-        set cursorcolumn
+        set nocursorcolumn
         set mouse=a
         set mousehide
 
@@ -1153,11 +1135,17 @@ set nocompatible
 
 " }
 
-" Test {
+" Corrections {
     map <Esc> <Esc>
+
+    if version >= 703 " Vim 7.x specific colors
+        hi CursorColumn   guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+        hi ColorColumn    guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+    endif
+
+    set paste  " terminal: do the right thing when executing paste
 " }
 
-set paste  " terminal: do the right thing when executing paste
 
 " vim: set foldmarker={,} foldlevel=0 nospell:
 
