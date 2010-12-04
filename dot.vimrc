@@ -871,6 +871,8 @@ set nocompatible
         let g:fuf_mrufile_maxItem = 400
         let g:fuf_mrucmd_maxItem = 400
 
+        let g:fuf_fuzzyRefining = 1
+
         map  <leader>fb   :FufBuffer          <CR>
         map  <leader>ff   :FufFile            <CR>
         map  <leader>fd   :FufDir             <CR>
