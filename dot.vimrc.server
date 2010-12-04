@@ -1,0 +1,309 @@
+
+" General {
+    syntax on
+    filetype plugin indent on
+
+    " vi compatible options {
+    set cpoptions=aABcefFmqs
+    "             |||||||||+-- Set buffer options when entering the buffer
+    "             ||||||||+-- When joining lines, leave the cursor between joined lines
+    "             |||||||+-- When a new match is created (showmatch) pause for .5
+    "             ||||||+-- :write command updates current file name
+    "             |||||+-- :read command updates current file name
+    "             ||||+-- Automatically add <CR> to the last line when using :@r
+    "             |||+-- Searching continues at the end of the match at the cursor position
+    "             ||+-- A backslash has no special meaning in mappings
+    "             |+-- :write updates alternative file name
+    "             +-- :read updates alternative file name
+    set cpoptions+=#
+    "              |
+    "              +-- A count before "D", "o" and "O" has no effect.
+    set cpoptions-=n
+    "              +-- column for 'number' does not show wrapped text
+    " }
+
+
+    set history=300                 " history size
+    set modeline                    " modeline on
+    set linebreak                   " when wrapping, uses chars listed in breakt
+    set breakat=\ ^I!@*-+;:,./?     " when wrapping, break at these characters
+    set showbreak=…                 " what to show at the start of a wrapped line
+
+    set iskeyword+=48-57,192-255
+    set iskeyword+=_,$,@,%,#        " none of these are word dividers
+
+    set showcmd                 " show command line
+    set wildmenu                " turn on command line completion wild style
+    set wildmode=list:longest   " turn on wild mode huge list
+    set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png,*~,*.lo
+                                " ignore these list file extensions
+
+    set hidden                  " hide buffer instead of closing
+
+    set laststatus=2        " always show statusline
+
+    set number              " linenumber
+    set numberwidth=5       " linenumber width
+
+    set cursorline          " horizontal highlight
+    set nocursorcolumn      " vertical highlight
+
+    set virtualedit=block   " allow moving past end of line in block selection mode
+
+    set nostartofline       " keep cursor in same column where moving up/down
+    set scrolloff=3         " keep 3 lines scrolling up/down
+    set sidescrolloff=10    " keep 10 lines scrolling left/right
+
+    set report=0            " report all changes via ':' commands
+
+    set winaltkeys=no       " wak: no ALT keys for menus
+
+    set incsearch           " Highlight dynamically as they are typed.
+    set nohlsearch          " Highlight search terms: off on start
+
+    set errorbells          " Bells error messagens
+    set visualbell          " no sound bells
+
+    set nolist              " [no]list invisible chars
+    set listchars=tab:▸\ ,trail:·,eol:¬,extends:>,precedes:<
+    "             |       |       |     |         +-- line befor left margin: <
+    "             |       |       |     +-- line beyond right margin: >
+    "             |       |       +-- EOF: _
+    "             |       +-- trailing spaces: ....
+    "             +-- each tab: >----
+
+" }
+
+" Mappings {
+
+    " \w => :w
+    nmap \ :
+
+    " Quick yanking to the end of the line
+    nmap Y y$
+
+    " CTRL-K:  delete so the end of line
+    map  <C-K> D
+
+    " K = inverted J: join line up
+    map K ddpkJ
+
+    " row up/down if wrap active
+    " http://nvie.com/posts/how-i-boosted-my-vim/
+    nnoremap j gj
+    nnoremap k gk
+
+    " linenumber on/off
+    nmap <leader>nu  :set invnumber<CR>
+
+    " relativenumber on/off
+    nmap <leader>rnu :set invrnu   <CR>
+
+    " set cursorcolumn/nocursorcolumn
+    nmap <leader>cuc :set invcuc   <CR>
+
+    " Highlight search on/off
+    nmap <leader>h :set invhls<CR>
+
+    " list invisibles on/off
+    nmap <leader>l :set invlist  <CR>
+
+    " fold {
+    nmap <leader>fc :foldclose<CR>
+    nmap <leader>fo :foldopen<CR>
+
+    nmap <leader>f0 :set foldlevel=0<CR>
+    nmap <leader>f1 :set foldlevel=1<CR>
+    nmap <leader>f2 :set foldlevel=2<CR>
+    nmap <leader>f3 :set foldlevel=3<CR>
+    nmap <leader>f4 :set foldlevel=4<CR>
+    nmap <leader>f5 :set foldlevel=5<CR>
+    nmap <leader>f6 :set foldlevel=6<CR>
+    nmap <leader>f7 :set foldlevel=7<CR>
+    nmap <leader>f8 :set foldlevel=8<CR>
+    nmap <leader>f9 :set foldlevel=9<CR>
+    " }
+
+    " Identation {
+
+    """ Normal mode:
+    nmap <D-[> <<
+    nmap <D-]> >>
+
+    """ Visual mode - gv: keeps selection
+    vnoremap > ><CR>gv
+    vnoremap < <<CR>gv
+    vmap <D-[> <gv
+    vmap <D-]> >gv
+
+    " }
+
+" }
+
+" GUI Settings {
+
+    set bg=dark
+
+    map <leader>c0 :echo g:colors_name   <CR>
+    map <leader>c1 :colorscheme desert   <CR>
+    map <leader>c2 :colorscheme torte    <CR>
+    map <leader>c3 :colorscheme default  <CR>
+    map <leader>c4 :colorscheme delek    <CR>
+    map <leader>c5 :colorscheme elflord  <CR>
+    map <leader>c6 :colorscheme koehler  <CR>
+    map <leader>c7 :colorscheme darkblue <CR>
+    map <leader>c8 :colorscheme peachpuff<CR>
+    map <leader>c9 :colorscheme ron      <CR>
+
+    " Terminal vim theme
+    colorscheme desert
+
+" }
+
+" Windows {
+
+    set splitbelow          " sb: split new window below current window
+    set splitright          " spr: split new window to the right
+    set noequalalways       " ea: resize all windows to same size to fit a new one
+
+    " Shortcut: move cursor
+    map <C-J> <C-W>j
+    map <C-K> <C-W>k
+    map <C-H> <C-W>h
+    map <C-L> <C-W>l
+
+    " }
+
+" Coding Rules {
+
+    set completeopt=menu,preview,longest
+                            " <C-N>/acp: completion popup menu options
+
+    set gdefault            " global search/replace by default
+
+    set showmatch           " show matching brackets
+    set matchtime=5         " ms blinking showmatch
+
+    set ignorecase          " case insensitive
+    set infercase           " if there are caps adjust auto-completion
+    set smartcase           " if there are caps go insensitive
+
+    " set ts=4 sts=4 sw=4 et   sta   nolist - spaces
+    " set ts=8 sts=0 sw=8 noet nosta list   - tabs
+    set tabstop=4           " real tabs will show 8 spaces
+    set softtabstop=4       " how many spaces in a tabstop
+    set shiftwidth=4        " sw: indent size
+    set expandtab           " no tabs - space in place of tabstops
+    set smarttab            " sta: space in place of tabs in a new line
+
+    set autoindent          " ai: pre-req for si
+    set copyindent          " ci: copy same character used in previous indent line
+    set smartindent         " si: on
+    set shiftround          " round indent to shiftwidth
+
+    set backspace=indent,eol,start  " make backspace a more flexible
+
+    " wrap
+    set textwidth=78        " tw
+    set nowrap sidescroll=1         " [no] wrap long lines
+
+" }
+
+" Folding {
+    set foldenable              " Turn on folding
+    set foldmarker={,}          " Fold C style code (only use this as default
+                                " if you use a high foldlevel)
+    set foldmethod=marker       " Fold on the marker
+    set foldlevel=100           " Don't autofold anything (but I can still fold manually)
+    set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
+
+    function! SimpleFoldText() " {
+        return getline(v:foldstart).' '
+    endfunction " }
+
+    set foldtext=SimpleFoldText() " Custom fold text function (cleaner than default)
+
+" }
+
+" FileTypes {
+
+    " all files {
+        " Strip white space
+        autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
+
+        " Come back to last position
+        autocmd BufReadPost *   if line("'\"") > 0
+                              \ && line("'\"") <= line("$") |
+                              \    exe "normal! g'\""       |
+                              \ endif
+
+        " no extension: treat as txt file
+        autocmd BufRead,BufNewFile *  setfiletype txt
+    " }
+
+    " Text {
+        autocmd BufNewFile,BufRead *.txt setlocal filetype=txt
+        autocmd FileType             txt setlocal tw=78 ts=4 sts=4 sw=4 et
+    " }
+
+    " Ruby {
+        autocmd BufNewFile,BufRead *.rb  setlocal filetype=ruby
+        autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
+    " }
+
+    " Makefile {
+        autocmd BufRead     [Mm]akefile*    setlocal filetype=make
+        autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
+    " }
+
+    " Programming settings {
+    " http://www.mattrope.com/computers/conf/vimrc.html
+    " augroup prog
+    "     au!
+    "     au BufRead *.c,*.cc,*.cpp,*.h,*.java set formatoptions=croql cindent nowrap nofoldenable
+    "     au BufEnter *.java                      map <C-Return> :w\|:!javac %<CR>
+    "     au BufEnter *.c                         map <C-Return> :w\|:!gcc %<CR>
+    "     au BufEnter *.cc,*.cpp                  map <C-Return> :w\|:!g++ %<CR>
+    "     au BufLeave *.java,*.c,*.cc             unmap <C-Return>
+    " augroup END
+    " }
+
+" }
+
+" Snippets {
+
+    " tab to spaces to tab
+    command! TabOn   :set noexpandtab|retab!
+    command! TabOff  :set expandtab|retab!
+
+    " http://vimcasts.org/episodes/tidying-whitespace/
+    function! Preserve(command)
+        " Preparation: save last search, and cursor position.
+        let _s=@/
+        let l = line(".")
+        let c = col(".")
+        " Do the business:
+        execute a:command
+        " Clean up: restore previous search history, and cursor position
+        let @/=_s
+        call cursor(l, c)
+    endfunction
+
+    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+    nmap _= :call Preserve("normal gg=G")<CR>
+
+" }
+
+set paste  " terminal: do the right thing when executing paste
+
+
+" vim: set foldmarker={,} nospell:
+
+  vim:ts=8 sw=8 noexpandtab tw=78 ft=help:
+# vim:ts=8 sw=8 noexpandtab tw=78 ft=make:
+
+# vim:ts=4 sw=4 noexpandtab tw=78 ft=code:  ??
+--vim:ts=4 sw=4 noexpandtab tw=78 ft=sql:  ??
+# vim:ts=2 sw=2 noexpandtab tw=78 ft=ruby:  ??
+
+
