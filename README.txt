@@ -8,26 +8,37 @@ Bundle via git:
         NERDTree        4.1.0   http://www.vim.org/scripts/script.php?script_id=1658
 
         # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
-        speeddating 20081016    http://www.vim.org/scripts/script.php?script_id=2120
-        surround        1.34    http://www.vim.org/scripts/script.php?script_id=1697
-            repeat      1.0     http://www.vim.org/scripts/script.php?script_id=2136
-        endwise         1.0     http://www.vim.org/scripts/script.php?script_id=2386
-        fugitive        1.1     http://www.vim.org/scripts/script.php?script_id=2975
-        rails           4.3     http://www.vim.org/scripts/script.php?script_id=1567
-        unimpaired      1.1     http://www.vim.org/scripts/script.php?script_id=1590
-        ragtag          2.0     http://www.vim.org/scripts/script.php?script_id=1896
+        speeddating
+            git submodule add git://github.com/tpope/vim-speeddating.git   dot.vim/bundle/vim-speeddating
+        surround
+            git submodule add git://github.com/tpope/vim-surround.git      dot.vim/bundle/vim-surround
+        repeat
+            git submodule add git://github.com/tpope/vim-repeat.git        dot.vim/bundle/vim-repeat
+        endwise
+            git submodule add git://github.com/tpope/vim-endwise.git       dot.vim/bundle/vim-endwise
+        fugitive
+            git submodule add git://github.com/tpope/vim-fugitive.git      dot.vim/bundle/vim-fugitive
+        rails
+            git submodule add git://github.com/tpope/vim-rails.git         dot.vim/bundle/vim-rails
+        unimpaired
+            git submodule add git://github.com/tpope/vim-unimpaired.git    dot.vim/bundle/vim-unimpaired
+        ragtag
+            git submodule add git://github.com/tpope/vim-ragtag.git        dot.vim/bundle/vim-ragtag
 
-        # Takeshi Nishida
-        fuzzyfinder     3.5     http://www.vim.org/scripts/script.php?script_id=1984
 
-        # Yasuhiro Matsumoto
+       # Yasuhiro Matsumoto
         Zen-Coding
             git submodule add git://github.com/mattn/zencoding-vim.git dot.vim/bundle/vim-zencoding
 
         # Puppetlabs
             git submodule add git://github.com/puppetlabs/puppet.git dot.vim/bundle/puppet-syntax
 
-Bundle Via hg:
+        # Wincent Colaiuta
+        Command-t
+            git submodule add git://git.wincent.com/command-t.git dot.vim/bundle/command-t
+            git checkout 1.0
+
+ Bundle Via hg:
 --------------
 
         # Takeshi Nishida

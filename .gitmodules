@@ -1,3 +1,30 @@
 [submodule "dot.vim/bundle/vim-zencoding"]
 	path = dot.vim/bundle/vim-zencoding
 	url = git://github.com/mattn/zencoding-vim.git
+[submodule "dot.vim/bundle/vim-speeddating.git"]
+	path = dot.vim/bundle/vim-speeddating.git
+	url = git://github.com/tpope/vim-speeddating.git
+[submodule "dot.vim/bundle/vim-speeddating"]
+	path = dot.vim/bundle/vim-speeddating
+	url = git://github.com/tpope/vim-speeddating.git
+[submodule "dot.vim/bundle/vim-surround"]
+	path = dot.vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "dot.vim/bundle/vim-repeat"]
+	path = dot.vim/bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "dot.vim/bundle/vim-endwise"]
+	path = dot.vim/bundle/vim-endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "dot.vim/bundle/vim-fugitive"]
+	path = dot.vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "dot.vim/bundle/vim-rails"]
+	path = dot.vim/bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "dot.vim/bundle/vim-unimpaired"]
+	path = dot.vim/bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "dot.vim/bundle/vim-ragtag"]
+	path = dot.vim/bundle/vim-ragtag
+	url = git://github.com/tpope/vim-ragtag.git
