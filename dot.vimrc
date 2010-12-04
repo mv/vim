@@ -1033,6 +1033,20 @@ set nocompatible
 
     " }
 
+    " project.vim {
+        " Turn it off:
+        " let loaded_project = 1
+
+        let g:proj_window_width = 40
+        let g:proj_window_increment = 20
+
+        " Default: 'imst'
+        let g:proj_flags = 'imstn'
+
+        nmap <silent> <Leader>p :Project<CR>
+
+    " }
+
     " rails.vim {
         " Turn it off:
         " let g:loaded_rails = 1
