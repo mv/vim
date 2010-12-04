@@ -136,6 +136,9 @@ Local:
 Must See ?
 ----------
 
+        vorax
+           svn checkout http://vorax.googlecode.com/svn/trunk/ vorax
+
         cpan            2.0     http://www.vim.org/scripts/script.php?script_id=2786
         vicle           1.1     http://www.vim.org/scripts/script.php?script_id=2551
 
