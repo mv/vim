@@ -4,24 +4,34 @@ Bundle via git:
 ---------------
 
         # Marty Grenfell
-        NERD_commenter  2.2.2   http://www.vim.org/scripts/script.php?script_id=1218
-        NERDTree        4.1.0   http://www.vim.org/scripts/script.php?script_id=1658
+        NERD_commenter
+            git submodule add git://github.com/scrooloose/nerdcommenter.git   dot.vim/bundle/nerdcommenter
+
+        NERDTree
+            git submodule add git://github.com/scrooloose/nerdtree.git        dot.vim/bundle/nerdtree
 
         # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
         speeddating
             git submodule add git://github.com/tpope/vim-speeddating.git   dot.vim/bundle/vim-speeddating
+
         surround
             git submodule add git://github.com/tpope/vim-surround.git      dot.vim/bundle/vim-surround
+
         repeat
             git submodule add git://github.com/tpope/vim-repeat.git        dot.vim/bundle/vim-repeat
+
         endwise
             git submodule add git://github.com/tpope/vim-endwise.git       dot.vim/bundle/vim-endwise
+
         fugitive
             git submodule add git://github.com/tpope/vim-fugitive.git      dot.vim/bundle/vim-fugitive
+
         rails
             git submodule add git://github.com/tpope/vim-rails.git         dot.vim/bundle/vim-rails
+
         unimpaired
             git submodule add git://github.com/tpope/vim-unimpaired.git    dot.vim/bundle/vim-unimpaired
+
         ragtag
             git submodule add git://github.com/tpope/vim-ragtag.git        dot.vim/bundle/vim-ragtag
 

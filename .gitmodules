@@ -1,9 +1,6 @@
 [submodule "dot.vim/bundle/vim-zencoding"]
 	path = dot.vim/bundle/vim-zencoding
 	url = git://github.com/mattn/zencoding-vim.git
-[submodule "dot.vim/bundle/vim-speeddating.git"]
-	path = dot.vim/bundle/vim-speeddating.git
-	url = git://github.com/tpope/vim-speeddating.git
 [submodule "dot.vim/bundle/vim-speeddating"]
 	path = dot.vim/bundle/vim-speeddating
 	url = git://github.com/tpope/vim-speeddating.git
@@ -28,3 +25,9 @@
 [submodule "dot.vim/bundle/vim-ragtag"]
 	path = dot.vim/bundle/vim-ragtag
 	url = git://github.com/tpope/vim-ragtag.git
+[submodule "dot.vim/bundle/nerdtree"]
+	path = dot.vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "dot.vim/bundle/nerdcommenter"]
+	path = dot.vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
