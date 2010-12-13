@@ -496,11 +496,6 @@ set nocompatible
     "      :tabonly
     "      :tabf[ind]
 
-    " next/previous tab
-    " <C-PageDown>/<C-PageUP>
-    map <C-[> gT
-    " map <C-]> gt
-
     " split buf to new tab
     map <leader>ts :tab split<CR>
     " move buf to new tab
@@ -1159,7 +1154,6 @@ set nocompatible
 " }
 
 " Corrections {
-    map <Esc> <Esc>
 
     if version >= 703 " Vim 7.x specific colors
         hi CursorColumn   guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD

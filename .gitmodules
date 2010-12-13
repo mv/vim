@@ -31,3 +31,6 @@
 [submodule "dot.vim/bundle/nerdcommenter"]
 	path = dot.vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "dot.vim/bundle/vim-markdown"]
+	path = dot.vim/bundle/vim-markdown
+	url = git://github.com/plasticboy/vim-markdown.git
