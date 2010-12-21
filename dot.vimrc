@@ -56,9 +56,9 @@ set nocompatible
     set writeany                    " write on readonly files
 
     " New in 7.3 !
-    if version >= 703
-        set autochdir               " always switch to the current file directory
-    endif
+    " if version >= 703
+    "     set autochdir               " always switch to the current file directory
+    " endif
     if has('persistent_undo')
         set undofile                " keep a permanent undofile (vide :wundo/:rundo)
         set undodir=/tmp
