@@ -40,8 +40,8 @@ Bundle via git:
         Zen-Coding
             git submodule add git://github.com/mattn/zencoding-vim.git dot.vim/bundle/vim-zencoding
 
-        # Puppetlabs
-            git submodule add git://github.com/puppetlabs/puppet.git dot.vim/bundle/puppet-syntax
+        # SnipMate-snippets
+            git submodule add git://github.com/msanders/snipmate.vim   dot.vim/bundle/snipmate
 
         # Wincent Colaiuta
         Command-t

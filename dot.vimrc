@@ -1056,6 +1056,17 @@ set nocompatible
         " let loaded_search_complete = 1
     " }
 
+    " snipmate-snippets {
+        " Turn it off:
+        " let loaded_snips = 1
+
+        " Tip: i_CTRL-R_<Tab>
+        "      popupmenu of all snippets available
+        "      for this filetype
+
+        let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
+    " }
+
     " speeddating.vim {
         " Turn it off:
         " let g:loaded_speeddating      = 1

@@ -34,3 +34,6 @@
 [submodule "dot.vim/bundle/vim-markdown"]
 	path = dot.vim/bundle/vim-markdown
 	url = git://github.com/plasticboy/vim-markdown.git
+[submodule "dot.vim/bundle/snipmate"]
+	path = dot.vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim
