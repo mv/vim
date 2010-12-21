@@ -661,6 +661,11 @@ set nocompatible
         " help fo-table
     " }
 
+    " Notes {
+        autocmd BufNewFile,BufRead *.notes     setlocal filetype=notes
+        autocmd BufNewFile,BufRead *.notes.txt setlocal filetype=notes
+    " }
+
     " Ruby {
         autocmd BufNewFile,BufRead *.rb  setlocal filetype=ruby
         autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
