@@ -120,6 +120,17 @@ Bundle via Download and/or get-script (GLVS)
 
         css.vim         0.7     http://www.vim.org/scripts/script.php?script_id=2150
 
+        # Peter Odding
+        session         1.3.5   http://www.vim.org/scripts/script.php?script_id=3150
+
+        # Todd Freed
+        xmlpretty       1.5     http://www.vim.org/scripts/script.php?script_id=2130
+
+        # Samhita Kasula
+        notemaker       1.0     http://www.vim.org/scripts/script.php?script_id=2382
+
+        # Ben Booth
+        kwbdi           1.1     http://www.vim.org/scripts/script.php?script_id=2103
 
 Local:
 ------
