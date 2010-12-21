@@ -860,6 +860,14 @@ set nocompatible
         " let g:loaded_endwise = 1
     " }
 
+    " enhancedjumps.vim {
+        " Turn it off:
+        " let g:loaded_EnhancedJumps = 1
+
+        " msg timout: 2s (2000 ms)
+        let g:stopFirstAndNotifyTimeoutLen = 2000
+    " }
+
     " fugitive.vim {
         " Turn it off:
         " let g:loaded_fugitive = 1
