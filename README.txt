@@ -102,6 +102,7 @@ Bundle via Download and/or get-script (GLVS)
         SearchPosition  1.10    http://www.vim.org/scripts/script.php?script_id=2634
 
         Mark            2.4.0   http://www.vim.org/scripts/script.php?script_id=2666
+        EnhancedJumps   1.13    http://www.vim.org/scripts/script.php?script_id=2695
 
         # Hongli Gao
         marks_corey     1.4     http://www.vim.org/scripts/script.php?script_id=2194
