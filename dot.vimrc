@@ -277,6 +277,7 @@ set nocompatible
     command! Rehash     source $MYVIMRC
     command! Rehashg    source $MYGVIMRC
     command! Helptags   helptags ~/.vim/doc
+    command! Helptags   call pathogen#helptags()
 
     command! Color      echo g:colors_name
 
