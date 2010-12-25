@@ -852,6 +852,14 @@ set nocompatible
         " let g:loaded_capslock = 1
     " }
 
+    " command-t {
+    nmap <silent> <Leader>t :CommandT<CR>
+
+    let g:CommandTMaxFiles=20000
+    let g:CommandTMaxHeigh=25
+
+    " }
+
     " dbext {
     " }
 

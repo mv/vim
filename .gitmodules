@@ -34,3 +34,6 @@
 [submodule "dot.vim/bundle/vim-markdown"]
 	path = dot.vim/bundle/vim-markdown
 	url = git://github.com/plasticboy/vim-markdown.git
+[submodule "dot.vim/bundle/command-t"]
+	path = dot.vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
