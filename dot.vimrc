@@ -708,9 +708,8 @@ set nocompatible
         autocmd Filetype    mail        set fo-=l autoindent spell
     " }
 
-    " Notes {
-        autocmd BufNewFile,BufRead *.notes     set filetype=notes
-        autocmd BufNewFile,BufRead *.notes.txt set filetype=notes
+    " Snipmate Snippets {
+        autocmd BufNewFile,BufRead *.snippets  setlocal ts=4 sts=4 sw=4 noet list
     " }
 
     " git.git/contrib {
@@ -730,7 +729,7 @@ set nocompatible
         " ❤     2764        U+2764          heavy black heart
 " }
 
-" Snippets {
+" VimCode {
     " :0 put =range(1,15)
     " :for in in range(1,15) | put ='192.168.1.'.i | endfor
 
@@ -1065,6 +1064,19 @@ set nocompatible
         "      for this filetype
 
         let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
+
+        " acp+snip-mate (from acp.txt help):
+        fun! GetSnipsInCurrentScope()
+            let snips = {}
+            for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
+                call extend(snips, get(s:snippets, scope, {}), 'keep')
+                call extend(snips, get(s:multi_snips, scope, {}), 'keep')
+            endfor
+            return snips
+        endf
+
+        let g:acp_behaviorSnipmateLength = 1
+
     " }
 
     " speeddating.vim {
