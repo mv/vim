@@ -732,24 +732,14 @@ set nocompatible
         autocmd BufNewFile,BufRead *.notes.txt setlocal filetype=notes
     " }
 
-    " Ruby {
-        autocmd BufNewFile,BufRead *.rb  setlocal filetype=ruby
-        autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
-    " }
-
     " LogFiles {
         " goto end of file
         autocmd BufReadPost  *.log      normal G
     " }
 
-    " SQL*Plus {
-        autocmd BufNewFile,BufRead *sql       set filetype=plsql
-        " http://www.oracledba.ru/notes_vim_en.html
-        autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
-        "
-      " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
-        autocmd BufRead *sql set errorformat=%E%l/%c%m,%C%m,%Z
-
+    " Mail {
+        autocmd BufRead     letter*     set filetype=mail
+        autocmd Filetype    mail        set fo-=l autoindent spell
     " }
 
     " Makefile {
