@@ -277,6 +277,7 @@ set nocompatible
     command! Rehash     source $MYVIMRC
     command! Rehashg    source $MYGVIMRC
     command! Helptags   helptags ~/.vim/doc
+    command! Helptags   call pathogen#helptags()
 
     command! Color      echo g:colors_name
 
@@ -629,6 +630,71 @@ set nocompatible
 
 " }
 
+" Unicode {
+        " Char  CTRL-V+u    i+CTRL-V+digit
+        " ¬       ac        U+00AC          not
+        " ▸     25b8        U+25B8          black right triangle
+        " ☠     2620        U+2620          skull and bones
+        " ❤     2764        U+2764          heavy black heart
+" }
+
+" VimCode {
+    " :0 put =range(1,15)
+    " :for in in range(1,15) | put ='192.168.1.'.i | endfor
+
+    " tab to spaces to tab
+    command! TabOn   :set noexpandtab|retab!
+    command! TabOff  :set expandtab|retab!
+
+    " http://vimcasts.org/episodes/tidying-whitespace/
+    function! Preserve(command)
+        " Preparation: save last search, and cursor position.
+        let _s=@/
+        let l = line(".")
+        let c = col(".")
+        " Do the business:
+        execute a:command
+        " Clean up: restore previous search history, and cursor position
+        let @/=_s
+        call cursor(l, c)
+    endfunction
+
+    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+    nmap _= :call Preserve("normal gg=G")<CR>
+
+    " define :Lorem command to dump in a paragraph of lorem ipsum
+    " by Willa! http://github.com/willian/willvim/tree/master
+    " command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
+    "         \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    "         \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    "         \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    "         \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    "         \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    "         \ proident, sunt in culpa qui officia deserunt mollit anim id est
+    "         \ laborum
+
+    " http://github.com/nvie/vimrc/raw/master/vimrc
+    " make p in Visual mode replace the selected text with the yank register
+    " vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
+
+    " Pull word under cursor into LHS of a substitute (for quick search and
+    " replace)
+    " nmap <leader>z :%s#\<<C-r>=expand("<cword>")<CR>\>#
+
+    " Strip all trailing whitespace from a file, using ,w
+    " nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+    " Run Ack fast (mind the trailing space here, wouldya?)
+    " nnoremap <leader>a :Ack
+
+    " Reselect text that was just pasted with ,v
+    " nnoremap <leader>v V`]
+
+    " Re-hardwrap paragraphs of text:
+    " nnoremap <leader>q gqip
+
+" }
+
 " FileTypes {
 
     " all files {
@@ -666,41 +732,9 @@ set nocompatible
         autocmd BufNewFile,BufRead *.notes.txt setlocal filetype=notes
     " }
 
-    " Ruby {
-        autocmd BufNewFile,BufRead *.rb  setlocal filetype=ruby
-        autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
-    " }
-
     " LogFiles {
         " goto end of file
         autocmd BufReadPost  *.log      normal G
-    " }
-
-    " SQL*Plus {
-        autocmd BufNewFile,BufRead *sql       set filetype=plsql
-        " http://www.oracledba.ru/notes_vim_en.html
-        autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
-        "
-      " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
-        autocmd BufRead *sql set errorformat=%E%l/%c%m,%C%m,%Z
-
-    " }
-
-    " Makefile {
-        autocmd BufRead     [Mm]akefile*    setlocal filetype=make
-        autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
-    " }
-
-    " Programming settings {
-    " http://www.mattrope.com/computers/conf/vimrc.html
-    " augroup prog
-    "     au!
-    "     au BufRead *.c,*.cc,*.cpp,*.h,*.java set formatoptions=croql cindent nowrap nofoldenable
-    "     au BufEnter *.java                      map <C-Return> :w\|:!javac %<CR>
-    "     au BufEnter *.c                         map <C-Return> :w\|:!gcc %<CR>
-    "     au BufEnter *.cc,*.cpp                  map <C-Return> :w\|:!g++ %<CR>
-    "     au BufLeave *.java,*.c,*.cc             unmap <C-Return>
-    " augroup END
     " }
 
     " Mail {
@@ -708,88 +742,36 @@ set nocompatible
         autocmd Filetype    mail        set fo-=l autoindent spell
     " }
 
-    " Notes {
-        autocmd BufNewFile,BufRead *.notes     set filetype=notes
-        autocmd BufNewFile,BufRead *.notes.txt set filetype=notes
+    " Makefile {
+        autocmd BufRead     [Mm]akefile*    setlocal filetype=make
+        autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
+    " }
+
+    " Ruby {
+        autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby
+        autocmd BufNewFile,BufRead Rakefile,Capfile  setlocal filetype=ruby
+        autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
+    " }
+
+    " SQL*Plus {
+      " autocmd BufNewFile,BufRead *sql       set filetype=plsql
+        " http://www.oracledba.ru/notes_vim_en.html
+      " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
+        "
+      " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
+      " autocmd BufRead *sql set errorformat=%E%l/%c%m,%C%m,%Z
+
+    " }
+
+    " Snipmate Snippets {
+        autocmd BufNewFile,BufRead *.snippet  setf snippet
+        autocmd BufNewFile,BufRead *.snippets setf snippet
+        autocmd FileType             snippet setlocal ts=4 sts=4 sw=4 noet list
     " }
 
     " git.git/contrib {
     "   autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
     " }
-
-    " Rehash:
-    "   autocmd BufWritePost ~/Work/mv_home/dot.vimrc   so ~/.vimrc
-
-" }
-
-" Unicode {
-        " Char  CTRL-V+u    i+CTRL-V+digit
-        " ¬       ac        U+00AC          not
-        " ▸     25b8        U+25B8          black right triangle
-        " ☠     2620        U+2620          skull and bones
-        " ❤     2764        U+2764          heavy black heart
-" }
-
-" Snippets {
-    " :0 put =range(1,15)
-    " :for in in range(1,15) | put ='192.168.1.'.i | endfor
-
-    " tab to spaces to tab
-    command! TabOn   :set noexpandtab|retab!
-    command! TabOff  :set expandtab|retab!
-
-    " http://vimcasts.org/episodes/tidying-whitespace/
-    function! Preserve(command)
-        " Preparation: save last search, and cursor position.
-        let _s=@/
-        let l = line(".")
-        let c = col(".")
-        " Do the business:
-        execute a:command
-        " Clean up: restore previous search history, and cursor position
-        let @/=_s
-        call cursor(l, c)
-    endfunction
-
-    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
-    nmap _= :call Preserve("normal gg=G")<CR>
-
-    " define :Lorem command to dump in a paragraph of lorem ipsum
-    " by Willa! http://github.com/willian/willvim/tree/master
-    command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
-            \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            \ proident, sunt in culpa qui officia deserunt mollit anim id est
-            \ laborum
-
-    "
-    "   nmap <leader>id1 <C-R>=strftime("%c")
-    "   nmap <leader>ifp :e <C-R>=expand("%:p:h") .'/' <C-R>
-    "   nmap <leader>ifp <C-R>=expand("%:p:h") .'/' <C-R>
-
-
-    " http://github.com/nvie/vimrc/raw/master/vimrc
-    " make p in Visual mode replace the selected text with the yank register
-    " vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
-
-    " Pull word under cursor into LHS of a substitute (for quick search and
-    " replace)
-    " nmap <leader>z :%s#\<<C-r>=expand("<cword>")<CR>\>#
-
-    " Strip all trailing whitespace from a file, using ,w
-    " nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-    " Run Ack fast (mind the trailing space here, wouldya?)
-    " nnoremap <leader>a :Ack
-
-    " Reselect text that was just pasted with ,v
-    " nnoremap <leader>v V`]
-
-    " Re-hardwrap paragraphs of text:
-    " nnoremap <leader>q gqip
 
 " }
 
@@ -1062,6 +1044,30 @@ set nocompatible
     " searchcomplete {
         " Turn it off:
         " let loaded_search_complete = 1
+    " }
+
+    " snipmate-snippets {
+        " Turn it off:
+        " let loaded_snips = 1
+
+        " Tip: i_CTRL-R_<Tab>
+        "      popupmenu of all snippets available
+        "      for this filetype
+
+        let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
+
+        " acp+snip-mate (from help:acp.txt):
+        fun! GetSnipsInCurrentScope()
+            let snips = {}
+            for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
+                call extend(snips, get(s:snippets, scope, {}), 'keep')
+                call extend(snips, get(s:multi_snips, scope, {}), 'keep')
+            endfor
+            return snips
+        endf
+
+        let g:acp_behaviorSnipmateLength = 1
+
     " }
 
     " speeddating.vim {
