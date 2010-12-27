@@ -1,17 +1,14 @@
-" Header and Notes {{{
 "
-"   vim: set foldenable foldmarker={{{,}}} foldlevel=0 nospell:
+" vim: set foldenable foldmarker={{{,}}} foldlevel=0 nospell:
 "
 "   dot.vimrc
 "       ferreira.mv[ at ]gmail.com
 "       originally based on http://vi-improved.org/vimrc.php
 "       2008/12
 "
-" }}}
-
 set nocompatible
 
-" Pathogen {{{
+" Pathogen     {{{
     filetype off
 
     " Use pathogen to easily modify the runtime path to include all
@@ -20,7 +17,7 @@ set nocompatible
     call pathogen#runtime_append_all_bundles()
 " }}}
 
-" General {{{
+" General      {{{
     syntax on
     filetype plugin indent on
 
@@ -109,7 +106,7 @@ set nocompatible
     " }}}
 " }}}
 
-" Mappings {{{
+" Mappings     {{{
     " Tip: D  : command key
     "      D-S: command+shift key
 
@@ -270,7 +267,7 @@ set nocompatible
 
 " }}}
 
-" Commands {{{
+" Commands     {{{
 
     command! W  :w
     command! WW :browse confirm saveas
@@ -290,7 +287,7 @@ set nocompatible
 
 " }}}
 
-" Vim-UI {{{
+" Vim-UI       {{{
     set title           " set window name as titlestring
     " set titlestring=%F\ [%R%H%M%w]\ %{v:servername}
     " let &titlestring=expand("%:p")." - ".v:servername
@@ -402,7 +399,7 @@ set nocompatible
 
 " }}}
 
-" Buffers {{{
+" Buffers      {{{
     " Tip:
     "     :e!       ignore changes, restore original file
     "     :bd  [n]  buf del [number n]
@@ -437,7 +434,7 @@ set nocompatible
 
 " }}}
 
-" Windows {{{
+" Windows      {{{
 
     set splitbelow          " sb: split new window below current window
     set splitright          " spr: split new window to the right
@@ -509,7 +506,7 @@ set nocompatible
 
 " }}}
 
-" Status Line {{{
+" Status Line  {{{
     " My status line
     " --------------
      set laststatus=2   " always show statusline
@@ -614,7 +611,7 @@ set nocompatible
 
 " }}}
 
-" Folding {{{
+" Folding      {{{
     set foldenable              " Turn on folding
     set foldmarker={,}          " Fold C style code (only use this as default
                                 " if you use a high foldlevel)
@@ -633,7 +630,7 @@ set nocompatible
 
 " }}}
 
-" Unicode {{{
+" Unicode      {{{
         " Char  CTRL-V+u    i+CTRL-V+digit
         " ¬       ac        U+00AC          not
         " ▸     25b8        U+25B8          black right triangle
@@ -641,7 +638,7 @@ set nocompatible
         " ❤     2764        U+2764          heavy black heart
 " }}}
 
-" VimCode {{{
+" VimCode      {{{
     " :0 put =range(1,15)
     " :for in in range(1,15) | put ='192.168.1.'.i | endfor
 
@@ -698,9 +695,9 @@ set nocompatible
 
 " }}}
 
-" FileTypes {{{
+" FileTypes    {{{
 
-    " all files {{{
+    " all files         {{{
         " Strip white space
         autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
@@ -714,7 +711,7 @@ set nocompatible
         autocmd BufRead,BufNewFile *  setfiletype txt
     " }}}
 
-    " Text {{{
+    " Text              {{{
         autocmd BufNewFile,BufRead *.txt setlocal filetype=txt
         autocmd FileType             txt setlocal tw=78 cc=+1,+2,+3,+4,+5 ts=4 sts=4 sw=4 et
         autocmd FileType             txt setlocal fo=cqrnl2
@@ -730,33 +727,33 @@ set nocompatible
         " help fo-table
     " }}}
 
-    " Notes {{{
+    " Notes             {{{
         autocmd BufNewFile,BufRead *.notes     setlocal filetype=notes
         autocmd BufNewFile,BufRead *.notes.txt setlocal filetype=notes
     " }}}
 
-    " LogFiles {{{
+    " LogFiles          {{{
         " goto end of file
         autocmd BufReadPost  *.log      normal G
     " }}}
 
-    " Mail {{{
+    " Mail              {{{
         autocmd BufRead     letter*     set filetype=mail
         autocmd Filetype    mail        set fo-=l autoindent spell
     " }}}
 
-    " Makefile {{{
+    " Makefile          {{{
         autocmd BufRead     [Mm]akefile*    setlocal filetype=make
         autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
     " }}}
 
-    " Ruby {{{
+    " Ruby              {{{
         autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby
         autocmd BufNewFile,BufRead Rakefile,Capfile  setlocal filetype=ruby
         autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
     " }}}
 
-    " SQL*Plus {{{
+    " SQL*Plus          {{{
       " autocmd BufNewFile,BufRead *sql       set filetype=plsql
         " http://www.oracledba.ru/notes_vim_en.html
       " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
@@ -769,28 +766,28 @@ set nocompatible
     " Snipmate Snippets {{{
         autocmd BufNewFile,BufRead *.snippet  setf snippet
         autocmd BufNewFile,BufRead *.snippets setf snippet
-        autocmd FileType             snippet setlocal ts=4 sts=4 sw=4 noet list
-        autocmd FileType             snippet setlocal foldmarker={{{,}}} foldlevel=0
+        autocmd FileType             snippet set ts=4 sts=4 sw=4 noet list
+        autocmd FileType             snippet set foldmarker={{{,}}} foldmethod=marker foldlevel=0
     " }}}
 
-    " Vim {{{
+    " Vim               {{{
         autocmd FileType             vim     setlocal foldmarker={{{,}}} foldlevel=0
     " }}}
 
-    " git.git/contrib {{{
+    " git.git/contrib   {{{
     "   autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
     " }}}
 
 " }}}
 
-" Plugins {{{
+" Plugins      {{{
 
-    " align, alignmaps {{{
+    " align, alignmaps  {{{
         let g:DrChipTopLvlMenu     = "Plugin."
         let g:alignmaps_euronumber = 1
     " }}}
 
-    " acp/autocomplpop {{{
+    " acp/autocomplpop  {{{
         let g:acp_enableAtStartup        = 1
         let g:acp_mappingDriven          = 0
         let g:acp_ignorecaseOption       = 1
@@ -805,12 +802,12 @@ set nocompatible
         " map <leader>au :AcpUnlock <CR>
     " }}}
 
-    " autoclose.vim {{{
+    " autoclose.vim     {{{
         " Turn it off:
         " let g:autoclose_loaded = 1
     " }}}
 
-    " Bash-support {{{
+    " Bash-support      {{{
         let g:BASH_Root = 'B&ash.'         " original
         let g:BASH_Root = '&Plugin.B&ash.' " mine.
 
@@ -824,7 +821,7 @@ set nocompatible
        "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
     " }}}
 
-    " bufexplorer {{{
+    " bufexplorer       {{{
         " ,be / ,bv / ,bs
         let g:bufExplorerReverseSort     = 0
         let g:bufExplorerShowUnlisted    = 1    " Do not show unlisted buffers.
@@ -837,12 +834,12 @@ set nocompatible
         let g:bufExplorerSplitRight      = 1    " Split right.
     " }}}
 
-    " capslock.vim {{{
+    " capslock.vim      {{{
         " Turn it off:
         " let g:loaded_capslock = 1
     " }}}
 
-    " command-t {{{
+    " command-t         {{{
     nmap <silent> <Leader>t :CommandT<CR>
 
     let g:CommandTMaxFiles=20000
@@ -850,10 +847,10 @@ set nocompatible
 
     " }}}
 
-    " dbext {{{
+    " dbext             {{{
     " }}}
 
-    " endwise.vim {{{
+    " endwise.vim       {{{
         " Turn it off:
         " let g:loaded_endwise = 1
     " }}}
@@ -866,12 +863,12 @@ set nocompatible
         let g:stopFirstAndNotifyTimeoutLen = 2000
     " }}}
 
-    " fugitive.vim {{{
+    " fugitive.vim      {{{
         " Turn it off:
         " let g:loaded_fugitive = 1
     " }}}
 
-    " FuzzyFinder {{{
+    " FuzzyFinder       {{{
 
         let g:fuf_modesDisable = []
         let g:fuf_mrufile_maxItem = 400
@@ -945,30 +942,30 @@ set nocompatible
 
     " }}}
 
-    " increment.vim {{{
+    " increment.vim     {{{
     " }}}
 
-    " LargeFile {{{
+    " LargeFile         {{{
         " in megabytes - :Large/:Unlarge
         let g:LargeFile= 200
     " }}}
 
-    " mark.vim {{{
+    " mark.vim          {{{
         " Turn it off:
         " let g:loaded_mark = 1
     " }}}
 
-    " marks_corey.vim {{{
+    " marks_corey.vim   {{{
         " Turn it off:
         " let g:loaded_marks_corey = 1
     " }}}
 
-    " matchit.vim {{{
+    " matchit.vim       {{{
         " Turn it off:
         " let loaded_matchit = 1
     " }}}
 
-    " NerdCommenter {{{
+    " NerdCommenter     {{{
         " Turn it off:
         " let loaded_nerd_comments=1
 
@@ -979,7 +976,7 @@ set nocompatible
 
     " }}}
 
-    " NerdTree {{{
+    " NerdTree          {{{
         " Turn it off:
         " let loaded_nerd_tree=1
 
@@ -995,14 +992,14 @@ set nocompatible
         map <leader>dd :NERDTreeMirror <CR> " Dir tree
     " }}}
 
-    " openssl (password safe) {{{
+    " openssl (pwdsafe) {{{
         " ms: 15000 - 15s
         "     30000 - 20s
         "    300000 -  5m
         "let g:openssl_timeout = 301000
     " }}}
 
-    " Perl-support {{{
+    " Perl-support      {{{
         let g:Perl_Root = '&Perl.'          " original
         let g:Perl_Root = '&Plugin.&Perl.'  " mine.
 
@@ -1023,7 +1020,7 @@ set nocompatible
 
     " }}}
 
-    " project.vim {{{
+    " project.vim       {{{
         " Turn it off:
         " let loaded_project = 1
 
@@ -1037,19 +1034,19 @@ set nocompatible
 
     " }}}
 
-    " rails.vim {{{
+    " rails.vim         {{{
         " Turn it off:
         " let g:loaded_rails = 1
         let g:rails_menu = 1
         let g:rails_history_size = 9
     " }}}
 
-    " repeat.vim {{{
+    " repeat.vim        {{{
         " Turn it off:
         " let g:loaded_repeat = 1
     " }}}
 
-    " searchcomplete {{{
+    " searchcomplete    {{{
         " Turn it off:
         " let loaded_search_complete = 1
     " }}}
@@ -1078,14 +1075,14 @@ set nocompatible
 
     " }}}
 
-    " speeddating.vim {{{
+    " speeddating.vim   {{{
         " Turn it off:
         " let g:loaded_speeddating      = 1
         " 0: maps to <C-A>/<C-X>
         let g:speeddating_no_mappings = 0
     " }}}
 
-    " SQLUtilities {{{
+    " SQLUtilities      {{{
         " Turn it off:
         " let g:loaded_sqlutilities = 1
 
@@ -1106,12 +1103,12 @@ set nocompatible
 
     " }}}
 
-    " surround.vim {{{
+    " surround.vim      {{{
         " Turn it off:
         " let g:loaded_surround = 1
     " }}}
 
-    " taglist {{{
+    " taglist           {{{
         " let loaded_taglist = 1 " 0: activate / 1: do not load
         " let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
         " let Tlist_File_Fold_Auto_Close = 1
@@ -1122,17 +1119,17 @@ set nocompatible
         " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
     " }}}
 
-    " textformat.vim {{{
+    " textformat.vim    {{{
         " Turn it off:
         " let g:loaded_textformat = 1
     " }}}
 
-    " unimpaired.vim {{{
+    " unimpaired.vim    {{{
         " Turn it off:
         " let g:loaded_unimpaired = 1
     " }}}
 
-    " Zen-Coding {{{
+    " Zen-Coding        {{{
         " Turn it off:
         " let g:loaded_zencoding_vim = 1
 
@@ -1181,14 +1178,14 @@ set nocompatible
             \}
     " }}}
 
-    " RainbowPlugin {{{
+    " RainbowPlugin     {{{
         " Turn it off:
         " let g:loaded_Rainbow = 1
     " }}}
 
 " }}}
 
-" Corrections {{{
+" Corrections  {{{
 
     if version >= 703 " Vim 7.x specific colors
         hi CursorColumn   guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
