@@ -1,9 +1,11 @@
 " Header and Notes {{{
 "
 "   vim: set foldenable foldmarker={{{,}}} foldlevel=0 nospell:
-"   vi/vim: dot.vimrc
-"   mvf: ferreira.mv[ at ]gmail.com
-"   based on http://vi-improved.org/vimrc.php
+"
+"   dot.vimrc
+"       ferreira.mv[ at ]gmail.com
+"       originally based on http://vi-improved.org/vimrc.php
+"       2008/12
 "
 " }}}
 
@@ -124,9 +126,10 @@ set nocompatible
     " imap <C-F> <C-X><C-F>
     " imap <C-L> <C-X><C-L>
 
+    " http://vi-improved.org/vimrc.php
     " space / shift-space scroll in normal mode
-    " noremap <S-space> <C-b>
-    " noremap <space>   <C-f>
+    noremap <S-SPACE> <C-B>
+    noremap <SPACE>   <C-F>
 
     " \w => :w
     nmap \ :
