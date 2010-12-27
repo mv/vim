@@ -1,23 +1,20 @@
-"
-" vim: set foldenable foldmarker={{{,}}} foldlevel=0 nospell:
-"
-"   dot.vimrc
-"       ferreira.mv[ at ]gmail.com
-"       originally based on http://vi-improved.org/vimrc.php
-"       2008/12
+" dot.vimrc
+"     ferreira.mv[ at ]gmail.com
+"     based on http://vi-improved.org/vimrc.php
+"     2008/12
 "
 set nocompatible
 
-" Pathogen     {{{
+" Pathogen     {{{1
     filetype off
 
     " Use pathogen to easily modify the runtime path to include all
     " plugins under the ~/.vim/bundle directory
     call pathogen#helptags()
     call pathogen#runtime_append_all_bundles()
-" }}}
 
-" General      {{{
+
+" General      {{{1
     syntax on
     filetype plugin indent on
 
@@ -82,7 +79,7 @@ set nocompatible
     set grepprg=ack
     set grepformat=%f:%l:%m
 
-    " what to save via :mksession {{{
+    " what to save via :mksession {{{2
     set sessionoptions=blank,buffers,curdir,folds,globals,options,resize,tabpages,winsize
     "                  |     |       |      |     |       |       |      |        +-- size of windows
     "                  |     |       |      |     |       |       |      +-- tabs opened
@@ -103,191 +100,10 @@ set nocompatible
     "           |    +-- store file marks
     "           +-- number of files for which marks are kept
     set viminfo='100,f1,<500,:50,@50,/50,h
-    " }}}
-" }}}
 
-" Mappings     {{{
-    " Tip: D  : command key
-    "      D-S: command+shift key
 
-    let mapleader=","
 
-    " http://items.sjbach.com/319/configuring-vim-right
-    " scroll viewpoint by 'n' lines
-    nnoremap <C-j> 5<C-e>
-    nnoremap <C-k> 5<C-y>
-
-    " Increase/Decrease: <C-A>/<C-X>
-    " Omni completion: <C-n>
-    " Complete whole filenames/lines with a quicker shortcut key in insert mode
-    " imap <C-F> <C-X><C-F>
-    " imap <C-L> <C-X><C-L>
-
-    " http://vi-improved.org/vimrc.php
-    " space / shift-space scroll in normal mode
-    noremap <S-SPACE> <C-B>
-    noremap <SPACE>   <C-F>
-
-    " \w => :w
-    nmap \ :
-
-    " Quick yanking to the end of the line
-    nmap Y y$
-
-    " K = inverted J: join line up
-    map K ddpkJ
-
-    " row up/down if wrap active
-    " http://nvie.com/posts/how-i-boosted-my-vim/
-    nnoremap j gj
-    nnoremap k gk
-
-    " CTRL-K:  delete so the end of line
-    map  <C-K> D
-    " DOES NOT WORK
-    " imap <C-K> <ESC>D
-
-     " Yank/paste to the OS clipboard with ,y and ,p
-    " nmap <leader>y "+y
-    " nmap <leader>Y "+yy
-    " nmap <leader>p "+p
-    " nmap <leader>P "+P
-
-    " Quickly get out of insert mode without your fingers having to leave the
-    " home row (either use 'jj' or 'jk')
-    " inoremap jj <Esc>
-    " inoremap jk <Esc>
-
-    " edit files
-    nmap <leader>ev :e $MYVIMRC<CR>
-    nmap <leader>eg :e $MYGVIMRC<CR>
-
-    " fold
-    " Tip: fold toggle: za
-    nmap <leader>fc :foldclose<CR>
-    nmap <leader>fo :foldopen<CR>
-
-    nmap <leader>f0 :set foldlevel=0<CR>
-    nmap <leader>f1 :set foldlevel=1<CR>
-    nmap <leader>f2 :set foldlevel=2<CR>
-    nmap <leader>f3 :set foldlevel=3<CR>
-    nmap <leader>f4 :set foldlevel=3<CR>
-    nmap <leader>f5 :set foldlevel=3<CR>
-    nmap <leader>f6 :set foldlevel=3<CR>
-    nmap <leader>f7 :set foldlevel=3<CR>
-    nmap <leader>f8 :set foldlevel=3<CR>
-    nmap <leader>f9 :set foldlevel=9<CR>
-
-    " Identation {{{
-
-    """ Normal mode:
-    nmap <D-[> <<
-    nmap <D-]> >>
-
-    """ Visual mode - gv: keeps selection
-    vnoremap > ><CR>gv
-    vnoremap < <<CR>gv
-    vmap <D-[> <gv
-    vmap <D-]> >gv
-
-    " }}}
-
-    " Shortcuts
-    nmap <leader>q  :q <CR>
-    nmap <leader>q1 :q!<CR>
-    nmap <leader>w  :w <CR>
-    nmap <leader>wa :wa<CR>
-    nmap <leader>wq :wq!<CR>
-    nmap <leader>ww :w !sudo tee % >/dev/null
-    nmap <leader>sa :browse confirm saveas<CR>
-
-"   cmap w!! w !sudo tee % >/dev/null
-
-    " linenumber on/off
-    nmap <leader>nu  :set invnumber<CR>
-    " relativenumber on/off
-    nmap <leader>rnu :set invrnu   <CR>
-    " set cursorcolumn/nocursorcolumn
-    nmap <leader>cuc :set invcuc   <CR>
-    " Highlight search on/off
-    nmap <leader>h :set invhls<CR>
-    " list invisibles on/off
-    nmap <leader>l :set invlist  <CR>
-
-    " CTRL-S for saving, also in Insert mode
-    "noremap  <C-S>        :update<CR>
-    "vnoremap <C-S>    <C-C>:update<CR>
-    "inoremap <C-S>    <C-O>:update<CR>
-
-    " CTRL-A is Select all
-    "noremap <C-A> gggH<C-O>G
-    "inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-    "cnoremap <C-A> <C-C>gggH<C-O>G
-    "onoremap <C-A> <C-C>gggH<C-O>G
-    "snoremap <C-A> <C-C>gggH<C-O>G
-    "xnoremap <C-A> <C-C>ggVG
-
-    " Underline header
-    map <leader>= yypVr=
-    map <leader>- yypVr-
-
-    " Thanks to Steve Losh for this liberating tip
-    " See http://stevelosh.com/blog/2010/09/coming-home-to-vim
-    " Perl Regex
-    nnoremap / /\v
-    vnoremap / /\v
-
-    " <TAB> for matching brackets
-    nnoremap <tab> %
-    vnoremap <tab> %
-
-    " Creating underline/overline headings for markup languages
-    " Inspired by http://sphinx.pocoo.org/rest.html#sections
-    "nnoremap <leader>1 yyPVr=jyypVr=
-    "nnoremap <leader>2 yyPVr*jyypVr*
-    "nnoremap <leader>3 yypVr=
-    "nnoremap <leader>4 yypVr-
-    "nnoremap <leader>5 yypVr^
-    "nnoremap <leader>6 yypVr"
-
-   " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-    nmap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
-
-    " Command mode: path of the currently edited file
-    " cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-    " Command line map
-    cmap %/ <C-R>
-
-    " dos2,nix
-    nmap <leader>unix   :%s/\r$//     <CR>
-
-   " rot all text
-    nmap <leader>rot ggg?G
-
-" }}}
-
-" Commands     {{{
-
-    command! W  :w
-    command! WW :browse confirm saveas
-    command! WQ :wq
-    command! Q  :q
-
-    command! Rehash     source $MYVIMRC
-    command! Rehashg    source $MYGVIMRC
-    command! Helptags   helptags ~/.vim/doc
-    command! Helptags   call pathogen#helptags()
-
-    command! Color      echo g:colors_name
-
-    " start/stop sharing OS clipboard
-    command! Clipon     set clipboard+=unnamed
-    command! Clipoff    set clipboard-=unnamed
-
-" }}}
-
-" Vim-UI       {{{
+" Vim-UI       {{{1
     set title           " set window name as titlestring
     " set titlestring=%F\ [%R%H%M%w]\ %{v:servername}
     " let &titlestring=expand("%:p")." - ".v:servername
@@ -337,9 +153,9 @@ set nocompatible
     "                 ||+--- insert comment leader after <Enter> in Insert mode
     "                 |+---- allow formatting using gq
     "                 +----- auto-wrap comments
-" }}}
 
-" GUI Settings {{{
+
+" GUI Settings {{{1
 
     set bg=dark
 
@@ -397,116 +213,9 @@ set nocompatible
     "     syntax on
     " endif
 
-" }}}
 
-" Buffers      {{{
-    " Tip:
-    "     :e!       ignore changes, restore original file
-    "     :bd  [n]  buf del [number n]
-    "     :bd! [n]  buf del, discard changes
-    "     <C-^>     switch to alternate file
 
-    set hidden                  " hide buffer instead of closing
-    "et nohidden                " close buffer always
-
-    " new buffer
-    " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
-    nmap <leader>b<left>   :leftabove  vnew<CR>
-    nmap <leader>b<right>  :rightbelow vnew<CR>
-    nmap <leader>b<up>     :leftabove   new<CR>
-    nmap <leader>b<down>   :rightbelow  new<CR>
-
-    " new buffer at top 'x'
-    nmap <leader>bt<left>  :topleft    vnew<CR>
-    nmap <leader>bt<right> :botright   vnew<CR>
-    nmap <leader>bt<up>    :topleft     new<CR>
-    nmap <leader>bt<down>  :botright    new<CR>
-
-    " v2
-    nmap <leader>bh   :leftabove   vnew<CR>
-    nmap <leader>bl   :rightbelow  vnew<CR>
-    nmap <leader>bk   :leftabove    new<CR>
-    nmap <leader>bj   :rightbelow   new<CR>
-    nmap <leader>bth  :topleft     vnew<CR>
-    nmap <leader>btl  :botright    vnew<CR>
-    nmap <leader>btk  :topleft      new<CR>
-    nmap <leader>btj  :botright     new<CR>
-
-" }}}
-
-" Windows      {{{
-
-    set splitbelow          " sb: split new window below current window
-    set splitright          " spr: split new window to the right
-    set noequalalways       " ea: resize all windows to same size to fit a new one
-
-    " Tip:
-    " CTRL-W =   : equal all windows sizes
-    " CTRL-W x   : swap split up/down
-    "
-    " :split #   : open alternate buf down
-    " :vsplit #  : open alternate buf right
-    "
-    " sf[ind] /work/*/dev
-    " sf[ind] /work/**/dev
-
-    nmap <leader>o   :only <CR>
-    nmap <leader>sb  :set scrollbind<CR>
-    nmap <leader>nsb :set noscrollbind<CR>
-
-    " Look MA! No arrow keys in Vim!!!
-    map <down>  <C-W>j
-    map <up>    <C-W>k
-    map <left>  <C-W>h
-    map <right> <C-W>l
-
-    " Shortcut: move cursor
-    map <C-J> <C-W>j
-    map <C-K> <C-W>k
-    map <C-H> <C-W>h
-    map <C-L> <C-W>l
-
-    " Shortcut: move split window to top L/R/U/D
-    nmap <leader>spJ <C-W>J
-    nmap <leader>spK <C-W>K
-    nmap <leader>spH <C-W>H
-    nmap <leader>spL <C-W>L
-
-    " split: set equal size
-    nmap <leader>sp= <C-W>=
-
-    " new split
-    " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
-    nmap <leader>sp<left>   :leftabove  vsplit<CR>
-    nmap <leader>sp<right>  :rightbelow vsplit<CR>
-    nmap <leader>sp<up>     :leftabove  split<CR>
-    nmap <leader>sp<down>   :rightbelow split<CR>
-
-    " new split, v2
-    nmap <leader>sph        :leftabove  vsplit<CR>
-    nmap <leader>spl        :rightbelow vsplit<CR>
-    nmap <leader>spk        :leftabove  split<CR>
-    nmap <leader>spj        :rightbelow split<CR>
-
-    " }}}
-
-" Windows Tabs {{{
-    " Tip: :tabs
-    "      :tabfirst
-    "      :tablast
-    "      :tabonly
-    "      :tabf[ind]
-
-    " split buf to new tab
-    map <leader>ts :tab split<CR>
-    " move buf to new tab
-    map <leader>tm <C-W>T
-    " open file under cursor to new tab: /etc/hosts
-    map <leader>tf <C-W>gf
-
-" }}}
-
-" Status Line  {{{
+" Status Line  {{{1
     " My status line
     " --------------
      set laststatus=2   " always show statusline
@@ -561,9 +270,9 @@ set nocompatible
 "       set statusline+=\ ruby
 "   endif
 
-" }}}
 
-" Coding Rules {{{
+
+" Coding Rules {{{1
 
     set completeopt=menu,preview,longest    " <C-N>/acp: completion popup menu options
 
@@ -593,7 +302,7 @@ set nocompatible
 
     set nrformats=alpha,octal,hex   " C-A/C-X: increment/decrement
 
-    " wrap {{{
+    " wrap {{{2
     set textwidth=78        " tw
     set nowrap sidescroll=1         " [no] wrap long lines
     "et whichwrap=b,s,h,l,<,>,~,[,] " everything wraps
@@ -607,11 +316,11 @@ set nocompatible
     "             | | +-- "h" Normal and Visual (not recommended)
     "             | +-- <Space> Normal and Visual
     "             +-- <BS> Normal and Visual
-    " }}}
 
-" }}}
 
-" Folding      {{{
+
+
+" Folding      {{{1
     set foldenable              " Turn on folding
     set foldmarker={,}          " Fold C style code (only use this as default
                                 " if you use a high foldlevel)
@@ -628,23 +337,315 @@ set nocompatible
     " Fold HTML tags
     nnoremap <leader>ft Vatzf
 
-" }}}
 
-" Unicode      {{{
+
+" Commands     {{{1
+
+    command! W  :w
+    command! WW :browse confirm saveas
+    command! WQ :wq
+    command! Q  :q
+
+    command! Rehash     source $MYVIMRC
+    command! Helptags   helptags ~/.vim/doc
+    command! Helptags   call pathogen#helptags()
+
+    command! Color      echo g:colors_name
+
+    " start/stop sharing OS clipboard
+    command! Clipon     set clipboard+=unnamed
+    command! Clipoff    set clipboard-=unnamed
+
+    " tab to spaces to tab
+    command! TabOn      set noexpandtab|retab!
+    command! TabOff     set expandtab|retab!
+
+
+" Mappings     {{{1
+    " Tip: D  : command key
+    "      D-S: command+shift key
+
+    let mapleader=","
+
+    " Saving from pressing SHIFT
+    " :w => \w
+    nmap \ :
+
+    " Thanks to Steve Losh for this liberating tip
+    " See http://stevelosh.com/blog/2010/09/coming-home-to-vim
+    " Perl Regex
+    nnoremap / /\v
+    vnoremap / /\v
+
+    " Quick yanking to the end of the line
+    nmap Y y$
+
+    " K = inverted J: join line up
+    map K ddpkJ
+
+    " CTRL-K:  delete so the end of line
+    map <C-K> D
+    " DOES NOT WORK
+    " imap <C-K> <ESC>D
+
+    " Movements         {{{2
+    " ======================
+
+    " http://items.sjbach.com/319/configuring-vim-right
+    " scroll viewpoint by 'n' lines
+    nnoremap <C-j> 5<C-e>
+    nnoremap <C-k> 5<C-y>
+
+    " http://vi-improved.org/vimrc.php
+    " space / shift-space scroll in normal mode
+    noremap <S-SPACE> <C-B>
+    noremap <SPACE>   <C-F>
+
+    " row up/down if wrap active
+    " http://nvie.com/posts/how-i-boosted-my-vim/
+    nnoremap j gj
+    nnoremap k gk
+
+    " Omni completion: <C-n>
+    " Complete whole filenames/lines with a quicker shortcut key in insert mode
+    imap <C-F> <C-X><C-F>
+    imap <C-L> <C-X><C-L>
+
+     " Yank/paste to the OS clipboard with ,y and ,p
+    " nmap <leader>y "+y
+    " nmap <leader>Y "+yy
+    " nmap <leader>p "+p
+    " nmap <leader>P "+P
+
+    " Reselect text that was just pasted with ,v
+    nnoremap <leader>v V`]
+
+    " Quickly get out of insert mode without your fingers having to leave the
+    " home row (either use 'jj' or 'jk')
+    " inoremap jj <Esc>
+    " inoremap jk <Esc>
+
+    " edit files
+    nmap <leader>ev  :e   $MYVIMRC<CR>
+    nmap <leader>sev :vsp $MYVIMRC<CR>
+
+    " fold
+    " Tip: fold toggle: za
+    nmap <leader>fc :foldclose<CR>
+    nmap <leader>fo :foldopen<CR>
+
+    nmap <leader>f0 :set foldlevel=0<CR>
+    nmap <leader>f1 :set foldlevel=1<CR>
+    nmap <leader>f2 :set foldlevel=2<CR>
+    nmap <leader>f3 :set foldlevel=3<CR>
+    nmap <leader>f4 :set foldlevel=3<CR>
+    nmap <leader>f5 :set foldlevel=3<CR>
+    nmap <leader>f6 :set foldlevel=3<CR>
+    nmap <leader>f7 :set foldlevel=3<CR>
+    nmap <leader>f8 :set foldlevel=3<CR>
+    nmap <leader>f9 :set foldlevel=9<CR>
+
+    " }}}
+    " Identation                {{{2
+    " ======================
+    """ Normal mode:
+    nmap <D-[> <<
+    nmap <D-]> >>
+
+    """ Visual mode - gv: keeps selection
+    vnoremap > ><CR>gv
+    vnoremap < <<CR>gv
+    vmap <D-[> <gv
+    vmap <D-]> >gv
+
+    " }}}
+    " Shortcuts                 {{{2
+    " ======================
+    nmap <leader>q  :q <CR>
+    nmap <leader>q1 :q!<CR>
+    nmap <leader>w  :w <CR>
+    nmap <leader>wa :wa<CR>
+    nmap <leader>wq :wq!<CR>
+    nmap <leader>ww :w !sudo tee % >/dev/null
+    nmap <leader>sa :browse confirm saveas<CR>
+
+"   cmap w!! w !sudo tee % >/dev/null
+
+    " linenumber on/off
+    nmap <leader>nu  :set invnumber<CR>
+    " relativenumber on/off
+    nmap <leader>rnu :set invrnu   <CR>
+    " set cursorcolumn/nocursorcolumn
+    nmap <leader>cuc :set invcuc   <CR>
+    " Highlight search on/off
+    nmap <leader>h :set invhls<CR>
+    " list invisibles on/off
+    nmap <leader>l :set invlist  <CR>
+
+    " CTRL-S for saving, also in Insert mode
+    "noremap  <C-S>        :update<CR>
+    "vnoremap <C-S>    <C-C>:update<CR>
+    "inoremap <C-S>    <C-O>:update<CR>
+
+    " CTRL-A is Select all
+    "noremap <C-A> gggH<C-O>G
+    "inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+    "cnoremap <C-A> <C-C>gggH<C-O>G
+    "onoremap <C-A> <C-C>gggH<C-O>G
+    "snoremap <C-A> <C-C>gggH<C-O>G
+    "xnoremap <C-A> <C-C>ggVG
+    " }}}
+    " Formatting                {{{2
+    " ======================
+    " Re-hardwrap paragraphs of text:
+    nnoremap <leader>g= gqip
+
+    " Underline header
+    map <leader>= yypVr=
+    map <leader>- yypVr-
+
+    " Creating underline/overline headings for markup languages
+    " Inspired by http://sphinx.pocoo.org/rest.html#sections
+    "nnoremap <leader>1 yyPVr=jyypVr=
+    "nnoremap <leader>2 yyPVr*jyypVr*
+    "nnoremap <leader>3 yypVr=
+    "nnoremap <leader>4 yypVr-
+    "nnoremap <leader>5 yypVr^
+    "nnoremap <leader>6 yypVr"
+    "
+    " }}}
+    " Utils                     {{{2
+    " ======================
+    " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
+    nmap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
+
+    " }}}
+    " Editing entire buffer     {{{2
+    " ======================
+    " Reformat
+    nmap _= :call Preserve("normal gg=G")<CR>
+    " Strip trailing spaces
+    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+    " dos2,nix
+    nmap _n :call Preserve("% s/\r$//")<CR>
+
+    " }}}
+" Buffers      {{{1
+    " Tip:
+    "     :e!       ignore changes, restore original file
+    "     :bd  [n]  buf del [number n]
+    "     :bd! [n]  buf del, discard changes
+    "     <C-^>     switch to alternate file
+
+    set hidden                  " hide buffer instead of closing
+    "et nohidden                " close buffer always
+
+    " new buffer
+    " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
+    nmap <leader>b<left>   :leftabove  vnew<CR>
+    nmap <leader>b<right>  :rightbelow vnew<CR>
+    nmap <leader>b<up>     :leftabove   new<CR>
+    nmap <leader>b<down>   :rightbelow  new<CR>
+
+    " new buffer at top 'x'
+    nmap <leader>bt<left>  :topleft    vnew<CR>
+    nmap <leader>bt<right> :botright   vnew<CR>
+    nmap <leader>bt<up>    :topleft     new<CR>
+    nmap <leader>bt<down>  :botright    new<CR>
+
+    " v2
+    nmap <leader>bh   :leftabove   vnew<CR>
+    nmap <leader>bl   :rightbelow  vnew<CR>
+    nmap <leader>bk   :leftabove    new<CR>
+    nmap <leader>bj   :rightbelow   new<CR>
+    nmap <leader>bth  :topleft     vnew<CR>
+    nmap <leader>btl  :botright    vnew<CR>
+    nmap <leader>btk  :topleft      new<CR>
+    nmap <leader>btj  :botright     new<CR>
+
+
+
+" Windows      {{{1
+
+    set splitbelow          " sb: split new window below current window
+    set splitright          " spr: split new window to the right
+    set noequalalways       " ea: resize all windows to same size to fit a new one
+
+    " Tip:
+    " CTRL-W =   : equal all windows sizes
+    " CTRL-W x   : swap split up/down
+    "
+    " :split #   : open alternate buf down
+    " :vsplit #  : open alternate buf right
+    "
+    " sf[ind] /work/*/dev
+    " sf[ind] /work/**/dev
+
+    nmap <leader>o   :only <CR>
+    nmap <leader>sb  :set scrollbind<CR>
+    nmap <leader>nsb :set noscrollbind<CR>
+
+    " Look MA! No arrow keys in Vim!!!
+    map <down>  <C-W>j
+    map <up>    <C-W>k
+    map <left>  <C-W>h
+    map <right> <C-W>l
+
+    " Shortcut: move cursor
+    map <C-J> <C-W>j
+    map <C-K> <C-W>k
+    map <C-H> <C-W>h
+    map <C-L> <C-W>l
+
+    " Shortcut: move split window to top L/R/U/D
+    nmap <leader>spJ <C-W>J
+    nmap <leader>spK <C-W>K
+    nmap <leader>spH <C-W>H
+    nmap <leader>spL <C-W>L
+
+    " split: set equal size
+    nmap <leader>sp= <C-W>=
+
+    " new split
+    " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
+    nmap <leader>sp<left>   :leftabove  vsplit<CR>
+    nmap <leader>sp<right>  :rightbelow vsplit<CR>
+    nmap <leader>sp<up>     :leftabove  split<CR>
+    nmap <leader>sp<down>   :rightbelow split<CR>
+
+    " new split, v2
+    nmap <leader>sph        :leftabove  vsplit<CR>
+    nmap <leader>spl        :rightbelow vsplit<CR>
+    nmap <leader>spk        :leftabove  split<CR>
+    nmap <leader>spj        :rightbelow split<CR>
+
+
+
+" Windows Tabs {{{1
+    " Tip: :tabs
+    "      :tabfirst
+    "      :tablast
+    "      :tabonly
+    "      :tabf[ind]
+
+    " split buf to new tab
+    map <leader>ts :tab split<CR>
+    " move buf to new tab
+    map <leader>tm <C-W>T
+    " open file under cursor to new tab: /etc/hosts
+    map <leader>tf <C-W>gf
+
+
+
+" Unicode      {{{1
         " Char  CTRL-V+u    i+CTRL-V+digit
         " ¬       ac        U+00AC          not
         " ▸     25b8        U+25B8          black right triangle
         " ☠     2620        U+2620          skull and bones
         " ❤     2764        U+2764          heavy black heart
-" }}}
 
-" VimCode      {{{
-    " :0 put =range(1,15)
-    " :for in in range(1,15) | put ='192.168.1.'.i | endfor
 
-    " tab to spaces to tab
-    command! TabOn   :set noexpandtab|retab!
-    command! TabOff  :set expandtab|retab!
+" VimCode      {{{1
 
     " http://vimcasts.org/episodes/tidying-whitespace/
     function! Preserve(command)
@@ -659,9 +660,6 @@ set nocompatible
         call cursor(l, c)
     endfunction
 
-    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
-    nmap _= :call Preserve("normal gg=G")<CR>
-
     " define :Lorem command to dump in a paragraph of lorem ipsum
     " by Willa! http://github.com/willian/willvim/tree/master
     " command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
@@ -673,31 +671,17 @@ set nocompatible
     "         \ proident, sunt in culpa qui officia deserunt mollit anim id est
     "         \ laborum
 
-    " http://github.com/nvie/vimrc/raw/master/vimrc
-    " make p in Visual mode replace the selected text with the yank register
-    " vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
-
     " Pull word under cursor into LHS of a substitute (for quick search and
     " replace)
-    " nmap <leader>z :%s#\<<C-r>=expand("<cword>")<CR>\>#
+    " nmap <leader>z :% s#\<<C-r>=expand("<cword>")<CR>\>#
 
-    " Strip all trailing whitespace from a file, using ,w
-    " nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+    " :0 put =range(1,15)
+    " :for in in range(1,15) | put ='192.168.1.'.i | endfor
 
-    " Run Ack fast (mind the trailing space here, wouldya?)
-    " nnoremap <leader>a :Ack
 
-    " Reselect text that was just pasted with ,v
-    " nnoremap <leader>v V`]
+" FileTypes    {{{1
 
-    " Re-hardwrap paragraphs of text:
-    " nnoremap <leader>q gqip
-
-" }}}
-
-" FileTypes    {{{
-
-    " all files         {{{
+    " all files                 {{{2
         " Strip white space
         autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
@@ -709,9 +693,9 @@ set nocompatible
 
         " no extension: treat as txt file
         autocmd BufRead,BufNewFile *  setfiletype txt
-    " }}}
 
-    " Text              {{{
+    " }}}
+    " Text                      {{{2
         autocmd BufNewFile,BufRead *.txt setlocal filetype=txt
         autocmd FileType             txt setlocal tw=78 cc=+1,+2,+3,+4,+5 ts=4 sts=4 sw=4 et
         autocmd FileType             txt setlocal fo=cqrnl2
@@ -725,35 +709,41 @@ set nocompatible
         "
         " formatoptions=tcroqn2l
         " help fo-table
-    " }}}
 
-    " Notes             {{{
+
+    " }}}
+    " Notes                     {{{2
         autocmd BufNewFile,BufRead *.notes     setlocal filetype=notes
         autocmd BufNewFile,BufRead *.notes.txt setlocal filetype=notes
-    " }}}
 
-    " LogFiles          {{{
+
+    " }}}
+    " LogFiles                  {{{2
         " goto end of file
         autocmd BufReadPost  *.log      normal G
-    " }}}
 
-    " Mail              {{{
+
+    " }}}
+    " Mail                      {{{2
         autocmd BufRead     letter*     set filetype=mail
         autocmd Filetype    mail        set fo-=l autoindent spell
-    " }}}
 
-    " Makefile          {{{
+
+    " }}}
+    " Makefile                  {{{2
         autocmd BufRead     [Mm]akefile*    setlocal filetype=make
         autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
-    " }}}
 
-    " Ruby              {{{
+
+    " }}}
+    " Ruby                      {{{2
         autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby
         autocmd BufNewFile,BufRead Rakefile,Capfile  setlocal filetype=ruby
         autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
-    " }}}
 
-    " SQL*Plus          {{{
+
+    " }}}
+    " SQL*Plus                  {{{2
       " autocmd BufNewFile,BufRead *sql       set filetype=plsql
         " http://www.oracledba.ru/notes_vim_en.html
       " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
@@ -761,33 +751,31 @@ set nocompatible
       " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
       " autocmd BufRead *sql set errorformat=%E%l/%c%m,%C%m,%Z
 
-    " }}}
 
-    " Snipmate Snippets {{{
+
+    " }}}
+    " Snipmate Snippets         {{{2
         autocmd BufNewFile,BufRead *.snippet  setf snippet
         autocmd BufNewFile,BufRead *.snippets setf snippet
-        autocmd FileType             snippet set ts=4 sts=4 sw=4 noet list
-        autocmd FileType             snippet set foldmarker={{{,}}} foldmethod=marker foldlevel=0
+        autocmd FileType             snippet  set ts=4 sts=4 sw=4 noet list
+        autocmd FileType             snippet  set foldmethod=marker foldmarker={{{,}}} foldlevel=0
+
+
     " }}}
+    " Vim                       {{{2
+       autocmd FileType             vim      set foldmethod=marker foldmarker={,} foldlevel=0
 
-    " Vim               {{{
-        autocmd FileType             vim     setlocal foldmarker={{{,}}} foldlevel=0
     " }}}
+    " git.git/contrib           {{{2
+        autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
 
-    " git.git/contrib   {{{
-    "   autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
     " }}}
-
-" }}}
-
-" Plugins      {{{
-
-    " align, alignmaps  {{{
+" Plugins      {{{1
+    " align, alignmaps          {{{2
         let g:DrChipTopLvlMenu     = "Plugin."
         let g:alignmaps_euronumber = 1
     " }}}
-
-    " acp/autocomplpop  {{{
+    " acp/autocomplpop          {{{2
         let g:acp_enableAtStartup        = 1
         let g:acp_mappingDriven          = 0
         let g:acp_ignorecaseOption       = 1
@@ -801,13 +789,11 @@ set nocompatible
         " map <leader>al :AcpLock <CR>
         " map <leader>au :AcpUnlock <CR>
     " }}}
-
-    " autoclose.vim     {{{
+    " autoclose.vim             {{{2
         " Turn it off:
         " let g:autoclose_loaded = 1
     " }}}
-
-    " Bash-support      {{{
+    " Bash-support              {{{2
         let g:BASH_Root = 'B&ash.'         " original
         let g:BASH_Root = '&Plugin.B&ash.' " mine.
 
@@ -820,8 +806,7 @@ set nocompatible
        "let g:BASH_MapLeader               '\'
        "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
     " }}}
-
-    " bufexplorer       {{{
+    " bufexplorer               {{{2
         " ,be / ,bv / ,bs
         let g:bufExplorerReverseSort     = 0
         let g:bufExplorerShowUnlisted    = 1    " Do not show unlisted buffers.
@@ -833,42 +818,34 @@ set nocompatible
         let g:bufExplorerSplitBelow      = 1    " Split new window below current.
         let g:bufExplorerSplitRight      = 1    " Split right.
     " }}}
-
-    " capslock.vim      {{{
+    " capslock.vim              {{{2
         " Turn it off:
         " let g:loaded_capslock = 1
     " }}}
-
-    " command-t         {{{
+    " command-t                 {{{2
     nmap <silent> <Leader>t :CommandT<CR>
 
     let g:CommandTMaxFiles=20000
     let g:CommandTMaxHeigh=25
-
     " }}}
-
-    " dbext             {{{
+    " dbext                     {{{2
     " }}}
-
-    " endwise.vim       {{{
+    " endwise.vim               {{{2
         " Turn it off:
         " let g:loaded_endwise = 1
     " }}}
-
-    " enhancedjumps.vim {{{
+    " enhancedjumps.vim         {{{2
         " Turn it off:
         " let g:loaded_EnhancedJumps = 1
 
         " msg timout: 2s (2000 ms)
         let g:stopFirstAndNotifyTimeoutLen = 2000
     " }}}
-
-    " fugitive.vim      {{{
+    " fugitive.vim              {{{2
         " Turn it off:
         " let g:loaded_fugitive = 1
     " }}}
-
-    " FuzzyFinder       {{{
+    " FuzzyFinder               {{{2
 
         let g:fuf_modesDisable = []
         let g:fuf_mrufile_maxItem = 400
@@ -939,33 +916,26 @@ set nocompatible
         " nnoremap <silent> sh     :FufHelp<CR>
         " nnoremap <silent> se     :FufEditDataFile<CR>
         " nnoremap <silent> sr     :FufRenewCache<CR>
-
     " }}}
-
-    " increment.vim     {{{
+    " increment.vim             {{{2
     " }}}
-
-    " LargeFile         {{{
+    " LargeFile                 {{{2
         " in megabytes - :Large/:Unlarge
         let g:LargeFile= 200
     " }}}
-
-    " mark.vim          {{{
+    " mark.vim                  {{{2
         " Turn it off:
         " let g:loaded_mark = 1
     " }}}
-
-    " marks_corey.vim   {{{
+    " marks_corey.vim           {{{2
         " Turn it off:
         " let g:loaded_marks_corey = 1
     " }}}
-
-    " matchit.vim       {{{
+    " matchit.vim               {{{2
         " Turn it off:
         " let loaded_matchit = 1
     " }}}
-
-    " NerdCommenter     {{{
+    " NerdCommenter             {{{2
         " Turn it off:
         " let loaded_nerd_comments=1
 
@@ -973,10 +943,8 @@ set nocompatible
         let NERDRemoveExtraSpaces = 1
         let NERDSpaceDelims = 1
         let NERDMenuMode = 0
-
     " }}}
-
-    " NerdTree          {{{
+    " NerdTree                  {{{2
         " Turn it off:
         " let loaded_nerd_tree=1
 
@@ -991,15 +959,13 @@ set nocompatible
         map <leader>d  :NERDTreeToggle <CR> " Dir tree
         map <leader>dd :NERDTreeMirror <CR> " Dir tree
     " }}}
-
-    " openssl (pwdsafe) {{{
+    " openssl (pwdsafe)         {{{2
         " ms: 15000 - 15s
         "     30000 - 20s
         "    300000 -  5m
         "let g:openssl_timeout = 301000
     " }}}
-
-    " Perl-support      {{{
+    " Perl-support              {{{2
         let g:Perl_Root = '&Perl.'          " original
         let g:Perl_Root = '&Plugin.&Perl.'  " mine.
 
@@ -1017,10 +983,8 @@ set nocompatible
        "let g:Perl_PerlcriticOptions       = ""
        "let g:Perl_PerlRegexSubstitution   = '$+'
        "let g:Perl_MapLeader               = '\'
-
     " }}}
-
-    " project.vim       {{{
+    " project.vim               {{{2
         " Turn it off:
         " let loaded_project = 1
 
@@ -1031,35 +995,33 @@ set nocompatible
         let g:proj_flags = 'imstn'
 
         nmap <silent> <Leader>p :Project<CR>
-
     " }}}
-
-    " rails.vim         {{{
+    " rails.vim                 {{{2
         " Turn it off:
         " let g:loaded_rails = 1
         let g:rails_menu = 1
         let g:rails_history_size = 9
     " }}}
-
-    " repeat.vim        {{{
+    " repeat.vim                {{{2
         " Turn it off:
         " let g:loaded_repeat = 1
     " }}}
-
-    " searchcomplete    {{{
+    " searchcomplete            {{{2
         " Turn it off:
         " let loaded_search_complete = 1
     " }}}
-
-    " snipmate-snippets {{{
+    " snipmate-snippets         {{{2
         " Turn it off:
         " let loaded_snips = 1
+
+        let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
 
         " Tip: i_CTRL-R_<Tab>
         "      popupmenu of all snippets available
         "      for this filetype
 
-        let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
+        " Space+tab: snip list
+        inoremap <silent> <space><tab> <c-r>=ShowAvailableSnips()<cr>
 
         " acp+snip-mate (from help:acp.txt):
         fun! GetSnipsInCurrentScope()
@@ -1070,19 +1032,15 @@ set nocompatible
             endfor
             return snips
         endf
-
         let g:acp_behaviorSnipmateLength = 1
-
     " }}}
-
-    " speeddating.vim   {{{
+    " speeddating.vim           {{{2
         " Turn it off:
         " let g:loaded_speeddating      = 1
         " 0: maps to <C-A>/<C-X>
         let g:speeddating_no_mappings = 0
     " }}}
-
-    " SQLUtilities      {{{
+    " SQLUtilities              {{{2
         " Turn it off:
         " let g:loaded_sqlutilities = 1
 
@@ -1095,20 +1053,17 @@ set nocompatible
         " 0: do not create maps
         let g:sqlutil_load_default_maps = 0
 
-		vmap <leader>sf        <Plug>SQLU_Formatter<CR>
-		" nmap <leader>scl       <Plug>SQLU_CreateColumnList<CR>
-		" nmap <leader>scd       <Plug>SQLU_GetColumnDef<CR>
-		" nmap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
-		" nmap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
-
+        vmap <leader>sf        <Plug>SQLU_Formatter<CR>
+        " nmap <leader>scl       <Plug>SQLU_CreateColumnList<CR>
+        " nmap <leader>scd       <Plug>SQLU_GetColumnDef<CR>
+        " nmap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
+        " nmap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
     " }}}
-
-    " surround.vim      {{{
+    " surround.vim              {{{2
         " Turn it off:
         " let g:loaded_surround = 1
     " }}}
-
-    " taglist           {{{
+    " taglist                   {{{2
         " let loaded_taglist = 1 " 0: activate / 1: do not load
         " let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
         " let Tlist_File_Fold_Auto_Close = 1
@@ -1118,18 +1073,15 @@ set nocompatible
         " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
         " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
     " }}}
-
-    " textformat.vim    {{{
+    " textformat.vim            {{{2
         " Turn it off:
         " let g:loaded_textformat = 1
     " }}}
-
-    " unimpaired.vim    {{{
+    " unimpaired.vim            {{{2
         " Turn it off:
         " let g:loaded_unimpaired = 1
     " }}}
-
-    " Zen-Coding        {{{
+    " Zen-Coding                {{{2
         " Turn it off:
         " let g:loaded_zencoding_vim = 1
 
@@ -1177,15 +1129,11 @@ set nocompatible
             \  },
             \}
     " }}}
-
-    " RainbowPlugin     {{{
+    " RainbowPlugin             {{{2
         " Turn it off:
         " let g:loaded_Rainbow = 1
     " }}}
-
-" }}}
-
-" Corrections  {{{
+" Corrections  {{{1
 
     if version >= 703 " Vim 7.x specific colors
         hi CursorColumn   guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
@@ -1193,8 +1141,9 @@ set nocompatible
     endif
 
     set paste  " terminal: do the right thing when executing paste
+
 " }}}
 
-
+" vim: set foldmarker={,} foldlevel=0 nospell:
 " vim: set foldmarker={{{,}}} foldlevel=0 nospell:
 
