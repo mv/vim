@@ -767,6 +767,11 @@ set nocompatible
         autocmd BufNewFile,BufRead *.snippet  setf snippet
         autocmd BufNewFile,BufRead *.snippets setf snippet
         autocmd FileType             snippet setlocal ts=4 sts=4 sw=4 noet list
+        autocmd FileType             snippet setlocal foldmarker={{{,}}} foldlevel=0
+    " }}}
+
+    " Vim {{{
+        autocmd FileType             vim     setlocal foldmarker={{{,}}} foldlevel=0
     " }}}
 
     " git.git/contrib {{{
@@ -1191,5 +1196,5 @@ set nocompatible
 " }}}
 
 
-" vim: set foldmarker={{{,}}}foldlevel=0 nospell:
+" vim: set foldmarker={{{,}}} foldlevel=0 nospell:
 
