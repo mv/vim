@@ -1023,16 +1023,17 @@ set nocompatible
         " Space+tab: snip list
         inoremap <silent> <space><tab> <c-r>=ShowAvailableSnips()<cr>
 
-        " acp+snip-mate (from help:acp.txt):
-        fun! GetSnipsInCurrentScope()
-            let snips = {}
-            for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
-                call extend(snips, get(s:snippets, scope, {}), 'keep')
-                call extend(snips, get(s:multi_snips, scope, {}), 'keep')
-            endfor
-            return snips
-        endf
+        " acp+snip-mate (from help:acp.txt): plugin/snipmate.vim
+        " fun! GetSnipsInCurrentScope()
+        "     let snips = {}
+        "     for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
+        "         call extend(snips, get(s:snippets, scope, {}), 'keep')
+        "         call extend(snips, get(s:multi_snips, scope, {}), 'keep')
+        "     endfor
+        "     return snips
+        " endf
         let g:acp_behaviorSnipmateLength = 1
+
     " }}}
     " speeddating.vim           {{{2
         " Turn it off:
