@@ -1143,6 +1143,9 @@ set nocompatible
 
     set paste  " terminal: do the right thing when executing paste
 
+    "  Debug
+    set verbose=0
+
 " }}}
 
 " vim: set foldmarker={,} foldlevel=0 nospell:
