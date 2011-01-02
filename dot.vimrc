@@ -936,6 +936,10 @@ set nocompatible
         " let loaded_matchit = 1
     " }}}
     " NerdCommenter             {{{2
+    " molokai.vim               {{{
+        " color option
+        let g:molokai_original = 1
+    " }}}
         " Turn it off:
         " let loaded_nerd_comments=1
 
