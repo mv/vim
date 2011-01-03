@@ -367,83 +367,40 @@ set nocompatible
 
     let mapleader=","
 
-    " G3                {{{
-    " Saving from pressing SHIFT
-    " :w => \w
-    nmap \ :
+    " GUI                       {{{
+    " ======================
+    " linenumber on/off
+    nmap <leader>nu  :set invnumber<CR>
 
-    " making vim regex act like Perl Regex
-    "     Thanks to Steve Losh for this liberating tip
-    "     See http://stevelosh.com/blog/2010/09/coming-home-to-vim
-    nnoremap / /\v
-    vnoremap / /\v
-    nnoremap ? ?\v
-    vnoremap ? ?\v
+    " relativenumber on/off
+    nmap <leader>rnu :set invrnu   <CR>
 
-    " Quick yanking to the end of the line
-    nmap Y y$
-    " K = inverted J: join line up
-    map K ddpkJ
-    " CTRL-K:  delete so the end of line
-    map <C-K> D
-    "}}}
-    " G2                {{{
-    " Ref:  https://github.com/godlygeek/vim-files/blob/master/.vimrc
-    " CTRL-g shows filename and buffer number, too.
-    nnoremap <C-g> 2<C-g>
-    " Q formats paragraphs, instead of entering ex mode
-    noremap Q gq
-    " <space> toggles folds opened and closed
-    " nnoremap <space> za
-    " <space> in visual mode creates a fold over the marked range
-    " vnoremap <space> zf
+    " set cursorcolumn/nocursorcolumn
+    nmap <leader>cuc :set invcuc   <CR>
 
-    " ` is more useful than ' but less accessible.
-    " nnoremap ' `
-    " nnoremap ` '
+    " Highlight search on/off
+    nmap <leader>h   :set invhls<CR>
 
-    " Ref: http://www.pixelbeat.org/settings/.vimrc
-    "allow deleting selection without updating the clipboard (yank buffer)
-    " vnoremap x "_x
-    " vnoremap X "_X
-    "
-    "don't move the cursor after pasting
-    "(by jumping to back start of previously changed text)
-    " noremap p p`[
-    " noremap P P`[
-    "}}}
-    " G1                {{{
-    " Omni completion: <C-n>
-    " Complete whole filenames/lines with a quicker shortcut key in insert mode
-    imap <C-F> <C-X><C-F>
-    imap <C-L> <C-X><C-L>
+    " list invisibles on/off
+    nmap <leader>l   :set invlist  <CR>
 
-    " Yank/paste to the OS clipboard with ,y and ,p
-    " nmap <leader>y "+y
-    " nmap <leader>Y "+yy
-    " nmap <leader>p "+p
-    " nmap <leader>P "+P
+    " }}}
+    " Identation                {{{
+    " ======================
 
-    " Reselect text that was just pasted with ,v
-    nnoremap <leader>v V`]
+    " Normal mode:
+    nmap <D-[> <<
+    nmap <D-]> >>
 
-    " Quickly get out of insert mode without your fingers having to leave the
-    " home row (either use 'jj' or 'jk')
-    " inoremap jj <Esc>
-    " inoremap jk <Esc>
+    " Visual mode
+    "     (gv: keeps selection)
+    vnoremap > ><CR>gv
+    vnoremap < <<CR>gv
+    vmap <D-[> <gv
+    vmap <D-]> >gv
 
-    " edit files
-    nmap <leader>ev  :e   $MYVIMRC<CR>
-    nmap <leader>sev :vsp $MYVIMRC<CR>
-
-    cmap w!! w !sudo tee % >/dev/null
-
-    " Pull word under cursor into LHS of a substitute (for quick search and
-    " replace)
-    " nmap <leader>z :% s#\<<C-r>=expand("<cword>")<CR>\>#
-
-    "}}}
-    " Movements         {{{
+    " }}}
+    " Movements                 {{{
     " ======================
 
     " http://vi-improved.org/vimrc.php
@@ -460,73 +417,87 @@ set nocompatible
     " begin/end of a  line
     map H ^
     map L $
+
     " }}}
-    " Fold              {{{
-    " Tip: fold toggle: za
-    nmap <leader>f0 :set foldlevel=0<CR>
-    nmap <leader>f1 :set foldlevel=1<CR>
-    nmap <leader>f2 :set foldlevel=2<CR>
-    nmap <leader>f3 :set foldlevel=3<CR>
-    nmap <leader>f4 :set foldlevel=4<CR>
-    nmap <leader>f5 :set foldlevel=5<CR>
-    nmap <leader>f6 :set foldlevel=6<CR>
-    nmap <leader>f7 :set foldlevel=7<CR>
-    nmap <leader>f8 :set foldlevel=8<CR>
-    nmap <leader>f9 :set foldlevel=9<CR>
+    " Editing                   {{{
+    " =======================
+    " CTRL-K:  delete so the end of line
+    nmap <C-K> D
+
+    " Quick yanking to the end of the line
+    nmap Y y$
+
+    " K = inverted J: join line up
+    nmap K ddpkJ
+
     " }}}
-    " Identation                {{{
+    " Using marks               {{{
+    " =======================
+
+    " ` is more useful than ' but less accessible.
+    " nnoremap ' `
+    " nnoremap ` '
+
+    " }}}
+    " Editing entire buffer     {{{
     " ======================
-    """ Normal mode:
-    nmap <D-[> <<
-    nmap <D-]> >>
 
-    """ Visual mode - gv: keeps selection
-    vnoremap > ><CR>gv
-    vnoremap < <<CR>gv
-    vmap <D-[> <gv
-    vmap <D-]> >gv
+    " Reformat
+    nmap _= :call Preserve("normal gg=G")<CR>
+
+    " Strip trailing spaces
+    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+
+    " dos2,nix
+    nmap _n :call Preserve("% s/\r$//")<CR>
 
     " }}}
-    " Shortcuts                 {{{
-    " ======================
-    nmap <leader>q  :q <CR>
-    nmap <leader>q1 :q!<CR>
-    nmap <leader>w  :w <CR>
-    nmap <leader>wa :wa<CR>
-    nmap <leader>wq :wq!<CR>
-    nmap <leader>ww :w !sudo tee % >/dev/null
-    nmap <leader>sa :browse confirm saveas<CR>
+    " Editing vimrc             {{{
+    " =======================
 
-"   cmap w!! w !sudo tee % >/dev/null
+    nmap <leader>ev  :e   $MYVIMRC<CR>
+    nmap <leader>sev :vsp $MYVIMRC<CR>
 
-    " linenumber on/off
-    nmap <leader>nu  :set invnumber<CR>
-    " relativenumber on/off
-    nmap <leader>rnu :set invrnu   <CR>
-    " set cursorcolumn/nocursorcolumn
-    nmap <leader>cuc :set invcuc   <CR>
-    " Highlight search on/off
-    nmap <leader>h :set invhls<CR>
-    " list invisibles on/off
-    nmap <leader>l :set invlist  <CR>
+    " }}}
+    " Copy/paste registers      {{{
+    " =======================
 
-    " CTRL-S for saving, also in Insert mode
-    "noremap  <C-S>        :update<CR>
-    "vnoremap <C-S>    <C-C>:update<CR>
-    "inoremap <C-S>    <C-O>:update<CR>
+    " (Correcting my international keyboard)
+    nmap \ "
 
-    " CTRL-A is Select all
-    "noremap <C-A> gggH<C-O>G
-    "inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-    "cnoremap <C-A> <C-C>gggH<C-O>G
-    "onoremap <C-A> <C-C>gggH<C-O>G
-    "snoremap <C-A> <C-C>gggH<C-O>G
-    "xnoremap <C-A> <C-C>ggVG
+    " allow deleting selection without updating the clipboard (yank buffer)
+    " Ref: http://www.pixelbeat.org/settings/.vimrc
+    " vnoremap x "_x
+    " vnoremap X "_X
+
+    "don't move the cursor after pasting
+    "(by jumping to back start of previously changed text)
+    " noremap p p`[
+    " noremap P P`[
+
+    " Yank/paste to the OS clipboard with ,y and ,p
+    " nmap <leader>y "+y
+    " nmap <leader>Y "+yy
+    " nmap <leader>p "+p
+    " nmap <leader>P "+P
+
+    " Reselect text that was just pasted with ,v
+    nnoremap <leader>v V`]
+
+    " Out of INSERT mode
+    " inoremap jj <Esc>
+    " inoremap jk <Esc>
+    inoremap jkl <Esc>
+
     " }}}
     " Formatting                {{{
     " ======================
+
     " Re-hardwrap paragraphs of text:
     nnoremap <leader>g= gqip
+
+    " Q formats paragraphs, instead of entering ex mode
+    noremap Q gq
 
     " Underline header
     map <leader>= yypVr=
@@ -540,22 +511,89 @@ set nocompatible
     "nnoremap <leader>4 yypVr-
     "nnoremap <leader>5 yypVr^
     "nnoremap <leader>6 yypVr"
-    "
+
     " }}}
-    " Utils                     {{{
-    " ======================
+    " Command Line              {{{
+    " =======================
+    " Saving from pressing SHIFT
+    " :w => \w
+    " nmap \ :
+
+    " making vim regex act like Perl Regex
+    "     Thanks to Steve Losh for this liberating tip
+    "     See http://stevelosh.com/blog/2010/09/coming-home-to-vim
+    nnoremap / /\v
+    vnoremap / /\v
+    nnoremap ? ?\v
+    vnoremap ? ?\v
+
+    " CTRL-g shows filename and buffer number, too.
+    " Ref:  https://github.com/godlygeek/vim-files/blob/master/.vimrc
+    nnoremap <C-g> 2<C-g>
+
+    " Pull word under cursor into LHS of a substitute (for quick search and
+    " replace)
+    " nmap <leader>z :% s#\<<C-r>=expand("<cword>")<CR>\>#
+
     " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
     nmap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
 
-    " }}}
-    " Editing entire buffer     {{{
+    "}}}
+    " Shortcuts                 {{{
     " ======================
-    " Reformat
-    nmap _= :call Preserve("normal gg=G")<CR>
-    " Strip trailing spaces
-    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
-    " dos2,nix
-    nmap _n :call Preserve("% s/\r$//")<CR>
+
+    nmap <leader>q  :q <CR>
+    nmap <leader>q1 :q!<CR>
+    nmap <leader>w  :w <CR>
+    nmap <leader>wa :wa<CR>
+    nmap <leader>wq :wq!<CR>
+    nmap <leader>ww :w !sudo tee % >/dev/null
+    nmap <leader>sa :browse confirm saveas<CR>
+
+    cmap w!! w !sudo tee % >/dev/null
+
+    " }}}
+    " Folding                   {{{
+    " =======================
+
+    " <space> toggles folds opened and closed
+    " nnoremap <space> za
+    " <space> in visual mode creates a fold over the marked range
+    " vnoremap <space> zf
+
+    " Tip: fold toggle: za
+    nmap <leader>f0 :set foldlevel=0<CR>
+    nmap <leader>f1 :set foldlevel=1<CR>
+    nmap <leader>f2 :set foldlevel=2<CR>
+    nmap <leader>f3 :set foldlevel=3<CR>
+    nmap <leader>f4 :set foldlevel=4<CR>
+    nmap <leader>f5 :set foldlevel=5<CR>
+    nmap <leader>f6 :set foldlevel=6<CR>
+    nmap <leader>f7 :set foldlevel=7<CR>
+    nmap <leader>f8 :set foldlevel=8<CR>
+    nmap <leader>f9 :set foldlevel=9<CR>
+
+    " }}}
+    " CNTRL-key                 {{{
+    " =======================
+
+    " CTRL-S for saving, also in Insert mode
+    "noremap  <C-S>        :update<CR>
+    "vnoremap <C-S>    <C-C>:update<CR>
+    "inoremap <C-S>    <C-O>:update<CR>
+
+    " CTRL-A is Select all
+    "noremap <C-A> gggH<C-O>G
+    "inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+    "cnoremap <C-A> <C-C>gggH<C-O>G
+    "onoremap <C-A> <C-C>gggH<C-O>G
+    "snoremap <C-A> <C-C>gggH<C-O>G
+    "xnoremap <C-A> <C-C>ggVG
+
+    " Omni completion: <C-n>
+    " Complete whole filenames/lines with a quicker shortcut key in insert mode
+    imap <C-F> <C-X><C-F>
+    imap <C-L> <C-X><C-L>
 
     " }}}
 
@@ -1234,5 +1272,5 @@ set nocompatible
 
 " }}}
 
-" vim: set foldmarker={{{,}}} foldlevel=0 nospell:
+" vim: set foldmarker={{{,}}} foldlevel=1 nospell:
 
