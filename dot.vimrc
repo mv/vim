@@ -286,17 +286,15 @@ set nocompatible
     " Folding                     {{{
     " ================
         set foldenable              " Turn on folding
-        set foldmarker={,}          " Fold C style code (only use this as default
-                                    " if you use a high foldlevel)
-        set foldmethod=marker       " Fold on the marker
+        set foldmethod=marker       " Fold on specific marker
+        set foldmarker={,}          " Markers to use.
         set foldlevel=100           " Don't autofold anything (but I can still fold manually)
         set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
 
+        set foldtext=SimpleFoldText() " Custom fold text function (cleaner than default)
         function! SimpleFoldText()
             return getline(v:foldstart).' '
         endfunction
-
-        set foldtext=SimpleFoldText() " Custom fold text function (cleaner than default)
 
         " Fold HTML tags
         nnoremap <leader>ft Vatzf
@@ -466,18 +464,15 @@ set nocompatible
     " }}}
     " Fold              {{{
     " Tip: fold toggle: za
-    nmap <leader>fc :foldclose<CR>
-    nmap <leader>fo :foldopen<CR>
-
     nmap <leader>f0 :set foldlevel=0<CR>
     nmap <leader>f1 :set foldlevel=1<CR>
     nmap <leader>f2 :set foldlevel=2<CR>
     nmap <leader>f3 :set foldlevel=3<CR>
-    nmap <leader>f4 :set foldlevel=3<CR>
-    nmap <leader>f5 :set foldlevel=3<CR>
-    nmap <leader>f6 :set foldlevel=3<CR>
-    nmap <leader>f7 :set foldlevel=3<CR>
-    nmap <leader>f8 :set foldlevel=3<CR>
+    nmap <leader>f4 :set foldlevel=4<CR>
+    nmap <leader>f5 :set foldlevel=5<CR>
+    nmap <leader>f6 :set foldlevel=6<CR>
+    nmap <leader>f7 :set foldlevel=7<CR>
+    nmap <leader>f8 :set foldlevel=8<CR>
     nmap <leader>f9 :set foldlevel=9<CR>
 
     " }}}
