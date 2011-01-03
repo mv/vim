@@ -818,9 +818,8 @@ set nocompatible
         autocmd BufNewFile,BufRead *.snippet  setf snippet
         autocmd BufNewFile,BufRead *.snippets setf snippet
         autocmd FileType             snippet  set ts=4 sts=4 sw=4 noet list
-        autocmd FileType             snippet  set foldmethod=marker foldmarker={{{,}}} foldlevel=0
-
-
+        autocmd FileType             snippet  set foldmethod=expr foldlevel=0
+        autocmd FileType             snippet  set foldexpr=getline(v:lnum)=~'^\\s*$'&&getline(v:lnum+1)=~'\\S'?'<1':1
     " }}}
     " Vim                       {{{2
        autocmd FileType             vim      set foldmethod=marker foldmarker={,} foldlevel=0
