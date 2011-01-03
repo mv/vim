@@ -1020,6 +1020,8 @@ set nocompatible
 
         let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
 
+        nmap <leader>ras  :exec ReloadAllSnippets()<CR>
+
         " Tip: i_CTRL-R_<Tab>
         "      popupmenu of all snippets available
         "      for this filetype
