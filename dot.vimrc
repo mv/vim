@@ -371,18 +371,18 @@ set nocompatible
     " :w => \w
     nmap \ :
 
-    " Thanks to Steve Losh for this liberating tip
-    " See http://stevelosh.com/blog/2010/09/coming-home-to-vim
-    " Perl Regex
+    " making vim regex act like Perl Regex
+    "     Thanks to Steve Losh for this liberating tip
+    "     See http://stevelosh.com/blog/2010/09/coming-home-to-vim
     nnoremap / /\v
     vnoremap / /\v
+    nnoremap ? ?\v
+    vnoremap ? ?\v
 
     " Quick yanking to the end of the line
     nmap Y y$
-
     " K = inverted J: join line up
     map K ddpkJ
-
     " CTRL-K:  delete so the end of line
     map <C-K> D
     " DOES NOT WORK
@@ -390,6 +390,29 @@ set nocompatible
 
     " Movements         {{{2
     " ======================
+    " Ref:  https://github.com/godlygeek/vim-files/blob/master/.vimrc
+    " CTRL-g shows filename and buffer number, too.
+    nnoremap <C-g> 2<C-g>
+    " Q formats paragraphs, instead of entering ex mode
+    noremap Q gq
+    " <space> toggles folds opened and closed
+    " nnoremap <space> za
+    " <space> in visual mode creates a fold over the marked range
+    " vnoremap <space> zf
+
+    " ` is more useful than ' but less accessible.
+    " nnoremap ' `
+    " nnoremap ` '
+
+    " Ref: http://www.pixelbeat.org/settings/.vimrc
+    "allow deleting selection without updating the clipboard (yank buffer)
+    " vnoremap x "_x
+    " vnoremap X "_X
+    "
+    "don't move the cursor after pasting
+    "(by jumping to back start of previously changed text)
+    " noremap p p`[
+    " noremap P P`[
 
     " http://items.sjbach.com/319/configuring-vim-right
     " scroll viewpoint by 'n' lines
@@ -397,7 +420,7 @@ set nocompatible
     nnoremap <C-k> 5<C-y>
 
     " http://vi-improved.org/vimrc.php
-    " space / shift-space scroll in normal mode
+    " space/shift-space: scroll in normal mode
     noremap <S-SPACE> <C-B>
     noremap <SPACE>   <C-F>
 
@@ -405,6 +428,12 @@ set nocompatible
     " http://nvie.com/posts/how-i-boosted-my-vim/
     nnoremap j gj
     nnoremap k gk
+
+    " http://blog.learnr.org/post/59098925/configuring-vim-some-more
+    " begin/end of a  line
+    map H ^
+    map L $
+    " }}}
 
     " Omni completion: <C-n>
     " Complete whole filenames/lines with a quicker shortcut key in insert mode
@@ -678,10 +707,31 @@ set nocompatible
     " :0 put =range(1,15)
     " :for in in range(1,15) | put ='192.168.1.'.i | endfor
 
+    " Ref: https://github.com/sjbach/env/blob/master/dotfiles/vimrc
+    " " Indent XML readably
+    " function! DoPrettyXML()
+    "     1,$!xmllint --format --recover -
+    " endfunction
+    " command! PrettyXML call DoPrettyXML()
+
+    " Ref: http://www.pixelbeat.org/settings/.vimrc
+    " To create new file securely do: vim new.file.txt.gpg
+    " Your private key used to decrypt the text before viewing should
+    " be protected by a passphrase. Alternatively one could use
+    " a passphrase directly with symmetric encryption in the gpg commands below.
+    " au BufNewFile,BufReadPre *.gpg :set secure viminfo= noswapfile nobackup nowritebackup history=0 binary
+    " au BufReadPost *.gpg :%!gpg -d 2>/dev/null
+    " au BufWritePre *.gpg :%!gpg -e -r 'P@draigBrady.com' 2>/dev/null
+    " au BufWritePost *.gpg u
 
 " FileTypes    {{{1
 
     " all files                 {{{2
+" }}}
+" FileTypes    {{{
+" ================
+
+    " all files                 {{{
         " Strip white space
         autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
@@ -713,6 +763,16 @@ set nocompatible
 
     " }}}
     " Notes                     {{{2
+
+    " HTML/XML                  {{{
+    " Ref: http://www.pixelbeat.org/settings/.vimrc
+    " augroup html
+    "     au!
+    "     "Disable parenthesis matching as it's way too slow
+    "     au BufRead *.html,*.xml NoMatchParen
+    " augroup END
+    " }}}
+
         autocmd BufNewFile,BufRead *.notes     setlocal filetype=notes
         autocmd BufNewFile,BufRead *.notes.txt setlocal filetype=notes
 
@@ -772,6 +832,10 @@ set nocompatible
     " }}}
 " Plugins      {{{1
     " align, alignmaps          {{{2
+
+    " Tip:
+    "     scriptnames     " List all sourced scripts
+
         let g:DrChipTopLvlMenu     = "Plugin."
         let g:alignmaps_euronumber = 1
     " }}}
@@ -934,6 +998,10 @@ set nocompatible
     " matchit.vim               {{{2
         " Turn it off:
         " let loaded_matchit = 1
+
+        " Using as provided by vim distro
+        " runtime macros/matchit.vim
+
     " }}}
     " NerdCommenter             {{{2
     " molokai.vim               {{{
