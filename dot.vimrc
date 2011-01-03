@@ -194,7 +194,6 @@ set nocompatible
     " }}}
     " ColorScheme                 {{{
         set bg=dark
-
         map <leader>c1 :colorscheme ir_black3<CR>
         map <leader>c2 :colorscheme torte    <CR>
         map <leader>c3 :colorscheme desert   <CR>
@@ -209,13 +208,13 @@ set nocompatible
         auto BufEnter * let &titlestring=expand("%:p")." - ".v:servername
 
         if filereadable(expand("~/.vim/colors/ir_black3.vim"))
-        colorscheme ir_black3
+            colorscheme ir_black3
         endif
 
-        set nocursorcolumn
         set mouse=a             " mouse active in all modes
         set mousehide           " Hide the mouse pointer while typing
 
+        set nocursorcolumn
         "et guioptions=egmrLtT  " Default
         set guioptions=egmrLt   " No toolbar
         set guifont=Monaco:h12  " MacVim
@@ -474,7 +473,6 @@ set nocompatible
     nmap <leader>f7 :set foldlevel=7<CR>
     nmap <leader>f8 :set foldlevel=8<CR>
     nmap <leader>f9 :set foldlevel=9<CR>
-
     " }}}
     " Identation                {{{
     " ======================
@@ -1230,9 +1228,9 @@ set nocompatible
     set paste               " terminal: do the right thing when executing paste
     set verbose=0           " Debug
     if version >= 703       " Vim 7.x specific colors
-        hi CursorColumn   guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-        hi ColorColumn    guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-    endif
+        hi CursorColumn guifg=NONE guibg=black gui=NONE ctermfg=NONE ctermbg=NONE cterm=BOLD
+        hi ColorColumn  guifg=NONE guibg=black gui=NONE ctermfg=NONE ctermbg=NONE cterm=BOLD
+        endif
 
 " }}}
 
