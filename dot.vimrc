@@ -418,14 +418,17 @@ set nocompatible
     map H ^
     map L $
 
+    " Out of INSERT mode
+    " inoremap jj <Esc>
+    " inoremap jk <Esc>
+    inoremap jkk <Esc>
+    inoremap ;l <Esc>
+
     " }}}
     " Editing                   {{{
     " =======================
     " CTRL-K:  delete so the end of line
     nmap <C-K> D
-
-    " Quick yanking to the end of the line
-    nmap Y y$
 
     " K = inverted J: join line up
     nmap K ddpkJ
