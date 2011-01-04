@@ -1165,6 +1165,16 @@ set nocompatible
         " Turn it off:
         " let loaded_search_complete = 1
     " }}}
+    " showmarks                 {{{
+        " Turn it off:
+        " let let loaded_showmarks = 1
+
+       " map <leader>mt :ShowMarksToggle    <CR>
+       " map <leader>mm :ShowMarksPlaceMark <CR>
+       " map <leader>md :ShowMarksClearMark <CR>
+       " map <leader>ma :ShowMarksClearAll  <CR>
+
+    " }}}
     " snipmate-snippets         {{{
         " Turn it off:
         " let loaded_snips = 1
