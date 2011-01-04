@@ -645,6 +645,7 @@ set nocompatible
     nmap <leader>o   :only <CR>
     nmap <leader>sb  :set scrollbind<CR>
     nmap <leader>nsb :set noscrollbind<CR>
+
     " split: set equal size
     nmap <leader>sp= <C-W>=
 
@@ -677,9 +678,13 @@ set nocompatible
     nmap <leader>spL <C-W>L
     "}}}
     " New split                         {{{
+
+    nmap <leader>sp   :split<CR>
+    nmap <leader>vsp  :vsplit<CR>
+
     " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
     nmap <leader>sp<left>   :leftabove  vsplit<CR>
-    nmap <leader>sp<right>  :rightbelow vsplplt<CR>
+    nmap <leader>sp<right>  :rightbelow vsplit<CR>
     nmap <leader>sp<up>     :leftabove  split<CR>
     nmap <leader>sp<down>   :rightbelow split<CR>
 
@@ -688,6 +693,7 @@ set nocompatible
     nmap <leader>spl        :rightbelow vsplit<CR>
     nmap <leader>spk        :leftabove  split<CR>
     nmap <leader>spj        :rightbelow split<CR>
+
     "}}}
 
 " }}}
