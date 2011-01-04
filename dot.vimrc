@@ -27,13 +27,16 @@ set nocompatible
     " }}}
     " general                     {{{
     set modeline                    " modeline on
-    set clipboard+=unnamed          " yy, D, p: share OS clipboard
+
     set virtualedit=block           " allow moving past end of line in block selection mode
-    set completeopt=menu,preview,longest    " C-N/acp: completion popup menu options
-    set nrformats=alpha,octal,hex           " C-A/C-X: increment/decrement
+    set virtualedit=all             " allow moving past end of line in block selection mode
+
     " set timeoutlen=5000             " time in ms to complete a mapped key combination
     " set timeoutlen=2000             " Wait 2 seconds before timing out a mapping
     " set ttimeoutlen=100             " and only 100 ms before timing out on a keypress.
+
+    " set clipboard+=unnamed          " yy, D, p: share OS clipboard
+    " set clipboard-=unnamed          " NOT sharing OS clipboard
     " }}}
     " command line                {{{
     set showcmd                 " show command line
@@ -136,8 +139,13 @@ set nocompatible
     set cursorline          " horizontal highlight
     set nocursorcolumn      " vertical highlight
     set nostartofline       " keep cursor in same column where moving up/down
-    set errorbells          " Bells error messagens
+
+    set completeopt=menu,preview,longest    " completion popup menu options
+    set nrformats=alpha,octal,hex           " C-A/C-X: increment/decrement
+
+    set noerrorbells        " no bells on error messagens
     set visualbell          " no sound bells
+
     "  }}}
     " Viewport                    {{{
     set scrolloff=3         " keep 3 lines scrolling up/down
@@ -473,24 +481,22 @@ set nocompatible
     " vnoremap x "_x
     " vnoremap X "_X
 
-    "don't move the cursor after pasting
-    "(by jumping to back start of previously changed text)
-    " noremap p p`[
-    " noremap P P`[
+    " Yank/paste to/from the OS clipboard with ,y and ,p
+    nmap <leader>p "*p
+    nmap <leader>P "*P
+    nmap <leader>y "*y
+    nmap <leader>yy "*yy
 
-    " Yank/paste to the OS clipboard with ,y and ,p
-    " nmap <leader>y "+y
-    " nmap <leader>Y "+yy
-    " nmap <leader>p "+p
-    " nmap <leader>P "+P
+    " Quick yanking to the end of the line
+    nmap Y y$
 
     " Reselect text that was just pasted with ,v
     nnoremap <leader>v V`]
 
-    " Out of INSERT mode
-    " inoremap jj <Esc>
-    " inoremap jk <Esc>
-    inoremap jkl <Esc>
+    "don't move the cursor after pasting
+    "(by jumping to back start of previously changed text)
+    " noremap p p`[
+    " noremap P P`[
 
     " }}}
     " Formatting                {{{
