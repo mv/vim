@@ -1049,9 +1049,27 @@ set nocompatible
         " Turn it off:
         " let g:loaded_mark = 1
     " }}}
+    " marks browser.vim         {{{
+        " Turn it off:
+        " let loaded_marksbrowser = 1
+
+        map <leader>mb :MarksBrowser<CR><CR>
+
+        " Do not close after selecting a mark
+        let marksCloseWhenSelected = 0
+
+    " }}}
     " marks_corey.vim           {{{
         " Turn it off:
         " let g:loaded_marks_corey = 1
+    " }}}
+    " matchit.vim               {{{
+        " Turn it off:
+        " let loaded_matchit = 1
+
+        " Using as provided by vim distro
+        " runtime macros/matchit.vim
+
     " }}}
     " matchit.vim               {{{
         " Turn it off:
