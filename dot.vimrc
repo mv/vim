@@ -1250,6 +1250,17 @@ set nocompatible
         " Turn it off:
         " let g:loaded_textformat = 1
     " }}}
+    " tregisters.vim            {{{
+        " Turn it off:
+        " let loaded_tregisters = 1
+
+       map <leader>tr :TRegisters    <CR>
+
+        " My corrections
+        autocmd FileType  tlibInputList setlocal nonu cc=+1,+2,+3,+4,+5 cursorcolumn
+        highlight  InputlListCursor guifg=#CCCCCC  guibg=darkblue  gui=italic  ctermfg=white  ctermbg=darkblue  cterm=NONE
+
+    " }}}
     " unimpaired.vim            {{{
         " Turn it off:
         " let g:loaded_unimpaired = 1
