@@ -43,3 +43,9 @@
 [submodule "dot.vim/bundle/tmarks"]
 	path = dot.vim/bundle/tmarks
 	url = https://github.com/tomtom/tmarks_vim.git
+[submodule "dot.vim/bundle/tregisters"]
+	path = dot.vim/bundle/tregisters
+	url = https://github.com/tomtom/tregisters_vim.git
+[submodule "dot.vim/bundle/tlib"]
+	path = dot.vim/bundle/tlib
+	url = https://github.com/tomtom/tlib_vim.git

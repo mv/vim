@@ -48,6 +48,14 @@ Bundle via git:
             git submodule add git://git.wincent.com/command-t.git dot.vim/bundle/command-t
             git checkout 1.0
 
+        # Tom Link
+        tlib
+            git submodule add https://github.com/tomtom/tlib_vim.git        dot.vim/bundle/tlib
+        tregisters
+            git submodule add https://github.com/tomtom/tregisters_vim.git  dot.vim/bundle/tregisters
+        tmarks
+            git submodule add https://github.com/tomtom/tmarks_vim.git      dot.vim/bundle/tmarks
+
  Bundle Via hg:
 --------------
 
