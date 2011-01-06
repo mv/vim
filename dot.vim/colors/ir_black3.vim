@@ -71,6 +71,7 @@ let colors_name = "ir_black3"
  hi Cursor           guifg=gray        guibg=blue        gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
 
  hi LineNr           guifg=darkgray    guibg=#121212     gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
+ hi SignColumn       guifg=white       guibg=black       gui=bold      ctermfg=white       ctermbg=black       cterm=bold
 
  hi VertSplit        guifg=white       guibg=#202020     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
  hi StatusLine       guifg=#CCCCCC     guibg=blue        gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
@@ -219,5 +220,8 @@ endif
 
 
 " Special for PHP
+
+
+highlight SignColumn guibg=darkgrey
 
 

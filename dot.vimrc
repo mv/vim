@@ -1169,6 +1169,11 @@ set nocompatible
         " Turn it off:
         " let let loaded_showmarks = 1
 
+        hi ShowMarksHLl guifg=white guibg=black    gui=bold ctermfg=white ctermbg=black    cterm=bold
+        hi ShowMarksHLu guifg=white guibg=darkblue gui=bold ctermfg=white ctermbg=darkblue cterm=bold
+        hi ShowMarksHLo guifg=gray  guibg=black    gui=bold ctermfg=gray  ctermbg=black    cterm=bold
+        hi ShowMarksHLm guifg=white guibg=gray     gui=bold ctermfg=white ctermbg=gray     cterm=bold
+
        " map <leader>mt :ShowMarksToggle    <CR>
        " map <leader>mm :ShowMarksPlaceMark <CR>
        " map <leader>md :ShowMarksClearMark <CR>
@@ -1309,9 +1314,10 @@ set nocompatible
     set paste               " terminal: do the right thing when executing paste
     set verbose=0           " Debug
     if version >= 703       " Vim 7.x specific colors
-        hi CursorColumn guifg=NONE guibg=black gui=NONE ctermfg=NONE ctermbg=NONE cterm=BOLD
-        hi ColorColumn  guifg=NONE guibg=black gui=NONE ctermfg=NONE ctermbg=NONE cterm=BOLD
-        endif
+        hi    CursorColumn guifg=NONE  guibg=black gui=NONE ctermfg=NONE  ctermbg=NONE  cterm=BOLD
+        hi    ColorColumn  guifg=NONE  guibg=black gui=NONE ctermfg=NONE  ctermbg=NONE  cterm=BOLD
+        hi    SignColumn   guifg=white guibg=black gui=bold ctermfg=white ctermbg=black cterm=bold
+    endif
 
 " }}}
 
