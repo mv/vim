@@ -258,7 +258,7 @@ set nocompatible
     "   set statusline+=,%{&fileformat}                " file format
         set statusline+=]
 
-        set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%l%)\ %p%%] " col lin/tot perc
+        set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)\ %p%%] " col lin/tot perc
 
     "   set statusline+=\ %f                               " filename
         set statusline+=\ [%t]                             " filename
