@@ -262,6 +262,7 @@ set nocompatible
 
     "   set statusline+=\ %f                               " filename
         set statusline+=\ [%t]                             " filename
+        set statusline+=\ %m%r%h%w%q
 
         if filereadable(expand("~/.vim/plugin/rails.vim"))
             set statusline+=\ %{rails#statusline(1)}      " rails.vim
