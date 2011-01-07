@@ -35,6 +35,7 @@ ScriptID  SourceID  Filename
 1682 7062 Indexedsearch
 474 1388 SearchComplete
 2695 13425 EnhancedJumps
+3383 14631 StatusLineHighlight
 
 39 8196 matchit
 2324 9247 textformat

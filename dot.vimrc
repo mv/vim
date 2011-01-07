@@ -1232,6 +1232,29 @@ set nocompatible
         " nmap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
         " nmap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
     " }}}
+    " StatusLineHighlight       {{{
+        " Turn it off:
+        " let g:loaded_StatusLineHighlight = 1
+
+        " My buffers
+        highlight StatusLineModified       guifg=#CCCCCC    guibg=DarkRed   gui=bold ctermfg=gray    ctermbg=DarkRed   cterm=NONE
+        highlight StatusLineModifiedNC     guifg=DarkRed    guibg=gray      gui=bold ctermfg=DarkRed ctermbg=gray      cterm=NONE
+
+        " Help
+        highlight StatusLineSpecial        guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
+        highlight StatusLineSpecialNC      guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
+
+        " :pedit/psearch/ptag
+        highlight StatusLinePreview        guifg=darkblue   guibg=#FF73FD   gui=bold ctermfg=gray    ctermbg=DarkRed   cterm=NONE
+        highlight StatusLinePreviewNC      guifg=magenta    guibg=#FF73FD   gui=bold ctermfg=DarkRed ctermbg=gray      cterm=NONE
+
+        " others...
+        highlight StatusLineReadonly       guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
+        highlight StatusLineReadonlyNC     guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
+        highlight StatusLineUnmodifiable   guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
+        highlight StatusLineUnmodifiableNC guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
+
+    " }}}
     " surround.vim              {{{
         " Turn it off:
         " let g:loaded_surround = 1
