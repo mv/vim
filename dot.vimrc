@@ -1245,8 +1245,8 @@ set nocompatible
         highlight StatusLineSpecialNC      guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
 
         " :pedit/psearch/ptag
-        highlight StatusLinePreview        guifg=darkblue   guibg=#FF73FD   gui=bold ctermfg=gray    ctermbg=DarkRed   cterm=NONE
-        highlight StatusLinePreviewNC      guifg=magenta    guibg=#FF73FD   gui=bold ctermfg=DarkRed ctermbg=gray      cterm=NONE
+        highlight StatusLinePreview        guifg=white      guibg=magenta   gui=bold ctermfg=white   ctermbg=magenta   cterm=NONE
+        highlight StatusLinePreviewNC      guifg=black      guibg=magenta   gui=bold ctermfg=black   ctermbg=magenta   cterm=NONE
 
         " others...
         highlight StatusLineReadonly       guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
