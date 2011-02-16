@@ -223,8 +223,8 @@ set nocompatible
         set mousehide           " Hide the mouse pointer while typing
 
         set nocursorcolumn
-        "et guioptions=egmrLtT  " Default
-        set guioptions=egmrLt   " No toolbar
+        set guioptions=egmrLtT  " Default
+        "et guioptions=egmrLt   " No toolbar
         set guifont=Monaco:h12  " MacVim
         set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
         set tabpagemax=15       " tpm: max nro of tab windows
