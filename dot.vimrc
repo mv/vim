@@ -1072,14 +1072,6 @@ set nocompatible
         " runtime macros/matchit.vim
 
     " }}}
-    " matchit.vim               {{{
-        " Turn it off:
-        " let loaded_matchit = 1
-
-        " Using as provided by vim distro
-        " runtime macros/matchit.vim
-
-    " }}}
     " molokai.vim               {{{
         " color option
         let g:molokai_original = 1
