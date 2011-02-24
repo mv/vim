@@ -1186,7 +1186,7 @@ set nocompatible
         "      for this filetype
 
         " Space+tab: snip list
-        inoremap <silent> <space><tab> <c-r>=ShowAvailableSnips()<cr>
+"       inoremap <silent> <space><tab> <c-r>=ShowAvailableSnips()<cr>
 
         " acp+snip-mate (from help:acp.txt): plugin/snipmate.vim
         " fun! GetSnipsInCurrentScope()
@@ -1197,7 +1197,7 @@ set nocompatible
         "     endfor
         "     return snips
         " endf
-        let g:acp_behaviorSnipmateLength = 1
+"       let g:acp_behaviorSnipmateLength = 5
 
     " }}}
     " speeddating.vim           {{{
