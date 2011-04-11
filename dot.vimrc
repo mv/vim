@@ -430,8 +430,8 @@ set nocompatible
 
     " http://vi-improved.org/vimrc.php
     " space/shift-space: scroll in normal mode
-    noremap <S-SPACE> <C-B>
-    noremap <SPACE>   <C-F>
+    " noremap <S-SPACE> <C-B>
+    " noremap <SPACE>   <C-F>
 
     " row up/down if wrap active
     " http://nvie.com/posts/how-i-boosted-my-vim/
