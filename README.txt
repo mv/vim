@@ -56,6 +56,15 @@ Bundle via git:
         tmarks
             git submodule add https://github.com/tomtom/tmarks_vim.git      dot.vim/bundle/tmarks
 
+        # plasticboy
+        markdown
+            git submodule add https://github.com/plasticboy/vim-markdown.git dot.vim/bundle/vim-markdown
+
+        # Hallison Batista
+        rdoc
+            git submodule add https://github.com/hallison/vim-rdoc.git      dot.vim/bundle/vim-rdoc
+
+
  Bundle Via hg:
 --------------
 
