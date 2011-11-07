@@ -1221,7 +1221,7 @@ set nocompatible
     " }}}
     " snipmate-snippets         {{{
         " Turn it off:
-        " let loaded_snips = 1
+        let loaded_snips = 1
 
         let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
 

@@ -37,9 +37,6 @@
 [submodule "dot.vim/bundle/command-t"]
 	path = dot.vim/bundle/command-t
 	url = git://git.wincent.com/command-t.git
-[submodule "dot.vim/bundle/snipmate"]
-	path = dot.vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim
 [submodule "dot.vim/bundle/tmarks"]
 	path = dot.vim/bundle/tmarks
 	url = https://github.com/tomtom/tmarks_vim.git
@@ -52,3 +49,6 @@
 [submodule "dot.vim/bundle/vim-rdoc"]
 	path = dot.vim/bundle/vim-rdoc
 	url = https://github.com/hallison/vim-rdoc.git
+[submodule "dot.vim/bundle/snipmate"]
+	path = dot.vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim
