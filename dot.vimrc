@@ -1206,7 +1206,7 @@ set nocompatible
     " }}}
     " showmarks                 {{{
         " Turn it off:
-        " let let loaded_showmarks = 1
+        let loaded_showmarks = 1
 
         hi ShowMarksHLl guifg=white guibg=black    gui=bold ctermfg=white ctermbg=black    cterm=bold
         hi ShowMarksHLu guifg=white guibg=darkblue gui=bold ctermfg=white ctermbg=darkblue cterm=bold
