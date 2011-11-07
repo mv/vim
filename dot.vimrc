@@ -205,6 +205,8 @@ set nocompatible
         map <leader>c1 :colorscheme ir_black3<CR>
         map <leader>c2 :colorscheme torte    <CR>
         map <leader>c3 :colorscheme desert   <CR>
+        map <leader>c4 :colorscheme vividchalk   <CR>
+        map <leader>c5 :colorscheme wombat256mod <CR>
         map <leader>c0 :echo g:colors_name   <CR>
 
         " Terminal vim theme
@@ -217,6 +219,10 @@ set nocompatible
 
         if filereadable(expand("~/.vim/colors/ir_black3.vim"))
             colorscheme ir_black3
+        endif
+
+        if filereadable(expand("~/.vim/colors/vividchalk.vim"))
+            colorscheme vividchalk
         endif
 
         set mouse=a             " mouse active in all modes
@@ -891,7 +897,11 @@ set nocompatible
     " Ruby                      {{{
         autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby
         autocmd BufNewFile,BufRead Rakefile,Capfile  setlocal filetype=ruby
-        autocmd FileType           ruby  setlocal ts=2 sts=2 sw=2 et nowrap
+        autocmd BufNewFile,BufRead Vagrantfile       setlocal filetype=ruby
+        autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
+    " }}}
+    " Puppet                    {{{
+        autocmd BufNewFile,BufRead *.pp              setlocal filetype=puppet
     " }}}
     " SQL*Plus                  {{{
     " autocmd BufNewFile,BufRead *sql       set filetype=plsql
