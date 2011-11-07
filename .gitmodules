@@ -1,3 +1,9 @@
+[submodule "dot.vim/bundle/nerdcommenter"]
+	path = dot.vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "dot.vim/bundle/nerdtree"]
+	path = dot.vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
 [submodule "dot.vim/bundle/vim-zencoding"]
 	path = dot.vim/bundle/vim-zencoding
 	url = git://github.com/mattn/zencoding-vim.git
@@ -10,45 +16,9 @@
 [submodule "dot.vim/bundle/vim-repeat"]
 	path = dot.vim/bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
-[submodule "dot.vim/bundle/vim-endwise"]
-	path = dot.vim/bundle/vim-endwise
-	url = git://github.com/tpope/vim-endwise.git
 [submodule "dot.vim/bundle/vim-fugitive"]
 	path = dot.vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "dot.vim/bundle/vim-rails"]
-	path = dot.vim/bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
-[submodule "dot.vim/bundle/vim-unimpaired"]
-	path = dot.vim/bundle/vim-unimpaired
-	url = git://github.com/tpope/vim-unimpaired.git
-[submodule "dot.vim/bundle/vim-ragtag"]
-	path = dot.vim/bundle/vim-ragtag
-	url = git://github.com/tpope/vim-ragtag.git
-[submodule "dot.vim/bundle/nerdtree"]
-	path = dot.vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
-[submodule "dot.vim/bundle/nerdcommenter"]
-	path = dot.vim/bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "dot.vim/bundle/vim-markdown"]
-	path = dot.vim/bundle/vim-markdown
-	url = git://github.com/plasticboy/vim-markdown.git
 [submodule "dot.vim/bundle/command-t"]
 	path = dot.vim/bundle/command-t
 	url = git://git.wincent.com/command-t.git
-[submodule "dot.vim/bundle/tmarks"]
-	path = dot.vim/bundle/tmarks
-	url = https://github.com/tomtom/tmarks_vim.git
-[submodule "dot.vim/bundle/tregisters"]
-	path = dot.vim/bundle/tregisters
-	url = https://github.com/tomtom/tregisters_vim.git
-[submodule "dot.vim/bundle/tlib"]
-	path = dot.vim/bundle/tlib
-	url = https://github.com/tomtom/tlib_vim.git
-[submodule "dot.vim/bundle/vim-rdoc"]
-	path = dot.vim/bundle/vim-rdoc
-	url = https://github.com/hallison/vim-rdoc.git
-[submodule "dot.vim/bundle/snipmate"]
-	path = dot.vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim

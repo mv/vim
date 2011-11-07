@@ -22,18 +22,22 @@ Bundle via git:
 
         endwise
             git submodule add git://github.com/tpope/vim-endwise.git       dot.vim/bundle/vim-endwise
+            git submodule rm  dot.vim/bundle/vim-endwise
 
         fugitive
             git submodule add git://github.com/tpope/vim-fugitive.git      dot.vim/bundle/vim-fugitive
 
         rails
             git submodule add git://github.com/tpope/vim-rails.git         dot.vim/bundle/vim-rails
+            git submodule rm  dot.vim/bundle/vim-rails
 
         unimpaired
             git submodule add git://github.com/tpope/vim-unimpaired.git    dot.vim/bundle/vim-unimpaired
+            git submodule rm  dot.vim/bundle/vim-unimpaired
 
         ragtag
             git submodule add git://github.com/tpope/vim-ragtag.git        dot.vim/bundle/vim-ragtag
+            git submodule rm  dot.vim/bundle/vim-ragtag
 
 
        # Yasuhiro Matsumoto
@@ -42,6 +46,7 @@ Bundle via git:
 
         # SnipMate-snippets
             git submodule add git://github.com/msanders/snipmate.vim   dot.vim/bundle/snipmate
+            git submodule rm  dot.vim/bundle/snipmate
 
         # Wincent Colaiuta
         Command-t
@@ -51,18 +56,23 @@ Bundle via git:
         # Tom Link
         tlib
             git submodule add https://github.com/tomtom/tlib_vim.git        dot.vim/bundle/tlib
+            git submodule rm        dot.vim/bundle/tlib
         tregisters
             git submodule add https://github.com/tomtom/tregisters_vim.git  dot.vim/bundle/tregisters
+            git submodule rm  dot.vim/bundle/tregisters
         tmarks
             git submodule add https://github.com/tomtom/tmarks_vim.git      dot.vim/bundle/tmarks
+            git submodule rm      dot.vim/bundle/tmarks
 
         # plasticboy
         markdown
             git submodule add https://github.com/plasticboy/vim-markdown.git dot.vim/bundle/vim-markdown
+            git submodule rm dot.vim/bundle/vim-markdown
 
         # Hallison Batista
         rdoc
             git submodule add https://github.com/hallison/vim-rdoc.git      dot.vim/bundle/vim-rdoc
+            git submodule rm      dot.vim/bundle/vim-rdoc
 
 
  Bundle Via hg:
@@ -94,16 +104,16 @@ Bundle via Download and/or get-script (GLVS)
         bufexplorer     7.2.6   http://www.vim.org/scripts/script.php?script_id=42
 
         # Yegappan Lakshmanan
-        taglist         4.5     http://www.vim.org/scripts/script.php?script_id=273
+      # taglist         4.5     http://www.vim.org/scripts/script.php?script_id=273
 
         # Peter Bagyinszki
-        dbext           12.00   http://www.vim.org/scripts/script.php?script_id=356
+      # dbext           12.00   http://www.vim.org/scripts/script.php?script_id=356
 
         # Miles Sterrett
         ack             0.3.1   http://www.vim.org/scripts/script.php?script_id=2572
 
         # Srinath Avadhanula
-        increment       1.3     http://www.vim.org/scripts/script.php?script_id=156
+      # increment       1.3     http://www.vim.org/scripts/script.php?script_id=156
 
         # Chris Russell
         SearchComplete  1.1     http://www.vim.org/scripts/script.php?script_id=474
@@ -125,7 +135,7 @@ Bundle via Download and/or get-script (GLVS)
         marks_corey     1.4     http://www.vim.org/scripts/script.php?script_id=2194
 
         # Karl Guertin
-        autoclose       1.2     http://www.vim.org/scripts/script.php?script_id=1849
+      # autoclose       1.2     http://www.vim.org/scripts/script.php?script_id=1849
 
         # Benji Fisher
         matchit         1.13.2  http://www.vim.org/scripts/script.php?script_id=39
@@ -145,7 +155,7 @@ Bundle via Download and/or get-script (GLVS)
         xmlpretty       1.5     http://www.vim.org/scripts/script.php?script_id=2130
 
         # Samhita Kasula
-        notemaker       1.0     http://www.vim.org/scripts/script.php?script_id=2382
+      # notemaker       1.0     http://www.vim.org/scripts/script.php?script_id=2382
 
         # Ben Booth
         kwbdi           1.1     http://www.vim.org/scripts/script.php?script_id=2103
