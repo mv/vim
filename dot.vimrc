@@ -11,8 +11,8 @@ set nocompatible
     " call pathogen {{{
     " All plugins under the ~/.vim/bundle directory
     filetype off
-    call pathogen#helptags()
-    call pathogen#runtime_append_all_bundles()
+    call pathogen#infect()
+  " call pathogen#helptags()
     " }}}
 
 " }}}
@@ -359,8 +359,8 @@ set nocompatible
     command! Q  :q
 
     command! Rehash     source $MYVIMRC
-    command! Helptags   helptags ~/.vim/doc
-    command! Helptags   call pathogen#helptags()
+    " command! Helptags   helptags ~/.vim/doc
+    " command! Helptags   call pathogen#helptags()
 
     command! Color      echo g:colors_name
     "}}}
