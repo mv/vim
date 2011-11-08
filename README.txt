@@ -80,16 +80,16 @@ Bundle via git:
 
         # Takeshi Nishida
         - autocomplpop    2.14.1
-            hg clone https://bitbucket.org/ns9tks/vim-autocomplpop
+            hg clone https://bitbucket.org/ns9tks/vim-autocomplpop hg-vim-autocomplpop
 
         - fuzzyfinder     4.2.2
-            hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder
+            hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder  hg-vim-fuzzyfinder
 
         - l9              1.1
-            hg clone https://bitbucket.org/ns9tks/vim-l9
+            hg clone https://bitbucket.org/ns9tks/vim-l9           hg-vim-l9
 
 
-Bundle via Download and/or get-script (GLVS)
+Bundle via Download and/or get-script (glv)
 -------------------------------------------
 
         # Charles Campbell

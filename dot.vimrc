@@ -1226,11 +1226,13 @@ set nocompatible
     " }}}
     " snipmate-snippets         {{{
         " Turn it off:
-        let loaded_snips = 1
+        " let loaded_snips = 1
 
         let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
+        let g:snippets_dir = '~/.vim/bundle/snipmate/snippets'
+        let g:snippets_dir = '~/.vim/snippets'
 
-        nmap <leader>ras  :exec ReloadAllSnippets()<CR>
+"       nmap <leader>ras  :exec ReloadAllSnippets()<CR>
 
         " Tip: i_CTRL-R_<Tab>
         "      popupmenu of all snippets available
