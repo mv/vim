@@ -992,10 +992,15 @@ set nocompatible
         " let g:loaded_capslock = 1
     " }}}
     " command-t                 {{{
-    nmap <silent> <Leader>t :CommandT<CR>
+    nmap <silent> <Leader>t  :CommandT<CR>
+    nmap <silent> <Leader>tf :CommandTFlush<CR>
+    nmap <silent> <Leader>b  :CommandTBuffer<CR>
 
     let g:CommandTMaxFiles=20000
     let g:CommandTMaxHeigh=25
+    let g:CommandTAlwaysShowDotFiles=1
+    let g:CommandTMatchWindowAtTop=0
+    let g:CommandTMatchWindowReverse=1
     " }}}
     " dbext                     {{{
     " }}}
