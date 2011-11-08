@@ -1097,6 +1097,10 @@ set nocompatible
         " in megabytes - :Large/:Unlarge
         let g:LargeFile= 200
     " }}}
+    " kwbdi.vim                  {{{
+        " Turn it off:
+        " let g:loaded_kwbd = 1
+    " }}}
     " mark.vim                  {{{
         " Turn it off:
         " let g:loaded_mark = 1
