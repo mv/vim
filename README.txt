@@ -10,69 +10,63 @@ Bundle via git:
         NERDTree
             git submodule add git://github.com/scrooloose/nerdtree.git        dot.vim/bundle/nerdtree
 
-        # Tim Pope              http://www.vim.org/account/profile.php?user_id=9012
+        # Tim Pope
+        #     http://www.vim.org/account/profile.php?user_id=9012
         speeddating
-            git submodule add git://github.com/tpope/vim-speeddating.git   dot.vim/bundle/vim-speeddating
+            git submodule add git://github.com/tpope/vim-speeddating.git      dot.vim/bundle/vim-speeddating
 
         surround
-            git submodule add git://github.com/tpope/vim-surround.git      dot.vim/bundle/vim-surround
+            git submodule add git://github.com/tpope/vim-surround.git         dot.vim/bundle/vim-surround
 
         repeat
-            git submodule add git://github.com/tpope/vim-repeat.git        dot.vim/bundle/vim-repeat
-
-        endwise
-            git submodule add git://github.com/tpope/vim-endwise.git       dot.vim/bundle/vim-endwise
-            git submodule rm  dot.vim/bundle/vim-endwise
+            git submodule add git://github.com/tpope/vim-repeat.git           dot.vim/bundle/vim-repeat
 
         fugitive
-            git submodule add git://github.com/tpope/vim-fugitive.git      dot.vim/bundle/vim-fugitive
+            git submodule add git://github.com/tpope/vim-fugitive.git         dot.vim/bundle/vim-fugitive
+
+        endwise
+        ragtag
+        unimpaired
 
         rails
-            git submodule add git://github.com/tpope/vim-rails.git         dot.vim/bundle/vim-rails
-            git submodule rm  dot.vim/bundle/vim-rails
+        cucumber
+        vim-rvm
+        rake
+        bundler
 
-        unimpaired
-            git submodule add git://github.com/tpope/vim-unimpaired.git    dot.vim/bundle/vim-unimpaired
-            git submodule rm  dot.vim/bundle/vim-unimpaired
-
-        ragtag
-            git submodule add git://github.com/tpope/vim-ragtag.git        dot.vim/bundle/vim-ragtag
-            git submodule rm  dot.vim/bundle/vim-ragtag
-
-
-       # Yasuhiro Matsumoto
-        Zen-Coding
-            git submodule add git://github.com/mattn/zencoding-vim.git dot.vim/bundle/vim-zencoding
-
-        # SnipMate-snippets
-            git submodule add git://github.com/msanders/snipmate.vim   dot.vim/bundle/snipmate
-            git submodule rm  dot.vim/bundle/snipmate
 
         # Wincent Colaiuta
         Command-t
-            git submodule add git://git.wincent.com/command-t.git dot.vim/bundle/command-t
+            git submodule add https://github.com/wincent/Command-T.git
             git checkout 1.0
+
+       # Yasuhiro Matsumoto
+        Zen-Coding
+            git submodule add https://github.com/mattn/zencoding-vim.git    dot.vim/bundle/vim-zencoding
+
+        # SnipMate-snippets
+            git submodule add https://github.com/msanders/snipmate.vim      dot.vim/bundle/snipmate
 
         # Tom Link
         tlib
             git submodule add https://github.com/tomtom/tlib_vim.git        dot.vim/bundle/tlib
-            git submodule rm        dot.vim/bundle/tlib
+
         tregisters
             git submodule add https://github.com/tomtom/tregisters_vim.git  dot.vim/bundle/tregisters
-            git submodule rm  dot.vim/bundle/tregisters
+
         tmarks
             git submodule add https://github.com/tomtom/tmarks_vim.git      dot.vim/bundle/tmarks
-            git submodule rm      dot.vim/bundle/tmarks
+
 
         # plasticboy
         markdown
             git submodule add https://github.com/plasticboy/vim-markdown.git dot.vim/bundle/vim-markdown
-            git submodule rm dot.vim/bundle/vim-markdown
+
 
         # Hallison Batista
         rdoc
             git submodule add https://github.com/hallison/vim-rdoc.git      dot.vim/bundle/vim-rdoc
-            git submodule rm      dot.vim/bundle/vim-rdoc
+
 
 
  Bundle Via hg:
