@@ -25,3 +25,6 @@
 [submodule "dot.vim/bundle/snipmate"]
 	path = dot.vim/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim
+[submodule "dot.vim/snippets"]
+	path = dot.vim/snippets
+	url = git@github.com:mv/snipmate-snippets.git
