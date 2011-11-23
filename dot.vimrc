@@ -979,7 +979,7 @@ set nocompatible
         " ,be / ,bv / ,bs
         let g:bufExplorerReverseSort     = 0
         let g:bufExplorerShowUnlisted    = 1    " Do not show unlisted buffers.
-        let g:bufExplorerSortBy          ='name'
+        let g:bufExplorerSortBy          ='fullpath' " name,number,mru,fullpath,extension
         let g:bufExplorerShowDirectories = 1    " Show directories.
         let g:bufExplorerFindActive      = 0    " Do not go to active window.
         let g:bufExplorerShowDirectories = 0    " Don't show directories.
