@@ -1233,8 +1233,8 @@ set nocompatible
         " let loaded_snips = 1
 
         let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
-        let g:snippets_dir = '~/.vim/bundle/snipmate/snippets'
-        let g:snippets_dir = '~/.vim/snippets'
+"       let g:snippets_dir = '~/.vim/bundle/snipmate/snippets'
+"       let g:snippets_dir = '~/.vim/snippets'
 
 "       nmap <leader>ras  :exec ReloadAllSnippets()<CR>
 
