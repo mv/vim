@@ -202,6 +202,7 @@ set nocompatible
     " }}}
     " ColorScheme                 {{{
         set bg=dark
+        set t_Co=256                " Terminal 256 colors
         map <leader>c1 :colorscheme ir_black3<CR>
         map <leader>c2 :colorscheme torte    <CR>
         map <leader>c3 :colorscheme desert   <CR>
@@ -211,6 +212,7 @@ set nocompatible
 
         " Terminal vim theme
         colorscheme torte
+
     " }}}
     " Gvim settings               {{{
     if has("gui_running")
