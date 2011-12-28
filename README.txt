@@ -68,6 +68,11 @@ Bundle via git:
             git submodule add https://github.com/hallison/vim-rdoc.git      dot.vim/bundle/vim-rdoc
 
 
+        # Kim Silkebækken
+        vim-easymotion
+            git submodule add https://github.com/Lokaltog/vim-easymotion    dot.vim/bundle/vim-easymotion
+
+
 
  Bundle Via hg:
 --------------
