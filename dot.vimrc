@@ -211,7 +211,10 @@ set nocompatible
         map <leader>c0 :echo g:colors_name   <CR>
 
         " Terminal vim theme
-        colorscheme torte
+"       colorscheme torte
+"       colorscheme vividchalk
+"       colorscheme ir_black3
+        colorscheme wombat256mod
 
     " }}}
     " Gvim settings               {{{
@@ -640,10 +643,10 @@ set nocompatible
     "     :bd! [n]  buf del, discard changes
     "     <C-^>     switch to alternate file
 
-    set hidden                      " hide buffer instead of closing
-    if version >= 703               " New in 7.3 !
-        set autochdir               " always switch to the current file directory
-    endif
+"   set hidden                      " hide buffer instead of closing
+"   if version >= 703               " New in 7.3 !
+"       set autochdir               " always switch to the current file directory
+"   endif
 
     " new buffer            {{{
     " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
@@ -902,6 +905,10 @@ set nocompatible
         autocmd BufNewFile,BufRead Vagrantfile       setlocal filetype=ruby
         autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
     " }}}
+    " Javascript/json           {{{
+        autocmd BufNewFile,BufRead *.js,*.json       setlocal filetype=javascript
+        autocmd BufNewFile,BufRead *.javascript      setlocal filetype=javascript
+    " }}}
     " Puppet                    {{{
         autocmd BufNewFile,BufRead *.pp              setlocal filetype=puppet
     " }}}
@@ -916,7 +923,7 @@ set nocompatible
     " Snipmate Snippets         {{{
         autocmd BufNewFile,BufRead *.snippet  setf snippet
         autocmd BufNewFile,BufRead *.snippets setf snippet
-        autocmd FileType             snippet  set ts=4 sts=4 sw=4 noet list
+        autocmd FileType             snippet  set ts=4 sts=4 sw=4 noet nosta list
         autocmd FileType             snippet  set foldmethod=expr foldlevel=0
         autocmd FileType             snippet  set foldexpr=getline(v:lnum)=~'^\\s*$'&&getline(v:lnum+1)=~'\\S'?'<1':1
     " }}}
@@ -999,10 +1006,10 @@ set nocompatible
     nmap <silent> <Leader>b  :CommandTBuffer<CR>
 
     let g:CommandTMaxFiles=20000
-    let g:CommandTMaxHeigh=25
-    let g:CommandTAlwaysShowDotFiles=1
-    let g:CommandTMatchWindowAtTop=0
-    let g:CommandTMatchWindowReverse=1
+    let g:CommandTMaxHeigh=0
+    let g:CommandTAlwaysShowDotFiles=0
+    let g:CommandTMatchWindowAtTop=1
+    let g:CommandTMatchWindowReverse=0
     " }}}
     " dbext                     {{{
     " }}}
@@ -1040,9 +1047,10 @@ set nocompatible
         map  <leader>fh   :FufHelp            <CR>
         map  <leader>fj   :FufJumpList        <CR>
 
-        " map  <leader>fbd  :FufBookmarkDir     <CR>
-        " map  <leader>fbf  :FufBookmarkFile    <CR>
-        " map  <leader>fbm  :FufBookmark        <CR>
+        map  <leader>fbd  :FufBookmarkDir     <CR>
+        map  <leader>fbf  :FufBookmarkFile    <CR>
+        map  <leader>fbda :FufBookmarkDirAdd  <CR>
+        map  <leader>fbfa :FufBookmarkFileAdd <CR>
         "
         " map  <leader>fcf  :FufCoverageFile    <CR>
         " map  <leader>fcl  :FufChangeList      <CR>

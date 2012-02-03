@@ -43,3 +43,6 @@
 	url = https://github.com/Lokaltog/vim-easymotion
 	ignore = untracked
 
+[submodule "dot.vim/bundle/vim-colors-solarized"]
+	path = dot.vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
