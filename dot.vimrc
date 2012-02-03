@@ -3,19 +3,71 @@
 "     based on http://vi-improved.org/vimrc.php
 "     2008/12
 "
-set nocompatible
 
-" Pathogen     {{{
+" Bundle setup {{{
 " ================
 
-    " call pathogen {{{
-    " All plugins under the ~/.vim/bundle directory
-    filetype off
-    call pathogen#infect()
-  " call pathogen#helptags()
-    " }}}
+    set nocompatible
+    filetype off                   " required!
+
+    set runtimepath+=~/.vim/bundle/vundle/
+    call vundle#rc()
+
+    " let Vundle manage Vundle
+    " required!
+    Bundle 'gmarik/vundle'
 
 " }}}
+
+" Bundles      {{{
+" ================
+
+    " Bundles: BEGIN
+
+    """
+    """ Github
+    """
+    Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'mattn/zencoding-vim'
+    Bundle 'uggedal/puppet-vim'
+
+"   Bundle 'tpope/vim-fugitive'
+"   Bundle 'tpope/vim-rails.git'
+
+    " Themes
+    Bundle 'tpope/vim-vividchalk'
+    Bundle 'mv/vim-ir_black3'
+
+"   Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+    """
+    """ www.vim.org/scripts
+    """
+    " Takeshi Nishida
+    Bundle 'L9'
+    Bundle 'FuzzyFinder'
+    Bundle 'AutoComplPop'
+
+    Bundle 'bufexplorer.zip'
+    Bundle 'kwbdi.vim'
+
+    " Themes
+    Bundle 'peaksea'
+    Bundle 'wombat256.vim'
+
+    " syntax
+    Bundle 'pf.vim'
+    Bundle 'JSON.vim'
+
+    """
+    """ Others
+    """
+"   Bundle 'git://git.wincent.com/command-t.git'
+
+    " Bundles: END
+
+" }}}
+
 " Settings     {{{
 " ================
 
@@ -212,9 +264,9 @@ set nocompatible
 
         " Terminal vim theme
 "       colorscheme torte
-"       colorscheme vividchalk
-"       colorscheme ir_black3
-        colorscheme wombat256mod
+"       silent! colorscheme vividchalk
+"       silent! colorscheme ir_black3
+        silent! colorscheme wombat256mod
 
     " }}}
     " Gvim settings               {{{
