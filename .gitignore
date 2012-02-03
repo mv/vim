@@ -23,6 +23,7 @@ dot.vim/sessions/*
 doc
 tags
 tags-ja
+.netrwhist
 
 *.[oa]
 *.log
