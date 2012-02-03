@@ -76,13 +76,20 @@ set verbose=0           " Debug
 """ Settings:
 """
 source ~/.vim/vim.d/settings.vim
-source ~/.vim/vim.d/vim-ui.vim
+source ~/.vim/vim.d/filetypes.vim
 
 """
-""" Rules: case/indent/tab-stops/brackets/vimgrep
+""" Rules: 
+"""     case/indent/tab-stops/brackets/vimgrep/wrapping
 """
-source ~/.vim/vim.d/coding-rules.vim
-source ~/.vim/vim.d/filetypes.vim
+source ~/.vim/vim.d/text-rules.vim
+
+"""
+""" Options:
+"""
+source ~/.vim/vim.d/vim-ui.vim
+source ~/.vim/vim.d/status-line.vim
+source ~/.vim/vim.d/folding.vim
 
 """
 """ Shortcuts: mapleader/mappings/commands
@@ -107,5 +114,5 @@ source ~/.vim/vim.d/windows.vim
 "#source ~/.vim/vim.d/vim-code.vim
 
 
-" vim: set foldmarker={{{,}}} foldlevel=1 nospell:
+" vim: set foldmarker={{{,}}} foldlevel=0 nospell:
 

@@ -1,19 +1,35 @@
 
-" FileTypes    {{{
+" FileTypes
 " ================
 
     " all files                 {{{
-        " Strip white space
-        autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
-        " Come back to last position
+        " NoExtension: treat as txt file
+        "autocmd BufRead,BufNewFile *  setfiletype txt
+
+        " CursorPosition: Come back to last position:
         autocmd BufReadPost *   if line("'\"") > 0
                             \ && line("'\"") <= line("$") |
                             \    exe "normal! g'\""       |
                             \ endif
 
-        " no extension: treat as txt file
-        " autocmd BufRead,BufNewFile *  setfiletype txt
+        " StripWhiteSpace:
+        autocmd BufWritePre * :silent! call Preserve("%s/\\s\\+$//e")
+
+        " Preserve: {{{
+        "     Ref http://vimcasts.org/episodes/tidying-whitespace/"
+        function! Preserve(command)
+            " preparation: save last search, and cursor position.
+            let _s=@/
+            let l = line(".")
+            let c = col(".")
+            " do the business:
+            execute a:command
+            " clean up: restore previous search history, and cursor position
+            let @/=_s
+            call cursor(l, c)
+        endfunction
+        "}}}
 
     " }}}
     " Text                      {{{
@@ -90,9 +106,6 @@
         autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
     " }}}
 
-" }}}
 
-
-
-vim: set foldlevel=9
+" vim: set foldlevel=9
 

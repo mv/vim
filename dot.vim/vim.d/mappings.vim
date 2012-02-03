@@ -4,6 +4,10 @@
     " Tip: D  : command key
     "      D-S: command+shift key
 
+    " set timeoutlen=5000             " time in ms to complete a mapped key combination
+    " set timeoutlen=2000             " Wait 2 seconds before timing out a mapping
+    " set ttimeoutlen=100             " and only 100 ms before timing out on a keypress.
+
     let mapleader=","
 
     " GUI

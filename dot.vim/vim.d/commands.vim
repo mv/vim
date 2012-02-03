@@ -9,10 +9,6 @@
     command! Q  :q
 
     command! Rehash     source $MYVIMRC
-    " command! Helptags   helptags ~/.vim/doc
-    " command! Helptags   call pathogen#helptags()
-
-    command! Color      echo g:colors_name
 
     " On/Off
     " start/stop sharing OS clipboard
