@@ -299,11 +299,4 @@ set paste  " terminal: do the right thing when executing paste
 
 " vim: set foldmarker={,} nospell:
 
-  vim:ts=8 sw=8 noexpandtab tw=78 ft=help:
-# vim:ts=8 sw=8 noexpandtab tw=78 ft=make:
-
-# vim:ts=4 sw=4 noexpandtab tw=78 ft=code:  ??
---vim:ts=4 sw=4 noexpandtab tw=78 ft=sql:  ??
-# vim:ts=2 sw=2 noexpandtab tw=78 ft=ruby:  ??
-
 

@@ -1,5 +1,5 @@
 
-" Folding 
+" Folding
 " ================
 "
     set foldenable              " Turn on folding

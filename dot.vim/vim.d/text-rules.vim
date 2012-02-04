@@ -5,7 +5,7 @@
     " =====
     set ignorecase          " case insensitive:
     set infercase           " if there are caps adjust auto-completion
-    set smartcase           " if there are caps go insensitive
+
 
     " TabStops:
     " =========
@@ -48,7 +48,7 @@
     " Wrapping Text:
     " ==============
     set backspace=indent,eol,start  " make backspace a more flexible
-    set textwidth=78                " tw
+    set textwidth=80                " tw
     set nowrap sidescroll=1         " [no] wrap long lines
     "et whichwrap=b,s,h,l,<,>,~,[,] " everything wraps
     "             | | | | | | | | |
@@ -75,17 +75,16 @@
     "
     " Char  CTRL-V+u    i+CTRL-V+digit
     " ¬       ac        U+00AC          not
-    " ▸     25b8        U+25B8          black right triangle
-    "
+    " ▸     25b8
+
 
     " Automatic Formating:
     " ===================
     "     default: tcq vide 'help fo-table'
     "     to use: 'gq'
-    set formatoptions=cqrn
-    "                 ||||
-    "                 |||+-- recognize numbered lists
-    "                 ||+--- insert comment leader after <Enter> in Insert mode
+    set formatoptions=cqno
+    "                 |||+-- insert comment leader when using 'o' or 'O'
+    "                 ||+--- recognize numbered lists
     "                 |+---- allow formatting using gq
     "                 +----- auto-wrap comments
     "et formatoptions=rq

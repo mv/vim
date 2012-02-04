@@ -24,8 +24,12 @@
     set nocursorcolumn      " vertical highlight
 
     " Autocompletion
-"   set completeopt=menuone,preview,longest    " completion popup menu options
-    set completeopt=menuone,preview
+    set completeopt=menuone,preview,longest    " completion popup menu options
+
+    " Cursor position on navigation
+"   set virtualedit=all             " allow moving past end of line in all modes
+    set virtualedit=block,insert,onemore
+
 
     " ColorScheme
     set bg=dark
@@ -69,7 +73,7 @@
         set tabpagemax=15       " tpm: max nro of tab windows
 
         " show textwidth limit
-        set colorcolumn=+1,+2,+3,+4,+5
+        set colorcolumn=+3,+4,+5
 
         set browsedir=buffer    " open graphical filebrowser on directory of current buffer
         set winaltkeys=no       " wak: no ALT keys for menus

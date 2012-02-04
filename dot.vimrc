@@ -16,6 +16,7 @@
     " let Vundle manage Vundle
     " required!
     Bundle 'gmarik/vundle'
+
 " }}}
 " Bundles      {{{
 " ================
@@ -25,33 +26,24 @@
     """
     """ Github
     """
-    Bundle 'Lokaltog/vim-easymotion'
-    Bundle 'mattn/zencoding-vim'
-    Bundle 'uggedal/puppet-vim'
-
-"   Bundle 'tpope/vim-fugitive'
-"   Bundle 'tpope/vim-rails.git'
 
     " Themes
-    Bundle 'tpope/vim-vividchalk'
     Bundle 'mv/vim-ir_black3'
+    Bundle 'tpope/vim-vividchalk'
+
+    " Syntax
+    Bundle 'uggedal/puppet-vim'
 
 "   Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
     """
     """ www.vim.org/scripts
     """
-    " Takeshi Nishida
-    Bundle 'L9'
-    Bundle 'FuzzyFinder'
-    Bundle 'AutoComplPop'
-
-    Bundle 'bufexplorer.zip'
-    Bundle 'kwbdi.vim'
 
     " Themes
     Bundle 'peaksea'
     Bundle 'wombat256.vim'
+    Bundle 'molokai'
 
     " syntax
     Bundle 'pf.vim'
@@ -60,7 +52,6 @@
     """
     """ Others
     """
-"   Bundle 'git://git.wincent.com/command-t.git'
 
     " Bundles: END
 
@@ -79,7 +70,7 @@ source ~/.vim/vim.d/settings.vim
 source ~/.vim/vim.d/filetypes.vim
 
 """
-""" Rules: 
+""" Rules:
 """     case/indent/tab-stops/brackets/vimgrep/wrapping
 """
 source ~/.vim/vim.d/text-rules.vim
@@ -106,12 +97,12 @@ source ~/.vim/vim.d/windows.vim
 """
 """ Plugins: via bundle
 """
-"#source ~/.vim/vim.d/plugins.vim
+source ~/.vim/vim.d/plugins.vim
 
 """
 """ VimCode: snippets
 """
-"#source ~/.vim/vim.d/vim-code.vim
+source ~/.vim/vim.d/vim-code.vim
 
 
 " vim: set foldmarker={{{,}}} foldlevel=0 nospell:

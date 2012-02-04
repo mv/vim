@@ -4,43 +4,42 @@
     " Tip: D  : command key
     "      D-S: command+shift key
 
-    " set timeoutlen=5000             " time in ms to complete a mapped key combination
-    " set timeoutlen=2000             " Wait 2 seconds before timing out a mapping
-    " set ttimeoutlen=100             " and only 100 ms before timing out on a keypress.
+    set timeoutlen=2000               " Wait 2 seconds before timing out a mapping
+  " set ttimeoutlen=100               " and only 100 ms before timing out on a keypress.
 
     let mapleader=","
 
     " GUI
     " ======================
     " linenumber on/off
-    nmap <leader>nu  :set invnumber<CR>
+    nnoremap <leader>nu  :set invnumber<CR>
 
     " relativenumber on/off
-    nmap <leader>rnu :set invrnu   <CR>
+    nnoremap <leader>rnu :set invrnu   <CR>
 
     " set cursorcolumn/nocursorcolumn
-    nmap <leader>cuc :set invcuc   <CR>
+    nnoremap <leader>cuc :set invcuc   <CR>
 
     " Highlight search on/off
-    nmap <leader>h   :set invhls<CR>
+    nnoremap <leader>h   :set invhls<CR>
 
     " list invisibles on/off
-    nmap <leader>l   :set invlist  <CR>
+    nnoremap <leader>l   :set invlist  <CR>
 
 
     " Identation
     " ======================
 
     " Normal mode:
-    nmap <D-[> <<
-    nmap <D-]> >>
+    nnoremap <D-[> <<
+    nnoremap <D-]> >>
 
     " Visual mode
     "     (gv: keeps selection)
-    vnoremap > ><CR>gv
-    vnoremap < <<CR>gv
-    vmap <D-[> <gv
-    vmap <D-]> >gv
+    vnoremap >   ><CR>gv
+    vnoremap <   <<CR>gv
+    vmap <D-[>   <gv
+    vmap <D-]>   >gv
 
     " Movements
     " ======================
@@ -57,22 +56,20 @@
 
     " http://blog.learnr.org/post/59098925/configuring-vim-some-more
     " begin/end of a  line
-    map H ^
-    map L $
+    " map H ^
+    " map L $
 
     " Out of INSERT mode
-    " inoremap jj <Esc>
-    " inoremap jk <Esc>
-    inoremap jkk <Esc>
-    inoremap ;l <Esc>
+    inoremap jj <Esc>
+    inoremap kk <Esc>
 
     " Editing
     " =======================
     " CTRL-K:  delete so the end of line
-    nmap <C-K> D
+    nnoremap <C-K> D
 
     " K = inverted J: join line up
-    nmap K ddpkJ
+    nnoremap K ddpkJ
 
     " Using marks
     " =======================
@@ -85,25 +82,25 @@
     " ======================
 
     " Reformat
-    nmap _= :call Preserve("normal gg=G")<CR>
+    nnoremap _= :call Preserve("normal gg=G")<CR>
 
     " Strip trailing spaces
-    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+    nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 
     " dos2,nix
-    nmap _n :call Preserve("% s/\r$//")<CR>
+    nnoremap _n :call Preserve("% s/\r$//")<CR>
 
     " Editing vimrc
     " =======================
 
-    nmap <leader>ev  :e   $MYVIMRC<CR>
-    nmap <leader>sev :vsp $MYVIMRC<CR>
+    nnoremap <leader>ev :e   $MYVIMRC<CR>
+    nnoremap <leader>ed :e   $HOME/.vim/vim.d/<CR>
 
     " Copy/paste registers
     " =======================
 
     " (Correcting my international keyboard)
-    nmap \ "
+    nnoremap \ "
 
     " allow deleting selection without updating the clipboard (yank buffer)
     " Ref: http://www.pixelbeat.org/settings/.vimrc
@@ -111,13 +108,13 @@
     " vnoremap X "_X
 
     " Yank/paste to/from the OS clipboard with ,y and ,p
-    nmap <leader>p "*p
-    nmap <leader>P "*P
-    nmap <leader>y "*y
-    nmap <leader>yy "*yy
+    nnoremap <leader>p "*p
+    nnoremap <leader>P "*P
+    nnoremap <leader>y "*y
+    nnoremap <leader>yy "*yy
 
     " Quick yanking to the end of the line
-    nmap Y y$
+    nnoremap Y y$
 
     " Reselect text that was just pasted with ,v
     nnoremap <leader>v V`]
@@ -153,7 +150,7 @@
     " =======================
     " Saving from pressing SHIFT
     " :w => \w
-    " nmap \ :
+    " nnoremap \ :
 
     " making vim regex act like Perl Regex
     "     Thanks to Steve Losh for this liberating tip
@@ -169,21 +166,21 @@
 
     " Pull word under cursor into LHS of a substitute (for quick search and
     " replace)
-    " nmap <leader>z :% s#\<<C-r>=expand("<cword>")<CR>\>#
+    " nnoremap <leader>z :% s#\<<C-r>=expand("<cword>")<CR>\>#
 
     " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-    nmap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
+    nnoremap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
 
     " Shortcuts
     " ======================
 
-    nmap <leader>q  :q <CR>
-    nmap <leader>q1 :q!<CR>
-    nmap <leader>w  :w <CR>
-    nmap <leader>wa :wa<CR>
-    nmap <leader>wq :wq!<CR>
-    nmap <leader>ww :w !sudo tee % >/dev/null
-    nmap <leader>sa :browse confirm saveas<CR>
+    nnoremap <leader>q  :q <CR>
+    nnoremap <leader>q1 :q!<CR>
+    nnoremap <leader>w  :w <CR>
+    nnoremap <leader>wa :wa<CR>
+    nnoremap <leader>wq :wq!<CR>
+    nnoremap <leader>ww :w !sudo tee % >/dev/null
+    nnoremap <leader>sa :browse confirm saveas<CR>
 
     cmap w!! w !sudo tee % >/dev/null
 
@@ -196,16 +193,16 @@
     " vnoremap <space> zf
 
     " Tip: fold toggle: za
-    nmap <leader>f0 :set foldlevel=0<CR>
-    nmap <leader>f1 :set foldlevel=1<CR>
-    nmap <leader>f2 :set foldlevel=2<CR>
-    nmap <leader>f3 :set foldlevel=3<CR>
-    nmap <leader>f4 :set foldlevel=4<CR>
-    nmap <leader>f5 :set foldlevel=5<CR>
-    nmap <leader>f6 :set foldlevel=6<CR>
-    nmap <leader>f7 :set foldlevel=7<CR>
-    nmap <leader>f8 :set foldlevel=8<CR>
-    nmap <leader>f9 :set foldlevel=9<CR>
+    nnoremap <leader>f0 :set foldlevel=0<CR>
+    nnoremap <leader>f1 :set foldlevel=1<CR>
+    nnoremap <leader>f2 :set foldlevel=2<CR>
+    nnoremap <leader>f3 :set foldlevel=3<CR>
+    nnoremap <leader>f4 :set foldlevel=4<CR>
+    nnoremap <leader>f5 :set foldlevel=5<CR>
+    nnoremap <leader>f6 :set foldlevel=6<CR>
+    nnoremap <leader>f7 :set foldlevel=7<CR>
+    nnoremap <leader>f8 :set foldlevel=8<CR>
+    nnoremap <leader>f9 :set foldlevel=9<CR>
 
 
     " CNTRL-key
@@ -228,7 +225,6 @@
     " Complete whole filenames/lines with a quicker shortcut key in insert mode
     imap <C-F> <C-X><C-F>
     imap <C-L> <C-X><C-L>
-
 
 
 " vim: set foldlevel=9

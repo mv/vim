@@ -3,43 +3,6 @@
 Bundle via git:
 ---------------
 
-        # Marty Grenfell
-        NERD_commenter
-            git submodule add git://github.com/scrooloose/nerdcommenter.git   dot.vim/bundle/nerdcommenter
-
-        NERDTree
-            git submodule add git://github.com/scrooloose/nerdtree.git        dot.vim/bundle/nerdtree
-
-        # Tim Pope
-        #     http://www.vim.org/account/profile.php?user_id=9012
-        speeddating
-            git submodule add git://github.com/tpope/vim-speeddating.git      dot.vim/bundle/vim-speeddating
-
-        surround
-            git submodule add git://github.com/tpope/vim-surround.git         dot.vim/bundle/vim-surround
-
-        repeat
-            git submodule add git://github.com/tpope/vim-repeat.git           dot.vim/bundle/vim-repeat
-
-        fugitive
-            git submodule add git://github.com/tpope/vim-fugitive.git         dot.vim/bundle/vim-fugitive
-
-        endwise
-        ragtag
-        unimpaired
-
-        rails
-        cucumber
-        vim-rvm
-        rake
-        bundler
-
-
-        # Wincent Colaiuta
-        Command-t
-            git submodule add https://github.com/wincent/Command-T.git
-            git checkout 1.0
-
        # Yasuhiro Matsumoto
         Zen-Coding
             git submodule add https://github.com/mattn/zencoding-vim.git    dot.vim/bundle/vim-zencoding
@@ -77,16 +40,6 @@ Bundle via git:
  Bundle Via hg:
 --------------
 
-        # Takeshi Nishida
-        - autocomplpop    2.14.1
-            hg clone https://bitbucket.org/ns9tks/vim-autocomplpop hg-vim-autocomplpop
-
-        - fuzzyfinder     4.2.2
-            hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder  hg-vim-fuzzyfinder
-
-        - l9              1.1
-            hg clone https://bitbucket.org/ns9tks/vim-l9           hg-vim-l9
-
 
 Bundle via Download and/or get-script (glv)
 -------------------------------------------
@@ -110,9 +63,6 @@ Bundle via Download and/or get-script (glv)
 
         # Miles Sterrett
         ack             0.3.1   http://www.vim.org/scripts/script.php?script_id=2572
-
-        # Srinath Avadhanula
-      # increment       1.3     http://www.vim.org/scripts/script.php?script_id=156
 
         # Chris Russell
         SearchComplete  1.1     http://www.vim.org/scripts/script.php?script_id=474
@@ -158,18 +108,6 @@ Bundle via Download and/or get-script (glv)
 
         # Ben Booth
         kwbdi           1.1     http://www.vim.org/scripts/script.php?script_id=2103
-
-Local:
-------
-
-        color
-            ir-black3
-        syntax
-            gitcommit       src: git/contrib
-            nagios          1.8     http://www.vim.org/scripts/script.php?script_id=2261
-        after/syntax
-
-
 
 Must See ?
 ----------

@@ -11,16 +11,14 @@
     set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png,*~,*.lo
                                     " ignore these list file extensions in glob()/expand()
     " Command Line Completion:
-    set wildmenu                    " turn on command line completion wild style
-    set wildmode=list:full          " turn on wild mode huge list
+"   set wildmenu                    " turn on command line completion wild style
+"   set wildmode=list:full          " command line complete using wildmenu
+    set wildmode=list:longest       " command line complete
 
     set history=300                 " history size
     set modeline                    " modeline on: Executes 'vim:' fle directives
 
-    set virtualedit=block           " allow moving past end of line in block selection mode
-    set virtualedit=all             " allow moving past end of line in block selection mode
 
-    " Copy_Paste:
     " set paste                       " terminal: do no format when pasting
     " set clipboard+=unnamed          " share OS clipboard: yy, D, p
     " set clipboard-=unnamed          " NOT sharing OS clipboard

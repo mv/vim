@@ -2,7 +2,8 @@
 " VimCode
 " ================
 
-    " Set font according to system"{{{
+    " Set font according to system
+    " ============================ "{{{
     "   Ref: http://amix.dk/vim/vimrc.html
     " if MySys() == "mac"
     "     set gfn=Menlo:h14
@@ -14,37 +15,24 @@
     "     set shell=/bin/bash
     " endif
     "}}}
-    " Terminal  "{{{
-    " Terminal has 256 colors
-    " if &t_Co >= 256 || has("gui_running")
-    "     colorscheme mustang
-    " endif
 
-    " Terminal has colors
-    " if &t_Co > 2 || has("gui_running")
-    "     syntax on
-    " endif
-    "}}}
-    " Lorem Ipsum "{{{
+    " Lorem Ipsum
+    " =========== "{{{
     " define :Lorem command to dump in a paragraph of lorem ipsum
     " by Willa! http://github.com/willian/willvim/tree/master
-    " command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
-    "         \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-    "         \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    "         \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-    "         \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-    "         \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    "         \ proident, sunt in culpa qui officia deserunt mollit anim id est
-    "         \ laborum
+    command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
+            \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            \ proident, sunt in culpa qui officia deserunt mollit anim id est
+            \ laborum
     "}}}
-    " Ref: https://github.com/sjbach/env/blob/master/dotfiles/vimrc"{{{
-    " " Indent XML readably
-    " function! DoPrettyXML()
-    "     1,$!xmllint --format --recover -
-    " endfunction
-    " command! PrettyXML call DoPrettyXML()
-    "}}}
-    " Ref: http://www.pixelbeat.org/settings/.vimrc"{{{
+
+    " Secure {{{
+    " ======
+    " Ref: http://www.pixelbeat.org/settings/.vimrc"
     " To create new file securely do: vim new.file.txt.gpg
     " Your private key used to decrypt the text before viewing should
     " be protected by a passphrase. Alternatively one could use
@@ -54,7 +42,9 @@
     " au BufWritePre *.gpg :%!gpg -e -r 'P@draigBrady.com' 2>/dev/null
     " au BufWritePost *.gpg u
     "}}}
-    " Markdown Preview in Browser"{{{
+
+    " Markdown Preview in Browser
+    " =========================== {{{
     " Ref: http://mathias-biilmann.net/2009/1/markdown-preview-in-vim
         " function! PreviewMKD()
         "     ruby << EOF
