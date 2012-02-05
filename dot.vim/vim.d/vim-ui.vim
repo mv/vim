@@ -52,7 +52,7 @@
 
         silent! colorscheme ir_black3   " gui: use if present
 
-        auto BufEnter * let &titlestring=expand("%:p")." - ".v:servername
+        autocmd BufEnter * let &titlestring=expand("%:p")." - ".v:servername
 
         set mouse=a             " mouse active in all modes
         set mousehide           " Hide the mouse pointer while typing
@@ -79,6 +79,13 @@
         set winaltkeys=no       " wak: no ALT keys for menus
 
     endif
+
+
+    " CursorPosition: Come back to last position:
+    autocmd BufReadPost *   if line("'\"") > 0
+                        \ && line("'\"") <= line("$") |
+                        \    exe "normal! g'\""       |
+                        \ endif
 
 
 " vim: set foldlevel=9

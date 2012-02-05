@@ -20,22 +20,21 @@
     " set cursorcolumn/nocursorcolumn
     nnoremap <leader>cuc :set invcuc   <CR>
 
-    " Highlight search on/off
+    " search Highlight on/off
     nnoremap <leader>h   :set invhls<CR>
 
-    " list invisibles on/off
+    " invisibles List on/off
     nnoremap <leader>l   :set invlist  <CR>
 
 
     " Identation
     " ======================
 
-    " Normal mode:
+    " Normal_mode:
     nnoremap <D-[> <<
     nnoremap <D-]> >>
 
-    " Visual mode
-    "     (gv: keeps selection)
+    " Visual_mode: (gv: keeps selection)
     vnoremap >   ><CR>gv
     vnoremap <   <<CR>gv
     vmap <D-[>   <gv
@@ -44,32 +43,29 @@
     " Movements
     " ======================
 
-    " http://vi-improved.org/vimrc.php
-    " space/shift-space: scroll in normal mode
-    " noremap <S-SPACE> <C-B>
-    " noremap <SPACE>   <C-F>
-
     " row up/down if wrap active
     " http://nvie.com/posts/how-i-boosted-my-vim/
     nnoremap j gj
     nnoremap k gk
+
+    " http://vi-improved.org/vimrc.php
+    " space/shift-space: scroll in normal mode
+    " noremap <S-SPACE> <C-B>
+    " noremap <SPACE>   <C-F>
 
     " http://blog.learnr.org/post/59098925/configuring-vim-some-more
     " begin/end of a  line
     " map H ^
     " map L $
 
+    " Editing
+    " =======================
+    " K = inverted J: join current line to the one below
+    nnoremap K ddpkJ
+
     " Out of INSERT mode
     inoremap jj <Esc>
     inoremap kk <Esc>
-
-    " Editing
-    " =======================
-    " CTRL-K:  delete so the end of line
-    nnoremap <C-K> D
-
-    " K = inverted J: join line up
-    nnoremap K ddpkJ
 
     " Using marks
     " =======================

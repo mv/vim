@@ -2,13 +2,19 @@
 " Commands
 " ================
 
-    " Shortcuts
-    command! W  :w
-    command! WW :browse confirm saveas
-    command! WQ :wq
-    command! Q  :q
+    """
+    """ Typos:
+    """
+    command! W    :w
+    command! Wall :wall
+    command! WQ   :wq
+    command! Qall :qall
 
-    command! Rehash     source $MYVIMRC
+    """
+    """ Shortcuts:
+    """
+    command! WW :browse confirm saveas
+    command! Rehash source $MYVIMRC
 
     " On/Off
     " start/stop sharing OS clipboard
@@ -32,9 +38,8 @@
     command! -nargs=1 -complete=filetype F set filetype=<args>
 
     " Even quicker setting often-used filetypes.
-    command! FR set filetype=ruby
-    command! FS set filetype=sql
-    command! FT set filetype=txt
+    command! Fr set filetype=ruby
+    command! Ft set filetype=txt
 
 
 " vim: set foldlevel=9

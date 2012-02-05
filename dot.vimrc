@@ -1,7 +1,6 @@
 " dot.vimrc
 "     ferreira.mv[ at ]gmail.com
-"     based on http://vi-improved.org/vimrc.php
-"     2008/12
+"     since 2008/12
 "
 
 " Bundle setup {{{
@@ -60,8 +59,13 @@
 syntax on
 filetype indent plugin on
 set paste               " terminal: do the right thing when executing paste
-set verbose=0           " Debug
+set verbose=0           " Debug: vim +V 9 ...
 
+"""
+""" Shortcuts: mapleader/mappings/commands
+"""
+source ~/.vim/vim.d/mappings.vim
+source ~/.vim/vim.d/commands.vim
 
 """
 """ Settings:
@@ -81,12 +85,6 @@ source ~/.vim/vim.d/text-rules.vim
 source ~/.vim/vim.d/vim-ui.vim
 source ~/.vim/vim.d/status-line.vim
 source ~/.vim/vim.d/folding.vim
-
-"""
-""" Shortcuts: mapleader/mappings/commands
-"""
-source ~/.vim/vim.d/commands.vim
-source ~/.vim/vim.d/mappings.vim
 
 """
 """ Visual: buffers/windows

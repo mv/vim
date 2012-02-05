@@ -1,6 +1,11 @@
 
+" ferreira.mv[ at ]gmail.com
+"     file layout based on http://vi-improved.org/vimrc.php
+
 " Settings
 " ========
+
+    set modeline                    " modeline on: Executes 'vim:' fle directives
 
     " Files:
     set fileformats=unix,dos,mac    " support all three, in this order
@@ -14,14 +19,11 @@
 "   set wildmenu                    " turn on command line completion wild style
 "   set wildmode=list:full          " command line complete using wildmenu
     set wildmode=list:longest       " command line complete
-
     set history=300                 " history size
-    set modeline                    " modeline on: Executes 'vim:' fle directives
 
-
-    " set paste                       " terminal: do no format when pasting
-    " set clipboard+=unnamed          " share OS clipboard: yy, D, p
-    " set clipboard-=unnamed          " NOT sharing OS clipboard
+    " Copy_Paste:
+    set clipboard=                  " DO-NOT share OS clipboard: must literal C-C/C-V
+    "et clipboard+=unnamed          " share OS clipboard: yy, D, p
 
    " Encoding:
     scriptencoding  utf-8

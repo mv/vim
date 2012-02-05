@@ -78,29 +78,69 @@
     " ▸     25b8
 
 
-    " Automatic Formating:
-    " ===================
-    "     default: tcq vide 'help fo-table'
-    "     to use: 'gq'
-    set formatoptions=cqno
-    "                 |||+-- insert comment leader when using 'o' or 'O'
-    "                 ||+--- recognize numbered lists
-    "                 |+---- allow formatting using gq
-    "                 +----- auto-wrap comments
-    "et formatoptions=rq
-
     " VimGrep:
     " ========
     set grepprg=ack
     set grepformat=%f:%l:%m
 
+
     " C-A/C-X: increment/decrement
     " ============================
     set nrformats=alpha,octal,hex
 
+
     " Moving:
     " -------
     set nostartofline       " keep cursor in same column when moving up/down
+
+
+    " Automatic Formating:
+    " ===================
+    "     default: tcq vide 'help fo-table'
+    "     to use: 'gq'
+
+    " ':set fo=qrn' is broken! Most of ft plugins default to
+    " 'setlocal fo=croql'. Using 'autocmd' to override.
+
+    autocmd BufRead,BufReadPost,FileType *
+            \ set      formatoptions=qrc
+    "                                |||
+    "                                ||+--- auto-wrap comments
+    "                                |+---- insert comment leader after <Enter>
+    "                                +----- allow formatting using gq
+    "et formatoptions=qr
+    "et formatoptions=cqno
+    "                 |||+-- insert comment leader when using 'o' or 'O'
+    "                 ||+--- recognize numbered lists
+    "                 |+---- allow formatting using gq
+    "                 +----- auto-wrap comments
+    "et formatoptions=qrcn
+    "                 |||+-- recognize numbered lists
+    "                 ||+--- auto-wrap comments
+    "                 |+---- insert comment leader after <Enter>
+    "                 +----- allow formatting using gq
+
+
+
+    " StripWhiteSpace:
+    " ================
+    autocmd BufWritePre * :silent! call Preserve("%s/\\s\\+$//e")
+
+        " Preserve: {{{
+        "     Ref http://vimcasts.org/episodes/tidying-whitespace/"
+        function! Preserve(command)
+            " preparation: save last search, and cursor position.
+            let _s=@/
+            let l = line(".")
+            let c = col(".")
+            " do the business:
+            execute a:command
+            " clean up: restore previous search history, and cursor position
+            let @/=_s
+            call cursor(l, c)
+        endfunction
+        "}}}
+
 
 " vim: set foldlevel=9
 
