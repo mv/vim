@@ -3,14 +3,20 @@
 " ================
 "
     set foldenable              " Turn on folding
-    set foldmethod=marker       " Fold on specific marker
-    set foldmarker={,}          " Markers to use.
-    set foldlevel=100           " Don't autofold anything (but I can still fold manually)
     set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
+    set foldlevel=100           " Don't autofold anything (but I can still fold manually)
 
-    set foldtext=SimpleFoldText() " Custom fold text function (cleaner than default)
+    set foldmethod=syntax
+
+"   set foldmethod=marker       " Fold on specific marker
+"   set foldmarker={,}          " Markers to use.
+
+    """
+    """ Text line of a closed folding
+    """
+    set foldtext=SimpleFoldText()
     function! SimpleFoldText()
-        return getline(v:foldstart).' '
+        return getline(v:foldstart).' {{{'
     endfunction
 
     " Fold HTML tags
