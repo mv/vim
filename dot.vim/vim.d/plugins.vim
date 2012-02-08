@@ -179,20 +179,23 @@
     """
     " {{{
 
-      " Bundle 'scrooloose/nerdcommenter'
+        Bundle 'scrooloose/nerdcommenter'
 
         let NERDCreateDefaultMappings = 1
-        let NERDRemoveExtraSpaces = 1
-        let NERDSpaceDelims = 1
+        let NERDDefaultNesting = 0
         let NERDMenuMode = 0
+        let NERDSpaceDelims = 1
+        let NERDRemoveExtraSpaces = 1
 
         Bundle 'scrooloose/nerdtree'
 
+        " let loaded_nerd_tree=1
         let NERDTreeCaseSensitiveSort = 1
         let NERDTreeChDirMode         = 0
         let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git']
-        let NERDTreeMouseMode         = 2
-        let NERDTreeShowLineNumbers   = 0
+        let NERDTreeMouseMode         = 3
+        let NERDTreeShowLineNumbers   = 1
+        let NERDTreeShowHidden        = 1
         let NERDTreeWinSize           = 35
         let NERDTreeHijackNetrw       = 1
 
