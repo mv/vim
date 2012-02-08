@@ -251,7 +251,7 @@
         " Turn it off:
         " let g:loaded_zencoding_vim = 1
 
-        let g:user_zen_complete_tag = 1
+        let g:user_zen_complete_tag = 0
         let g:user_zen_leader_key  = '<c-y>'
 
         " let g:user_zen_balancetagoutward_key = 'ta'
