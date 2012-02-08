@@ -1,0 +1,27 @@
+total 0
+drwxr-xr-x 2 marcus staff 102 2012-02-03 16:25 [0m[01;34m.vundle[0m/
+drwxr-xr-x 6 marcus staff 238 2012-02-07 23:53 [01;34mAlign[0m/
+drwxr-xr-x 6 marcus staff 238 2012-02-08 00:04 [01;34mAnsiEsc.vim[0m/
+drwxr-xr-x 6 marcus staff 238 2012-02-03 13:28 [01;34mAutoComplPop[0m/
+drwxr-xr-x 6 marcus staff 238 2012-02-03 13:28 [01;34mFuzzyFinder[0m/
+drwxr-xr-x 4 marcus staff 170 2012-02-03 13:28 [01;34mJSON.vim[0m/
+drwxr-xr-x 6 marcus staff 238 2012-02-03 13:28 [01;34mL9[0m/
+drwxr-xr-x 5 marcus staff 204 2012-02-03 13:28 [01;34mbufexplorer.zip[0m/
+drwxr-xr-x 4 marcus staff 170 2012-02-03 13:28 [01;34mkwbdi.vim[0m/
+drwxr-xr-x 4 marcus staff 170 2012-02-04 01:49 [01;34mmolokai[0m/
+drwxr-xr-x 5 marcus staff 238 2012-02-06 00:41 [01;34mnerdcommenter[0m/
+drwxr-xr-x 7 marcus staff 306 2012-02-04 02:47 [01;34mnerdtree[0m/
+drwxr-xr-x 4 marcus staff 170 2012-02-03 13:28 [01;34mpeaksea[0m/
+drwxr-xr-x 4 marcus staff 170 2012-02-03 13:28 [01;34mpf.vim[0m/
+drwxr-xr-x 7 marcus staff 340 2012-02-03 13:28 [01;34mpuppet-vim[0m/
+drwxr-xr-x 6 marcus staff 272 2012-02-03 13:28 [01;34mvim-easymotion[0m/
+drwxr-xr-x 5 marcus staff 204 2012-02-04 02:26 [01;34mvim-eunuch[0m/
+drwxr-xr-x 5 marcus staff 238 2012-02-04 02:21 [01;34mvim-fugitive[0m/
+drwxr-xr-x 4 marcus staff 170 2012-02-03 14:43 [01;34mvim-ir_black3[0m/
+drwxr-xr-x 5 marcus staff 204 2012-02-04 02:28 [01;34mvim-speeddating[0m/
+drwxr-xr-x 5 marcus staff 238 2012-02-04 02:17 [01;34mvim-surround[0m/
+drwxr-xr-x 5 marcus staff 170 2012-02-04 02:31 [01;34mvim-unimpaired[0m/
+drwxr-xr-x 4 marcus staff 136 2012-02-03 13:28 [01;34mvim-vividchalk[0m/
+drwxr-xr-x 6 marcus staff 306 2012-02-07 22:15 [01;34mvundle[0m/
+drwxr-xr-x 4 marcus staff 170 2012-02-03 13:28 [01;34mwombat256.vim[0m/
+drwxr-xr-x 6 marcus staff 442 2012-02-03 13:28 [01;34mzencoding-vim[0m/
