@@ -30,16 +30,18 @@
 "   set virtualedit=all             " allow moving past end of line in all modes
     set virtualedit=block,insert,onemore
 
-
     " ColorScheme
     set bg=dark
-    set t_Co=256                " Terminal 256 colors
 
     map <leader>c0 :echo g:colors_name<CR>
     map <leader>c1 :colorscheme torte<CR>
     map <leader>c2 :colorscheme ir_black3<CR>
     map <leader>c3 :colorscheme vividchalk<CR>
     map <leader>c4 :colorscheme wombat256mod<CR>
+
+    " Terminal vim
+    set t_Co=256            " Terminal 256 colors
+    set showtabline=1       " only if there are at least two tab pages
 
     " Terminal vim theme
     colorscheme torte                   " default
@@ -60,6 +62,7 @@
 
         "et guioptions=egmtrLT  " Default
         set guioptions=egmt     " No toolbar/scrollbars
+        set showtabline=2       " always show tab bar
         set gtl=%t              " guitablabel. See statusline flags.
         set gtt=%F              " guitabtooltip
 
