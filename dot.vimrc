@@ -61,11 +61,14 @@ filetype indent plugin on
 set paste               " terminal: do the right thing when executing paste
 set verbose=0           " Debug: vim +V 9 ...
 
+" just in case...
+let mapleader=","
+
 """
-""" Shortcuts: mapleader/mappings/commands
+""" Rules: editing rules
+"""     case/indent/tab-stops/brackets/wrapping
 """
-source ~/.vim/vim.d/mappings.vim
-source ~/.vim/vim.d/commands.vim
+source ~/.vim/vim.d/text-rules.vim
 
 """
 """ Settings:
@@ -74,10 +77,10 @@ source ~/.vim/vim.d/settings.vim
 source ~/.vim/vim.d/filetypes.vim
 
 """
-""" Rules:
-"""     case/indent/tab-stops/brackets/vimgrep/wrapping
+""" Shortcuts: mapleader/mappings/commands
 """
-source ~/.vim/vim.d/text-rules.vim
+source ~/.vim/vim.d/commands.vim
+source ~/.vim/vim.d/mappings.vim
 
 """
 """ Options:

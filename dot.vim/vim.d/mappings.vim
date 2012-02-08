@@ -165,7 +165,8 @@
     " nnoremap <leader>z :% s#\<<C-r>=expand("<cword>")<CR>\>#
 
     " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-    nnoremap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
+    nnoremap <leader>cd  :cd  <C-R>=expand("%:p:h")<CR>
+    nnoremap <leader>lcd :lcd <C-R>=expand("%:p:h")<CR>
 
     " Shortcuts
     " ======================
