@@ -58,9 +58,10 @@
         set mousehide           " Hide the mouse pointer while typing
         set cursorcolumn
 
-        set guioptions=egmrLtT  " Default
-        "et guioptions=egmrLt   " No toolbar
-        set gtl=%t gtt=%F       " guitablabel/guitabtooltip
+        "et guioptions=egmtrLT  " Default
+        set guioptions=egmt     " No toolbar/scrollbars
+        set gtl=%t              " guitablabel. See statusline flags.
+        set gtt=%F              " guitabtooltip
 
         set guifont=Monaco:h12  " MacVim
         set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
