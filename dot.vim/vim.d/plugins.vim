@@ -275,22 +275,23 @@
 
         let g:user_zen_settings = {
             \  'html' : {
-            \    'filters' : 'html, e',
+            \    'filters' : 'html, c',
             \    'indentation' : '    '
             \  },
             \  'css' : {
-            \    'filters' : 'fc',
+            \    'filters' : 'html, fc',
             \    'indentation' : '  '
             \  },
             \  'xml' : {
             \    'extends' : 'html',
+            \    'indentation' : '    '
             \  },
             \  'haml' : {
             \    'extends' : 'html',
             \  },
             \  'php' : {
             \    'extends' : 'html',
-            \    'filters' : 'html,c',
+            \    'filters' : 'c',
             \    'indentation' : '    '
             \  },
             \}
