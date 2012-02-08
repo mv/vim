@@ -17,21 +17,23 @@
 
     set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)\ %p%%] " col lin/tot perc
 
-"   set statusline+=\ %f                               " filename
-    set statusline+=\ [%t]                             " filename
+"   set statusline+=\ %f                           " filename
+    set statusline+=\ [%t]                         " filename tail
+"   set statusline+=\ [%F]                         " Full path
+    set statusline+=\ [%{getcwd()}]                " buffer dir
     set statusline+=\ %m%r%h%w%q
 
-    if filereadable(expand("~/.vim/plugin/rails.vim"))
-        set statusline+=\ %{rails#statusline(1)}      " rails.vim
+    if exists("*rails#statusline()")
+        set statusline+=\ %{rails#statusline(1)}   " rails.vim
     endif
 
-    if filereadable(expand("~/.vim/plugin/fugitive.vim"))
-        set statusline+=\ %{fugitive#statusline()}     " git branch
+    if exists("*fugitive#statusline()")
+        set statusline+=\ %{fugitive#statusline()} " git branch
     endif
 
-    if filereadable(expand("~/.vim/plugin/capslock.vim"))
-        set statusline+=\ %{capslockstatusline()}      " capslock.vim
-    endif
+"   if exists("*capslockstatusline()")
+"       set statusline+=\ %{capslockstatusline()}  " capslock.vim
+"   endif
 
 "   set statusline+=%0                             " break
 "   set statusline+=asc:[%3.(%b%)\ %3.(x%b%)]      " current char (ga)
@@ -43,7 +45,7 @@
 "   set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%l%)]\ %p
 "   set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%l%)]\ %p
 
-    if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
+    if exists("*vimbuddy()")
         set statusline+=%=%{vimbuddy()} " vim buddy
     endif
 
