@@ -103,10 +103,16 @@
     """
     """ Dr. Chip's
     """
-    " align, alignnoremaps      {{{
-        let g:DrChipTopLvlMenu     = "Plugin."
+    " {{{
+    " ============
+    " align, alignnoremaps
+
+        Bundle 'AnsiEsc.vim'
+
+        Bundle 'Align'
+        let g:DrChipTopLvlMenu         = "Plugin."
         let g:alignnoremaps_euronumber = 1
-    " }}}
+
     " Bash-support              {{{
 
         " Turn it off:
@@ -156,6 +162,7 @@
             let g:Perl_PerlModuleListGenerator = '/codework/perl/perl.list.txt'
         endif
     " }}}
+" }}}
 
     """
     """ Tim Pope
