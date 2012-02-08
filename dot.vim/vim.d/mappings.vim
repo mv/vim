@@ -172,6 +172,7 @@
 
     nnoremap <leader>q  :q <CR>
     nnoremap <leader>q1 :q!<CR>
+    nnoremap <leader>qa :qall!<CR>
     nnoremap <leader>w  :w <CR>
     nnoremap <leader>wa :wa<CR>
     nnoremap <leader>wq :wq!<CR>

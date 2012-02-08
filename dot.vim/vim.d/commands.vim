@@ -7,8 +7,8 @@
     """
     command! W    :w
     command! Wall :wall
-    command! WQ   :wq
-    command! Qall :qall
+    command! WQ   :wq!
+    command! Qall :qall!
 
     """
     """ Shortcuts:
