@@ -203,7 +203,7 @@
         let NERDTreeMouseMode         = 3
         let NERDTreeShowLineNumbers   = 1
         let NERDTreeShowHidden        = 1
-        let NERDTreeWinSize           = 35
+        let NERDTreeWinSize           = 30
         let NERDTreeHijackNetrw       = 1
 
         map <leader>d  :NERDTreeToggle <CR> " Dir tree
@@ -297,22 +297,6 @@
             \}
 
     " }}}
-    " command-t                 {{{
-    " =========
-
-      " Bundle 'git://git.wincent.com/command-t.git'
-
-        nnoremap <silent> <Leader>t  :CommandT<CR>
-        nnoremap <silent> <Leader>tf :CommandTFlush<CR>
-        nnoremap <silent> <Leader>b  :CommandTBuffer<CR>
-
-        let g:CommandTMaxFiles=20000
-        let g:CommandTMaxHeigh=0
-        let g:CommandTAlwaysShowDotFiles=0
-        let g:CommandTMatchWindowAtTop=1
-        let g:CommandTMatchWindowReverse=0
-
-    " }}}
     " vim-easymotion            {{{
     " ==============
 
@@ -375,27 +359,15 @@
         " Turn it off:
         " let loaded_marksbrowser = 1
 
-        map <leader>mb :MarksBrowser<CR><CR>
+        " map <leader>mb :MarksBrowser<CR><CR>
 
         " Do not close after selecting a mark
-        let marksCloseWhenSelected = 0
+        " let marksCloseWhenSelected = 0
 
     " }}}
     " marks_corey.vim           {{{
         " Turn it off:
         " let g:loaded_marks_corey = 1
-    " }}}
-    " project.vim               {{{
-        " Turn it off:
-        " let loaded_project = 1
-
-        let g:proj_window_width = 40
-        let g:proj_window_increment = 20
-
-        " Default: 'imst'
-        let g:proj_flags = 'imstn'
-
-        nnoremap <silent> <Leader>p :Project<CR>
     " }}}
     " searchcomplete            {{{
         " Turn it off:
@@ -403,12 +375,12 @@
     " }}}
     " showmarks                 {{{
         " Turn it off:
-        let loaded_showmarks = 1
+        " let loaded_showmarks = 1
 
-        hi ShowMarksHLl guifg=white guibg=black    gui=bold ctermfg=white ctermbg=black    cterm=bold
-        hi ShowMarksHLu guifg=white guibg=darkblue gui=bold ctermfg=white ctermbg=darkblue cterm=bold
-        hi ShowMarksHLo guifg=gray  guibg=black    gui=bold ctermfg=gray  ctermbg=black    cterm=bold
-        hi ShowMarksHLm guifg=white guibg=gray     gui=bold ctermfg=white ctermbg=gray     cterm=bold
+        " hi ShowMarksHLl guifg=white guibg=black    gui=bold ctermfg=white ctermbg=black    cterm=bold
+        " hi ShowMarksHLu guifg=white guibg=darkblue gui=bold ctermfg=white ctermbg=darkblue cterm=bold
+        " hi ShowMarksHLo guifg=gray  guibg=black    gui=bold ctermfg=gray  ctermbg=black    cterm=bold
+        " hi ShowMarksHLm guifg=white guibg=gray     gui=bold ctermfg=white ctermbg=gray     cterm=bold
 
        " map <leader>mt :ShowMarksToggle    <CR>
        " map <leader>mm :ShowMarksPlaceMark <CR>
@@ -420,22 +392,25 @@
         " Turn it off:
         " let g:loaded_sqlutilities = 1
 
-        let g:sqlutil_align_where = 1
-        let g:sqlutil_align_comma = 1
-        let g:sqlutil_align_first_word = 1
-        let g:sqlutil_align_keyword_right = 1
-        let g:sqlutil_keyword_case = '\U'
+        " let g:sqlutil_align_where = 1
+        " let g:sqlutil_align_comma = 1
+        " let g:sqlutil_align_first_word = 1
+        " let g:sqlutil_align_keyword_right = 1
+        " let g:sqlutil_keyword_case = '\U'
 
         " 0: do not create maps
-        let g:sqlutil_load_default_maps = 0
+        " let g:sqlutil_load_default_maps = 0
 
-        vmap <leader>sf        <Plug>SQLU_Formatter<CR>
+        " vmap <leader>sf        <Plug>SQLU_Formatter<CR>
         " nnoremap <leader>scl       <Plug>SQLU_CreateColumnList<CR>
         " nnoremap <leader>scd       <Plug>SQLU_GetColumnDef<CR>
         " nnoremap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
         " nnoremap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
     " }}}
     " StatusLineHighlight       {{{
+
+        Bundle 'vim-scripts/StatusLineHighlight'
+
         " Turn it off:
         " let g:loaded_StatusLineHighlight = 1
 
@@ -477,22 +452,22 @@
         " let loaded_tlib = 1
 
         " My corrections
-        autocmd FileType  tlibInputList setlocal nonu cc=+1,+2,+3,+4,+5 cursorcolumn
-        highlight  InputlListCursor guifg=#CCCCCC  guibg=darkblue  gui=italic  ctermfg=white  ctermbg=darkblue  cterm=NONE
+        " autocmd FileType  tlibInputList setlocal nonu cc=+1,+2,+3,+4,+5 cursorcolumn
+        " highlight  InputlListCursor guifg=#CCCCCC  guibg=darkblue  gui=italic  ctermfg=white  ctermbg=darkblue  cterm=NONE
 
     " }}}
     " tmarks.vim                {{{
         " Turn it off:
         " let loaded_tmarks = 1
 
-       map <leader>tm :TMarks    <CR>
+       " map <leader>tm :TMarks    <CR>
 
     " }}}
     " tregisters.vim            {{{
         " Turn it off:
         " let loaded_tregisters = 1
 
-       map <leader>tr :TRegisters    <CR>
+       " map <leader>tr :TRegisters    <CR>
 
     " }}}
     " RainbowPlugin             {{{

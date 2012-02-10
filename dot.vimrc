@@ -33,8 +33,6 @@
     " Syntax
     Bundle 'uggedal/puppet-vim'
 
-"   Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-
     """
     """ www.vim.org/scripts
     """
@@ -47,10 +45,6 @@
     " syntax
     Bundle 'pf.vim'
     Bundle 'JSON.vim'
-
-    """
-    """ Others
-    """
 
     " Bundles: END
 
