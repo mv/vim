@@ -16,8 +16,8 @@
 
     " Viewport
     set scrolloff=3         " keep 3 lines scrolling up/down
-    set sidescroll=10       " keep 10 columns scrolling left/right
-    set sidescrolloff=10    " keep 10 columns scrolling left/right
+    set sidescroll=0        " keep 'n' columns scrolling left/right
+    set sidescrolloff=0     " keep 'n' columns scrolling left/right
 
     " Cursor bars
     set cursorline          " horizontal highlight
