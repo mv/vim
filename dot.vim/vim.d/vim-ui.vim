@@ -34,7 +34,7 @@
     set bg=dark
 
     map <leader>c0 :echo g:colors_name<CR>
-    map <leader>c1 :colorscheme torte<CR>
+    map <leader>c1 :colorscheme desert<CR>
     map <leader>c2 :colorscheme ir_black3<CR>
     map <leader>c3 :colorscheme vividchalk<CR>
     map <leader>c4 :colorscheme wombat256mod<CR>
