@@ -339,6 +339,23 @@
         let g:bufExplorerSplitRight      = 1    " Split right.
 
     " }}}
+    " bufkill                   {{{
+    " =======
+
+        " Bundle 'vim-scripts/bufkill.vim'
+
+        " call <SID>CreateUniqueMapping('<Leader>bb',   '<Plug>BufKillBack')
+        " call <SID>CreateUniqueMapping('<Leader>bf',   '<Plug>BufKillForward')
+        " call <SID>CreateUniqueMapping('<Leader>bun',  '<Plug>BufKillBun')
+        " call <SID>CreateUniqueMapping('<Leader>!bun', '<Plug>BufKillBangBun')
+        " call <SID>CreateUniqueMapping('<Leader>bd',   '<Plug>BufKillBd')
+        " call <SID>CreateUniqueMapping('<Leader>!bd',  '<Plug>BufKillBangBd')
+        " call <SID>CreateUniqueMapping('<Leader>bw',   '<Plug>BufKillBw')
+        " call <SID>CreateUniqueMapping('<Leader>!bw',  '<Plug>BufKillBangBw')
+        " call <SID>CreateUniqueMapping('<Leader>bundo','<Plug>BufKillUndo')
+        " call <SID>CreateUniqueMapping('<Leader>ba',   '<Plug>BufKillAlt')
+
+    " }}}
     " enhancedjumps.vim         {{{
         " Turn it off:
         " let g:loaded_EnhancedJumps = 1
@@ -349,15 +366,6 @@
     " LargeFile                 {{{
         " in megabytes - :Large/:Unlarge
         let g:LargeFile= 200
-    " }}}
-    " kwbdi.vim                 {{{
-    " =========
-    "
-        Bundle 'kwbdi.vim'
-
-        " Turn it off:
-        " let g:loaded_kwbd = 1
-        "
     " }}}
     " mark.vim                  {{{
         " Turn it off:

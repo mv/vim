@@ -25,6 +25,12 @@
     nmap <leader>btk  :topleft      new<CR>
     nmap <leader>btj  :botright     new<CR>
 
+    """
+    """ Removing:
+    """
+    nmap <leader>bd :bprevious<CR>:bdelete #<CR>
+    nmap <leader>bw :bprevious<CR>:bwipeout #<CR>
+
 
 " vim: set foldlevel=9
 
