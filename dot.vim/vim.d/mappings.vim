@@ -89,8 +89,8 @@
     " Editing vimrc
     " =======================
 
-    nnoremap <leader>ev :e   $MYVIMRC<CR>
-    nnoremap <leader>ed :e   $HOME/.vim/vim.d/<CR>
+    nnoremap <leader>ev :tabnew   $MYVIMRC<CR>
+    nnoremap <leader>ed :tabnew   $HOME/.vim/vim.d/<CR>
 
     " Copy/paste registers
     " =======================
