@@ -7,11 +7,8 @@
     """
     """ Takeshi Nishida
     """
-    " {{{
-    " ================
-
-        Bundle 'L9'
-        Bundle 'AutoComplPop'
+    Bundle 'L9'
+    Bundle 'AutoComplPop'             " {{{
 
         let g:acp_enableAtStartup        = 1
         let g:acp_mappingDriven          = 0
@@ -19,14 +16,15 @@
         let g:acp_behaviorKeywordLength  = 2
         let g:acp_behaviorFileLength     = 0
 
-        let g:acp_behavior = { 'repeat': 1}
+        let g:acp_behavior = {'repeat': 1}
 
         nnoremap <leader>ae :AcpEnable <CR>
         nnoremap <leader>ad :AcpDisable <CR>
         " nnoremap <leader>al :AcpLock <CR>
         " nnoremap <leader>au :AcpUnlock <CR>
 
-        Bundle 'FuzzyFinder'
+    " }}}
+    Bundle 'FuzzyFinder'                {{{
 
         let g:fuf_modesDisable = []
         let g:fuf_mrufile_maxItem = 400
@@ -103,17 +101,12 @@
     """
     """ Dr. Chip's
     """
-    " {{{
-    " ============
-    " align, alignnoremaps
-
-        Bundle 'AnsiEsc.vim'
-
-        Bundle 'Align'
+    Bundle 'AnsiEsc.vim'
+    Bundle 'Align'                    " {{{
         let g:DrChipTopLvlMenu         = "Plugin."
         let g:alignnoremaps_euronumber = 1
-
-    " Bash-support              {{{
+    " }}}
+    " Bash-support                      {{{
 
         " Turn it off:
         let g:BASH_Version = 'OFF'
@@ -136,7 +129,7 @@
         endif
 
     " }}}
-    " Perl-support              {{{
+    " Perl-support                      {{{
         " Turn it off:
         let g:Perl_Version = 'OFF'
 
@@ -162,20 +155,16 @@
             let g:Perl_PerlModuleListGenerator = '/codework/perl/perl.list.txt'
         endif
     " }}}
-" }}}
 
     """
     """ Tim Pope
     """
-    " {{{
-    " ============
-
-        Bundle 'tpope/vim-eunuch'
-        Bundle 'tpope/vim-fugitive'
-        Bundle 'tpope/vim-repeat'
-        Bundle 'tpope/vim-surround'
-        Bundle 'tpope/vim-unimpaired'
-        Bundle 'tpope/vim-speeddating'
+    Bundle 'tpope/vim-eunuch'
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'tpope/vim-repeat'
+    Bundle 'tpope/vim-surround'
+    Bundle 'tpope/vim-unimpaired'
+    Bundle 'tpope/vim-speeddating'    " {{{
 
         let g:speeddating_no_mappings = 0
 
@@ -184,17 +173,15 @@
     """
     """ Martin Greffel
     """
-    " {{{
-
-        Bundle 'scrooloose/nerdcommenter'
+    Bundle 'scrooloose/nerdcommenter' " {{{
 
         let NERDCreateDefaultMappings = 1
         let NERDDefaultNesting = 0
         let NERDMenuMode = 0
         let NERDSpaceDelims = 1
         let NERDRemoveExtraSpaces = 1
-
-        Bundle 'scrooloose/nerdtree'
+    " }}}
+    Bundle 'scrooloose/nerdtree'      " {{{
 
         " let loaded_nerd_tree=1
         let NERDTreeCaseSensitiveSort = 1
@@ -208,8 +195,8 @@
 
         map <leader>d  :NERDTreeToggle <CR> " Dir tree
         map <leader>dd :NERDTreeMirror <CR> " Dir tree
-
-    " snipmate-snippets         {{{
+    " }}}
+    " snipmate-snippets                 {{{
         " Turn it off:
         " let loaded_snips = 1
 
@@ -238,15 +225,12 @@
 "       let g:acp_behaviorSnipmateLength = 5
 
     " }}}
-    " }}}
 
     """
     """ best of the best
     """
-    " Zen-Coding                {{{
-    " ==========
-
-        Bundle 'mattn/zencoding-vim'
+    Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'mattn/zencoding-vim'      " {{{
 
         " Turn it off:
         " let g:loaded_zencoding_vim = 1
@@ -297,20 +281,27 @@
             \}
 
     " }}}
-    " vim-easymotion            {{{
-    " ==============
 
-        Bundle 'Lokaltog/vim-easymotion'
+    """
+    """ Snipmate
+    """
+    Bundle 'MarcWeber/vim-addon-mw-utils'    "
+    Bundle 'tomtom/tlib_vim'                 " {{{
+        " Turn it off:
+        " let loaded_tlib = 1
+
+        " My corrections
+        " autocmd FileType  tlibInputList setlocal nonu cc=+1,+2,+3,+4,+5 cursorcolumn
+        " highlight  InputlListCursor guifg=#CCCCCC  guibg=darkblue  gui=italic  ctermfg=white  ctermbg=darkblue  cterm=NONE
 
     " }}}
+    Bundle 'snipmate-snippets'
+    Bundle 'garbas/vim-snipmate'             "
 
     """
     """ Others....
     """
-    " bufexplorer               {{{
-    " ===========
-
-        Bundle 'bufexplorer.zip'
+    Bundle 'bufexplorer.zip'                 " {{{
 
         " ,be / ,bv / ,bs
         let g:bufExplorerReverseSort     = 0
@@ -323,23 +314,45 @@
         let g:bufExplorerSplitRight      = 1    " Split right.
 
     " }}}
-    " bufkill                   {{{
-    " =======
+    Bundle 'vim-scripts/StatusLineHighlight' " {{{
 
-        " Bundle 'vim-scripts/bufkill.vim'
+        " Turn it off:
+        " let g:loaded_StatusLineHighlight = 1
 
-        " call <SID>CreateUniqueMapping('<Leader>bb',   '<Plug>BufKillBack')
-        " call <SID>CreateUniqueMapping('<Leader>bf',   '<Plug>BufKillForward')
-        " call <SID>CreateUniqueMapping('<Leader>bun',  '<Plug>BufKillBun')
-        " call <SID>CreateUniqueMapping('<Leader>!bun', '<Plug>BufKillBangBun')
-        " call <SID>CreateUniqueMapping('<Leader>bd',   '<Plug>BufKillBd')
-        " call <SID>CreateUniqueMapping('<Leader>!bd',  '<Plug>BufKillBangBd')
-        " call <SID>CreateUniqueMapping('<Leader>bw',   '<Plug>BufKillBw')
-        " call <SID>CreateUniqueMapping('<Leader>!bw',  '<Plug>BufKillBangBw')
-        " call <SID>CreateUniqueMapping('<Leader>bundo','<Plug>BufKillUndo')
-        " call <SID>CreateUniqueMapping('<Leader>ba',   '<Plug>BufKillAlt')
+        " My buffers
+        highlight StatusLineModified       guifg=#CCCCCC    guibg=DarkRed   gui=bold ctermfg=gray    ctermbg=DarkRed   cterm=NONE
+        highlight StatusLineModifiedNC     guifg=DarkRed    guibg=gray      gui=bold ctermfg=DarkRed ctermbg=gray      cterm=NONE
+
+        " Help
+        highlight StatusLineSpecial        guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
+        highlight StatusLineSpecialNC      guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
+
+        " :pedit/psearch/ptag
+        highlight StatusLinePreview        guifg=white      guibg=magenta   gui=bold ctermfg=white   ctermbg=magenta   cterm=NONE
+        highlight StatusLinePreviewNC      guifg=black      guibg=magenta   gui=bold ctermfg=black   ctermbg=magenta   cterm=NONE
+
+        " others...
+        highlight StatusLineReadonly       guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
+        highlight StatusLineReadonlyNC     guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
+        highlight StatusLineUnmodifiable   guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
+        highlight StatusLineUnmodifiableNC guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
 
     " }}}
+
+    """
+    """ Must see...
+    """
+    " tregisters.vim            {{{
+        " Turn it off:
+        " let loaded_tregisters = 1
+
+       " map <leader>tr :TRegisters    <CR>
+
+    " }}}
+
+    """
+    """ Off...
+    """
     " enhancedjumps.vim         {{{
         " Turn it off:
         " let g:loaded_EnhancedJumps = 1
@@ -407,32 +420,6 @@
         " nnoremap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
         " nnoremap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
     " }}}
-    " StatusLineHighlight       {{{
-
-        Bundle 'vim-scripts/StatusLineHighlight'
-
-        " Turn it off:
-        " let g:loaded_StatusLineHighlight = 1
-
-        " My buffers
-        highlight StatusLineModified       guifg=#CCCCCC    guibg=DarkRed   gui=bold ctermfg=gray    ctermbg=DarkRed   cterm=NONE
-        highlight StatusLineModifiedNC     guifg=DarkRed    guibg=gray      gui=bold ctermfg=DarkRed ctermbg=gray      cterm=NONE
-
-        " Help
-        highlight StatusLineSpecial        guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
-        highlight StatusLineSpecialNC      guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
-
-        " :pedit/psearch/ptag
-        highlight StatusLinePreview        guifg=white      guibg=magenta   gui=bold ctermfg=white   ctermbg=magenta   cterm=NONE
-        highlight StatusLinePreviewNC      guifg=black      guibg=magenta   gui=bold ctermfg=black   ctermbg=magenta   cterm=NONE
-
-        " others...
-        highlight StatusLineReadonly       guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
-        highlight StatusLineReadonlyNC     guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
-        highlight StatusLineUnmodifiable   guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
-        highlight StatusLineUnmodifiableNC guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
-
-    " }}}
     " taglist                   {{{
         " let loaded_taglist = 1 " 0: activate / 1: do not load
         " let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
@@ -447,27 +434,11 @@
         " Turn it off:
         " let g:loaded_textformat = 1
     " }}}
-    " tlib.vim                  {{{
-        " Turn it off:
-        " let loaded_tlib = 1
-
-        " My corrections
-        " autocmd FileType  tlibInputList setlocal nonu cc=+1,+2,+3,+4,+5 cursorcolumn
-        " highlight  InputlListCursor guifg=#CCCCCC  guibg=darkblue  gui=italic  ctermfg=white  ctermbg=darkblue  cterm=NONE
-
-    " }}}
     " tmarks.vim                {{{
         " Turn it off:
         " let loaded_tmarks = 1
 
        " map <leader>tm :TMarks    <CR>
-
-    " }}}
-    " tregisters.vim            {{{
-        " Turn it off:
-        " let loaded_tregisters = 1
-
-       " map <leader>tr :TRegisters    <CR>
 
     " }}}
     " RainbowPlugin             {{{
