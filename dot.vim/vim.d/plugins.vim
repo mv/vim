@@ -8,7 +8,8 @@
     """ Takeshi Nishida
     """
     Bundle 'L9'
-    Bundle 'AutoComplPop'             " {{{
+    Bundle 'AutoComplPop'
+    "      'AutoComplPop'             " {{{
 
         let g:acp_enableAtStartup        = 1
         let g:acp_mappingDriven          = 0
@@ -24,7 +25,9 @@
         " nnoremap <leader>au :AcpUnlock <CR>
 
     " }}}
-    Bundle 'FuzzyFinder'                {{{
+
+    Bundle 'FuzzyFinder'
+    "      'FuzzyFinder'                {{{
 
         let g:fuf_modesDisable = []
         let g:fuf_mrufile_maxItem = 400
@@ -102,10 +105,12 @@
     """ Dr. Chip's
     """
     Bundle 'AnsiEsc.vim'
-    Bundle 'Align'                    " {{{
+    Bundle 'Align'
+    "      'Align'                    " {{{
         let g:DrChipTopLvlMenu         = "Plugin."
         let g:alignnoremaps_euronumber = 1
     " }}}
+
     " Bash-support                      {{{
 
         " Turn it off:
@@ -164,16 +169,15 @@
     Bundle 'tpope/vim-repeat'
     Bundle 'tpope/vim-surround'
     Bundle 'tpope/vim-unimpaired'
-    Bundle 'tpope/vim-speeddating'    " {{{
+    Bundle 'tpope/vim-speeddating'
 
         let g:speeddating_no_mappings = 0
-
-    " }}}
 
     """
     """ Martin Greffel
     """
-    Bundle 'scrooloose/nerdcommenter' " {{{
+    Bundle 'scrooloose/nerdcommenter'
+    "      'scrooloose/nerdcommenter' " {{{
 
         let NERDCreateDefaultMappings = 1
         let NERDDefaultNesting = 0
@@ -181,7 +185,9 @@
         let NERDSpaceDelims = 1
         let NERDRemoveExtraSpaces = 1
     " }}}
-    Bundle 'scrooloose/nerdtree'      " {{{
+
+    Bundle 'scrooloose/nerdtree'
+    "      'scrooloose/nerdtree'      " {{{
 
         " let loaded_nerd_tree=1
         let NERDTreeCaseSensitiveSort = 1
@@ -196,6 +202,7 @@
         map <leader>d  :NERDTreeToggle <CR> " Dir tree
         map <leader>dd :NERDTreeMirror <CR> " Dir tree
     " }}}
+
     " snipmate-snippets                 {{{
         " Turn it off:
         " let loaded_snips = 1
@@ -230,7 +237,8 @@
     """ best of the best
     """
     Bundle 'Lokaltog/vim-easymotion'
-    Bundle 'mattn/zencoding-vim'      " {{{
+    Bundle 'mattn/zencoding-vim'
+    "      'mattn/zencoding-vim'      " {{{
 
         " Turn it off:
         " let g:loaded_zencoding_vim = 1
@@ -285,8 +293,9 @@
     """
     """ Snipmate
     """
-    Bundle 'MarcWeber/vim-addon-mw-utils'    "
-    Bundle 'tomtom/tlib_vim'                 " {{{
+    Bundle 'MarcWeber/vim-addon-mw-utils'
+    Bundle 'tomtom/tlib_vim'
+    "      'tomtom/tlib_vim'          " {{{
         " Turn it off:
         " let loaded_tlib = 1
 
@@ -295,13 +304,16 @@
         " highlight  InputlListCursor guifg=#CCCCCC  guibg=darkblue  gui=italic  ctermfg=white  ctermbg=darkblue  cterm=NONE
 
     " }}}
-    Bundle 'snipmate-snippets'
-    Bundle 'garbas/vim-snipmate'             "
+    Bundle 'garbas/vim-snipmate'
+
+"   Bundle 'snipmate-snippets'
+    Bundle 'mv/mv-snipmate-snippets'
 
     """
     """ Others....
     """
-    Bundle 'bufexplorer.zip'                 " {{{
+    Bundle 'bufexplorer.zip'
+    "      'bufexplorer.zip'                 " {{{
 
         " ,be / ,bv / ,bs
         let g:bufExplorerReverseSort     = 0
@@ -314,7 +326,8 @@
         let g:bufExplorerSplitRight      = 1    " Split right.
 
     " }}}
-    Bundle 'vim-scripts/StatusLineHighlight' " {{{
+    Bundle 'vim-scripts/StatusLineHighlight'
+    "      'vim-scripts/StatusLineHighlight' " {{{
 
         " Turn it off:
         " let g:loaded_StatusLineHighlight = 1
