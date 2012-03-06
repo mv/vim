@@ -52,7 +52,8 @@
     """
     if has("gui_running")
 
-        silent! colorscheme ir_black3   " gui: use if present
+        silent! colorscheme ir_black3    " gui: use if present
+        " silent! colorscheme wombat256mod
 
         autocmd BufEnter * let &titlestring=expand("%:p")." - ".v:servername
 
