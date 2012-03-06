@@ -351,6 +351,7 @@
         highlight StatusLineUnmodifiableNC guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
 
     " }}}
+    Bundle 'Raimondi/delimitMate'
 
     """
     """ Must see...
