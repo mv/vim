@@ -308,6 +308,7 @@
 
 "   Bundle 'snipmate-snippets'
     Bundle 'mv/mv-snipmate-snippets'
+    Bundle 'mv/mv-vim-puppet'
 
     """
     """ Others....
