@@ -46,7 +46,7 @@
         autocmd BufNewFile,BufRead *.js,*.json       setlocal filetype=javascript
     " }}}
     " Puppet                    {{{
-        autocmd BufNewFile,BufRead *.pp              setlocal filetype=puppet
+        autocmd BufRead,BufNewFile *.pp setlocal filetype=puppet foldmethod=marker foldmarker={,} foldlevel=9
     " }}}
     " SQL*Plus                  {{{
     " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
