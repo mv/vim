@@ -4,7 +4,7 @@
 
     set splitbelow          " sb: split new window below current window
     set splitright          " spr: split new window to the right
-    set noequalalways       " ea: resize all windows to same size to fit a new one
+    set equalalways         " ea: resize all windows to same size to fit a new one
 
     nmap <leader>o   :only <CR>
     nmap <leader>sb  :set scrollbind<CR>
@@ -80,8 +80,16 @@
     " split buf to new tab
     "map <leader>ts :tab split<CR>
 
-    " open file under cursor to new tab: /etc/hosts
-    "map <leader>tf <C-W>gf
+    " open file under cursor to new tab
+    map <leader>tf <C-W>gf
+
+    " open file under cursor to new split right
+    " <C-W><C-F>: open file under cursor to new split below
+    " <C-W><S-L>: move split to right
+    map <leader>sf <C-W><C-F><C-W><S-L>
+
+    " open all current buffers, one per tab
+    map <leader>ta :tab sball
 
 " vim: set foldlevel=9
 
