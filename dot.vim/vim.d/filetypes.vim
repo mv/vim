@@ -36,17 +36,17 @@
         autocmd BufRead     [Mm]akefile*    setlocal filetype=make
         autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
     " }}}
+    " Javascript/json           {{{
+        autocmd BufNewFile,BufRead *.js,*.json       setlocal filetype=javascript
+    " }}}
     " Ruby                      {{{
         autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby
         autocmd BufNewFile,BufRead Rakefile,Capfile  setlocal filetype=ruby
         autocmd BufNewFile,BufRead Vagrantfile       setlocal filetype=ruby
         autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
     " }}}
-    " Javascript/json           {{{
-        autocmd BufNewFile,BufRead *.js,*.json       setlocal filetype=javascript
-    " }}}
     " Puppet                    {{{
-        autocmd BufRead,BufNewFile *.pp setlocal filetype=puppet foldmethod=marker foldmarker={,} foldlevel=9
+        autocmd BufRead,BufNewFile *.pp setlocal foldmethod=marker foldmarker={,} foldlevel=9
     " }}}
     " SQL*Plus                  {{{
     " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
