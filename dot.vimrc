@@ -99,6 +99,7 @@ source ~/.vim/vim.d/plugins.vim
 """
 source ~/.vim/vim.d/vim-code.vim
 
+set paste
 
 " vim: set foldmarker={{{,}}} foldlevel=0 nospell:
 
