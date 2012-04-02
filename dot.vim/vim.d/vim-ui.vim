@@ -67,7 +67,7 @@
         set gtl=%t              " guitablabel. See statusline flags.
         set gtt=%F              " guitabtooltip
 
-        set guifont=Monaco:h12  " MacVim
+        set guifont=Monaco:h13  " MacVim
         set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
         set transp=4            " background transparency
 
