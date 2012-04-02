@@ -183,7 +183,7 @@
     nnoremap <leader>w  :w <CR>
     nnoremap <leader>wa :wa<CR>
     nnoremap <leader>wq :wq!<CR>
-    nnoremap <leader>ww :w !sudo tee % >/dev/null
+    nnoremap <leader>ws :w !sudo tee % >/dev/null
     nnoremap <leader>sa :browse confirm saveas<CR>
 
     cmap w!! w !sudo tee % >/dev/null
