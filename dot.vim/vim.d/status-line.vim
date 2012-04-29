@@ -15,12 +15,15 @@
 "   set statusline+=,%{&filefoGrmat}                " file format
     set statusline+=]
 
-    set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)\ %p%%] " col lin/tot perc
+    set statusline+=\ [%2.(%c%)\ lin:%-5.(%l/%L%)\ %p%%] " col lin/tot perc
 
 "   set statusline+=\ %f                           " filename
     set statusline+=\ [%t]                         " filename tail
 "   set statusline+=\ [%F]                         " Full path
-    set statusline+=\ [%{getcwd()}]                " buffer dir
+
+"   set statusline+=\ [%{getcwd()}]                " buffer dir
+    set statusline+=\ [..%{strpart(getcwd(),strlen(getcwd())-15,15)}/] " substr(getcwd(),-15)
+
     set statusline+=\ %m%r%h%w%q
 
     if exists("*rails#statusline()")
