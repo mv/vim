@@ -50,7 +50,8 @@
         autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
     " }}}
     " Puppet                    {{{
-        autocmd BufRead,BufNewFile *.pp setlocal foldmethod=marker foldmarker={,} foldlevel=9
+        autocmd BufRead,BufNewFile *.pp setlocal ts=2 sts=2 sw=2 et nowrap filetype=puppet
+        autocmd BufRead,BufNewFile *.pp setlocal foldmethod=marker foldmarker={,} foldlevel=9 filetype=puppet
     " }}}
     " SQL*Plus                  {{{
     " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
