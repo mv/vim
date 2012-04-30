@@ -237,6 +237,19 @@
     """ best of the best
     """
     Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'Lokaltog/vim-powerline'
+
+    " i_CTRL-V_Unnnn:
+    " ∓ [0x2213]
+    " ➤ [0x27a4]
+    " ¶ [0x00b6]
+        let g:Powerline_symbols_override = {
+        \ 'BRANCH': [0x2213],
+        \ 'LINE': [0x27a4],
+        \ }
+        let g:Powerline_theme = 'mvf'
+        let g:Powerline_colorscheme = 'mvf'
+
     Bundle 'mattn/zencoding-vim'
     "      'mattn/zencoding-vim'      " {{{
 
