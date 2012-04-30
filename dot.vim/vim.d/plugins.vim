@@ -314,6 +314,19 @@
 
     " }}}
 
+    Bundle 'wincent/Command-T'
+    "      'wincent/Command-T'        " {
+        let g:CommandTMaxFiles=20000
+        let g:CommandTMinHeight=5
+
+        let g:CommandTAcceptSelectionSplitMap='<C-j>'
+        let g:CommandTAcceptSelectionVSplitMap='<C-k>'
+        let g:CommandTAcceptSelectionTabMap='<C-l>'
+
+"       nnoremap <silent> <Leader>t :CommandT<CR>
+"       nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+    " }
+
     """
     """ Snipmate
     """
