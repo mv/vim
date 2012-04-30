@@ -33,7 +33,18 @@
         let g:fuf_mrufile_maxItem = 400
         let g:fuf_mrucmd_maxItem = 400
 
-        let g:fuf_fuzzyRefining = 1
+"       let g:fuf_coveragefile_globPatterns = [ './**/', '**/.*' ]
+"       let g:fuf_abbrevMap = {
+"           \   "^mod:" : [
+"           \     "modules/**/",
+"           \     "modules/**/manifests/*",
+"           \     "modules/**/manifests/**/",
+"           \   ],
+"           \ }
+
+        " 0: partial matching
+        " 1: refining matching
+"       let g:fuf_fuzzyRefining = 0
 
         noremap  <leader>fb   :FufBuffer          <CR>
         noremap  <leader>ff   :FufFile            <CR>
