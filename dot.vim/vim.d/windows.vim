@@ -78,18 +78,23 @@
     "      :tabf[ind]
 
     " split buf to new tab
-    "map <leader>ts :tab split<CR>
+"   map <leader>ts :tab split<CR>
+
+
+
+    " move buffer to new tab
+"   map <leader>tab <C-W><S-T>
+
+    " open all current buffers, one per tab
+"   map <leader>tabs :tab sball
 
     " open file under cursor to new tab
-    map <leader>tf <C-W>gf
+"   map <leader>tabf <C-W>gf
 
     " open file under cursor to new split right
     " <C-W><C-F>: open file under cursor to new split below
     " <C-W><S-L>: move split to right
     map <leader>sf <C-W><C-F><C-W><S-L>
-
-    " open all current buffers, one per tab
-    map <leader>ta :tab sball
 
 " vim: set foldlevel=9
 
