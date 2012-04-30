@@ -208,7 +208,7 @@
         let NERDTreeShowLineNumbers   = 1
         let NERDTreeShowHidden        = 1
         let NERDTreeWinSize           = 30
-        let NERDTreeHijackNetrw       = 1
+        let NERDTreeHijackNetrw       = 0
 
         map <leader>d  :NERDTreeToggle <CR> " Dir tree
         map <leader>dd :NERDTreeMirror <CR> " Dir tree
