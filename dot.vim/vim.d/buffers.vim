@@ -8,9 +8,9 @@
     "     <C-^>     switch to alternate file
 
 "   set hidden                      " hide buffer instead of closing
-"   if version >= 703               " New in 7.3 !
-"       set autochdir               " always switch to the current file directory
-"   endif
+    if version >= 703               " New in 7.3 !
+        set autochdir               " always switch to the current file directory
+    endif
 
     """
     """ Creating:
