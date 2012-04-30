@@ -394,6 +394,7 @@
     """
     """ Must see...
     """
+"   Bundle 'majutsushi/tagbar'
     " tregisters.vim            {{{
         " Turn it off:
         " let loaded_tregisters = 1
