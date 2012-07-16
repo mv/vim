@@ -46,29 +46,29 @@
         " 1: refining matching
 "       let g:fuf_fuzzyRefining = 0
 
-        noremap  <leader>fb   :FufBuffer          <CR>
-        noremap  <leader>ff   :FufFile            <CR>
-        noremap  <leader>fd   :FufDir             <CR>
-        noremap  <leader>fl   :FufLine            <CR>
+        noremap  <leader>fb   :FufBuffer  <CR>
+        noremap  <leader>ff   :FufFile **/<CR>
+        noremap  <leader>fd   :FufDir     <CR>
+        noremap  <leader>fl   :FufLine    <CR>
 
-        noremap  <leader>fmc  :FufMruCmd          <CR>
-        noremap  <leader>fmf  :FufMruFile         <CR>
+        noremap  <leader>fmc  :FufMruCmd  <CR>
+        noremap  <leader>fmf  :FufMruFile <CR>
 
-        noremap  <leader>fh   :FufHelp            <CR>
-        noremap  <leader>fj   :FufJumpList        <CR>
+        noremap  <leader>fh   :FufHelp    <CR>
+        noremap  <leader>fj   :FufJumpList<CR>
 
         noremap  <leader>fbd  :FufBookmarkDir     <CR>
         noremap  <leader>fbf  :FufBookmarkFile    <CR>
         noremap  <leader>fbda :FufBookmarkDirAdd  <CR>
         noremap  <leader>fbfa :FufBookmarkFileAdd <CR>
         "
-        " noremap  <leader>fcf  :FufCoverageFile    <CR>
-        " noremap  <leader>fcl  :FufChangeList      <CR>
-        " noremap  <leader>fq   :FufQuickfix        <CR>
+        " noremap  <leader>fcf  :FufCoverageFile  <CR>
+        " noremap  <leader>fcl  :FufChangeList    <CR>
+        " noremap  <leader>fq   :FufQuickfix      <CR>
         "
-        " noremap  <leader>fbt  :FufBufferTag       <CR>
-        " noremap  <leader>ft   :FufTag             <CR>
-        " noremap  <leader>ftf  :FufTaggedFile      <CR>
+        " noremap  <leader>fbt  :FufBufferTag     <CR>
+        " noremap  <leader>ft   :FufTag           <CR>
+        " noremap  <leader>ftf  :FufTaggedFile    <CR>
 
         " nnoremap <silent> sj     :FufBuffer<CR>
         " nnoremap <silent> sk     :FufFileWithCurrentBufferDir<CR>
@@ -248,7 +248,7 @@
     """ best of the best
     """
     Bundle 'Lokaltog/vim-easymotion'
-    Bundle 'Lokaltog/vim-powerline'
+"   Bundle 'Lokaltog/vim-powerline'
 
     " i_CTRL-V_Unnnn:
     " ∓ [0x2213]
@@ -319,9 +319,9 @@
         let g:CommandTMaxFiles=20000
         let g:CommandTMinHeight=5
 
-        let g:CommandTAcceptSelectionSplitMap='<C-j>'
-        let g:CommandTAcceptSelectionVSplitMap='<C-k>'
-        let g:CommandTAcceptSelectionTabMap='<C-l>'
+        let g:CommandTAcceptSelectionSplitMap='<D-j>'
+        let g:CommandTAcceptSelectionVSplitMap='<D-k>'
+        let g:CommandTAcceptSelectionTabMap='<D-CR>'
 
 "       nnoremap <silent> <Leader>t :CommandT<CR>
 "       nnoremap <silent> <Leader>b :CommandTBuffer<CR>
@@ -364,7 +364,7 @@
         let g:bufExplorerSplitRight      = 1    " Split right.
 
     " }}}
-    Bundle 'vim-scripts/StatusLineHighlight'
+"   Bundle 'vim-scripts/StatusLineHighlight'
     "      'vim-scripts/StatusLineHighlight' " {{{
 
         " Turn it off:
@@ -390,6 +390,11 @@
 
     " }}}
     Bundle 'Raimondi/delimitMate'
+
+    """
+    """ Syntax only
+    """
+    Bundle 'vim-scripts/iptables'
 
     """
     """ Must see...
