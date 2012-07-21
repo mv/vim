@@ -3,19 +3,29 @@
 
     set laststatus=2   " always show statusline
 
-    set statusline=\                               " one blank
+    set statusline=                                " start blank line
+"   set statusline=\                               " one blank
 
 "   set statusline+=\ %f\                          " filename
 "   set statusline+=%h%m%r                         " flags
+
+"   set statusline+=,%{&encoding}                  " encoding
+"   set statusline+=,%{&filefoGrmat}               " file format
 
     set statusline+=[
     set statusline+=%n:                            " buffer number
     set statusline+=%{strlen(&ft)?&ft:'none'}      " filetype
 "   set statusline+=,%{&encoding}                  " encoding
-"   set statusline+=,%{&filefoGrmat}                " file format
+"   set statusline+=,%{&filefoGrmat}               " file format
     set statusline+=]
 
-    set statusline+=\ [%2.(%c%)\ lin:%-5.(%l/%L%)\ %p%%] " col lin/tot perc
+    " col lin/tot perc
+    " [ 7 lin:12/97 12%]
+"   set statusline+=\ [%2.(%c%)\ lin:%-5.(%l/%L%)\ %p%%]
+
+    " col lin/tot perc
+    " [ 7x12/97 12%]
+    set statusline+=\ [%2.(%c%)x%-5.(%l/%L%)\ %p%%]
 
 "   set statusline+=\ %f                           " filename
     set statusline+=\ [%t]                         " filename tail
