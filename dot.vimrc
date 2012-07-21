@@ -80,7 +80,7 @@ source ~/.vim/vim.d/mappings.vim
 """ Options:
 """
 source ~/.vim/vim.d/vim-ui.vim
-"ource ~/.vim/vim.d/status-line.vim
+source ~/.vim/vim.d/status-line.vim
 source ~/.vim/vim.d/folding.vim
 
 """
