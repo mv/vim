@@ -17,8 +17,6 @@
     set statusline+=[
     set statusline+=%n:                            " buffer number
     set statusline+=%{strlen(&ft)?&ft:'none'}      " filetype
-"   set statusline+=,%{&encoding}                  " encoding
-"   set statusline+=,%{&filefoGrmat}               " file format
     set statusline+=]
 
     " [ col lin/tot perc ]
