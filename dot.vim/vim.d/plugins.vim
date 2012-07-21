@@ -177,6 +177,14 @@
     """
     Bundle 'tpope/vim-eunuch'
     Bundle 'tpope/vim-fugitive'
+    "      'tpope/vim-fugitive'       " {{{
+        map <leader>gw :Gwrite<CR>
+        map <leader>gr :Gread<CR>
+        map <leader>gmv :Gremove<CR>
+        map <leader>grm :Gmove<CR>
+        map <leader>gs :Gstatus<CR>
+        map <leader>gd :Gdiff<CR>
+    " }}}
     Bundle 'tpope/vim-repeat'
     Bundle 'tpope/vim-surround'
     Bundle 'tpope/vim-unimpaired'
