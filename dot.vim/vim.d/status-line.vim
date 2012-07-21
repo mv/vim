@@ -76,7 +76,7 @@
 
     " StatusLineHighlight       {{{
 
-        Bundle 'vim-scripts/StatusLineHighlight'
+     Bundle 'vim-scripts/StatusLineHighlight'
 
         " Turn it off:
         " let g:loaded_StatusLineHighlight = 1
@@ -84,7 +84,11 @@
      nnoremap <Leader>sl :call StatusLineHL()<CR>
 
      function! StatusLineHL()
+
         " Text Buffer
+        highlight StatusLine               guifg=#CCCCCC    guibg=darkblue  gui=italic ctermfg=white ctermbg=darkblue  cterm=NONE
+        highlight StatusLineNC             guifg=black      guibg=gray      gui=NONE   ctermfg=blue  ctermbg=darkgray  cterm=NONE
+
         highlight StatusLineModified       guifg=#CCCCCC    guibg=DarkRed   gui=bold ctermfg=gray    ctermbg=DarkRed   cterm=NONE
         highlight StatusLineModifiedNC     guifg=DarkRed    guibg=gray      gui=bold ctermfg=DarkRed ctermbg=gray      cterm=NONE
 
