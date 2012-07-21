@@ -93,5 +93,11 @@
                         \ endif
 
 
+    " emulates 'autochdir' using 'lcd' for each buffer
+"   autocmd BufReadPost * lcd %:p:h | cd /work/mv-vim/
+"   autocmd BufReadPost * silent! lcd %:p:h
+
+
+
 " vim: set foldlevel=9
 
