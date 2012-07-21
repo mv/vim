@@ -184,6 +184,10 @@
         map <leader>grm :Gmove<CR>
         map <leader>gs :Gstatus<CR>
         map <leader>gd :Gdiff<CR>
+
+        " wipeout fugitive extra buffers
+        autocmd BufReadPost fugitive://* set bufhidden=delete
+
     " }}}
     Bundle 'tpope/vim-repeat'
     Bundle 'tpope/vim-surround'
