@@ -36,8 +36,8 @@
     map <leader>c0 :echo g:colors_name<CR>
     map <leader>c1 :colorscheme desert<CR>
     map <leader>c2 :colorscheme ir_black3<CR>
-    map <leader>c3 :colorscheme vividchalk<CR>
-    map <leader>c4 :colorscheme wombat256mod<CR>
+    map <leader>c3 :colorscheme wombat256mod<CR>
+    map <leader>c4 :colorscheme vividchalk<CR>
 
     " Terminal vim
     set t_Co=256            " Terminal 256 colors
@@ -53,7 +53,7 @@
     if has("gui_running")
 
         silent! colorscheme ir_black3    " gui: use if present
-        " silent! colorscheme wombat256mod
+        silent! colorscheme wombat256mod
 
         autocmd BufEnter * let &titlestring=expand("%:p")." - ".v:servername
 
