@@ -250,6 +250,8 @@
     Bundle 'Lokaltog/vim-easymotion'
 "   Bundle 'Lokaltog/vim-powerline'
 
+    Bundle 'sjl/gundo.vim'
+
     " i_CTRL-V_Unnnn:
     " ∓ [0x2213]
     " ➤ [0x27a4]
