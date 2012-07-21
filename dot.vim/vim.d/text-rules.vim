@@ -84,6 +84,14 @@
     set grepformat=%f:%l:%m
 
 
+    " Vimdiff
+    " ========
+    if &diff
+        set list            " ON: list chars
+        set hlsearch        " ON: highlight search"
+    endif
+
+
     " C-A/C-X: increment/decrement
     " ============================
     set nrformats=alpha,octal,hex
