@@ -25,7 +25,8 @@
 
     " col lin/tot perc
     " [ 7x12/97 12%]
-    set statusline+=\ [%2.(%c%)x%-5.(%l/%L%)\ %p%%]
+"   set statusline+=\ [%2.(%c%)x%-5.(%l/%L%)\ %p%%]
+    set statusline+=\ [%2.(%c%)x%-5.(%l/%L%):%p%%]
 
 "   set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%l%)]\ %p
 "   set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%l%)]\ %p
