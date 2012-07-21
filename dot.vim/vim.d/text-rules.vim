@@ -90,7 +90,7 @@
 
 
     " Moving:
-    " -------
+    " =======
     set nostartofline       " keep cursor in same column when moving up/down
 
 
