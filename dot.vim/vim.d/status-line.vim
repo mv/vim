@@ -30,14 +30,17 @@
 "   set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%l%)]\ %p
 "   set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%l%)]\ %p
 
-    " [../pathname]
-"   set statusline+=\ [%{getcwd()}]                " buffer dir
-    set statusline+=\ [..%{strpart(getcwd(),strlen(getcwd())-15,15)}/] " substr(getcwd(),-15)
+  " " [../pathname]
+" " set statusline+=\ [%{getcwd()}]                " buffer dir
+  " set statusline+=\ [..%{strpart(getcwd(),strlen(getcwd())-15,15)}/] " substr(getcwd(),-15)
+  "
+  " " [filename]
+" " set statusline+=\ %f                           " filename
+  " set statusline+=\ [%t]                         " filename tail
+" " set statusline+=\ [%F]                         " Full path
 
-    " [filename]
-"   set statusline+=\ %f                           " filename
-    set statusline+=\ [%t]                         " filename tail
-"   set statusline+=\ [%F]                         " Full path
+    " [../pathname/filename]
+    set statusline+=\ ..%{strpart(getcwd(),strlen(getcwd())-15,15)}/%t
 
     " fugitive.vim: current git branch
     if exists("*fugitive#statusline()")
