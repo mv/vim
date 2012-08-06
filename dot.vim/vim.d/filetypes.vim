@@ -52,7 +52,11 @@
     " Nagios                    {{{
         autocmd BufRead,BufNewFile */nagios/**/*cfg set filetype=nagios
         autocmd BufRead,BufNewFile */icinga/**/*cfg set filetype=nagios
-        autocmd FileType           nagios setlocal ts=8 sts=8 sw=8 noet nosta list nowrap
+        autocmd FileType           nagios setlocal ts=2 sts=2 sw=2 noet nosta list nowrap
+    " }}}
+    " Nginx                     {{{
+        autocmd FileType nginx setlocal ts=2 sts=2 sw=2 et nowrap
+        autocmd FileType nginx setlocal foldmethod=marker foldmarker={,} foldlevel=9
     " }}}
     " Puppet                    {{{
         autocmd BufRead,BufNewFile *.pp setlocal ts=2 sts=2 sw=2 et nowrap filetype=puppet
