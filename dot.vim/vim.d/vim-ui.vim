@@ -27,17 +27,18 @@
     set completeopt=menuone,preview,longest    " completion popup menu options
 
     " Cursor position on navigation
-"   set virtualedit=all             " allow moving past end of line in all modes
-    set virtualedit=block,insert,onemore
+    set virtualedit=all     " allow moving past end of line in all modes
+"   set virtualedit=block,insert,onemore
 
     " ColorScheme
     set bg=dark
 
     map <leader>c0 :echo g:colors_name<CR>
-    map <leader>c1 :colorscheme desert<CR>
-    map <leader>c2 :colorscheme ir_black3<CR>
-    map <leader>c3 :colorscheme wombat256mod<CR>
-    map <leader>c4 :colorscheme vividchalk<CR>
+    map <leader>c1 :colorscheme ir_black3<CR>
+    map <leader>c2 :colorscheme wombat256mod<CR>
+    map <leader>c3 :colorscheme vividchalk<CR>
+    map <leader>c8 :colorscheme desert<CR>
+    map <leader>c9 :colorscheme torte<CR>
 
     " Terminal vim
     set t_Co=256            " Terminal 256 colors
@@ -53,7 +54,7 @@
     if has("gui_running")
 
         silent! colorscheme ir_black3    " gui: use if present
-        silent! colorscheme wombat256mod
+    "   silent! colorscheme wombat256mod
 
         autocmd BufEnter * let &titlestring=expand("%:p")." - ".v:servername
 
