@@ -116,6 +116,7 @@
     """ Dr. Chip's
     """
     Bundle 'AnsiEsc.vim'
+"   Bundle 'mv/Align'
     Bundle 'Align'
     "      'Align'                    " {{{
         let g:DrChipTopLvlMenu         = "Plugin."
@@ -222,8 +223,10 @@
         let NERDTreeWinSize           = 30
         let NERDTreeHijackNetrw       = 0
 
-        map <leader>d  :NERDTreeToggle <CR> " Dir tree
-        map <leader>dd :NERDTreeMirror <CR> " Dir tree
+        "ap <leader>d  :NERDTreeToggle <CR> " Dir tree
+        "ap <leader>dd :NERDTreeMirror <CR> " Dir tree
+        map <leader>no :NERDTree . <CR>   " Tree Open
+        map <leader>nc :NERDTreeClose<CR> " Tree Close
     " }}}
 
     " snipmate-snippets                 {{{
@@ -345,6 +348,7 @@
     """ Snipmate
     """
     Bundle 'MarcWeber/vim-addon-mw-utils'
+    Bundle 'tomtom/tComment_vim'
     Bundle 'tomtom/tlib_vim'
     "      'tomtom/tlib_vim'          " {{{
         " Turn it off:
@@ -405,10 +409,15 @@
     " }}}
     Bundle 'Raimondi/delimitMate'
 
+    Bundle 'vim-nagios'
+    Bundle 'gundo.vim'
+    Bundle 'sessionman.vim'
+
     """
     """ Syntax only
     """
     Bundle 'vim-scripts/iptables'
+    Bundle 'vim-scripts/nginx.vim'
 
     """
     """ Must see...

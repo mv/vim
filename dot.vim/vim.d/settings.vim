@@ -48,7 +48,8 @@
     endif
 
     " ViewOptions:
-    "     what is saved using mkview {{{
+    "     what is saved using mkview  (current window only) {{{
+    "     mkview/loadview"
     set sessionoptions=cursor,folds,options,slash,unix
     "                  |      |     |       |     +-- force unix EOL
     "                  |      |     |       +-- replace backslashes in file names
@@ -59,8 +60,8 @@
     " }}}
 
     " Sessionoptions:
-    "     what is saved using mksession {{{
-    set sessionoptions=blank,buffers,curdir,folds,globals,options,resize,tabpages,winsize
+    "     what is saved using mksession (all windows) {{{
+    "et sessionoptions=blank,buffers,curdir,folds,globals,options,resize,tabpages,winsize
     "                  |     |       |      |     |       |       |      |        +-- size of windows
     "                  |     |       |      |     |       |       |      +-- tabs opened
     "                  |     |       |      |     |       |       +- size of line/columns
@@ -70,10 +71,17 @@
     "                  |     |       +-- current dir
     "                  |     +-- hidden/unloaded buffers
     "                  +-- empty windows
+    set sessionoptions=resize    " size of line/columns
+    set sessionoptions+=buffers  " hidden/unloaded buffers
+    set sessionoptions+=curdir   " current dir
+    set sessionoptions+=folds    " state of folds
+    set sessionoptions+=tabpages " tabs opened
+    set sessionoptions+=winsize  " size of windows
     " }}}
 
     " Viminfo:
-    "     what is saved using wviminfo/rviminfo {{{
+    "     what is saved using wviminfo {{{
+    "     wviminfo/rviminfo
     set viminfo='100,f1,<500,:50,@50,/50,h,%
     "           |    |  |    |   |   |   | +-- save/restore buffer list
     "           |    |  |    |   |   |   +-- disable hlsearch
