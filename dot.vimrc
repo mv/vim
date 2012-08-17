@@ -71,12 +71,6 @@ source ~/.vim/vim.d/settings.vim
 source ~/.vim/vim.d/filetypes.vim
 
 """
-""" Shortcuts: mapleader/mappings/commands
-"""
-source ~/.vim/vim.d/commands.vim
-source ~/.vim/vim.d/mappings.vim
-
-"""
 """ Options:
 """
 source ~/.vim/vim.d/vim-ui.vim
@@ -93,6 +87,12 @@ source ~/.vim/vim.d/windows.vim
 """ Plugins: via bundle
 """
 source ~/.vim/vim.d/plugins.vim
+
+"""
+""" Shortcuts: mapleader/mappings/commands
+"""
+source ~/.vim/vim.d/commands.vim
+source ~/.vim/vim.d/mappings.vim
 
 """
 """ VimCode: snippets

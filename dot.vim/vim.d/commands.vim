@@ -5,10 +5,10 @@
     """
     """ Typos:
     """
-"   command! W    :w
-"   command! Wall :wall
-"   command! WQ   :wq!
-"   command! Qall :qall!
+    command! W    :w
+    command! Wall :wall
+    command! WQ   :wq!
+    command! Qall :qall!
 
     """
     """ Shortcuts:
