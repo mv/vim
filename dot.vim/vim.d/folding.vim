@@ -4,7 +4,7 @@
 "
     set foldenable              " Turn on folding
     set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
-    set foldlevel=100           " Don't autofold anything (but I can still fold manually)
+    set foldlevel=9             " Don't autofold anything (but I can still fold manually)
 
     set foldmethod=syntax
 

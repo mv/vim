@@ -9,9 +9,9 @@
 
     " TabStops:
     " =========
-    set tabstop=4           " real tabs will show 8 spaces
-    set softtabstop=4       " how many spaces in a tabstop
-    set shiftwidth=4        " sw: indent size
+    set tabstop=2           " real tabs will show 8 spaces
+    set softtabstop=2       " how many spaces in a tabstop
+    set shiftwidth=2        " sw: indent size
     set expandtab           " no tabs - space in place of tabstops
     set smarttab            " sta: space in place of tabs in a new line
                             " modelines:
