@@ -64,17 +64,17 @@ source ~/.vim/vim.d/commands.vim
 source ~/.vim/vim.d/mappings.vim
 
 """
-""" Plugins: activate bundle/ stuff
-"""
-source ~/.vim/vim.d/plugins.vim
-
-"""
 """ VimCode: my snippets
 """
 source ~/.vim/vim.d/vim-code.vim
 
 """
-""" Terminal: force correct copy/paste
+""" Plugins: activate bundle/ stuff
+"""
+source ~/.vim/vim.d/plugins.vim
+
+"""
+""" Terminal Fix: force correct copy/paste
 """
 set paste
 
