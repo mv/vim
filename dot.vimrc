@@ -21,6 +21,9 @@ Bundle 'gmarik/vundle'
 call pathogen#infect()
 
 
+"""
+""" Mv: what is mine begins here
+"""
 syntax on
 filetype indent plugin on
 set paste               " terminal: do the right thing when executing paste
@@ -55,18 +58,18 @@ source ~/.vim/vim.d/buffers.vim
 source ~/.vim/vim.d/windows.vim
 
 """
-""" Plugins: via bundle
-"""
-source ~/.vim/vim.d/plugins.vim
-
-"""
 """ Shortcuts: mapleader/mappings/commands
 """
 source ~/.vim/vim.d/commands.vim
 source ~/.vim/vim.d/mappings.vim
 
 """
-""" VimCode: snippets
+""" Plugins: activate bundle/ stuff
+"""
+source ~/.vim/vim.d/plugins.vim
+
+"""
+""" VimCode: my snippets
 """
 source ~/.vim/vim.d/vim-code.vim
 
@@ -75,5 +78,5 @@ source ~/.vim/vim.d/vim-code.vim
 """
 set paste
 
-" vim: set foldmarker={{{,}}} foldlevel=0 nospell:
+" vim: set foldmarker={{{,}}} foldlevel=9 nospell:
 
