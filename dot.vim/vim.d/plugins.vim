@@ -5,6 +5,32 @@
     "     scriptnames     " List all sourced scripts
 
     """
+    """ Mine
+    """
+    Bundle 'mv/vim-ir_black3'
+    Bundle 'mv/vim-monit'
+    Bundle 'mv/mv-snipmate-snippets'
+    Bundle 'mv/mv-vim-puppet'
+
+
+    """
+    """ Themes
+    """
+    Bundle 'tpope/vim-vividchalk'
+    Bundle 'wombat256.vim'
+    Bundle 'molokai'
+    Bundle 'peaksea'
+
+    """
+    """ Syntax only
+    """
+    Bundle 'pf.vim'
+    Bundle 'JSON.vim'
+    Bundle 'vim-scripts/iptables'
+    Bundle 'vim-scripts/nginx.vim'
+
+
+    """
     """ Takeshi Nishida
     """
     Bundle 'L9'
@@ -116,7 +142,6 @@
     """ Dr. Chip's
     """
     Bundle 'AnsiEsc.vim'
-"   Bundle 'mv/Align'
     Bundle 'Align'
     "      'Align'                    " {{{
         let g:DrChipTopLvlMenu         = "Plugin."
@@ -194,8 +219,9 @@
     Bundle 'tpope/vim-surround'
     Bundle 'tpope/vim-unimpaired'
     Bundle 'tpope/vim-speeddating'
-
+    "      'tpope/vim-speeddating'    " {{{
         let g:speeddating_no_mappings = 0
+    " }}}
 
     """
     """ Martin Greffel
@@ -229,7 +255,8 @@
         map <leader>nc :NERDTreeClose<CR> " Tree Close
     " }}}
 
-    " snipmate-snippets                 {{{
+"   Bundle 'scrooloose/snipmate-snippets'
+    "      'scrooloose/snipmate-snippets' {{{
         " Turn it off:
         " let loaded_snips = 1
 
@@ -264,8 +291,7 @@
     """
     Bundle 'Lokaltog/vim-easymotion'
 "   Bundle 'Lokaltog/vim-powerline'
-
-    Bundle 'sjl/gundo.vim'
+    "      'Lokaltog/vim-powerline'     {{{
 
     " i_CTRL-V_Unnnn:
     " ∓ [0x2213]
@@ -277,6 +303,7 @@
         \ }
         let g:Powerline_theme = 'mvf'
         let g:Powerline_colorscheme = 'mvf'
+    " }}}
 
     Bundle 'mattn/zencoding-vim'
     "      'mattn/zencoding-vim'      " {{{
@@ -362,8 +389,6 @@
     Bundle 'garbas/vim-snipmate'
 
 "   Bundle 'snipmate-snippets'
-    Bundle 'mv/mv-snipmate-snippets'
-    Bundle 'mv/mv-vim-puppet'
 
     """
     """ Others....
@@ -382,6 +407,7 @@
         let g:bufExplorerSplitRight      = 1    " Split right.
 
     " }}}
+
 "   Bundle 'vim-scripts/StatusLineHighlight'
     "      'vim-scripts/StatusLineHighlight' " {{{
 
@@ -407,17 +433,14 @@
         highlight StatusLineUnmodifiableNC guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
 
     " }}}
+
     Bundle 'Raimondi/delimitMate'
 
     Bundle 'vim-nagios'
     Bundle 'gundo.vim'
     Bundle 'sessionman.vim'
+    Bundle 'sjl/gundo.vim'
 
-    """
-    """ Syntax only
-    """
-    Bundle 'vim-scripts/iptables'
-    Bundle 'vim-scripts/nginx.vim'
 
     """
     """ Must see...
@@ -435,9 +458,9 @@
     """ Built in
     """
     " spec.vim: rpm spec files
-	let spec_chglog_format = "%Y-%m-%d - Marcus Vinicius Ferreira <ferreira.mv@gmail.com>"
-	let spec_chglog_prepend = 1
-	let spec_chglog_release_info = 1
+  	let spec_chglog_format = "%Y-%m-%d - Marcus Vinicius Ferreira <ferreira.mv@gmail.com>"
+    let spec_chglog_prepend = 1
+	  let spec_chglog_release_info = 1
 "   map <buffer> <LocalLeader>c <Plug>SpecChangelog
 
     """
