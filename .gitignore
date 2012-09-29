@@ -1,51 +1,55 @@
-## # Lines starting with '#' are considered comments.
-## # Ignore any file named foo.txt.
-## foo.txt
-## # Ignore (generated) html files,
-## *.html
-## # except foo.html which is maintained by hand.
-## !foo.html
-## # Ignore objects and archives.
-## *.[oa]
+##
+## foo.txt      # Ignore any file named foo.txt.
+## *.html       # Ignore (generated) html files,
+## !foo.html    # except foo.html which is maintained by hand.
+## *.[oa]       # Ignore objects and archives.
+## !lib.a       # but do track lib.a, even though you're ignoring .a files above
+## /TODO        # only ignore the root TODO file, not subdir/TODO
+## build/       # ignore all files in the build/ directory
+## doc/*.txt    # ignore doc/notes.txt, but not doc/server/arch.txt
+##
 
+# this project
+autoload
+bundle
+sessions
+
+# general
 .svn
 .CVS
-.hg
-.hgtags
 .DS_Store
-.netrwhist
-.VimballRecord
-dot.vim/doc/tags
-dot.vim/GetLatest/*vim
-dot.vim/GetLatest/*vba
-dot.vim/sessions/*
+.*
+!.gitignore
 
-doc
-tags
-tags-ja
-.netrwhist
-bundle
+.bundle
+.vagrant
+*lock
 
-*.[oa]
-*.log
-*.tmp
-*.pid
-*.swp
+*[oa]
+*log
+*tmp
+*pid
+*swp
+*sw?
+*~
 
+# Binary packages
+*rpm
+*deb
+*gem
+*pkg
+*box
+
+# Compressed
 *tar
-*gz
-*bz
+*z
 *bz2
 *zip
 *arj
 *a[0-9][0-9]
+*lha
 
-*~
-
-# file links at ~/bin/
-mate
-mvim
-vi
-view
-vim
+# Oracle: afiedt.buf, *.lst
+*.buf
+*.lst
 
