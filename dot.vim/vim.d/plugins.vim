@@ -8,8 +8,8 @@
     """ Mine
     """
     Bundle 'mv/vim-ir_black3'
-    Bundle 'mv/vim-monit'
     Bundle 'mv/mv-snipmate-snippets'
+    Bundle 'mv/mv-vim-monit'
     Bundle 'mv/mv-vim-puppet'
 
 
@@ -375,7 +375,7 @@
     """ Snipmate
     """
     Bundle 'MarcWeber/vim-addon-mw-utils'
-    Bundle 'tomtom/tComment_vim'
+"   Bundle 'tomtom/tComment_vim'
     Bundle 'tomtom/tlib_vim'
     "      'tomtom/tlib_vim'          " {{{
         " Turn it off:
