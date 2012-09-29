@@ -3,52 +3,23 @@
 "     since 2008/12
 "
 
-" Bundle setup {{{
-" ================
+"""
+""" Vundle: 'Bundle' commands to install vim plugins
+"""
+set nocompatible
+filetype off              " required!
 
-    set nocompatible
-    filetype off                   " required!
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-    set runtimepath+=~/.vim/bundle/vundle/
-    call vundle#rc()
+" let Vundle manage Vundle. required!
+Bundle 'gmarik/vundle'
 
-    " let Vundle manage Vundle
-    " required!
-    Bundle 'gmarik/vundle'
+"""
+""" Pathogen: fixing runtimepath
+"""
+call pathogen#infect()
 
-" }}}
-" Bundles      {{{
-" ================
-
-    " Bundles: BEGIN
-
-    """
-    """ Github
-    """
-
-    " Themes
-    Bundle 'mv/vim-ir_black3'
-    Bundle 'tpope/vim-vividchalk'
-
-    " Syntax
-    Bundle 'uggedal/puppet-vim'
-
-    """
-    """ www.vim.org/scripts
-    """
-
-    " Themes
-    Bundle 'peaksea'
-    Bundle 'wombat256.vim'
-    Bundle 'molokai'
-
-    " syntax
-    Bundle 'pf.vim'
-    Bundle 'JSON.vim'
-
-    " Bundles: END
-
-" }}}
 
 syntax on
 filetype indent plugin on
