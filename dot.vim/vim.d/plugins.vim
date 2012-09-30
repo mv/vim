@@ -29,7 +29,6 @@
     Bundle 'pf.vim'
     Bundle 'JSON.vim'
     Bundle 'vim-scripts/iptables'
-    Bundle 'vim-scripts/nginx.vim'
 
 
     """
