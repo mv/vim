@@ -10,6 +10,8 @@
     Bundle 'mv/vim-ir_black3'
     Bundle 'mv/mv-snipmate-snippets'
     Bundle 'mv/mv-vim-monit'
+    Bundle 'mv/mv-vim-nagios'
+    Bundle 'mv/mv-vim-nginx'
     Bundle 'mv/mv-vim-puppet'
 
 
@@ -436,8 +438,6 @@
 
     Bundle 'Raimondi/delimitMate'
 
-    Bundle 'vim-nagios'
-    Bundle 'gundo.vim'
     Bundle 'sessionman.vim'
     Bundle 'sjl/gundo.vim'
 

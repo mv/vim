@@ -49,15 +49,6 @@
         autocmd BufNewFile,BufRead Vagrantfile       setlocal filetype=ruby
         autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
     " }}}
-    " Nagios                    {{{
-        autocmd BufRead,BufNewFile */nagios/**/*cfg set filetype=nagios
-        autocmd BufRead,BufNewFile */icinga/**/*cfg set filetype=nagios
-        autocmd FileType           nagios setlocal ts=2 sts=2 sw=2 noet nosta list nowrap
-    " }}}
-    " Nginx                     {{{
-        autocmd FileType nginx setlocal ts=2 sts=2 sw=2 et nowrap
-        autocmd FileType nginx setlocal foldmethod=marker foldmarker={,} foldlevel=9
-    " }}}
     " SQL*Plus                  {{{
     " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
         "
