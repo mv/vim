@@ -248,10 +248,10 @@
         let NERDTreeShowLineNumbers   = 1
         let NERDTreeShowHidden        = 1
         let NERDTreeWinSize           = 30
-        let NERDTreeHijackNetrw       = 0
+        let NERDTreeHijackNetrw       = 1
 
-        "ap <leader>d  :NERDTreeToggle <CR> " Dir tree
-        "ap <leader>dd :NERDTreeMirror <CR> " Dir tree
+        map <leader>nn :NERDTreeToggle <CR> " Dir tree
+        map <leader>nm :NERDTreeMirror <CR> " Dir tree
         map <leader>no :NERDTree . <CR>   " Tree Open
         map <leader>nc :NERDTreeClose<CR> " Tree Close
     " }}}
@@ -474,6 +474,25 @@
     let spec_chglog_prepend = 1
 	  let spec_chglog_release_info = 1
 "   map <buffer> <LocalLeader>c <Plug>SpecChangelog
+
+    " netrw
+    "   0: on, 1: off
+    let g:loaded_netrw       = 1
+    let g:loaded_netrwPlugin = 1
+    let g:netrw_liststyle    = 3
+    let g:netrw_winsize      = 60
+    "et g:netrw_preview      = 1
+    "et g:netrw_alto         = &sb
+    let g:netrw_altv         = 1
+    let g:netrw_banner       = 0
+    let g:netrw_browse_split = 2
+    let g:netrw_cursor       = 4
+    let g:netrw_home         = "~"
+    "et g:netrw_keepdir      = 1
+    let g:netrw_timefmt      = '%F %H:%M'
+    let g:netrw_sort_sequence = '[\/]$,*'
+
+
 
     """
     """ Off...
