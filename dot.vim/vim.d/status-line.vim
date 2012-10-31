@@ -97,8 +97,8 @@
         highlight StatusLineSpecialNC      guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
 
         " :pedit/psearch/ptag
-        highlight StatusLinePreview        guifg=white      guibg=magenta   gui=bold ctermfg=white   ctermbg=magenta   cterm=NONE
-        highlight StatusLinePreviewNC      guifg=black      guibg=magenta   gui=bold ctermfg=black   ctermbg=magenta   cterm=NONE
+        highlight StatusLinePreview        guifg=white      guibg=#008080   gui=bold ctermfg=white   ctermbg=cyan   cterm=NONE
+        highlight StatusLinePreviewNC      guifg=black      guibg=#008080   gui=bold ctermfg=black   ctermbg=cyan   cterm=NONE
 
         " others...
         highlight StatusLineReadonly       guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
