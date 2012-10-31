@@ -54,6 +54,10 @@
         autocmd BufNewFile,BufRead Vagrantfile       setlocal filetype=ruby
         autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
     " }}}
+    " Python                    {{{
+        autocmd BufNewFile,BufRead *.py    setlocal filetype=python
+        autocmd FileType           python  setlocal ts=4 sts=4 sw=4 noet nowrap list
+    " }}}
     " SQL*Plus                  {{{
     " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
         "
