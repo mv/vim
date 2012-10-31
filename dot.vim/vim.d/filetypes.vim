@@ -40,8 +40,13 @@
         autocmd BufRead     [Mm]akefile*    setlocal filetype=make
         autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
     " }}}
+    " Mardown
+        "utocmd BufRead     *.{md,mkd,markdown}  setlocal filetype=markdown
+        autocmd FileType    markdown             setlocal ts=4 sts=4 sw=4 et nolist
+    " }}}
     " Javascript/json           {{{
-        autocmd BufNewFile,BufRead *.js,*.json       setlocal filetype=javascript
+        autocmd BufNewFile,BufRead *.js,*.json,*.template setlocal filetype=javascript
+        autocmd FileType           javascript             setlocal ts=2 sts=2 sw=2 et nowrap foldmethod=marker foldmarker={,}
     " }}}
     " Ruby                      {{{
         autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby

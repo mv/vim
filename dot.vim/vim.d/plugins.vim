@@ -439,6 +439,19 @@
 
     Bundle 'sessionman.vim'
     Bundle 'sjl/gundo.vim'
+    Bundle 'pangloss/vim-javascript'
+
+
+    " ft:markdown
+    Bundle 'tpope/vim-markdown'
+    " ft:mkd
+    "undle 'plasticboy/vim-markdown'
+    Bundle 'nelstrom/vim-markdown-preview'
+    "      'nelstrom/vim-markdown-preview'     {{{
+    nnoremap <silent> <Leader>mm :Mm<CR>
+    "
+    "
+    "      }}}
 
 
     """
