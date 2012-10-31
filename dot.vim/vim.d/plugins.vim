@@ -27,7 +27,7 @@
     """ Syntax only
     """
     Bundle 'pf.vim'
-    Bundle 'JSON.vim'
+"   Bundle 'JSON.vim'
     Bundle 'vim-scripts/iptables'
 
 
