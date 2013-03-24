@@ -40,6 +40,10 @@
         autocmd BufRead     [Mm]akefile*    setlocal filetype=make
         autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
     " }}}
+    " ctags                     {{{
+        autocmd BufRead     ?tags  setlocal filetype=tags
+        autocmd FileType    tags   setlocal ts=8 sts=0 sw=8 noet nosta list
+    " }}}
     " Mardown
         "utocmd BufRead     *.{md,mkd,markdown}  setlocal filetype=markdown
         autocmd FileType    markdown             setlocal ts=4 sts=4 sw=4 et nolist
