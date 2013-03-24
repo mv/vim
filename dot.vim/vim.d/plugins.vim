@@ -224,6 +224,14 @@
         let g:speeddating_no_mappings = 0
     " }}}
 
+    Bundle 'vim-ruby/vim-ruby'
+    Bundle 'tpope/vim-rails'
+    Bundle 'tpope/vim-rake'
+    Bundle 'tpope/vim-bundler'
+
+    Bundle 'tpope/vim-scriptease'
+"   Bundle 'tpope/vim-sensible'
+
     """
     """ Martin Greffel
     """
@@ -452,6 +460,11 @@
     Bundle 'sessionman.vim'
     Bundle 'sjl/gundo.vim'
     Bundle 'pangloss/vim-javascript'
+
+    Bundle 'hoffstein/vim-tsql'
+    Bundle 'mileszs/ack.vim'
+
+    Bundle 'airblade/vim-gitgutter'
 
 
     " ft:markdown
