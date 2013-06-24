@@ -14,10 +14,10 @@
 "   set statusline+=,%{&filefoGrmat}               " file format
 
     " [buffer:filetype]
-    set statusline+=[
+"   set statusline+=[
     set statusline+=%n:                            " buffer number
     set statusline+=%{strlen(&ft)?&ft:'none'}      " filetype
-    set statusline+=]
+"   set statusline+=]
 
     " [ col lin/tot perc ]
     " [ 7 lin:12/97 12%]
@@ -26,7 +26,11 @@
     " col lin/tot perc
     " [ 7x12/97 12%]
 "   set statusline+=\ [%2.(%c%)x%-5.(%l/%L%)\ %p%%]
-    set statusline+=\ [%2.(%c%)x%-5.(%l/%L%):%p%%]
+"   set statusline+=\ [%2.(%c%)x%-5.(%l/%L%):%p%%]
+
+    " [ 7] 12/97 : [col] lin/tot
+"   set statusline+=\ [%2.(%c%)x%-5.(%l/%L%)\ %p%%]
+    set statusline+=\ [%2.(%c%)]\ %-5.(%l/%L%)
 
 "   set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%l%)]\ %p
 "   set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%l%)]\ %p
