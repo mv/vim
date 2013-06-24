@@ -40,8 +40,11 @@
   " set statusline+=\ [%t]                         " filename tail
 " " set statusline+=\ [%F]                         " Full path
 
-    " [../pathname/filename]
-    set statusline+=\ ..%{strpart(getcwd(),strlen(getcwd())-15,15)}/%t
+    " [../pathname/filename] (bug)
+"   set statusline+=\ ..%{strpart(getcwd(),strlen(getcwd())-15,15)}/%t
+
+    " [../current-cwd]
+    set statusline+=\ ..%{strpart(getcwd(),strlen(getcwd())-15,15)}/
 
     " fugitive.vim: current git branch
     if exists("*fugitive#statusline()")
