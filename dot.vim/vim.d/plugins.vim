@@ -245,23 +245,23 @@
         let NERDRemoveExtraSpaces = 1
     " }}}
 
-    Bundle 'scrooloose/nerdtree'
+""  Bundle 'scrooloose/nerdtree'
     "      'scrooloose/nerdtree'      " {{{
 
-        " let loaded_nerd_tree=1
-        let NERDTreeCaseSensitiveSort = 1
-        let NERDTreeChDirMode         = 0
-        let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git']
-        let NERDTreeMouseMode         = 3
-        let NERDTreeShowLineNumbers   = 1
-        let NERDTreeShowHidden        = 1
-        let NERDTreeWinSize           = 30
-        let NERDTreeHijackNetrw       = 1
+        let loaded_nerd_tree=1
+""      let NERDTreeCaseSensitiveSort = 1
+""      let NERDTreeChDirMode         = 0
+""      let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git']
+""      let NERDTreeMouseMode         = 3
+""      let NERDTreeShowLineNumbers   = 1
+""      let NERDTreeShowHidden        = 1
+""      let NERDTreeWinSize           = 30
+""      let NERDTreeHijackNetrw       = 1
 
-        map <leader>nn :NERDTreeToggle <CR> " Dir tree
-        map <leader>nm :NERDTreeMirror <CR> " Dir tree
-        map <leader>no :NERDTree . <CR>   " Tree Open
-        map <leader>nc :NERDTreeClose<CR> " Tree Close
+""      map <leader>nn :NERDTreeToggle <CR> " Dir tree
+""      map <leader>nm :NERDTreeMirror <CR> " Dir tree
+""      map <leader>no :NERDTree . <CR>   " Tree Open
+""      map <leader>nc :NERDTreeClose<CR> " Tree Close
     " }}}
 
 "   Bundle 'scrooloose/snipmate-snippets'
