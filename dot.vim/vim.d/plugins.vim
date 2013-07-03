@@ -463,6 +463,12 @@
 
     Bundle 'hoffstein/vim-tsql'
     Bundle 'mileszs/ack.vim'
+    Bundle 'rking/ag.vim'
+    "      'rking/ag.vim' {{{
+
+      " let g:agprg="<custom-ag-path-goes-here> --column"
+
+    " }}}
 
     Bundle 'airblade/vim-gitgutter'
 
