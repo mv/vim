@@ -504,7 +504,7 @@
     "   0: on, 1: off
     "let g:loaded_netrw       = 1
     "let g:loaded_netrwPlugin = 1
-    let g:netrw_liststyle    = 3
+    let g:netrw_liststyle    = 0
     let g:netrw_winsize      = 60
     "et g:netrw_preview      = 1
     "et g:netrw_alto         = &sb
