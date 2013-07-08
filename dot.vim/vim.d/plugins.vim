@@ -205,12 +205,26 @@
     Bundle 'tpope/vim-eunuch'
     Bundle 'tpope/vim-fugitive'
     "      'tpope/vim-fugitive'       " {{{
+
+        " git add %
         map <leader>gw :Gwrite
+        " git checkout % (revert to previous checked version)
         map <leader>gr :Gread
-        map <leader>gd :Gremove
-        map <leader>gm :Gmove
-        map <leader>gs :Gstatus
+
+        " git mv %
+        map <leader>gmv :Gmove
+        " git rm %
+        map <leader>grm :Gremove
+
         map <leader>gd :Gdiff
+        map <leader>gs :Gstatus
+
+        map <leader>gc :Gcommit
+        map <leader>gb :Gblame
+
+        " on diff
+        map <leader>dg :diffget
+        map <leader>dp :diffput
 
         " wipeout fugitive extra buffers
         autocmd BufReadPost fugitive://* set bufhidden=delete
