@@ -205,12 +205,12 @@
     Bundle 'tpope/vim-eunuch'
     Bundle 'tpope/vim-fugitive'
     "      'tpope/vim-fugitive'       " {{{
-        map <leader>gw :Gwrite<CR>
-        map <leader>gr :Gread<CR>
-        map <leader>gmv :Gremove<CR>
-        map <leader>grm :Gmove<CR>
-        map <leader>gs :Gstatus<CR>
-        map <leader>gd :Gdiff<CR>
+        map <leader>gw :Gwrite
+        map <leader>gr :Gread
+        map <leader>gd :Gremove
+        map <leader>gm :Gmove
+        map <leader>gs :Gstatus
+        map <leader>gd :Gdiff
 
         " wipeout fugitive extra buffers
         autocmd BufReadPost fugitive://* set bufhidden=delete
@@ -531,7 +531,7 @@
     "let g:loaded_netrw       = 1
     "let g:loaded_netrwPlugin = 1
     let g:netrw_liststyle    = 0
-    let g:netrw_winsize      = 60
+    let g:netrw_winsize      = 30
     "et g:netrw_preview      = 1
     "et g:netrw_alto         = &sb
     let g:netrw_altv         = 1
