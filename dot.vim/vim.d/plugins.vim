@@ -216,11 +216,11 @@
         " git rm %
         map <leader>grm :Gremove
 
-        map <leader>gd :Gdiff
-        map <leader>gs :Gstatus
+        map <leader>gd :Gdiff<CR>
+        map <leader>gs :Gstatus<CR>
 
         map <leader>gc :Gcommit
-        map <leader>gb :Gblame
+        map <leader>gb :Gblame<CR>
 
         " on diff
         map <leader>dg :diffget
