@@ -4,8 +4,8 @@
     " Tip: D  : command key
     "      D-S: command+shift key
 
-  " set timeoutlen=2000               " Wait 2 seconds before timing out a mapping
-  " set ttimeoutlen=100               " and only 100 ms before timing out on a keypress.
+    set timeoutlen=2000               " Wait 2 seconds before timing out a mapping
+    set ttimeoutlen=100               " and only 100 ms before timing out on a keypress.
 
     let mapleader=","
 
@@ -177,20 +177,20 @@
     " Shortcuts
     " ======================
 
-    nnoremap <leader>q  :q <CR>
-    nnoremap <leader>q1 :q!<CR>
-    nnoremap <leader>qa :qall!<CR>
-    nnoremap <leader>w  :w
-    nnoremap <leader>W  :w
-    nnoremap <leader>wa :wa
-    nnoremap <leader>WA :wa
-    nnoremap <leader>wq :wq!
-    nnoremap <leader>WQ :wq!
-    nnoremap <leader>ws :w !sudo tee % >/dev/null
-    nnoremap <leader>WS :w !sudo tee % >/dev/null
+    nnoremap <leader>q  :q
+    nnoremap <leader>q1 :q!
+    nnoremap <leader>qa :qall!
+    nnoremap <leader>w  :w<CR>
+    nnoremap <leader>W  :w<CR>
+    nnoremap <leader>wa :wa<CR>
+    nnoremap <leader>WA :wa<CR>
+    nnoremap <leader>wq :wq!<CR>
+    nnoremap <leader>WQ :wq!<CR>
+    nnoremap <leader>ws :w !sudo tee % >/dev/null<CR>
+    nnoremap <leader>WS :w !sudo tee % >/dev/null<CR>
     nnoremap <leader>sa :browse confirm saveas
 
-    cmap w!! w !sudo tee % >/dev/null
+    cmap w!! w !sudo tee % >/dev/null<CR>
 
     " Folding
     " =======================
