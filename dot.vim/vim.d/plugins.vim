@@ -219,12 +219,12 @@
         map <leader>gd :Gdiff<CR>
         map <leader>gs :Gstatus<CR>
 
-        map <leader>gc :Gcommit
+        map <leader>gc :Gcommit<CR>
         map <leader>gb :Gblame<CR>
 
         " on diff
-        map <leader>dg :diffget
-        map <leader>dp :diffput
+        map <leader>dg :diffget<CR>
+        map <leader>dp :diffput<CR>
 
         " wipeout fugitive extra buffers
         autocmd BufReadPost fugitive://* set bufhidden=delete
