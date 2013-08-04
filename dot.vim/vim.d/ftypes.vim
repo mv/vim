@@ -1,6 +1,6 @@
 
 " FileTypes
-" ================
+" =========
 
     " Text                      {{{
         "utocmd BufNewFile,BufRead *.txt setlocal filetype=txt
