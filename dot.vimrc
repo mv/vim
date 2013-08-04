@@ -36,26 +36,26 @@ let mapleader=","
 """ Rules: editing rules
 """     case/indent/tab-stops/brackets/wrapping
 """
-source ~/.vim/vim.d/text-rules.vim
+source ~/.vim/vim.d/text_rules.vim
 
 """
 """ Settings:
 """
 source ~/.vim/vim.d/settings.vim
-source ~/.vim/vim.d/filetypes.vim
+source ~/.vim/vim.d/ftypes.vim
 
 """
 """ Options:
 """
-source ~/.vim/vim.d/vim-ui.vim
-source ~/.vim/vim.d/status-line.vim
+source ~/.vim/vim.d/vim_ui.vim
+source ~/.vim/vim.d/status_line.vim
 source ~/.vim/vim.d/folding.vim
 
 """
 """ Visual: buffers/windows
 """
-source ~/.vim/vim.d/buffers.vim
-source ~/.vim/vim.d/windows.vim
+source ~/.vim/vim.d/buf.vim
+source ~/.vim/vim.d/win.vim
 
 """
 """ Shortcuts: mapleader/mappings/commands
@@ -66,7 +66,7 @@ source ~/.vim/vim.d/mappings.vim
 """
 """ VimCode: my snippets
 """
-source ~/.vim/vim.d/vim-code.vim
+source ~/.vim/vim.d/vim_code.vim
 
 """
 """ Plugins: activate bundle/ stuff
