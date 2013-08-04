@@ -568,6 +568,14 @@
 "   map <buffer> <LocalLeader>c <Plug>SpecChangelog
     " }}}
 
+    " TOhtml
+    " TOhtml                    {{{
+
+    let g:html_use_encoding = 'UTF-8'
+    let g:html_ignore_folding = 1
+
+    " }}}
+
     " netrw
     " netrw                     {{{
     "   0: on, 1: off
