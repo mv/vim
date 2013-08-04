@@ -27,15 +27,16 @@
     """ Syntax only
     """
     Bundle 'pf.vim'
-"   Bundle 'JSON.vim'
     Bundle 'vim-scripts/iptables'
+"   Bundle 'JSON.vim'
+"   Bundle 'hoffstein/vim-tsql'
 
 
     """
     """ Takeshi Nishida
     """
     Bundle 'L9'
-    Bundle 'AutoComplPop'
+"   Bundle 'AutoComplPop'
     "      'AutoComplPop'             " {{{
 
         let g:acp_enableAtStartup        = 1
@@ -139,6 +140,7 @@
         " nnoremap <silent> sr     :FufRenewCache<CR>
     " }}}
 
+
     """
     """ Dr. Chip's
     """
@@ -238,18 +240,32 @@
         let g:speeddating_no_mappings = 0
     " }}}
 
-    Bundle 'vim-ruby/vim-ruby'
-    Bundle 'tpope/vim-rails'
-    Bundle 'tpope/vim-rake'
-    Bundle 'tpope/vim-bundler'
+"   Bundle 'vim-ruby/vim-ruby'
+"   Bundle 'tpope/vim-rails'
+"   Bundle 'tpope/vim-rake'
+"   Bundle 'tpope/vim-bundler'
 
-    Bundle 'tpope/vim-scriptease'
+"   Bundle 'tpope/vim-scriptease'
 "   Bundle 'tpope/vim-sensible'
+
+
+    """
+    """ Shougo
+    """
+
+    " vimshell
+    Bundle 'Shougo/vimproc'
+    Bundle 'Shougo/vimshell'
+
+    " vimfiler
+    Bundle 'Shougo/unite.vim'
+    Bundle 'Shougo/vimfiler'
+
 
     """
     """ Martin Greffel
     """
-    Bundle 'scrooloose/nerdcommenter'
+"   Bundle 'scrooloose/nerdcommenter'
     "      'scrooloose/nerdcommenter' " {{{
 
         let NERDCreateDefaultMappings = 1
@@ -309,6 +325,7 @@
 
     " }}}
 
+
     """
     """ best of the best
     """
@@ -354,7 +371,7 @@
         let g:Powerline_stl_path_style = 'filename'
     " }}}
 
-    Bundle 'mattn/zencoding-vim'
+"   Bundle 'mattn/zencoding-vim'
     "      'mattn/zencoding-vim'      " {{{
 
         " Turn it off:
@@ -420,12 +437,24 @@
 "       nnoremap <silent> <Leader>b :CommandTBuffer<CR>
     " }
 
+
+    Bundle 'mileszs/ack.vim'
+    Bundle 'rking/ag.vim'
+    "      'rking/ag.vim' {{{
+
+      " let g:agprg="<custom-ag-path-goes-here> --column"
+
+    " }}}
+
+    Bundle 'airblade/vim-gitgutter'
+
+
     """
     """ Snipmate
     """
     Bundle 'MarcWeber/vim-addon-mw-utils'
 "   Bundle 'tomtom/tComment_vim'
-    Bundle 'tomtom/tlib_vim'
+"   Bundle 'tomtom/tlib_vim'
     "      'tomtom/tlib_vim'          " {{{
         " Turn it off:
         " let loaded_tlib = 1
@@ -495,26 +524,16 @@
 
     " }}}
 
-    Bundle 'Raimondi/delimitMate'
+"   Bundle 'Raimondi/delimitMate'
 
-    Bundle 'sessionman.vim'
-    Bundle 'sjl/gundo.vim'
-    Bundle 'pangloss/vim-javascript'
-
-    Bundle 'hoffstein/vim-tsql'
-    Bundle 'mileszs/ack.vim'
-    Bundle 'rking/ag.vim'
-    "      'rking/ag.vim' {{{
-
-      " let g:agprg="<custom-ag-path-goes-here> --column"
-
-    " }}}
-
-    Bundle 'airblade/vim-gitgutter'
+"   Bundle 'sessionman.vim'
+"   Bundle 'sjl/gundo.vim'
+"   Bundle 'pangloss/vim-javascript'
 
 
     " ft:markdown
     Bundle 'tpope/vim-markdown'
+
     " ft:mkd
     "undle 'plasticboy/vim-markdown'
     Bundle 'nelstrom/vim-markdown-preview'
@@ -537,16 +556,20 @@
 
     " }}}
 
+
     """
     """ Built in
     """
     " spec.vim: rpm spec files
+    " spec.vim:                 {{{
     let spec_chglog_format = "%Y-%m-%d - Marcus Vinicius Ferreira <ferreira.mv@gmail.com>"
     let spec_chglog_prepend = 1
     let spec_chglog_release_info = 1
 "   map <buffer> <LocalLeader>c <Plug>SpecChangelog
+    " }}}
 
     " netrw
+    " netrw                     {{{
     "   0: on, 1: off
    "let g:loaded_netrw       = 1
    "let g:loaded_netrwPlugin = 1
@@ -568,7 +591,7 @@
     "et g:netrw_keepdir      = 1
     let g:netrw_timefmt      = '%F %H:%M'
     let g:netrw_sort_sequence = '[\/]$,*'
-
+    " }}}
 
 
     """
