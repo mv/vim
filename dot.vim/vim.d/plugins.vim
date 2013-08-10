@@ -255,12 +255,28 @@
     """ Shougo
     """
 
-    " vimshell
+    " vimshell requires vimproc
     Bundle 'Shougo/vimproc'
     Bundle 'Shougo/vimshell'
 
-    " vimfiler
+    " vimfiler requires unite.vim
     Bundle 'Shougo/unite.vim'
+    "      'Shougo/unite.vim'
+
+        let g:unite_source_buffer_time_format   = '(%F %T%z) '
+        let g:unite_source_file_mru_time_format = '(%F %T%z) '
+        let g:unite_source_directory_mru_time_format = '(%F %T%z) '
+
+        nnoremap <leader>ub :<C-u>Unite -start-insert buffer<CR>
+        nnoremap <leader>uf :<C-u>Unite -start-insert buffer file_rec/async:!<CR>
+        nnoremap <leader>um :<C-u>Unite -start-insert file_mru<CR>
+        nnoremap <leader>ub :<C-u>Unite -start-insert bookmark<CR>
+
+        " enable (and use) yank history
+      	let g:unite_source_history_yank_enable = 1
+      	nnoremap <leader>uy :<C-u>Unite history/yank<CR>
+
+
     Bundle 'Shougo/vimfiler'
 
     " autocomplete
