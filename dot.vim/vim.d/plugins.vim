@@ -35,11 +35,13 @@
     """
     """ Takeshi Nishida
     """
-    Bundle 'L9'
+"   Bundle 'L9'
 "   Bundle 'AutoComplPop'
     "      'AutoComplPop'             " {{{
 
-        let g:acp_enableAtStartup        = 1
+    " Disable AutoComplPop.
+        let g:acp_enableAtStartup        = 0
+
         let g:acp_mappingDriven          = 0
         let g:acp_ignorecaseOption       = 1
         let g:acp_behaviorKeywordLength  = 2
@@ -47,8 +49,8 @@
 
         let g:acp_behavior = {'repeat': 1}
 
-        nnoremap <leader>ae :AcpEnable <CR>
-        nnoremap <leader>ad :AcpDisable <CR>
+        " nnoremap <leader>ae :AcpEnable <CR>
+        " nnoremap <leader>ad :AcpDisable <CR>
         " nnoremap <leader>al :AcpLock <CR>
         " nnoremap <leader>au :AcpUnlock <CR>
 
@@ -452,7 +454,7 @@
     """
     """ Snipmate
     """
-    Bundle 'MarcWeber/vim-addon-mw-utils'
+"   Bundle 'MarcWeber/vim-addon-mw-utils'
 "   Bundle 'tomtom/tComment_vim'
 "   Bundle 'tomtom/tlib_vim'
     "      'tomtom/tlib_vim'          " {{{
@@ -464,7 +466,7 @@
         " highlight  InputlListCursor guifg=#CCCCCC  guibg=darkblue  gui=italic  ctermfg=white  ctermbg=darkblue  cterm=NONE
 
     " }}}
-    Bundle 'garbas/vim-snipmate'
+"   Bundle 'garbas/vim-snipmate'
 
 "   Bundle 'snipmate-snippets'
 
