@@ -279,6 +279,24 @@
 
     Bundle 'Shougo/vimfiler'
 
+        let g:vimfiler_time_format = '%F %T%z'
+        let g:vimfiler_quick_look_command = 'qlmanage -p'
+        let g:vimfiler_default_columns = 'type:size:time'
+        let g:vimfiler_explore_columns = 'type'
+
+        nnoremap <leader>vf :<C-u>VimFiler <CR>
+        nnoremap <leader>vfc :<C-u>VimFilerClose <CR>
+        nnoremap <leader>vfe :<C-u>VimFilerExplorer <CR>
+        nnoremap <leader>vft :<C-u>VimFilerTab <CR>
+        nnoremap <leader>vfb :<C-u>VimFilerBufferDir <CR>
+        nnoremap <leader>vfd :<C-u>VimFilerCurrentDir <CR>
+        nnoremap <leader>vfs :<C-u>VimFilerSplit <CR>
+        nnoremap <leader>vfcr :<C-u>VimFilerCreate <CR>
+        nnoremap <leader>vfsi :<C-u>VimFilerSimple <CR>
+        nnoremap <leader>vfdo :<C-u>VimFilerDouble <CR>
+
+
+
     " autocomplete
     Bundle 'Shougo/neocomplete.vim'
     "      'Shougo/neocomplete.vim'     {{{
@@ -551,6 +569,7 @@
 
 "       nnoremap <silent> <Leader>t :CommandT<CR>
 "       nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+        nnoremap <silent> <Leader>ctf :CommandTFlush
     " }
 
 
