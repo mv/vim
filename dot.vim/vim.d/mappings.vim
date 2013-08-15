@@ -162,6 +162,12 @@
     nnoremap ? ?\v
     vnoremap ? ?\v
 
+    " command-line in history mode
+    "    http://vim.wikia.com/wiki/Using_command-line_history
+    nnoremap : q:i
+    nnoremap / q/i
+    nnoremap ? q?i
+
     " CTRL-g shows filename and buffer number, too.
     " Ref:  https://github.com/godlygeek/vim-files/blob/master/.vimrc
     nnoremap <C-g> 2<C-g>
