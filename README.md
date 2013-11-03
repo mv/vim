@@ -25,3 +25,7 @@ Remaining settings are in files inside `.vim/vim.d` directory.
 
 Mv
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mv/vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
