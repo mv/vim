@@ -96,7 +96,7 @@
     " =======================
 
     " (Correcting my international keyboard)
-    nnoremap \ "
+"   nnoremap \ "
 
     " allow deleting selection without updating the clipboard (yank buffer)
     " Ref: http://www.pixelbeat.org/settings/.vimrc
@@ -164,9 +164,9 @@
 
     " command-line in history mode
     "    http://vim.wikia.com/wiki/Using_command-line_history
-    nnoremap : q:i
-    nnoremap / q/i
-    nnoremap ? q?i
+"   nnoremap : q:i
+"   nnoremap / q/i
+"   nnoremap ? q?i
 
     " CTRL-g shows filename and buffer number, too.
     " Ref:  https://github.com/godlygeek/vim-files/blob/master/.vimrc

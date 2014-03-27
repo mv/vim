@@ -44,19 +44,25 @@
         autocmd BufRead     ?tags  setlocal filetype=tags
         autocmd FileType    tags   setlocal ts=8 sts=0 sw=8 noet nosta list
     " }}}
-    " Mardown
+    " Mardown                   {{{
         "utocmd BufRead     *.{md,mkd,markdown}  setlocal filetype=markdown
         autocmd FileType    markdown             setlocal ts=4 sts=4 sw=4 et nolist
     " }}}
     " Javascript/json           {{{
-        autocmd BufNewFile,BufRead *.js,*.json,*.template setlocal filetype=javascript
-        autocmd FileType           javascript             setlocal ts=2 sts=2 sw=2 et nowrap foldmethod=marker foldmarker={,}
+        autocmd BufNewFile,BufRead *.js,*.json,*.template setlocal filetype=json
+        autocmd FileType           json                   setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=marker foldmarker={,} foldlevel=9
     " }}}
     " Ruby                      {{{
         autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby
         autocmd BufNewFile,BufRead Rakefile,Capfile  setlocal filetype=ruby
         autocmd BufNewFile,BufRead Vagrantfile       setlocal filetype=ruby
         autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
+    " }}}
+    " SML                       {{{
+        autocmd BufNewFile,BufRead *.sml setlocal filetype=sml
+        autocmd FileType             sml setlocal ts=4 sts=4 sw=4 et nowrap
+       "autocmd FileType             sml setlocal makeprg=rlwrap\ sml\ -P\ full\ '%'
+        autocmd FileType             sml setlocal makeprg=sml\ '%'
     " }}}
     " Python                    {{{
         autocmd BufNewFile,BufRead *.py    setlocal filetype=python
