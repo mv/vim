@@ -124,11 +124,11 @@
         noremap  <leader>fd   :FufDir     <CR>
         noremap  <leader>fl   :FufLine    <CR>
 
-        noremap  <leader>fmc  :FufMruCmd  <CR>
-        noremap  <leader>fmf  :FufMruFile <CR>
-
         noremap  <leader>fh   :FufHelp    <CR>
         noremap  <leader>fj   :FufJumpList<CR>
+
+        noremap  <leader>fmc  :FufMruCmd  <CR>
+        noremap  <leader>fmf  :FufMruFile <CR>
 
         noremap  <leader>fbd  :FufBookmarkDir     <CR>
         noremap  <leader>fbf  :FufBookmarkFile    <CR>
