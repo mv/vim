@@ -83,6 +83,8 @@
     " }}}
 
     Bundle 'kien/ctrlp.vim'
+    Bundle 'Valloric/YouCompleteMe'
+
 
 
     """
