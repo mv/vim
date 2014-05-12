@@ -14,7 +14,7 @@
     """ Themes
     """
 "   Bundle 'mv/vim-ir_black3'
-    Bundle 'mv/wombat256.vim'
+    Bundle 'wombat256.vim'
     Bundle 'molokai'
     Bundle 'junegunn/seoul256.vim'
 
