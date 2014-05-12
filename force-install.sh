@@ -24,11 +24,14 @@ ln -nsf ${PWD}/dot.gvimrc      ~/.gvimrc
 ln -nsf ${PWD}/dot.vim         ~/.vim
 
 ## Vundle setup
+echo "Vundle: install"
 mkdir -p ~/.vim/bundle
 if [ -d ~/.vim/bundle/vundle ]
 then
+    echo "Vundle: install: pull"
     cd ~/.vim/bundle/vundle && git pull
 else
+    echo "Vundle: install: clone"
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 fi
 

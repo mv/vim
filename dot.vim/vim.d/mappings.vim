@@ -4,8 +4,8 @@
     " Tip: D  : command key
     "      D-S: command+shift key
 
-    set timeoutlen=2000               " Wait 2 seconds before timing out a mapping
-    set ttimeoutlen=100               " and only 100 ms before timing out on a keypress.
+"   set timeoutlen=2000               " Wait 2 seconds before timing out a mapping
+"   set ttimeoutlen=100               " and only 100 ms before timing out on a keypress.
 
     let mapleader=","
 
@@ -64,8 +64,8 @@
     nnoremap K ddpkJ
 
     " Out of INSERT mode
-    inoremap jj <Esc>
-    inoremap kk <Esc>
+"   inoremap jj <Esc>
+"   inoremap kk <Esc>
 
     " Using marks
     " =======================
@@ -78,13 +78,13 @@
     " ======================
 
     " Reformat
-    nnoremap _= :call Preserve("normal gg=G")<CR>
+"   nnoremap _= :call Preserve("normal gg=G")<CR>
 
     " Strip trailing spaces
-    nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+"   nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 
     " dos2,nix
-    nnoremap _n :call Preserve("% s/\r$//")<CR>
+"   nnoremap _n :call Preserve("% s/\r$//")<CR>
 
     " Editing vimrc
     " =======================
@@ -197,27 +197,6 @@
     nnoremap <leader>sa :browse confirm saveas
 
     cmap w!! w !sudo tee % >/dev/null<CR>
-
-    " Folding
-    " =======================
-
-    " <space> toggles folds opened and closed
-    " nnoremap <space> za
-    " <space> in visual mode creates a fold over the marked range
-    " vnoremap <space> zf
-
-    " Tip: fold toggle: za
-    nnoremap <leader>f0 :set foldlevel=0<CR>
-    nnoremap <leader>f1 :set foldlevel=1<CR>
-    nnoremap <leader>f2 :set foldlevel=2<CR>
-    nnoremap <leader>f3 :set foldlevel=3<CR>
-    nnoremap <leader>f4 :set foldlevel=4<CR>
-    nnoremap <leader>f5 :set foldlevel=5<CR>
-    nnoremap <leader>f6 :set foldlevel=6<CR>
-    nnoremap <leader>f7 :set foldlevel=7<CR>
-    nnoremap <leader>f8 :set foldlevel=8<CR>
-    nnoremap <leader>f9 :set foldlevel=9<CR>
-
 
     " CNTRL-key
     " =======================

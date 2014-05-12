@@ -13,13 +13,6 @@
     set noautowrite                 " NEVER write a file, unless requested
     set noautowriteall              " idem
     set writeany                    " write on readonly files
-    set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png,*~,*.lo
-                                    " ignore these list file extensions in glob()/expand()
-    " Command Line Completion:
-"   set wildmenu                    " turn on command line completion wild style
-"   set wildmode=list:full          " command line complete using wildmenu
-    set wildmode=list:longest       " command line complete
-    set history=300                 " history size
 
     " Copy_Paste:
     set clipboard=                  " DO-NOT share OS clipboard: must literal C-C/C-V

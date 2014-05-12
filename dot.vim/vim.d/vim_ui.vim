@@ -11,8 +11,17 @@
     set number              " linenumber
     set numberwidth=5       " linenumber width
 
+    set history=300         " history size
+
     " Command line
     set showcmd             " show command line
+
+    " Command Line Completion
+"   set wildmenu                    " turn on command line completion wild style
+"   set wildmode=list:full          " command line complete using wildmenu
+    set wildmode=list:longest       " command line complete
+    set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png,*~,*.lo
+                                    " ignore these list file extensions in glob()/expand()
 
     " Viewport
     set scrolloff=3         " keep 3 lines scrolling up/down
@@ -34,11 +43,11 @@
     set bg=dark
 
     map <leader>c0 :echo g:colors_name<CR>
-    map <leader>c1 :colorscheme ir_black3<CR>
-    map <leader>c2 :colorscheme wombat256mod<CR>
-    map <leader>c3 :colorscheme vividchalk<CR>
-    map <leader>c8 :colorscheme desert<CR>
-    map <leader>c9 :colorscheme torte<CR>
+    map <leader>c1 :colorscheme desert<CR>
+    map <leader>c2 :colorscheme torte<CR>
+    map <leader>c3 :colorscheme wombat256mod<CR>
+    map <leader>c4 :colorscheme molokai<CR>
+    map <leader>c5 :colorscheme seoul256<CR>
 
     " Terminal vim
     set t_Co=256            " Terminal 256 colors
@@ -66,8 +75,7 @@
     """
     if has("gui_running")
 
-        silent! colorscheme ir_black3    " gui: use if present
-    "   silent! colorscheme wombat256mod
+        silent! colorscheme wombat256mod
 
         autocmd BufEnter * let &titlestring=expand("%:p")." - ".v:servername
 
@@ -81,8 +89,8 @@
         set gtl=%t              " guitablabel. See statusline flags.
         set gtt=%F              " guitabtooltip
 
-"       set guifont=Monaco:h13  " MacVim
-        set guifont=Monaco:h12  " MacVim
+"       set guifont=Monaco:h12  " MacVim
+        set guifont=Monaco:h13  " MacVim
         set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
         set transp=4            " background transparency
 

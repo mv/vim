@@ -39,7 +39,9 @@
 
     " Even quicker setting often-used filetypes.
     command! Fr set filetype=ruby
+    command! Fs set filetype=sh
     command! Ft set filetype=txt
+    command! Fj set filetype=javascript
 
 
 " vim: set foldlevel=9

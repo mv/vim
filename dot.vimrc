@@ -39,29 +39,28 @@ let mapleader=","
 source ~/.vim/vim.d/text_rules.vim
 
 """
-""" Settings:
+""" Settings: vim as a program
+"""     history/undo/backup/encoding/session/viminfo
 """
 source ~/.vim/vim.d/settings.vim
+
+"""
+""" Ftypes: autocmd for file types
+"""
 source ~/.vim/vim.d/ftypes.vim
-
-"""
-""" Options:
-"""
-source ~/.vim/vim.d/vim_ui.vim
-source ~/.vim/vim.d/status_line.vim
-source ~/.vim/vim.d/folding.vim
-
-"""
-""" Visual: buffers/windows
-"""
-source ~/.vim/vim.d/buf.vim
-source ~/.vim/vim.d/win.vim
 
 """
 """ Shortcuts: mapleader/mappings/commands
 """
 source ~/.vim/vim.d/commands.vim
 source ~/.vim/vim.d/mappings.vim
+
+"""
+""" Visual: buffers/windows/folding
+"""
+source ~/.vim/vim.d/buf.vim
+source ~/.vim/vim.d/win.vim
+source ~/.vim/vim.d/folding.vim
 
 """
 """ VimCode: my snippets
@@ -72,6 +71,13 @@ source ~/.vim/vim.d/vim_code.vim
 """ Plugins: activate bundle/ stuff
 """
 source ~/.vim/vim.d/plugins.vim
+source ~/.vim/vim.d/plugins-builtins.vim
+
+"""
+""" Vim_ui: User Interface shenaningans
+"""
+source ~/.vim/vim.d/vim_ui.vim
+source ~/.vim/vim.d/status_line.vim
 
 """
 """ Terminal Fix: force correct copy/paste
