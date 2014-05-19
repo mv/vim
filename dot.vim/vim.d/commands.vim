@@ -5,8 +5,7 @@
     """
     """ Typos:
     """
-"   command! W    :w
-"   command! Wall :wall
+    command! W  :w
     command! WQ :wq!
     command! QA :qall!
 

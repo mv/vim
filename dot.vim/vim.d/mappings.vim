@@ -18,13 +18,13 @@
     nnoremap <leader>rnu :set invrnu   <CR>
 
     " set cursorcolumn/nocursorcolumn
-    nnoremap <leader>cuc :set invcuc   <CR>
+"   nnoremap <leader>cuc :set invcuc   <CR>
 
     " search Highlight on/off
-    nnoremap <leader>h   :set invhls<CR>
+"   nnoremap <leader>h   :set invhls<CR>
 
     " invisibles List on/off
-    nnoremap <leader>l   :set invlist  <CR>
+"   nnoremap <leader>l   :set invlist  <CR>
 
 
     " Identation
@@ -192,11 +192,11 @@
     nnoremap <leader>WA :wa<CR>
     nnoremap <leader>wq :wq!<CR>
     nnoremap <leader>WQ :wq!<CR>
-    nnoremap <leader>ws :w !sudo tee % >/dev/null<CR>
-    nnoremap <leader>WS :w !sudo tee % >/dev/null<CR>
     nnoremap <leader>sa :browse confirm saveas
 
-    cmap w!! w !sudo tee % >/dev/null<CR>
+"   nnoremap <leader>ws :w !sudo tee % >/dev/null<CR>
+"   nnoremap <leader>WS :w !sudo tee % >/dev/null<CR>
+"   cmap w!! w !sudo tee % >/dev/null<CR>
 
     " CNTRL-key
     " =======================
