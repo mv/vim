@@ -12,8 +12,8 @@
     """
     """ Shortcuts:
     """
-    command! WW :browse confirm saveas
-    command! Rehash source $MYVIMRC
+"   command! WW :browse confirm saveas
+"   command! Rehash source $MYVIMRC
 
     " On/Off
     " start/stop sharing OS clipboard
@@ -42,7 +42,6 @@
     command! Fs set filetype=sh
     command! Ft set filetype=txt
     command! Fj set filetype=javascript
-
 
 " vim: set foldlevel=9
 

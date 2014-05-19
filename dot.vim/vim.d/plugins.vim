@@ -13,7 +13,7 @@
     """
     """ Themes
     """
-"   Bundle 'mv/vim-ir_black3'
+    Bundle 'mv/vim-ir_black3'
     Bundle 'wombat256.vim'
     Bundle 'molokai'
     Bundle 'junegunn/seoul256.vim'
@@ -21,11 +21,11 @@
     """
     """ Extra: Syntaxes
     """
-    Bundle 'pf.vim'
-    Bundle 'vim-scripts/iptables'
-    Bundle 'mv/mv-vim-monit'
-    Bundle 'mv/mv-vim-nagios'
-    Bundle 'mv/mv-vim-nginx'
+    Bundle "pf.vim"
+    Bundle "vim-scripts/iptables"
+    Bundle "mv/mv-vim-monit"
+    Bundle "mv/mv-vim-nagios"
+    Bundle "mv/mv-vim-nginx"
 
 
     """
@@ -211,11 +211,8 @@
     """
     """ Essentials: Tim Pope
     """
-    Bundle 'tpope/vim-repeat'
-    Bundle 'tpope/vim-surround'
-    Bundle 'tpope/vim-endwise'
-    Bundle 'tpope/vim-unimpaired'
     Bundle 'tpope/vim-eunuch'
+    Bundle 'tpope/vim-endwise'
     Bundle 'tpope/vim-fugitive'
     "      'tpope/vim-fugitive'                {{{
 
@@ -243,16 +240,19 @@
         autocmd BufReadPost fugitive://* set bufhidden=delete
 
     " }}}
+
+    " gc/gcc/gcap:
+    Bundle 'tpope/vim-commentary'
+
+    Bundle 'tpope/vim-repeat'
+    Bundle 'tpope/vim-surround'
     Bundle 'tpope/vim-speeddating'
-    "      'tpope/vim-speeddating'             {{{
-        let g:speeddating_no_mappings = 0
-    " }}}
+    Bundle 'tpope/vim-unimpaired'
 
     " ft:markdown
     Bundle 'tpope/vim-markdown'
 
     " ft:mkd
-    "undle 'plasticboy/vim-markdown'
     Bundle 'nelstrom/vim-markdown-preview'
     "      'nelstrom/vim-markdown-preview'     {{{
     nnoremap <silent> <Leader>mm :Mm<CR>
@@ -260,15 +260,10 @@
     "
     " }}}
 
-    " gc/gcc/gcap:
-    Bundle 'tpope/vim-commentary'
-"   Bundle 'tomtom/tcomment_vim'
-
 
     """
     """ Testing.....
     """
-    Bundle 'SearchComplete'
     "      'SearchComplete'                    {{{
         " Turn it off:
         " let loaded_search_complete = 1
