@@ -49,7 +49,6 @@
     Bundle 'matchit.zip'
 
     Bundle 'mileszs/ack.vim'
-
     Bundle 'rking/ag.vim'
     "      'rking/ag.vim'                      {{{
 
@@ -82,8 +81,27 @@
         nnoremap <silent> <Leader>ctag :CommandTTag<CR>
     " }}}
 
-    Bundle 'kien/ctrlp.vim'
+    Bundle 'sjl/gundo.vim'
     Bundle 'Valloric/YouCompleteMe'
+
+    Bundle 'kien/ctrlp.vim'
+    "      'kien/ctrlp.vim'                    {{{
+
+    " Remember: opening files
+    "   C-P +
+    "     C-s split  (down)
+    "       v vsplit (right)
+    "       t tabnew
+"   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+    let g:ctrlp_match_window = 'top,order:ttb,min:1,max:50,results:50'
+
+    nnoremap <leader>w   :w<CR>
+    nnoremap <leader>p   :CtrlP<CR>
+    nnoremap <leader>pb  :CtrlPBuffer<CR>
+    nnoremap <leader>pm  :CtrlPMRU<CR>
+    nnoremap <leader>pcc :CtrlPClearCache<CR>
+
+    " }}}
 
 
 
@@ -104,87 +122,58 @@
     Bundle 'FuzzyFinder'
     "      'FuzzyFinder'                       {{{
 
+    " Remember: opening files
+    "   ,ff +
+    "     C-j split  (down)
+    "       k vsplit (right)
+    "       l tabnew
+
+"   let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
         let g:fuf_modesDisable = []
         let g:fuf_mrufile_maxItem = 400
         let g:fuf_mrucmd_maxItem = 400
 
 "       let g:fuf_coveragefile_globPatterns = [ './**/', '**/.*' ]
-"       let g:fuf_abbrevMap = {
-"           \   "^mod:" : [
-"           \     "modules/**/",
-"           \     "modules/**/manifests/*",
-"           \     "modules/**/manifests/**/",
-"           \   ],
-"           \ }
 
-        " 0: partial matching
-        " 1: refining matching
-"       let g:fuf_fuzzyRefining = 0
+        let g:fuf_abbrevMap = {
+            \   "^mod:" : [
+            \     "modules/**/",
+            \     "modules/**/manifests/*",
+            \     "modules/**/manifests/**/",
+            \   ],
+            \   "^file:" : [
+            \     "~/work/nu/repo/cookbooks/**/files/",
+            \     "~/work/nu/repo/cookbooks/**/templates/",
+            \     "~/work/nu/repo/pkg-build/**/",
+            \   ],
+            \ }
 
-        noremap  <leader>fb   :FufBuffer  <CR>
         noremap  <leader>ff   :FufFile **/<CR>
-        noremap  <leader>fd   :FufDir     <CR>
-        noremap  <leader>fl   :FufLine    <CR>
+        noremap  <leader>fcf  :FufCoverageFile<CR>
 
-        noremap  <leader>fh   :FufHelp    <CR>
-        noremap  <leader>fj   :FufJumpList<CR>
+        noremap  <leader>fb   :FufBuffer      <CR>
+        noremap  <leader>fd   :FufDir         <CR>
 
-        noremap  <leader>fmc  :FufMruCmd  <CR>
-        noremap  <leader>fmf  :FufMruFile <CR>
+        noremap  <leader>fc   :FufMruCmd    <CR>
+        noremap  <leader>fh   :FufHelp      <CR>
+        noremap  <leader>fj   :FufJumpList  <CR>
+        noremap  <leader>fl   :FufLine      <CR>
+        noremap  <leader>fq   :FufQuickfix  <CR>
 
-        noremap  <leader>fbd  :FufBookmarkDir     <CR>
+        noremap  <leader>fcl  :FufChangeList<CR>
+        noremap  <leader>fmc  :FufMruCmd    <CR>
+        noremap  <leader>fmf  :FufMruFile   <CR>
+        noremap  <leader>frc  :FufRenewCache<CR>
+
         noremap  <leader>fbf  :FufBookmarkFile    <CR>
-        noremap  <leader>fbda :FufBookmarkDirAdd  <CR>
         noremap  <leader>fbfa :FufBookmarkFileAdd <CR>
-        "
-        " noremap  <leader>fcf  :FufCoverageFile  <CR>
-        " noremap  <leader>fcl  :FufChangeList    <CR>
-        " noremap  <leader>fq   :FufQuickfix      <CR>
-        "
+        noremap  <leader>fbd  :FufBookmarkDir     <CR>
+        noremap  <leader>fbda :FufBookmarkDirAdd  <CR>
+
         " noremap  <leader>fbt  :FufBufferTag     <CR>
         " noremap  <leader>ft   :FufTag           <CR>
         " noremap  <leader>ftf  :FufTaggedFile    <CR>
 
-        " nnoremap <silent> sj     :FufBuffer<CR>
-        " nnoremap <silent> sk     :FufFileWithCurrentBufferDir<CR>
-        " nnoremap <silent> sK     :FufFileWithFullCwd<CR>
-        " nnoremap <silent> s<C-k> :FufFile<CR>
-        " nnoremap <silent> sl     :FufCoverageFileChange<CR>
-        " nnoremap <silent> sL     :FufCoverageFileChange<CR>
-        " nnoremap <silent> s<C-l> :FufCoverageFileRegister<CR>
-        " nnoremap <silent> sd     :FufDirWithCurrentBufferDir<CR>
-        " nnoremap <silent> sD     :FufDirWithFullCwd<CR>
-        " nnoremap <silent> s<C-d> :FufDir<CR>
-        " nnoremap <silent> sn     :FufMruFile<CR>
-        " nnoremap <silent> sN     :FufMruFileInCwd<CR>
-        " nnoremap <silent> sm     :FufMruCmd<CR>
-        " nnoremap <silent> su     :FufBookmarkFile<CR>
-        " nnoremap <silent> s<C-u> :FufBookmarkFileAdd<CR>
-        " vnoremap <silent> s<C-u> :FufBookmarkFileAddAsSelectedText<CR>
-        " nnoremap <silent> si     :FufBookmarkDir<CR>
-        " nnoremap <silent> s<C-i> :FufBookmarkDirAdd<CR>
-        " nnoremap <silent> st     :FufTag<CR>
-        " nnoremap <silent> sT     :FufTag!<CR>
-        " nnoremap <silent> s<C-]> :FufTagWithCursorWord!<CR>
-        " nnoremap <silent> s,     :FufBufferTag<CR>
-        " nnoremap <silent> s<     :FufBufferTag!<CR>
-        " vnoremap <silent> s,     :FufBufferTagWithSelectedText!<CR>
-        " vnoremap <silent> s<     :FufBufferTagWithSelectedText<CR>
-        " nnoremap <silent> sxxxw  :FufBufferTagWithCursorWord!<CR>
-        " nnoremap <silent> s.     :FufBufferTagAll<CR>
-        " nnoremap <silent> s>     :FufBufferTagAll!<CR>
-        " vnoremap <silent> s.     :FufBufferTagAllWithSelectedText!<CR>
-        " vnoremap <silent> s>     :FufBufferTagAllWithSelectedText<CR>
-        " nnoremap <silent> s]     :FufBufferTagAllWithCursorWord!<CR>
-        " nnoremap <silent> sg     :FufTaggedFile<CR>
-        " nnoremap <silent> sG     :FufTaggedFile!<CR>
-        " nnoremap <silent> so     :FufJumpList<CR>
-        " nnoremap <silent> sp     :FufChangeList<CR>
-        " nnoremap <silent> sq     :FufQuickfix<CR>
-        " nnoremap <silent> sy     :FufLine<CR>
-        " nnoremap <silent> sh     :FufHelp<CR>
-        " nnoremap <silent> se     :FufEditDataFile<CR>
-        " nnoremap <silent> sr     :FufRenewCache<CR>
     " }}}
 
  "  Bundle 'AutoComplPop'
