@@ -22,8 +22,9 @@
     command! Clipoff    set clipboard-=unnamed
 
     " tab to spaces to tab
-    command! TabOn      set noexpandtab|retab!
-    command! TabOff     set expandtab|retab!
+    command! TabOn        set noexpandtab|retab!
+    command! TabOff       set expandtab|retab!
+    command! -nargs=1 Tab setlocal ts=<args> sts=<args> sw=<args> et nowrap
 
     """
     """ FileTypes:
