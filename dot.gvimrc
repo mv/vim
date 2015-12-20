@@ -4,5 +4,8 @@
 
 set nopaste     " default: gvim detects paste from type
 
+set listchars=tab:▸\ ,trail:·,eol:¬,extends:>,precedes:<
+set showbreak=…
+
 " vim: set foldmarker={,} foldlevel=0 nospell:
 

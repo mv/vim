@@ -77,6 +77,7 @@ source ~/.vim/vim.d/plugins.vim
 """ Terminal Fix: force correct copy/paste
 """
 set paste
+colorscheme wombat256mod
 
 " vim: set foldmarker={{{,}}} foldlevel=9 nospell:
 

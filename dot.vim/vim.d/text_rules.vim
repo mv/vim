@@ -36,7 +36,8 @@
     " ============
     set linebreak                   " when wrapping, uses chars listed in breakt
     set breakat=\ ^I!@*-+;:,./?     " when wrapping, break at these characters
-    set showbreak=…                 " what to show at the start of a wrapped line
+    set showbreak=_                 " what to show at the start of a wrapped line
+"   set showbreak=…                 " look at ~/.gvimrc
     set iskeyword+=48-57,192-255
     set iskeyword+=_,$,@,%,#        " none of these are word dividers
 
@@ -66,7 +67,7 @@
     " ===================
     "     list/invlist/nolist
     set nolist                      " [no]list invisible chars
-    set listchars=tab:▸\ ,trail:·,eol:¬,extends:>,precedes:<
+    set listchars=tab:>\ ,trail:.,eol:_,extends:>,precedes:<
     "             |       |       |     |         +-- line befor left margin: <
     "             |       |       |     +-- line beyond right margin: >
     "             |       |       +-- EOF: _
@@ -76,6 +77,9 @@
     " Char  CTRL-V+u    i+CTRL-V+digit
     " ¬       ac        U+00AC          not
     " ▸     25b8
+    "
+    " also: look at ~/.gvimrc
+    "
 
     " Invisible character colors
     highlight NonText    guifg=#4a4a59
