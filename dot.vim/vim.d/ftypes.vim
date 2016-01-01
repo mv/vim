@@ -5,7 +5,7 @@
     " Text                      {{{
         "utocmd BufNewFile,BufRead *.txt setlocal filetype=txt
         autocmd FileType text setlocal tw=80 cc=+3,+4,+5 ts=4 sts=4 sw=4 et
-        autocmd FileType text setlocal formatoptions=qatn2wl
+        "utocmd FileType text setlocal formatoptions=qatn2wl
         "                                            |||||||
         "                                            ||||||+- long line do not break in insert mode if already longer
         "                                            |||||+-- trailing whitespace as end of a paragraph
