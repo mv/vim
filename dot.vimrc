@@ -18,7 +18,7 @@ Bundle 'gmarik/vundle'
 """
 """ Pathogen: fixing runtimepath
 """
-call pathogen#infect()
+"call pathogen#infect()
 
 
 """
