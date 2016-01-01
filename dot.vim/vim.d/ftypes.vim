@@ -20,10 +20,10 @@
         " goto end of file
         autocmd BufReadPost *.log normal G
     " }}}
-    " HTML/XML                  {{{
+    " XML                       {{{
 
         let g:xml_syntax_folding = 1
-        autocmd FileType    html,xml    setlocal foldmethod=syntax
+        autocmd FileType    xml    setlocal foldmethod=syntax
 
     " Ref: http://www.pixelbeat.org/settings/.vimrc
     " augroup html
