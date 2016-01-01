@@ -42,13 +42,14 @@
   " " [filename]
 " " set statusline+=\ %f                           " filename
   " set statusline+=\ [%t]                         " filename tail
+    set statusline+=\ %t                           " filename tail
 " " set statusline+=\ [%F]                         " Full path
 
     " [../pathname/filename] (bug)
 "   set statusline+=\ ..%{strpart(getcwd(),strlen(getcwd())-15,15)}/%t
 
     " [../current-cwd]
-    set statusline+=\ ..%{strpart(getcwd(),strlen(getcwd())-15,15)}/
+"   set statusline+=\ ..%{strpart(getcwd(),strlen(getcwd())-15,15)}/
 
     " fugitive.vim: current git branch
     if exists("*fugitive#statusline()")
@@ -81,9 +82,10 @@
 "   set statusline+=%0                             " break
 "   set statusline+=asc:[%3.(%b%)\ %3.(x%b%)]      " current char (ga)
 
+
     " StatusLineHighlight       {{{
 
-    "Bundle 'vim-scripts/StatusLineHighlight'
+    "undle 'vim-scripts/StatusLineHighlight'
 
         " Turn it off:
         " let g:loaded_StatusLineHighlight = 1
@@ -93,8 +95,8 @@
      function! StatusLineHL()
 
         " Text Buffer
-        highlight StatusLine               guifg=#CCCCCC    guibg=darkblue  gui=italic ctermfg=white ctermbg=darkblue  cterm=NONE
-        highlight StatusLineNC             guifg=black      guibg=gray      gui=NONE   ctermfg=blue  ctermbg=darkgray  cterm=NONE
+"       highlight StatusLine               guifg=#CCCCCC    guibg=darkblue  gui=italic ctermfg=white ctermbg=darkblue  cterm=NONE
+"       highlight StatusLineNC             guifg=black      guibg=gray      gui=NONE   ctermfg=blue  ctermbg=darkgray  cterm=NONE
 
         highlight StatusLineModified       guifg=#CCCCCC    guibg=DarkRed   gui=bold ctermfg=gray    ctermbg=DarkRed   cterm=NONE
         highlight StatusLineModifiedNC     guifg=DarkRed    guibg=gray      gui=bold ctermfg=DarkRed ctermbg=gray      cterm=NONE

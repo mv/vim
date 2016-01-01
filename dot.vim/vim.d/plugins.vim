@@ -151,8 +151,15 @@
 
 "   Bundle 'vim-ruby/vim-ruby'
 "   Bundle 'tpope/vim-rails'
-"   Bundle 'tpope/vim-rake'
 "   Bundle 'tpope/vim-bundler'
+
+    Bundle 'tpope/vim-projectionist'
+    Bundle 'tpope/vim-rake'
+    "      'tpope/vim-rake'             {{{
+    "
+       "let g:loaded_rake = 1
+        set makeprg=rake
+    " }}}
 
 "   Bundle 'tpope/vim-scriptease'
 "   Bundle 'tpope/vim-sensible'
@@ -343,32 +350,6 @@
         " map <leader>t   :TlistToggle     <CR>
         " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
         " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
-    " }}}
-
-    Bundle 'vim-scripts/StatusLineHighlight'
-    "      'vim-scripts/StatusLineHighlight' " {{{
-
-        " Turn it off:
-        " let g:loaded_StatusLineHighlight = 1
-
-        " My buffers
-        highlight StatusLineModified       guifg=#CCCCCC    guibg=DarkRed   gui=bold ctermfg=gray    ctermbg=DarkRed   cterm=NONE
-        highlight StatusLineModifiedNC     guifg=DarkRed    guibg=gray      gui=bold ctermfg=DarkRed ctermbg=gray      cterm=NONE
-
-        " Help
-        highlight StatusLineSpecial        guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
-        highlight StatusLineSpecialNC      guifg=lightgreen guibg=darkgreen gui=bold ctermfg=yellow  ctermbg=darkgreen cterm=NONE
-
-        " :pedit/psearch/ptag
-        highlight StatusLinePreview        guifg=white      guibg=magenta   gui=bold ctermfg=white   ctermbg=magenta   cterm=NONE
-        highlight StatusLinePreviewNC      guifg=black      guibg=magenta   gui=bold ctermfg=black   ctermbg=magenta   cterm=NONE
-
-        " others...
-        highlight StatusLineReadonly       guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
-        highlight StatusLineReadonlyNC     guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
-        highlight StatusLineUnmodifiable   guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
-        highlight StatusLineUnmodifiableNC guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
-
     " }}}
 
 
