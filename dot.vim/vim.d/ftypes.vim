@@ -69,7 +69,7 @@
         autocmd FileType             sml setlocal makeprg=sml\ '%'
     " }}}
     " Python                    {{{
-        autocmd BufNewFile,BufRead *.py    setlocal filetype=python
+        autocmd BufNewFile,BufRead *.py    setlocal filetype=python foldmethod=indent
         autocmd FileType           python  setlocal ts=4 sts=4 sw=4 noet nowrap list
     " }}}
     " SQL*Plus                  {{{
