@@ -48,9 +48,13 @@
         "utocmd BufRead     *.{md,mkd,markdown}  setlocal filetype=markdown
         autocmd FileType    markdown             setlocal ts=4 sts=4 sw=4 et nolist
     " }}}
-    " Javascript/json           {{{
-        autocmd BufNewFile,BufRead *.js,*.json,*.template setlocal filetype=json
-        autocmd FileType           json                   setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=marker foldmarker={,} foldlevel=9
+    " JSON                      {{{
+        autocmd BufNewFile,BufRead *.json,*.template setlocal filetype=json
+        autocmd FileType           json              setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=marker foldmarker={,} foldlevel=9
+    " }}}
+    " Javascript                {{{
+        autocmd BufNewFile,BufRead *.js         setlocal filetype=javascript
+        autocmd FileType           javascript   setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=indent foldlevel=9
     " }}}
     " Ruby                      {{{
         autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby
