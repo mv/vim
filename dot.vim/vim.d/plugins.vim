@@ -8,41 +8,14 @@
     """ test
     """
 "   Bundle 'Valloric/YouCompleteMe'
-
-
-    """
-    """ Mine
-    """
-    Bundle 'mv/vim-ir_black3'
-    Bundle 'mv/mv-snipmate-snippets'
-    Bundle 'mv/mv-vim-monit'
-    Bundle 'mv/mv-vim-nagios'
-    Bundle 'mv/mv-vim-nginx'
-    Bundle 'mv/mv-vim-puppet'
-
-
-    """
-    """ Themes
-    """
-    Bundle 'tpope/vim-vividchalk'
-    Bundle 'wombat256.vim'
-    Bundle 'molokai'
-    Bundle 'peaksea'
-    Bundle 'junegunn/seoul256.vim'
-
-    """
-    """ Syntax only
-    """
-    Bundle 'pf.vim'
-    Bundle 'vim-scripts/iptables'
-"   Bundle 'hoffstein/vim-tsql'
+"   Bundle 'majutsushi/tagbar'
 
 
     """
     """ Takeshi Nishida
     """
-    Bundle 'vimscripts/L9'
-    Bundle 'vimscripts/AutoComplPop'
+    Bundle 'L9'
+    Bundle 'AutoComplPop'
     "      'AutoComplPop'             " {{{
 
     " Disable AutoComplPop.
@@ -62,93 +35,6 @@
 
     " }}}
 
-    Bundle 'FuzzyFinder'
-    "      'FuzzyFinder'                {{{
-
-        let g:fuf_modesDisable = []
-        let g:fuf_mrufile_maxItem = 400
-        let g:fuf_mrucmd_maxItem = 400
-
-"       let g:fuf_coveragefile_globPatterns = [ './**/', '**/.*' ]
-"       let g:fuf_abbrevMap = {
-"           \   "^mod:" : [
-"           \     "modules/**/",
-"           \     "modules/**/manifests/*",
-"           \     "modules/**/manifests/**/",
-"           \   ],
-"           \ }
-
-        " 0: partial matching
-        " 1: refining matching
-"       let g:fuf_fuzzyRefining = 0
-
-        noremap  <leader>fb   :FufBuffer  <CR>
-        noremap  <leader>ff   :FufFile **/<CR>
-        noremap  <leader>fd   :FufDir     <CR>
-        noremap  <leader>fl   :FufLine    <CR>
-
-        noremap  <leader>fmc  :FufMruCmd  <CR>
-        noremap  <leader>fmf  :FufMruFile <CR>
-
-        noremap  <leader>fh   :FufHelp    <CR>
-        noremap  <leader>fj   :FufJumpList<CR>
-
-        noremap  <leader>fbd  :FufBookmarkDir     <CR>
-        noremap  <leader>fbf  :FufBookmarkFile    <CR>
-        noremap  <leader>fbda :FufBookmarkDirAdd  <CR>
-        noremap  <leader>fbfa :FufBookmarkFileAdd <CR>
-        "
-        " noremap  <leader>fcf  :FufCoverageFile  <CR>
-        " noremap  <leader>fcl  :FufChangeList    <CR>
-        " noremap  <leader>fq   :FufQuickfix      <CR>
-        "
-        " noremap  <leader>fbt  :FufBufferTag     <CR>
-        " noremap  <leader>ft   :FufTag           <CR>
-        " noremap  <leader>ftf  :FufTaggedFile    <CR>
-
-        " nnoremap <silent> sj     :FufBuffer<CR>
-        " nnoremap <silent> sk     :FufFileWithCurrentBufferDir<CR>
-        " nnoremap <silent> sK     :FufFileWithFullCwd<CR>
-        " nnoremap <silent> s<C-k> :FufFile<CR>
-        " nnoremap <silent> sl     :FufCoverageFileChange<CR>
-        " nnoremap <silent> sL     :FufCoverageFileChange<CR>
-        " nnoremap <silent> s<C-l> :FufCoverageFileRegister<CR>
-        " nnoremap <silent> sd     :FufDirWithCurrentBufferDir<CR>
-        " nnoremap <silent> sD     :FufDirWithFullCwd<CR>
-        " nnoremap <silent> s<C-d> :FufDir<CR>
-        " nnoremap <silent> sn     :FufMruFile<CR>
-        " nnoremap <silent> sN     :FufMruFileInCwd<CR>
-        " nnoremap <silent> sm     :FufMruCmd<CR>
-        " nnoremap <silent> su     :FufBookmarkFile<CR>
-        " nnoremap <silent> s<C-u> :FufBookmarkFileAdd<CR>
-        " vnoremap <silent> s<C-u> :FufBookmarkFileAddAsSelectedText<CR>
-        " nnoremap <silent> si     :FufBookmarkDir<CR>
-        " nnoremap <silent> s<C-i> :FufBookmarkDirAdd<CR>
-        " nnoremap <silent> st     :FufTag<CR>
-        " nnoremap <silent> sT     :FufTag!<CR>
-        " nnoremap <silent> s<C-]> :FufTagWithCursorWord!<CR>
-        " nnoremap <silent> s,     :FufBufferTag<CR>
-        " nnoremap <silent> s<     :FufBufferTag!<CR>
-        " vnoremap <silent> s,     :FufBufferTagWithSelectedText!<CR>
-        " vnoremap <silent> s<     :FufBufferTagWithSelectedText<CR>
-        " nnoremap <silent> sxxxw  :FufBufferTagWithCursorWord!<CR>
-        " nnoremap <silent> s.     :FufBufferTagAll<CR>
-        " nnoremap <silent> s>     :FufBufferTagAll!<CR>
-        " vnoremap <silent> s.     :FufBufferTagAllWithSelectedText!<CR>
-        " vnoremap <silent> s>     :FufBufferTagAllWithSelectedText<CR>
-        " nnoremap <silent> s]     :FufBufferTagAllWithCursorWord!<CR>
-        " nnoremap <silent> sg     :FufTaggedFile<CR>
-        " nnoremap <silent> sG     :FufTaggedFile!<CR>
-        " nnoremap <silent> so     :FufJumpList<CR>
-        " nnoremap <silent> sp     :FufChangeList<CR>
-        " nnoremap <silent> sq     :FufQuickfix<CR>
-        " nnoremap <silent> sy     :FufLine<CR>
-        " nnoremap <silent> sh     :FufHelp<CR>
-        " nnoremap <silent> se     :FufEditDataFile<CR>
-        " nnoremap <silent> sr     :FufRenewCache<CR>
-    " }}}
-
-
     """
     """ Dr. Chip's
     """
@@ -159,7 +45,8 @@
         let g:alignnoremaps_euronumber = 1
     " }}}
 
-    " Bash-support                      {{{
+    "undle 'Bash-support'
+    "      'Bash-support'               {{{
 
         " Turn it off:
         let g:BASH_Version = 'OFF'
@@ -182,7 +69,9 @@
         endif
 
     " }}}
-    " Perl-support                      {{{
+
+    "undle 'Bash-support'
+    "      'Perl-support'               {{{
         " Turn it off:
         let g:Perl_Version = 'OFF'
 
@@ -249,9 +138,16 @@
         let g:speeddating_no_mappings = 0
     " }}}
 
+    Bundle 'tpope/vim-markdown'
+    Bundle 'nelstrom/vim-markdown-preview'
+    "      'nelstrom/vim-markdown-preview'     {{{
+    nnoremap <silent> <Leader>mm :Mm<CR>
+    "
+    "
+    "      }}}
+
     " gc/gcc/gcap:
     Bundle 'tpope/vim-commentary'
-"   Bundle 'tomtom/tcomment_vim'
 
 "   Bundle 'vim-ruby/vim-ruby'
 "   Bundle 'tpope/vim-rails'
@@ -263,168 +159,8 @@
 
 
     """
-    """ Shougo
-    """
-
-    " vimshell requires vimproc
-    Bundle 'Shougo/vimproc'
-    Bundle 'Shougo/vimshell'
-
-    " vimfiler requires unite.vim
-    Bundle 'Shougo/unite.vim'
-    "      'Shougo/unite.vim'         " {{{
-
-        let g:unite_source_buffer_time_format   = '(%F %T%z) '
-        let g:unite_source_file_mru_time_format = '(%F %T%z) '
-        let g:unite_source_directory_mru_time_format = '(%F %T%z) '
-
-        nnoremap <leader>ub :<C-u>Unite -start-insert buffer<CR>
-        nnoremap <leader>uf :<C-u>Unite -start-insert buffer file_rec/async:!<CR>
-        nnoremap <leader>um :<C-u>Unite -start-insert file_mru<CR>
-        nnoremap <leader>ub :<C-u>Unite -start-insert bookmark<CR>
-
-        " enable (and use) yank history
-      	let g:unite_source_history_yank_enable = 1
-      	nnoremap <leader>uy :<C-u>Unite history/yank<CR>
-
-    " }}}
-
-    Bundle 'Shougo/vimfiler'
-    "      'Shougo/vimfiler'          " {{{
-
-        let g:vimfiler_time_format = '%F %T%z'
-        let g:vimfiler_quick_look_command = 'qlmanage -p'
-        let g:vimfiler_default_columns = 'type:size:time'
-        let g:vimfiler_explore_columns = 'type'
-
-        let g:vimfiler_as_default_explorer = 1
-        let g:vimfiler_safe_mode_by_default	= 0
-
-        nnoremap <leader>vf :<C-u>VimFiler <CR>
-        nnoremap <leader>vfc :<C-u>VimFilerClose <CR>
-        nnoremap <leader>vfe :<C-u>VimFilerExplorer <CR>
-        nnoremap <leader>vft :<C-u>VimFilerTab <CR>
-        nnoremap <leader>vfb :<C-u>VimFilerBufferDir <CR>
-        nnoremap <leader>vfd :<C-u>VimFilerCurrentDir <CR>
-        nnoremap <leader>vfs :<C-u>VimFilerSplit <CR>
-        nnoremap <leader>vfcr :<C-u>VimFilerCreate <CR>
-        nnoremap <leader>vfsi :<C-u>VimFilerSimple <CR>
-        nnoremap <leader>vfdo :<C-u>VimFilerDouble <CR>
-
-    " }}}
-
-"   " autocomplete
-"   Bundle 'Shougo/neocomplete.vim'
-"   "      'Shougo/neocomplete.vim'     {{{
-"
-"   " Disable acp
-"   let g:acp_enableAtStartup = 0
-"
-"   " Use neocomplete.
-"   let g:neocomplete#enable_at_startup = 1
-"   let g:neocomplete#enable_auto_select = 1
-"
-"   " Use smartcase.
-"   let g:neocomplete#enable_smart_case = 1
-"
-"   " Set minimum syntax keyword length.
-"   let g:neocomplete#sources#syntax#min_keyword_length = 3
-"   let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-"
-"   " Define dictionary.
-"   let g:neocomplete#sources#dictionary#dictionaries = {
-"       \ 'default' : '',
-"       \ 'vimshell' : $HOME.'/.vimshell_hist',
-"       \ 'scheme' : $HOME.'/.gosh_completions'
-"           \ }
-"
-"   " Define keyword.
-"   if !exists('g:neocomplete#keyword_patterns')
-"       let g:neocomplete#keyword_patterns = {}
-"   endif
-"   let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-"
-"   " Plugin key-mappings.
-"   inoremap <expr><C-g>     neocomplete#undo_completion()
-"   inoremap <expr><C-l>     neocomplete#complete_common_string()
-"
-"   " Recommended key-mappings.
-"   " <CR>: close popup and save indent.
-"   inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-"
-"   function! s:my_cr_function()
-"     return neocomplete#smart_close_popup() . "\<CR>"
-"     " For no inserting <CR> key.
-"     "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-"   endfunction
-"
-"   " <TAB>: completion.
-"   inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"
-"   " <C-h>, <BS>: close popup and delete backword char.
-"   inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-"   inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"   inoremap <expr><C-y>  neocomplete#close_popup()
-"   inoremap <expr><C-e>  neocomplete#cancel_popup()
-"
-"   " Close popup by <Space>.
-"   "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-"
-"   " For cursor moving in insert mode(Not recommended)
-"   "inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
-"   "inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
-"   "inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
-"   "inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
-"   " Or set this.
-"   "let g:neocomplete#enable_cursor_hold_i = 1
-"   " Or set this.
-"   "let g:neocomplete#enable_insert_char_pre = 1
-"
-"   " AutoComplPop like behavior.
-"   "let g:neocomplete#enable_auto_select = 1
-"
-"   " Shell like behavior(not recommended).
-"   "set completeopt+=longest
-"   "let g:neocomplete#enable_auto_select = 1
-"   "let g:neocomplete#disable_auto_complete = 1
-"   "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-"
-"   " Enable omni completion.
-"   autocmd FileType css           setlocal omnifunc=csscomplete#CompleteCSS
-"   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-"   autocmd FileType javascript    setlocal omnifunc=javascriptcomplete#CompleteJS
-"   autocmd FileType python        setlocal omnifunc=pythoncomplete#Complete
-"   autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
-
-"   " Enable heavy omni completion.
-"   if !exists('g:neocomplete#sources#omni#input_patterns')
-"     let g:neocomplete#sources#omni#input_patterns = {}
-"   endif
-"   let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"   let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"   let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-"
-"   " For perlomni.vim setting.
-"   " https://github.com/c9s/perlomni.vim
-"   let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-"
-    " }}}
-
-
-
-    """
     """ Martin Greffel
     """
-"   Bundle 'scrooloose/nerdcommenter'
-    "      'scrooloose/nerdcommenter' " {{{
-
-        let NERDCreateDefaultMappings = 1
-        let NERDDefaultNesting = 0
-        let NERDMenuMode = 0
-        let NERDSpaceDelims = 1
-        let NERDRemoveExtraSpaces = 1
-    " }}}
-
 ""  Bundle 'scrooloose/nerdtree'
     "      'scrooloose/nerdtree'      " {{{
 
@@ -444,68 +180,46 @@
 ""      map <leader>nc :NERDTreeClose<CR> " Tree Close
     " }}}
 
-"   Bundle 'scrooloose/snipmate-snippets'
-    "      'scrooloose/snipmate-snippets' {{{
-        " Turn it off:
-        " let loaded_snips = 1
-
-        let g:snips_author = 'Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com'
-"       let g:snippets_dir = '~/.vim/bundle/snipmate/snippets'
-        let g:snippets_dir = '~/.vim/snippets'
-
-"       nnoremap <leader>ras  :exec ReloadAllSnippets()<CR>
-
-        " Tip: i_CTRL-R_<Tab>
-        "      popupmenu of all snippets available
-        "      for this filetype
-
-        " Space+tab: snip list
-"       inoremap <silent> <space><tab> <c-r>=ShowAvailableSnips()<cr>
-
-        " acp+snip-mate (from help:acp.txt): plugin/snipmate.vim
-        " fun! GetSnipsInCurrentScope()
-        "     let snips = {}
-        "     for scope in [bufnr('%')] + split(&ft, '\.') + ['_']
-        "         call extend(snips, get(s:snippets, scope, {}), 'keep')
-        "         call extend(snips, get(s:multi_snips, scope, {}), 'keep')
-        "     endfor
-        "     return snips
-        " endf
-"       let g:acp_behaviorSnipmateLength = 5
-
-    " }}}
-
-
     """
     """ Lokaltog
     """
 "   Bundle 'Lokaltog/vim-easymotion'
-    Bundle 'Lokaltog/vim-powerline'
-    "      'Lokaltog/vim-powerline'     {{{
-
-    " i_CTRL-V_Unnnn:
-    " ∓ [0x2213]
-    " ➤ [0x27a4]
-    " ¶ [0x00b6]
-"       let g:Powerline_symbols_override = {
-"       \ 'BRANCH': [0x2213],
-"       \ 'LINE': [0x27a4],
-"       \ }
-"       let g:Powerline_theme = 'mvf'
-"       let g:Powerline_colorscheme = 'mvf'
-
-"       let g:Powerline_symbols = 'fancy'
-        let g:Powerline_symbols = 'unicode'
-
-        let g:Powerline_theme = 'solarized16'
-        let g:Powerline_stl_path_style = 'filename'
-    " }}}
-
 
     """
     """ best of the best
     """
     Bundle 'airblade/vim-gitgutter'
+
+    Bundle 'wincent/Command-T'
+    "      'wincent/Command-T'        " {
+        let g:CommandTMaxFiles=20000
+        let g:CommandTMinHeight=5
+        let g:CommandTMatchWindowAtTop=1
+
+        let g:CommandTAcceptSelectionSplitMap='<D-j>'
+        let g:CommandTAcceptSelectionVSplitMap='<D-k>'
+        let g:CommandTAcceptSelectionTabMap='<D-CR>'
+
+"       nnoremap <silent> <Leader>t :CommandT<CR>
+"       nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+        nnoremap <silent> <Leader>b :CommandTMRU<CR>
+        nnoremap <silent> <Leader>ctf :CommandTFlush
+        nnoremap <silent> <Leader>ctj :CommandTJump<CR>
+        nnoremap <silent> <Leader>ctag :CommandTTag<CR>
+    " }
+
+    Bundle 'nathanaelkane/vim-indent-guides'
+    "      'nathanaelkane/vim-indent-guides' {{{
+
+        let g:indent_guides_enable_on_vim_startup = 1
+        let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+
+        let g:indent_guides_indent_levels = 30
+        let g:indent_guides_guide_size = 4
+        let g:indent_guides_default_mapping = 1
+      " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+
+    " }}}
 
     Bundle 'terryma/vim-multiple-cursors'
 "          'terryma/vim-multiple-cursors' {{{
@@ -580,40 +294,11 @@
 
     " }}}
 
-    Bundle 'wincent/Command-T'
-    "      'wincent/Command-T'        " {
-        let g:CommandTMaxFiles=20000
-        let g:CommandTMinHeight=5
-
-        let g:CommandTAcceptSelectionSplitMap='<D-j>'
-        let g:CommandTAcceptSelectionVSplitMap='<D-k>'
-        let g:CommandTAcceptSelectionTabMap='<D-CR>'
-
-"       nnoremap <silent> <Leader>t :CommandT<CR>
-"       nnoremap <silent> <Leader>b :CommandTBuffer<CR>
-        nnoremap <silent> <Leader>ctf :CommandTFlush
-        nnoremap <silent> <Leader>ctj :CommandTJump<CR>
-        nnoremap <silent> <Leader>ctag :CommandTTag<CR>
-    " }
-
     Bundle 'elzr/vim-json'
     "      'elzr/vim-json'            " {
         let g:vim_json_syntax_conceal=0
         set conceallevel=0
     " }
-
-    Bundle 'nathanaelkane/vim-indent-guides'
-    "      'nathanaelkane/vim-indent-guides' {{{
-
-        let g:indent_guides_enable_on_vim_startup = 1
-        let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-
-        let g:indent_guides_indent_levels = 30
-        let g:indent_guides_guide_size = 4
-        let g:indent_guides_default_mapping = 1
-      " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
-
-    " }}}
 
     " just like vimgrep.... :Ack and :Ag
     Bundle 'mileszs/ack.vim'
@@ -627,28 +312,6 @@
     " auto-close stuff: pick one
 "   Bundle 'jiangmiao/auto-pairs'
     Bundle 'Raimondi/delimitMate'
-
-    """
-    """ Snipmate
-    """
-    " Snippets collection
-"   Bundle 'snipmate-snippets'
-
-    " Engine 1
-"   Bundle 'MarcWeber/vim-addon-mw-utils'
-"   Bundle 'tomtom/tlib_vim'
-    "      'tomtom/tlib_vim'          " {{{
-        " Turn it off:
-        " let loaded_tlib = 1
-
-        " My corrections
-        " autocmd FileType  tlibInputList setlocal nonu cc=+1,+2,+3,+4,+5 cursorcolumn
-        " highlight  InputlListCursor guifg=#CCCCCC  guibg=darkblue  gui=italic  ctermfg=white  ctermbg=darkblue  cterm=NONE
-
-    " }}}
-"   Bundle 'garbas/vim-snipmate'
-
-    " Engine 2....
 
     """
     """ Others....
@@ -670,7 +333,7 @@
 
     " }}}
 
-    Bundle 'vim-scripts/taglist.vim'
+"   Bundle 'vim-scripts/taglist.vim'
     "      'vim-scripts/taglist.vim' {{{
         " let loaded_taglist = 1 " 0: activate / 1: do not load
           let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
@@ -682,7 +345,7 @@
         " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
     " }}}
 
-"   Bundle 'vim-scripts/StatusLineHighlight'
+    Bundle 'vim-scripts/StatusLineHighlight'
     "      'vim-scripts/StatusLineHighlight' " {{{
 
         " Turn it off:
@@ -705,36 +368,6 @@
         highlight StatusLineReadonlyNC     guifg=white      guibg=darkgreen gui=bold ctermfg=white   ctermbg=darkgreen cterm=NONE
         highlight StatusLineUnmodifiable   guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
         highlight StatusLineUnmodifiableNC guifg=green      guibg=darkgreen gui=bold ctermfg=green   ctermbg=darkgreen cterm=NONE
-
-    " }}}
-
-"   Bundle 'sessionman.vim'
-"   Bundle 'sjl/gundo.vim'
-"   Bundle 'pangloss/vim-javascript'
-
-
-    " ft:markdown
-    Bundle 'tpope/vim-markdown'
-
-    " ft:mkd
-    "undle 'plasticboy/vim-markdown'
-    Bundle 'nelstrom/vim-markdown-preview'
-    "      'nelstrom/vim-markdown-preview'     {{{
-    nnoremap <silent> <Leader>mm :Mm<CR>
-    "
-    "
-    "      }}}
-
-
-    """
-    """ Must see...
-    """
-"   Bundle 'majutsushi/tagbar'
-    " tregisters.vim            {{{
-        " Turn it off:
-        " let loaded_tregisters = 1
-
-       " map <leader>tr :TRegisters    <CR>
 
     " }}}
 
@@ -798,42 +431,9 @@
         " in megabytes - :Large/:Unlarge
         let g:LargeFile= 200
     " }}}
-    " mark.vim                  {{{
-        " Turn it off:
-        " let g:loaded_mark = 1
-    " }}}
-    " marks browser.vim         {{{
-        " Turn it off:
-        " let loaded_marksbrowser = 1
-
-        " map <leader>mb :MarksBrowser<CR><CR>
-
-        " Do not close after selecting a mark
-        " let marksCloseWhenSelected = 0
-
-    " }}}
-    " marks_corey.vim           {{{
-        " Turn it off:
-        " let g:loaded_marks_corey = 1
-    " }}}
     " searchcomplete            {{{
         " Turn it off:
         " let loaded_search_complete = 1
-    " }}}
-    " showmarks                 {{{
-        " Turn it off:
-        " let loaded_showmarks = 1
-
-        " hi ShowMarksHLl guifg=white guibg=black    gui=bold ctermfg=white ctermbg=black    cterm=bold
-        " hi ShowMarksHLu guifg=white guibg=darkblue gui=bold ctermfg=white ctermbg=darkblue cterm=bold
-        " hi ShowMarksHLo guifg=gray  guibg=black    gui=bold ctermfg=gray  ctermbg=black    cterm=bold
-        " hi ShowMarksHLm guifg=white guibg=gray     gui=bold ctermfg=white ctermbg=gray     cterm=bold
-
-       " map <leader>mt :ShowMarksToggle    <CR>
-       " map <leader>mm :ShowMarksPlaceMark <CR>
-       " map <leader>md :ShowMarksClearMark <CR>
-       " map <leader>ma :ShowMarksClearAll  <CR>
-
     " }}}
     " SQLUtilities              {{{
         " Turn it off:
@@ -858,17 +458,30 @@
         " Turn it off:
         " let g:loaded_textformat = 1
     " }}}
-    " tmarks.vim                {{{
-        " Turn it off:
-        " let loaded_tmarks = 1
 
-       " map <leader>tm :TMarks    <CR>
 
-    " }}}
-    " RainbowPlugin             {{{
-        " Turn it off:
-        " let g:loaded_Rainbow = 1
-    " }}}
+    """
+    """ Mine
+    """
+    Bundle 'mv/mv-vim-monit'
+    Bundle 'mv/mv-vim-nagios'
+    Bundle 'mv/mv-vim-nginx'
+    Bundle 'mv/mv-vim-puppet'
+"   Bundle 'mv/mv-snipmate-snippets'
+    Bundle 'mv/vim-ir_black3'
+
+
+    """
+    """ Themes
+    """
+    Bundle 'wombat256.vim'
+    Bundle 'peaksea'
+
+    """
+    """ Syntax only
+    """
+    Bundle 'pf.vim'
+    Bundle 'vim-scripts/iptables'
 
 
 " vim: set foldlevel=9
