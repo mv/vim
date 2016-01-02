@@ -94,7 +94,7 @@
     " open file under cursor to new split right
     " <C-W><C-F>: open file under cursor to new split below
     " <C-W><S-L>: move split to right
-    map <leader>sf <C-W><C-F><C-W><S-L>
+    map <leader>gf <C-W><C-F><C-W><S-L>
 
 " vim: set foldlevel=9
 

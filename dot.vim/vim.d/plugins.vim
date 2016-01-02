@@ -10,6 +10,18 @@
 "   Bundle 'Valloric/YouCompleteMe'
 "   Bundle 'majutsushi/tagbar'
 
+    Bundle 'vimscripts/SQLUtilities'
+    "      'vimscripts/SQLUtilities'    {{{
+
+      let g:sqlutil_align_comma = 1
+      let g:sqlutil_align_first_word = 1
+      let g:sqlutil_align_keyword_right = 1
+      let g:sqlutil_keyword_case = '\U'
+
+    " }}}
+
+"   Bundle 'vimscripts/dbext'
+
 
     """
     """ Takeshi Nishida
@@ -138,14 +150,6 @@
         let g:speeddating_no_mappings = 0
     " }}}
 
-    Bundle 'tpope/vim-markdown'
-    Bundle 'nelstrom/vim-markdown-preview'
-    "      'nelstrom/vim-markdown-preview'     {{{
-    nnoremap <silent> <Leader>mm :Mm<CR>
-    "
-    "
-    "      }}}
-
     " gc/gcc/gcap:
     Bundle 'tpope/vim-commentary'
 
@@ -163,6 +167,14 @@
 
 "   Bundle 'tpope/vim-scriptease'
 "   Bundle 'tpope/vim-sensible'
+
+    Bundle 'tpope/vim-markdown'
+    Bundle 'nelstrom/vim-markdown-preview'
+    "      'nelstrom/vim-markdown-preview'     {{{
+    nnoremap <silent> <Leader>mm :Mm<CR>
+    "
+    "
+    "      }}}
 
 
     """
