@@ -186,8 +186,8 @@
     nnoremap <leader>q  :q
     nnoremap <leader>q1 :q!
     nnoremap <leader>qa :qall!
-    nnoremap <leader>w  :w<CR>
-    nnoremap <leader>W  :w<CR>
+    nnoremap <leader>w  :w
+    nnoremap <leader>W  :w
     nnoremap <leader>wa :wa<CR>
     nnoremap <leader>WA :wa<CR>
     nnoremap <leader>wq :wq!<CR>
