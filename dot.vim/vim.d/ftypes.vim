@@ -70,7 +70,8 @@
     " }}}
     " Python                    {{{
         autocmd BufNewFile,BufRead *.py    setlocal filetype=python foldmethod=indent
-        autocmd FileType           python  setlocal ts=4 sts=4 sw=4 noet nowrap list
+        autocmd FileType           python  setlocal ts=4 sts=4 sw=4 expandtab nowrap list
+        autocmd BufWritePost       *.py    call Flake8()
     " }}}
     " SQL*Plus                  {{{
     " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
