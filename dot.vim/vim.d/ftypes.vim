@@ -50,7 +50,7 @@
     " }}}
     " JSON                      {{{
         autocmd BufNewFile,BufRead *.json,*.template setlocal filetype=json
-        autocmd FileType           json              setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=marker foldmarker={,} foldlevel=9
+        autocmd FileType           json              setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=syntax
     " }}}
     " Javascript                {{{
         autocmd BufNewFile,BufRead *.js         setlocal filetype=javascript
