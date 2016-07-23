@@ -7,6 +7,12 @@
     set timeoutlen=2000               " Wait 2 seconds before timing out a mapping
     set ttimeoutlen=100               " and only 100 ms before timing out on a keypress.
 
+    set timeoutlen=500                " Wait 2 seconds before timing out a mapping
+    set ttimeoutlen=100               " and only 100 ms before timing out on a keypress.
+
+"   set timeoutlen=100                " 1000: 1s. 100: 1/10s
+"   set ttimeoutlen=-1                " back to default
+
     let mapleader=","
 
     " GUI
