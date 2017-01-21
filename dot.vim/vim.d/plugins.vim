@@ -21,6 +21,51 @@
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
+    """ best of the best
+    """
+    Bundle 'scrooloose/nerdtree'
+    "      'scrooloose/nerdtree'      " {{{
+
+"       let loaded_nerd_tree=0
+        let NERDTreeCaseSensitiveSort = 1
+""      let NERDTreeChDirMode         = 0
+        let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git','\.pdf','\.xls','\.ods']
+        let NERDTreeRespectWildIgnore = 1
+""      let NERDTreeMouseMode         = 3
+        let NERDTreeShowLineNumbers   = 1
+        let NERDTreeShowHidden        = 0
+""      let NERDTreeWinSize           = 30
+        let NERDTreeHijackNetrw       = 1
+
+        map <leader>nn :NERDTreeToggle <CR> " Dir tree
+        map <leader>nm :NERDTreeMirror <CR> " Dir tree
+        map <leader>no :NERDTree . <CR>   " Tree Open
+        map <leader>nc :NERDTreeClose<CR> " Tree Close
+    " }}}
+
+    Bundle 'nathanaelkane/vim-indent-guides'
+    "      'nathanaelkane/vim-indent-guides' {{{
+
+        let g:indent_guides_enable_on_vim_startup = 1
+        let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+
+        let g:indent_guides_indent_levels = 30
+        let g:indent_guides_guide_size = 4
+        let g:indent_guides_default_mapping = 1
+      " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+
+    " }}}
+
+    Bundle 'airblade/vim-gitgutter'
+
+    " just like vimgrep.... :Ack and :Ag
+    Bundle 'mileszs/ack.vim'
+
+"   Bundle 'Lokaltog/vim-easymotion'
+
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """
     """ Dr. Chip's
     """
     Bundle 'Align'
@@ -30,69 +75,11 @@
     " }}}
     Bundle 'AnsiEsc.vim'
 
-    "undle 'Bash-support'
-    "      'Bash-support'               {{{
-
-        " Turn it off:
-        let g:BASH_Version = 'OFF'
-
-        let g:BASH_Root = 'B&ash.'         " original
-        let g:BASH_Root = '&Plugin.B&ash.' " mine.
-        "let g:BASH_MapLeader               '\'
-        "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
-
-        if ! len(glob( $HOME.'/.vim/bundle/bash-support/' ))
-            let g:BASH_Support_Root_Dir        = $HOME.'/.vim/bundle/'
-        endif
-
-        " let g:BASH_Support_Root_Dir        = '/codework/bash/'
-        if ! len(glob("/codework/bash/"))
-            let g:BASH_GlobalTemplateFile      = '/codework/bash/templates'
-            let g:BASH_LocalTemplateFile       = '/codework/bash/templates'
-            let g:BASH_CodeSnippets            = '/codework/bash/snippets'
-        "let g:BASH_Dictionary_File         = '/codework/bash/bash.dict.txt'
-        endif
-
-    " }}}
-
-    "undle 'Bash-support'
-    "      'Perl-support'               {{{
-        " Turn it off:
-        let g:Perl_Version = 'OFF'
-
-        let g:Perl_Root = '&Perl.'          " original
-        let g:Perl_Root = '&Plugin.&Perl.'  " mine.
-    "let g:Perl_Printheader             = "%<%f%h%m%<  %=%{strftime('%x %X')}     Page %N"
-    "let g:Perl_PerlcriticSeverity      = 5
-    "let g:Perl_PerlcriticVerbosity     = 5
-    "let g:Perl_PerlcriticOptions       = ""
-    "let g:Perl_PerlRegexSubstitution   = '$+'
-    "let g:Perl_MapLeader               = '\'
-
-        if ! len(glob( $HOME.'/.vim/bundle/perl-support/' ))
-            let g:Perl_Support_Root_Dir        = $HOME.'/.vim/bundle/perl-support'
-        endif
-
-        if ! len(glob("/codework/perl/"))
-            let g:Perl_GlobalTemplateFile      = '/codework/perl/templates.pl'
-            let g:Perl_LocalTemplateFile       = '/codework/perl/templates.pl'
-            let g:Perl_CodeSnippets            = '/codework/perl/snippets.pl'
-            let g:Perl_Dictionary_File         = '/codework/perl/perl.dict.txt'
-            let g:Perl_PerlModuleList          = '/codework/perl/perl.list.txt'
-            let g:Perl_PerlModuleListGenerator = '/codework/perl/perl.list.txt'
-        endif
-    " }}}
-
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Tim Pope
     """
-"2017: Bundle 'tpope/vim-repeat'
-"2017: Bundle 'tpope/vim-surround'
-"2017: Bundle 'tpope/vim-endwise'
-"2017: Bundle 'tpope/vim-unimpaired'
-"2017: Bundle 'tpope/vim-eunuch'
     Bundle 'tpope/vim-fugitive'
     "      'tpope/vim-fugitive'       " {{{
 
@@ -120,6 +107,11 @@
         autocmd BufReadPost fugitive://* set bufhidden=delete
 
     " }}}
+"2017: Bundle 'tpope/vim-repeat'
+"2017: Bundle 'tpope/vim-surround'
+"2017: Bundle 'tpope/vim-endwise'
+"2017: Bundle 'tpope/vim-unimpaired'
+"2017: Bundle 'tpope/vim-eunuch'
 "2017: Bundle 'tpope/vim-speeddating'
     "      'tpope/vim-speeddating'    " {{{
         let g:speeddating_no_mappings = 0
@@ -142,61 +134,6 @@
 
 "   Bundle 'tpope/vim-scriptease'
 "   Bundle 'tpope/vim-sensible'
-
-
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
-    """ Martin Greffel
-    """
-    Bundle 'scrooloose/nerdtree'
-    "      'scrooloose/nerdtree'      " {{{
-
-"       let loaded_nerd_tree=0
-        let NERDTreeCaseSensitiveSort = 1
-""      let NERDTreeChDirMode         = 0
-        let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git','\.pdf','\.xls','\.ods']
-        let NERDTreeRespectWildIgnore = 1
-""      let NERDTreeMouseMode         = 3
-        let NERDTreeShowLineNumbers   = 1
-        let NERDTreeShowHidden        = 0
-""      let NERDTreeWinSize           = 30
-        let NERDTreeHijackNetrw       = 1
-
-        map <leader>nn :NERDTreeToggle <CR> " Dir tree
-        map <leader>nm :NERDTreeMirror <CR> " Dir tree
-        map <leader>no :NERDTree . <CR>   " Tree Open
-        map <leader>nc :NERDTreeClose<CR> " Tree Close
-    " }}}
-
-
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
-    """ Lokaltog
-    """
-"   Bundle 'Lokaltog/vim-easymotion'
-"
-
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
-    """ best of the best
-    """
-    Bundle 'nathanaelkane/vim-indent-guides'
-    "      'nathanaelkane/vim-indent-guides' {{{
-
-        let g:indent_guides_enable_on_vim_startup = 1
-        let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-
-        let g:indent_guides_indent_levels = 30
-        let g:indent_guides_guide_size = 4
-        let g:indent_guides_default_mapping = 1
-      " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
-
-    " }}}
-
-    Bundle 'airblade/vim-gitgutter'
-
-    " just like vimgrep.... :Ack and :Ag
-    Bundle 'mileszs/ack.vim'
 
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -503,4 +440,62 @@
 "2017: Bundle 'mv/mv-vim-nginx'
 "2017: Bundle 'mv/mv-vim-puppet'
 "2017: Bundle 'mv/vim-ir_black3'
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """
+    """ Dr. Chip's
+    """
+    "undle 'Bash-support'
+    "      'Bash-support'               {{{
+
+        " Turn it off:
+        let g:BASH_Version = 'OFF'
+
+        let g:BASH_Root = 'B&ash.'         " original
+        let g:BASH_Root = '&Plugin.B&ash.' " mine.
+        "let g:BASH_MapLeader               '\'
+        "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
+
+        if ! len(glob( $HOME.'/.vim/bundle/bash-support/' ))
+            let g:BASH_Support_Root_Dir        = $HOME.'/.vim/bundle/'
+        endif
+
+        " let g:BASH_Support_Root_Dir        = '/codework/bash/'
+        if ! len(glob("/codework/bash/"))
+            let g:BASH_GlobalTemplateFile      = '/codework/bash/templates'
+            let g:BASH_LocalTemplateFile       = '/codework/bash/templates'
+            let g:BASH_CodeSnippets            = '/codework/bash/snippets'
+        "let g:BASH_Dictionary_File         = '/codework/bash/bash.dict.txt'
+        endif
+
+    " }}}
+
+    "undle 'Bash-support'
+    "      'Perl-support'               {{{
+        " Turn it off:
+        let g:Perl_Version = 'OFF'
+
+        let g:Perl_Root = '&Perl.'          " original
+        let g:Perl_Root = '&Plugin.&Perl.'  " mine.
+    "let g:Perl_Printheader             = "%<%f%h%m%<  %=%{strftime('%x %X')}     Page %N"
+    "let g:Perl_PerlcriticSeverity      = 5
+    "let g:Perl_PerlcriticVerbosity     = 5
+    "let g:Perl_PerlcriticOptions       = ""
+    "let g:Perl_PerlRegexSubstitution   = '$+'
+    "let g:Perl_MapLeader               = '\'
+
+        if ! len(glob( $HOME.'/.vim/bundle/perl-support/' ))
+            let g:Perl_Support_Root_Dir        = $HOME.'/.vim/bundle/perl-support'
+        endif
+
+        if ! len(glob("/codework/perl/"))
+            let g:Perl_GlobalTemplateFile      = '/codework/perl/templates.pl'
+            let g:Perl_LocalTemplateFile       = '/codework/perl/templates.pl'
+            let g:Perl_CodeSnippets            = '/codework/perl/snippets.pl'
+            let g:Perl_Dictionary_File         = '/codework/perl/perl.dict.txt'
+            let g:Perl_PerlModuleList          = '/codework/perl/perl.list.txt'
+            let g:Perl_PerlModuleListGenerator = '/codework/perl/perl.list.txt'
+        endif
+    " }}}
+
 
