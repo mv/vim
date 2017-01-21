@@ -9,9 +9,9 @@
     """
 "   Bundle 'Valloric/YouCompleteMe'
 "   Bundle 'majutsushi/tagbar'
-    Bundle 'tyru/open-browser.vim'
+"2017: Bundle 'tyru/open-browser.vim'
 
-    Bundle 'vimscripts/SQLUtilities'
+"2017: Bundle 'vimscripts/SQLUtilities'
     "      'vimscripts/SQLUtilities'    {{{
 
       let g:sqlutil_align_comma = 1
@@ -23,7 +23,7 @@
 
 "   Bundle 'vimscripts/dbext'
 
-    Bundle 'nvie/vim-flake8'
+"2017: Bundle 'nvie/vim-flake8'
     "      'nvie/vim-flake8'          " {{{
 
         let g:flake8_cmd="/usr/local/bin/flake8"
@@ -38,8 +38,8 @@
     """
     """ Takeshi Nishida
     """
-    Bundle 'L9'
-    Bundle 'AutoComplPop'
+"2017: Bundle 'L9'
+"2017: Bundle 'AutoComplPop'
     "      'AutoComplPop'             " {{{
 
     " Disable AutoComplPop.
@@ -62,12 +62,12 @@
     """
     """ Dr. Chip's
     """
-    Bundle 'AnsiEsc.vim'
     Bundle 'Align'
     "      'Align'                    " {{{
         let g:DrChipTopLvlMenu         = "Plugin."
         let g:alignnoremaps_euronumber = 1
     " }}}
+    Bundle 'AnsiEsc.vim'
 
     "undle 'Bash-support'
     "      'Bash-support'               {{{
@@ -125,11 +125,11 @@
     """
     """ Tim Pope
     """
-    Bundle 'tpope/vim-repeat'
-    Bundle 'tpope/vim-surround'
-    Bundle 'tpope/vim-endwise'
-    Bundle 'tpope/vim-unimpaired'
-    Bundle 'tpope/vim-eunuch'
+"2017: Bundle 'tpope/vim-repeat'
+"2017: Bundle 'tpope/vim-surround'
+"2017: Bundle 'tpope/vim-endwise'
+"2017: Bundle 'tpope/vim-unimpaired'
+"2017: Bundle 'tpope/vim-eunuch'
     Bundle 'tpope/vim-fugitive'
     "      'tpope/vim-fugitive'       " {{{
 
@@ -157,20 +157,20 @@
         autocmd BufReadPost fugitive://* set bufhidden=delete
 
     " }}}
-    Bundle 'tpope/vim-speeddating'
+"2017: Bundle 'tpope/vim-speeddating'
     "      'tpope/vim-speeddating'    " {{{
         let g:speeddating_no_mappings = 0
     " }}}
 
     " gc/gcc/gcap:
-    Bundle 'tpope/vim-commentary'
+"2017: Bundle 'tpope/vim-commentary'
 
 "   Bundle 'vim-ruby/vim-ruby'
 "   Bundle 'tpope/vim-rails'
 "   Bundle 'tpope/vim-bundler'
 
-    Bundle 'tpope/vim-projectionist'
-    Bundle 'tpope/vim-rake'
+"2017: Bundle 'tpope/vim-projectionist'
+"2017: Bundle 'tpope/vim-rake'
     "      'tpope/vim-rake'             {{{
     "
        "let g:loaded_rake = 1
@@ -180,8 +180,8 @@
 "   Bundle 'tpope/vim-scriptease'
 "   Bundle 'tpope/vim-sensible'
 
-    Bundle 'tpope/vim-markdown'
-    Bundle 'nelstrom/vim-markdown-preview'
+"2017: Bundle 'tpope/vim-markdown'
+"2017: Bundle 'nelstrom/vim-markdown-preview'
     "      'nelstrom/vim-markdown-preview'     {{{
     nnoremap <silent> <Leader>mm :Mm<CR>
     "
@@ -222,7 +222,7 @@
     """
     Bundle 'airblade/vim-gitgutter'
 
-    Bundle 'wincent/Command-T'
+"2017: Bundle 'wincent/Command-T'
     "      'wincent/Command-T'        " {
         let g:CommandTMaxFiles=20000
         let g:CommandTMinHeight=5
@@ -253,7 +253,7 @@
 
     " }}}
 
-    Bundle 'terryma/vim-multiple-cursors'
+"2017: Bundle 'terryma/vim-multiple-cursors'
 "          'terryma/vim-multiple-cursors' {{{
 
         let g:multi_cursor_use_default_mapping=0
@@ -326,7 +326,7 @@
 
     " }}}
 
-    Bundle 'elzr/vim-json'
+"2017: Bundle 'elzr/vim-json'
     "      'elzr/vim-json'            " {
         let g:vim_json_syntax_conceal=0
         set conceallevel=0
@@ -334,7 +334,7 @@
 
     " just like vimgrep.... :Ack and :Ag
     Bundle 'mileszs/ack.vim'
-    Bundle 'rking/ag.vim'
+"2017: Bundle 'rking/ag.vim'
     "      'rking/ag.vim' {{{
 
       " let g:agprg="<custom-ag-path-goes-here> --column"
@@ -343,14 +343,14 @@
 
     " auto-close stuff: pick one
 "   Bundle 'jiangmiao/auto-pairs'
-    Bundle 'Raimondi/delimitMate'
+"2017: Bundle 'Raimondi/delimitMate'
 
     """
     """ Others....
     """
-    Bundle 'sudo.vim'
+"2017: Bundle 'sudo.vim'
 
-    Bundle 'bufexplorer.zip'
+"2017: Bundle 'bufexplorer.zip'
     "      'bufexplorer.zip'                 " {{{
 
         " ,be / ,bv / ,bs
@@ -392,8 +392,8 @@
     " TOhtml
     " TOhtml                    {{{
 
-    let g:html_use_encoding = 'UTF-8'
-    let g:html_ignore_folding = 1
+"2017: let g:html_use_encoding = 'UTF-8'
+"2017: let g:html_ignore_folding = 1
 
     " }}}
 
@@ -469,19 +469,19 @@
     """
     """ Mine
     """
-    Bundle 'mv/mv-vim-monit'
-    Bundle 'mv/mv-vim-nagios'
-    Bundle 'mv/mv-vim-nginx'
-    Bundle 'mv/mv-vim-puppet'
+"2017: Bundle 'mv/mv-vim-monit'
+"2017: Bundle 'mv/mv-vim-nagios'
+"2017: Bundle 'mv/mv-vim-nginx'
+"2017: Bundle 'mv/mv-vim-puppet'
 "   Bundle 'mv/mv-snipmate-snippets'
-    Bundle 'mv/vim-ir_black3'
+"2017: Bundle 'mv/vim-ir_black3'
 
 
     """
     """ Themes
     """
     Bundle 'wombat256.vim'
-    Bundle 'peaksea'
+"2017: Bundle 'peaksea'
 
     """
     """ Syntax only

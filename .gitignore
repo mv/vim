@@ -12,6 +12,7 @@
 # this project
 autoload
 bundle
+bundle.old
 sessions
 
 # general
