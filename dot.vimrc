@@ -70,10 +70,10 @@ endfor
 """
 """ Options:
 """
-"2017: source ~/.vim/vim.d/status_line.vim
 "2017: source ~/.vim/vim.d/folding.vim
 "2017: source ~/.vim/vim.d/buf.vim
 "2017: source ~/.vim/vim.d/win.vim
+"2017: source ~/.vim/vim.d/status_line.vim
 
 """
 """ Shortcuts: mapleader/mappings/commands

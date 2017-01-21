@@ -85,7 +85,7 @@
 
     " StatusLineHighlight       {{{
 
-    "undle 'vim-scripts/StatusLineHighlight'
+    Bundle 'vim-scripts/StatusLineHighlight'
 
         " Turn it off:
         " let g:loaded_StatusLineHighlight = 1
@@ -118,6 +118,7 @@
     endfunction
 
     " }}}
+
 
 " vim: set foldlevel=9
 
