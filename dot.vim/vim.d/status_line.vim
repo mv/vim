@@ -1,5 +1,7 @@
-
-" Status line
+"""
+""" Mv: Status line
+"""
+" vim: set foldlevel=9
 
     set laststatus=2   " always show statusline
 
@@ -83,12 +85,13 @@
 "   set statusline+=asc:[%3.(%b%)\ %3.(x%b%)]      " current char (ga)
 
 
-    " StatusLineHighlight       {{{
+    """
+    """ StatusLineHighlight
+    """
 
     Bundle 'vim-scripts/StatusLineHighlight'
-
-        " Turn it off:
-        " let g:loaded_StatusLineHighlight = 1
+    " Turn it off:
+    " let g:loaded_StatusLineHighlight = 1
 
      nnoremap <Leader>sl :call StatusLineHL()<CR>
 
@@ -117,8 +120,10 @@
 
     endfunction
 
+    " flag it
+    let g:mv_StatusLineHighlight = 0
+
     " }}}
 
 
-" vim: set foldlevel=9
 
