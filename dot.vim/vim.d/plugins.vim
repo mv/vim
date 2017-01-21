@@ -1,64 +1,25 @@
+" vim: set foldlevel=9
 
 " Plugins
 " ================
     " Tip:
     "     scriptnames     " List all sourced scripts
 
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
-    """ test
+    """ Themes
     """
-"   Bundle 'Valloric/YouCompleteMe'
-"   Bundle 'majutsushi/tagbar'
-"2017: Bundle 'tyru/open-browser.vim'
-
-"2017: Bundle 'vimscripts/SQLUtilities'
-    "      'vimscripts/SQLUtilities'    {{{
-
-      let g:sqlutil_align_comma = 1
-      let g:sqlutil_align_first_word = 1
-      let g:sqlutil_align_keyword_right = 1
-      let g:sqlutil_keyword_case = '\U'
-
-    " }}}
-
-"   Bundle 'vimscripts/dbext'
-
-"2017: Bundle 'nvie/vim-flake8'
-    "      'nvie/vim-flake8'          " {{{
-
-        let g:flake8_cmd="/usr/local/bin/flake8"
-        let g:flake8_quickfix_height=7
-        let g:flake8_show_quickfix=1
-        let g:flake8_show_in_gutter=1
-        let g:flake8_show_in_file=1
-
-    "}}}
+    Bundle 'wombat256.vim'
 
 
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
-    """ Takeshi Nishida
+    """ Syntax only
     """
-"2017: Bundle 'L9'
-"2017: Bundle 'AutoComplPop'
-    "      'AutoComplPop'             " {{{
+    Bundle "motus/pig.vim"
 
-    " Disable AutoComplPop.
-"       let g:acp_enableAtStartup        = 0
 
-        let g:acp_mappingDriven          = 0
-        let g:acp_ignorecaseOption       = 1
-        let g:acp_behaviorKeywordLength  = 2
-        let g:acp_behaviorFileLength     = 0
-
-        let g:acp_behavior = {'repeat': 1}
-
-        " nnoremap <leader>ae :AcpEnable <CR>
-        " nnoremap <leader>ad :AcpDisable <CR>
-        " nnoremap <leader>al :AcpLock <CR>
-        " nnoremap <leader>au :AcpUnlock <CR>
-
-    " }}}
-
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Dr. Chip's
     """
@@ -122,6 +83,8 @@
         endif
     " }}}
 
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Tim Pope
     """
@@ -180,15 +143,8 @@
 "   Bundle 'tpope/vim-scriptease'
 "   Bundle 'tpope/vim-sensible'
 
-"2017: Bundle 'tpope/vim-markdown'
-"2017: Bundle 'nelstrom/vim-markdown-preview'
-    "      'nelstrom/vim-markdown-preview'     {{{
-    nnoremap <silent> <Leader>mm :Mm<CR>
-    "
-    "
-    "      }}}
 
-
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Martin Greffel
     """
@@ -212,15 +168,218 @@
         map <leader>nc :NERDTreeClose<CR> " Tree Close
     " }}}
 
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Lokaltog
     """
 "   Bundle 'Lokaltog/vim-easymotion'
+"
 
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ best of the best
     """
+    Bundle 'nathanaelkane/vim-indent-guides'
+    "      'nathanaelkane/vim-indent-guides' {{{
+
+        let g:indent_guides_enable_on_vim_startup = 1
+        let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+
+        let g:indent_guides_indent_levels = 30
+        let g:indent_guides_guide_size = 4
+        let g:indent_guides_default_mapping = 1
+      " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+
+    " }}}
+
     Bundle 'airblade/vim-gitgutter'
+
+    " just like vimgrep.... :Ack and :Ag
+    Bundle 'mileszs/ack.vim'
+
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """
+    """ Others....
+    """
+"2017: Bundle 'sudo.vim'
+
+"2017: Bundle 'bufexplorer.zip'
+    "      'bufexplorer.zip'                 " {{{
+
+        " ,be / ,bv / ,bs
+        let g:bufExplorerReverseSort     = 0
+        let g:bufExplorerShowUnlisted    = 1    " Do not show unlisted buffers.
+        let g:bufExplorerSortBy          ='fullpath' " name,number,mru,fullpath,extension
+        let g:bufExplorerShowDirectories = 1    " Show directories.
+        let g:bufExplorerFindActive      = 0    " Do not go to active window.
+        let g:bufExplorerShowDirectories = 0    " Don't show directories.
+        let g:bufExplorerSplitBelow      = 1    " Split new window below current.
+        let g:bufExplorerSplitRight      = 1    " Split right.
+
+    " }}}
+
+"   Bundle 'vim-scripts/taglist.vim'
+    "      'vim-scripts/taglist.vim' {{{
+        " let loaded_taglist = 1 " 0: activate / 1: do not load
+          let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+          let Tlist_File_Fold_Auto_Close = 1
+          let Tlist_Show_Menu = 1
+
+        " map <leader>t   :TlistToggle     <CR>
+        " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
+        " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
+    " }}}
+
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """
+    """ Built in
+    """
+    " spec.vim: rpm spec files
+    " spec.vim:                 {{{
+    let spec_chglog_format = "%Y-%m-%d - Marcus Vinicius Ferreira <ferreira.mv@gmail.com>"
+    let spec_chglog_prepend = 1
+    let spec_chglog_release_info = 1
+"   map <buffer> <LocalLeader>c <Plug>SpecChangelog
+    " }}}
+
+    " TOhtml
+    " TOhtml                    {{{
+
+"2017: let g:html_use_encoding = 'UTF-8'
+"2017: let g:html_ignore_folding = 1
+
+    " }}}
+
+    " netrw
+    " netrw                     {{{
+    "   0: on, 1: off
+   "let g:loaded_netrw       = 1
+   "let g:loaded_netrwPlugin = 1
+    let g:netrw_liststyle    = 0
+   "let g:netrw_winsize      = 50
+
+    " 'p': preview windows split horizontally/vertically
+   "let g:netrw_preview      = 0
+
+    " horizontal split: above or below ?
+    "et g:netrw_alto         = 1
+    " vertical split: left or right ?
+    "et g:netrw_altv         = 1
+
+    "et g:netrw_banner       = 1
+   "let g:netrw_browse_split = 3
+    let g:netrw_cursor       = 4
+    "et g:netrw_home         = "~"
+    "et g:netrw_keepdir      = 1
+    let g:netrw_timefmt      = '%F %H:%M'
+    let g:netrw_sort_sequence = '[\/]$,*'
+    " }}}
+
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """
+    """ Off...
+    """
+    " enhancedjumps.vim         {{{
+        " Turn it off:
+        " let g:loaded_EnhancedJumps = 1
+
+        " msg timout: 2s (2000 ms)
+        let g:stopFirstAndNotifyTimeoutLen = 2000
+    " }}}
+    " LargeFile                 {{{
+        " in megabytes - :Large/:Unlarge
+        let g:LargeFile= 200
+    " }}}
+    " searchcomplete            {{{
+        " Turn it off:
+        " let loaded_search_complete = 1
+    " }}}
+    " SQLUtilities              {{{
+        " Turn it off:
+        " let g:loaded_sqlutilities = 1
+
+        " let g:sqlutil_align_where = 1
+        " let g:sqlutil_align_comma = 1
+        " let g:sqlutil_align_first_word = 1
+        " let g:sqlutil_align_keyword_right = 1
+        " let g:sqlutil_keyword_case = '\U'
+
+        " 0: do not create maps
+        " let g:sqlutil_load_default_maps = 0
+
+        " vmap <leader>sf        <Plug>SQLU_Formatter<CR>
+        " nnoremap <leader>scl       <Plug>SQLU_CreateColumnList<CR>
+        " nnoremap <leader>scd       <Plug>SQLU_GetColumnDef<CR>
+        " nnoremap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
+        " nnoremap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
+    " }}}
+    " textformat.vim            {{{
+        " Turn it off:
+        " let g:loaded_textformat = 1
+    " }}}
+
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """
+    """ test
+    """
+"   Bundle 'Valloric/YouCompleteMe'
+"   Bundle 'majutsushi/tagbar'
+"2017: Bundle 'tyru/open-browser.vim'
+
+"2017: Bundle 'vimscripts/SQLUtilities'
+    "      'vimscripts/SQLUtilities'    {{{
+
+      let g:sqlutil_align_comma = 1
+      let g:sqlutil_align_first_word = 1
+      let g:sqlutil_align_keyword_right = 1
+      let g:sqlutil_keyword_case = '\U'
+
+    " }}}
+
+"   Bundle 'vimscripts/dbext'
+
+"2017: Bundle 'nvie/vim-flake8'
+    "      'nvie/vim-flake8'          " {{{
+
+        let g:flake8_cmd="/usr/local/bin/flake8"
+        let g:flake8_quickfix_height=7
+        let g:flake8_show_quickfix=1
+        let g:flake8_show_in_gutter=1
+        let g:flake8_show_in_file=1
+
+    "}}}
+
+
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """
+    """ Takeshi Nishida
+    """
+"2017: Bundle 'L9'
+"2017: Bundle 'AutoComplPop'
+    "      'AutoComplPop'             " {{{
+
+    " Disable AutoComplPop.
+"       let g:acp_enableAtStartup        = 0
+
+        let g:acp_mappingDriven          = 0
+        let g:acp_ignorecaseOption       = 1
+        let g:acp_behaviorKeywordLength  = 2
+        let g:acp_behaviorFileLength     = 0
+
+        let g:acp_behavior = {'repeat': 1}
+
+        " nnoremap <leader>ae :AcpEnable <CR>
+        " nnoremap <leader>ad :AcpDisable <CR>
+        " nnoremap <leader>al :AcpLock <CR>
+        " nnoremap <leader>au :AcpUnlock <CR>
+
+    " }}}
+
 
 "2017: Bundle 'wincent/Command-T'
     "      'wincent/Command-T'        " {
@@ -239,19 +398,6 @@
         nnoremap <silent> <Leader>ctj :CommandTJump<CR>
         nnoremap <silent> <Leader>ctag :CommandTTag<CR>
     " }
-
-    Bundle 'nathanaelkane/vim-indent-guides'
-    "      'nathanaelkane/vim-indent-guides' {{{
-
-        let g:indent_guides_enable_on_vim_startup = 1
-        let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-
-        let g:indent_guides_indent_levels = 30
-        let g:indent_guides_guide_size = 4
-        let g:indent_guides_default_mapping = 1
-      " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
-
-    " }}}
 
 "2017: Bundle 'terryma/vim-multiple-cursors'
 "          'terryma/vim-multiple-cursors' {{{
@@ -332,164 +478,29 @@
         set conceallevel=0
     " }
 
-    " just like vimgrep.... :Ack and :Ag
-    Bundle 'mileszs/ack.vim'
-"2017: Bundle 'rking/ag.vim'
-    "      'rking/ag.vim' {{{
 
-      " let g:agprg="<custom-ag-path-goes-here> --column"
-
-    " }}}
+"2017: Bundle 'tpope/vim-markdown'
+"2017: Bundle 'nelstrom/vim-markdown-preview'
+    "      'nelstrom/vim-markdown-preview'     {{{
+    nnoremap <silent> <Leader>mm :Mm<CR>
+    "
+    "
+    "      }}}
+    "
 
     " auto-close stuff: pick one
 "   Bundle 'jiangmiao/auto-pairs'
 "2017: Bundle 'Raimondi/delimitMate'
+"
 
-    """
-    """ Others....
-    """
-"2017: Bundle 'sudo.vim'
-
-"2017: Bundle 'bufexplorer.zip'
-    "      'bufexplorer.zip'                 " {{{
-
-        " ,be / ,bv / ,bs
-        let g:bufExplorerReverseSort     = 0
-        let g:bufExplorerShowUnlisted    = 1    " Do not show unlisted buffers.
-        let g:bufExplorerSortBy          ='fullpath' " name,number,mru,fullpath,extension
-        let g:bufExplorerShowDirectories = 1    " Show directories.
-        let g:bufExplorerFindActive      = 0    " Do not go to active window.
-        let g:bufExplorerShowDirectories = 0    " Don't show directories.
-        let g:bufExplorerSplitBelow      = 1    " Split new window below current.
-        let g:bufExplorerSplitRight      = 1    " Split right.
-
-    " }}}
-
-"   Bundle 'vim-scripts/taglist.vim'
-    "      'vim-scripts/taglist.vim' {{{
-        " let loaded_taglist = 1 " 0: activate / 1: do not load
-          let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-          let Tlist_File_Fold_Auto_Close = 1
-          let Tlist_Show_Menu = 1
-
-        " map <leader>t   :TlistToggle     <CR>
-        " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
-        " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
-    " }}}
-
-
-    """
-    """ Built in
-    """
-    " spec.vim: rpm spec files
-    " spec.vim:                 {{{
-    let spec_chglog_format = "%Y-%m-%d - Marcus Vinicius Ferreira <ferreira.mv@gmail.com>"
-    let spec_chglog_prepend = 1
-    let spec_chglog_release_info = 1
-"   map <buffer> <LocalLeader>c <Plug>SpecChangelog
-    " }}}
-
-    " TOhtml
-    " TOhtml                    {{{
-
-"2017: let g:html_use_encoding = 'UTF-8'
-"2017: let g:html_ignore_folding = 1
-
-    " }}}
-
-    " netrw
-    " netrw                     {{{
-    "   0: on, 1: off
-   "let g:loaded_netrw       = 1
-   "let g:loaded_netrwPlugin = 1
-    let g:netrw_liststyle    = 0
-   "let g:netrw_winsize      = 50
-
-    " 'p': preview windows split horizontally/vertically
-   "let g:netrw_preview      = 0
-
-    " horizontal split: above or below ?
-    "et g:netrw_alto         = 1
-    " vertical split: left or right ?
-    "et g:netrw_altv         = 1
-
-    "et g:netrw_banner       = 1
-   "let g:netrw_browse_split = 3
-    let g:netrw_cursor       = 4
-    "et g:netrw_home         = "~"
-    "et g:netrw_keepdir      = 1
-    let g:netrw_timefmt      = '%F %H:%M'
-    let g:netrw_sort_sequence = '[\/]$,*'
-    " }}}
-
-
-    """
-    """ Off...
-    """
-    " enhancedjumps.vim         {{{
-        " Turn it off:
-        " let g:loaded_EnhancedJumps = 1
-
-        " msg timout: 2s (2000 ms)
-        let g:stopFirstAndNotifyTimeoutLen = 2000
-    " }}}
-    " LargeFile                 {{{
-        " in megabytes - :Large/:Unlarge
-        let g:LargeFile= 200
-    " }}}
-    " searchcomplete            {{{
-        " Turn it off:
-        " let loaded_search_complete = 1
-    " }}}
-    " SQLUtilities              {{{
-        " Turn it off:
-        " let g:loaded_sqlutilities = 1
-
-        " let g:sqlutil_align_where = 1
-        " let g:sqlutil_align_comma = 1
-        " let g:sqlutil_align_first_word = 1
-        " let g:sqlutil_align_keyword_right = 1
-        " let g:sqlutil_keyword_case = '\U'
-
-        " 0: do not create maps
-        " let g:sqlutil_load_default_maps = 0
-
-        " vmap <leader>sf        <Plug>SQLU_Formatter<CR>
-        " nnoremap <leader>scl       <Plug>SQLU_CreateColumnList<CR>
-        " nnoremap <leader>scd       <Plug>SQLU_GetColumnDef<CR>
-        " nnoremap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
-        " nnoremap <leader>scp       <Plug>SQLU_CreateProcedure<CR>
-    " }}}
-    " textformat.vim            {{{
-        " Turn it off:
-        " let g:loaded_textformat = 1
-    " }}}
-
-
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Mine
     """
+"   Bundle 'mv/mv-snipmate-snippets'
 "2017: Bundle 'mv/mv-vim-monit'
 "2017: Bundle 'mv/mv-vim-nagios'
 "2017: Bundle 'mv/mv-vim-nginx'
 "2017: Bundle 'mv/mv-vim-puppet'
-"   Bundle 'mv/mv-snipmate-snippets'
 "2017: Bundle 'mv/vim-ir_black3'
-
-
-    """
-    """ Themes
-    """
-    Bundle 'wombat256.vim'
-"2017: Bundle 'peaksea'
-
-    """
-    """ Syntax only
-    """
-    Bundle 'pf.vim'
-    Bundle 'vim-scripts/iptables'
-    Bundle "motus/pig.vim"
-
-
-" vim: set foldlevel=9
 
