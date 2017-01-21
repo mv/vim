@@ -1,57 +1,81 @@
 
 " Vim-UI
-" ================
+" ======
 
-    " Visibles
+    " Visibles:
+    " =========
     set title               " set window name as titlestring
     set visualbell          " no sound bells
     set noerrorbells        " no bells on error messagens
 
-    " Linenumbers
+    " Linenumbers:
+    " ============
     set number              " linenumber
     set numberwidth=5       " linenumber width
 
-    " Command line
+    " Commandline:
+    " ============
     set showcmd             " show command line
 
+    " Search:
+    " =======
+    set incsearch           " Highlight dynamically as they are typed.
+    set nohlsearch          " Highlight search terms: off on start
+    nnoremap <esc> :set invhlsearch<CR><esc>
+                            " type <esc> to clear hlsearch
+"2017: set gdefault            " global search/replace by default
+    set report=0            " report all lines changed
+
+
     " Viewport
+    " ========
     set scrolloff=3         " keep 3 lines scrolling up/down
     set sidescroll=0        " keep 'n' columns scrolling left/right
     set sidescrolloff=0     " keep 'n' columns scrolling left/right
 
     " Cursor bars
+    " ===========
     set cursorline          " horizontal highlight
     set nocursorcolumn      " vertical highlight
 
+    " Matching Brackets:
+    " ==================
+    set showmatch           " show matching brackets
+    set matchtime=5         " ms blinking showmatch
+
     " Autocompletion
+    " =========
     set completeopt=menuone,preview,longest    " completion popup menu options
 
     " Cursor position on navigation
+    " =============================
     set virtualedit=all     " allow moving past end of line in all modes
 "   set virtualedit=block,insert,onemore
 
     " ColorScheme
+    " ===========
     set bg=dark
 
-    map <leader>c0 :echo g:colors_name<CR>
-    map <leader>c1 :colorscheme ir_black3<CR>
-    map <leader>c2 :colorscheme wombat256mod<CR>
-    map <leader>c3 :colorscheme vividchalk<CR>
-    map <leader>c8 :colorscheme desert<CR>
-    map <leader>c9 :colorscheme torte<CR>
-
     " Terminal vim
+    " ============
     set t_Co=256            " Terminal 256 colors
     set showtabline=1       " only if there are at least two tab pages
 
     " Terminal vim theme
+    " ==================
     colorscheme torte                   " default
     silent! colorscheme wombat256mod    " use if present
 
+    map <leader>c0 :echo g:colors_name<CR>
+"   map <leader>c1 :colorscheme ir_black3<CR>
+"   map <leader>c2 :colorscheme wombat256mod<CR>
+"   map <leader>c3 :colorscheme vividchalk<CR>
+"   map <leader>c8 :colorscheme desert<CR>
+"   map <leader>c9 :colorscheme torte<CR>
 
-    """
-    """ Printing
-    """
+
+    " Printing:
+    " =========
     set printfont=:h08
 "   set printheader="%<%f%h%m%=Page %N"
     set printheader=%F
@@ -93,7 +117,8 @@
         set tabpagemax=15       " tpm: max nro of tab windows
 
         " show textwidth limit
-        set colorcolumn=+3,+4,+5
+"       set colorcolumn=+3,+4,+5
+        set colorcolumn=+1
 
         set browsedir=buffer    " open graphical filebrowser on directory of current buffer
         set winaltkeys=no       " wak: no ALT keys for menus

@@ -15,37 +15,37 @@
     set writeany                    " write on readonly files
     set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png,*~,*.lo
                                     " ignore these list file extensions in glob()/expand()
+
+
     " Command Line Completion:
 "   set wildmenu                    " turn on command line completion wild style
 "   set wildmode=list:full          " command line complete using wildmenu
     set wildmode=list:longest       " command line complete
     set history=300                 " history size
 
+
     " Copy_Paste:
     set clipboard=                  " DO-NOT share OS clipboard: must literal C-C/C-V
     "et clipboard+=unnamed          " share OS clipboard: yy, D, p
 
-   " Encoding:
-    scriptencoding  utf-8
-    set encoding=utf-8 nobomb       " BOM often causes trouble
 
     " Backup:
-    set nobackup                    " [donot] make backup files
-    set backupdir=/tmp              " where to put backup files
+"2017: set nobackup                    " [donot] make backup files
+"2017: set backupdir=/tmp              " where to put backup files
 
     " SwapFile:
-    set noswapfile                  " do not use swap files (brave mode on!)
-    set directory=/tmp              " where to put swap files in
+"2017: set noswapfile                  " do not use swap files (brave mode on!)
+"2017: set directory=/tmp              " where to put swap files in
     " Creating directories if they don't exist
     " silent execute '!mkdir -p $HOME/.vimbackup'
     " silent execute '!mkdir -p $HOME/.vimswap'
     " silent execute '!mkdir -p $HOME/.vimviews'
 
     " Undo:
-    if has('persistent_undo')
-        set undofile                " keep a permanent undofile (vide :wundo/:rundo)
-        set undodir=/tmp
-    endif
+"2017:     if has('persistent_undo')
+"2017:         set undofile                " keep a permanent undofile (vide :wundo/:rundo)
+"2017:         set undodir=/tmp
+"2017:     endif
 
     " ViewOptions:
     "     what is saved using mkview  (current window only) {{{
@@ -56,7 +56,7 @@
     "                  |      |     +-- local window options and mappings
     "                  |      +-- all defined foldings
     "                  +-- cursor position
-    set viewdir=/tmp                " where to put view files
+"2017:     set viewdir=/tmp                " where to put view files
     " }}}
 
     " Sessionoptions:

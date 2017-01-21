@@ -2,107 +2,21 @@
 " FileTypes
 " =========
 
-    " Text                      {{{
-        "utocmd BufNewFile,BufRead *.txt setlocal filetype=txt
-        autocmd FileType text setlocal tw=80 cc=+3,+4,+5 ts=4 sts=4 sw=4 et
-        "utocmd FileType text setlocal formatoptions=qatn2wl
-        "                                            |||||||
-        "                                            ||||||+- long line do not break in insert mode if already longer
-        "                                            |||||+-- trailing whitespace as end of a paragraph
-        "                                            ||||+--- indent as 2nd line of paragraph
-        "                                            |||+---- recognize numbered lists
-        "                                            ||+----- auto-wrap text in textwidth
-        "                                            |+------ automatic formatting of paragraphs
-        "                                            +------- allow formatting using gq
-        " help fo-table
-    " }}}
-    " LogFiles                  {{{
-        " goto end of file
-        autocmd BufReadPost *.log normal G
-    " }}}
-    " XML                       {{{
+    """
+    """ FileTypes:
+    """
 
-        let g:xml_syntax_folding = 1
-        autocmd FileType    xml    setlocal foldmethod=syntax
+    " Ref: https://github.com/henrik/dotfiles/blob/master/vimrc#L217-226
+    " Quicker filetype setting:
+    "   :F html
+    " instead of
+    "   :set ft=html
+    " Can tab-complete filetype.
+    command! -nargs=1 -complete=filetype F set filetype=<args>
 
-    " Ref: http://www.pixelbeat.org/settings/.vimrc
-    " augroup html
-    "     au!
-    "     "Disable parenthesis matching as it's way too slow
-    "     au BufRead *.html,*.xml NoMatchParen
-    " augroup END
-    " }}}
-    " Mail                      {{{
-        autocmd BufRead     letter*     set filetype=mail
-        autocmd Filetype    mail        set fo-=l autoindent spell
-    " }}}
-    " Makefile                  {{{
-        autocmd BufRead     [Mm]akefile*    setlocal filetype=make
-        autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
-    " }}}
-    " ctags                     {{{
-        autocmd BufRead     ?tags  setlocal filetype=tags
-        autocmd FileType    tags   setlocal ts=8 sts=0 sw=8 noet nosta list
-    " }}}
-    " Mardown                   {{{
-        "utocmd BufRead     *.{md,mkd,markdown}  setlocal filetype=markdown
-        autocmd FileType    markdown             setlocal ts=4 sts=4 sw=4 et nolist
-    " }}}
-    " JSON                      {{{
-        autocmd BufNewFile,BufRead *.json,*.template setlocal filetype=json
-        autocmd FileType           json              setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=syntax
-    " }}}
-    " Javascript                {{{
-        autocmd BufNewFile,BufRead *.js         setlocal filetype=javascript
-        autocmd FileType           javascript   setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=indent foldlevel=9
-    " }}}
-    " Ruby                      {{{
-        autocmd BufNewFile,BufRead *.rb              setlocal filetype=ruby
-        autocmd BufNewFile,BufRead Rakefile,Capfile  setlocal filetype=ruby
-        autocmd BufNewFile,BufRead Vagrantfile       setlocal filetype=ruby
-        autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
-    " }}}
-    " SML                       {{{
-        autocmd BufNewFile,BufRead *.sml setlocal filetype=sml
-        autocmd FileType             sml setlocal ts=4 sts=4 sw=4 et nowrap
-       "autocmd FileType             sml setlocal makeprg=rlwrap\ sml\ -P\ full\ '%'
-        autocmd FileType             sml setlocal makeprg=sml\ '%'
-    " }}}
-    " Python                    {{{
-        autocmd BufNewFile,BufRead *.py    setlocal filetype=python foldmethod=indent
-        autocmd FileType           python  setlocal ts=4 sts=4 sw=4 expandtab nowrap list
-        autocmd BufWritePost       *.py    call Flake8()
-    " }}}
-    " SQL*Plus                  {{{
-    " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
-        "
-    " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
-    " autocmd BufRead *sql set errorformat=%E%l/%c%m,%C%m,%Z
-    " }}}
-    " Snipmate Snippets         {{{
-        autocmd BufNewFile,BufRead *.snippet  setf snippet
-        autocmd BufNewFile,BufRead *.snippets setf snippet
-        autocmd FileType             snippet  set ts=4 sts=4 sw=4 noet nosta list
-        autocmd FileType             snippet  set foldmethod=expr foldlevel=0
-        autocmd FileType             snippet  set foldexpr=getline(v:lnum)=~'^\\s*$'&&getline(v:lnum+1)=~'\\S'?'<1':1
-    " }}}
-    " Vim                       {{{
-        autocmd FileType             vim      set foldmethod=marker foldmarker={,} foldlevel=0
-    " }}}
-    " git.git/contrib/vim       {{{
-        autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
-	autocmd BufNewFile,BufRead *.git/COMMIT_EDITMSG    setf gitcommit
-	autocmd BufNewFile,BufRead *.git/config,.gitconfig setf gitconfig
-	autocmd BufNewFile,BufRead git-rebase-todo         setf gitrebase
-	autocmd BufNewFile,BufRead .msg.[0-9]*
-		\ if getline(1) =~ '^From.*# This line is ignored.$' |
-		\   setf gitsendemail |
-		\ endif
-	autocmd BufNewFile,BufRead *.git/**
-		\ if getline(1) =~ '^\x\{40\}\>\|^ref: ' |
-		\   setf git |
-		\ endif
-    " }}}
+    " Even quicker setting often-used filetypes.
+    command! Fr set filetype=ruby
+    command! Ft set filetype=txt
 
 
 " vim: set foldlevel=9

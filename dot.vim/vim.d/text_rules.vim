@@ -1,6 +1,12 @@
 " Text Rules
 " ==========
 
+   " Encoding:
+   " =========
+    scriptencoding  utf-8
+    set encoding=utf-8 nobomb       " BOM often causes trouble
+
+
     " Case:
     " =====
     set ignorecase          " case insensitive:
@@ -25,12 +31,6 @@
     set copyindent          " ci: copy same character used in previous indent line
     set shiftround          " round indent to shiftwidth
 
-    " Search:
-    " =======
-    set nohlsearch          " Highlight search terms: off on start
-    set incsearch           " Highlight dynamically as they are typed.
-    set gdefault            " global search/replace by default
-    set report=0            " report all lines changed
 
     " Line Breaks:
     " ============
@@ -41,10 +41,6 @@
     set iskeyword+=48-57,192-255
     set iskeyword+=_,$,@,%,#        " none of these are word dividers
 
-    " Matching Brackets:
-    " ==================
-    set showmatch           " show matching brackets
-    set matchtime=5         " ms blinking showmatch
 
     " Wrapping Text:
     " ==============
@@ -62,6 +58,7 @@
     "             | | +-- "h" Normal and Visual (not recommended)
     "             | +-- <Space> Normal and Visual
     "             +-- <BS> Normal and Visual
+
 
     " Visible Characters:
     " ===================
@@ -119,8 +116,8 @@
     " ':set fo=qrn' is broken! Most of ft plugins default to
     " 'setlocal fo=croql'. Using 'autocmd' to override.
 
-    autocmd BufRead,BufReadPost,FileType *
-            \ set      formatoptions=qrc
+"2017: autocmd BufRead,BufReadPost,FileType *
+"2017:             \ set      formatoptions=qrc
     "                                |||
     "                                ||+--- auto-wrap comments
     "                                |+---- insert comment leader after <Enter>

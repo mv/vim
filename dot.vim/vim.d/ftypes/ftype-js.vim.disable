@@ -1,0 +1,15 @@
+
+" FileTypes
+" =========
+
+    " Javascript                {{{
+        autocmd BufNewFile,BufRead *.js         setlocal filetype=javascript
+        autocmd FileType           javascript   setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=indent foldlevel=9
+    " }}}
+    " JSON                      {{{
+        autocmd BufNewFile,BufRead *.json,*.template setlocal filetype=json
+        autocmd FileType           json              setlocal ts=4 sts=4 sw=4 et nowrap foldmethod=syntax
+    " }}}
+
+" vim: set foldlevel=9
+

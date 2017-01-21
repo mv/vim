@@ -1,0 +1,12 @@
+
+" FileTypes
+" =========
+
+    " Mardown                   {{{
+        "utocmd BufRead     *.{md,mkd,markdown}  setlocal filetype=markdown
+        autocmd FileType    markdown             setlocal ts=4 sts=4 sw=4 et nolist
+    " }}}
+
+
+" vim: set foldlevel=9
+
