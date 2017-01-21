@@ -52,9 +52,6 @@ endfor
 """
 """ Mv: just in case...
 """
-"let mapleader=","
-"colorscheme wombat256mod
-
 "2017: set paste               " terminal: do the right thing when executing paste
 "2017: set verbose=0           " Debug: vim +V 9 ...
 
@@ -96,5 +93,8 @@ endfor
 """
 "2017: set paste
 
+
+
+"
 " vim: set foldmarker={{{,}}} foldlevel=9 nospell:
 
