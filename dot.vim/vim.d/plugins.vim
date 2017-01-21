@@ -487,6 +487,7 @@
     """
     Bundle 'pf.vim'
     Bundle 'vim-scripts/iptables'
+    Bundle "motus/pig.vim"
 
 
 " vim: set foldlevel=9
