@@ -9,6 +9,7 @@
     """
 "   Bundle 'Valloric/YouCompleteMe'
 "   Bundle 'majutsushi/tagbar'
+    Bundle 'tyru/open-browser.vim'
 
     Bundle 'vimscripts/SQLUtilities'
     "      'vimscripts/SQLUtilities'    {{{
