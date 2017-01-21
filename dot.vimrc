@@ -50,6 +50,14 @@ for f in split(glob('~/.vim/vim.d/ftypes/*.vim'), '\n')
 endfor
 
 """
+""" Mv: local settings for plugins
+"""
+for f in split(glob('~/.vim/vim.d/plugins/*.vim'), '\n')
+  exe 'source' f
+endfor
+
+
+"""
 """ Mv: just in case...
 """
 "2017: set paste               " terminal: do the right thing when executing paste

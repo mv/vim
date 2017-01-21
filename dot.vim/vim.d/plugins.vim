@@ -23,90 +23,21 @@
     """
     """ best of the best
     """
-    Bundle 'scrooloose/nerdtree'
-    "      'scrooloose/nerdtree'      " {{{
-
-"       let loaded_nerd_tree=0
-        let NERDTreeCaseSensitiveSort = 1
-""      let NERDTreeChDirMode         = 0
-        let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git','\.pdf','\.xls','\.ods']
-        let NERDTreeRespectWildIgnore = 1
-""      let NERDTreeMouseMode         = 3
-        let NERDTreeShowLineNumbers   = 1
-        let NERDTreeShowHidden        = 0
-""      let NERDTreeWinSize           = 30
-        let NERDTreeHijackNetrw       = 1
-
-        map <leader>nn :NERDTreeToggle <CR> " Dir tree
-        map <leader>nm :NERDTreeMirror <CR> " Dir tree
-        map <leader>no :NERDTree . <CR>   " Tree Open
-        map <leader>nc :NERDTreeClose<CR> " Tree Close
-    " }}}
-
-    Bundle 'nathanaelkane/vim-indent-guides'
-    "      'nathanaelkane/vim-indent-guides' {{{
-
-        let g:indent_guides_enable_on_vim_startup = 1
-        let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-
-        let g:indent_guides_indent_levels = 30
-        let g:indent_guides_guide_size = 4
-        let g:indent_guides_default_mapping = 1
-      " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
-
-    " }}}
-
     Bundle 'airblade/vim-gitgutter'
-
-    " just like vimgrep.... :Ack and :Ag
     Bundle 'mileszs/ack.vim'
-
-"   Bundle 'Lokaltog/vim-easymotion'
-
-
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
-    """ Dr. Chip's
-    """
+    Bundle 'AnsiEsc.vim'
     Bundle 'Align'
-    "      'Align'                    " {{{
+    "      'Align'                    "
         let g:DrChipTopLvlMenu         = "Plugin."
         let g:alignnoremaps_euronumber = 1
     " }}}
-    Bundle 'AnsiEsc.vim'
 
+"   Bundle 'Lokaltog/vim-easymotion'
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Tim Pope
     """
-    Bundle 'tpope/vim-fugitive'
-    "      'tpope/vim-fugitive'       " {{{
-
-        " git add %
-        map <leader>gw :Gwrite
-        " git checkout % (revert to previous checked version)
-        map <leader>gr :Gread
-
-        " git mv %
-        map <leader>gmv :Gmove
-        " git rm %
-        map <leader>grm :Gremove
-
-        map <leader>gd :Gdiff<CR>
-        map <leader>gs :Gstatus<CR>
-
-        map <leader>gc :Gcommit<CR>
-        map <leader>gb :Gblame<CR>
-
-        " on diff
-        map <leader>dg :diffget<CR>
-        map <leader>dp :diffput<CR>
-
-        " wipeout fugitive extra buffers
-        autocmd BufReadPost fugitive://* set bufhidden=delete
-
-    " }}}
 "2017: Bundle 'tpope/vim-repeat'
 "2017: Bundle 'tpope/vim-surround'
 "2017: Bundle 'tpope/vim-endwise'
@@ -125,12 +56,6 @@
 "   Bundle 'tpope/vim-bundler'
 
 "2017: Bundle 'tpope/vim-projectionist'
-"2017: Bundle 'tpope/vim-rake'
-    "      'tpope/vim-rake'             {{{
-    "
-       "let g:loaded_rake = 1
-        set makeprg=rake
-    " }}}
 
 "   Bundle 'tpope/vim-scriptease'
 "   Bundle 'tpope/vim-sensible'
@@ -142,78 +67,6 @@
     """
 "2017: Bundle 'sudo.vim'
 
-"2017: Bundle 'bufexplorer.zip'
-    "      'bufexplorer.zip'                 " {{{
-
-        " ,be / ,bv / ,bs
-        let g:bufExplorerReverseSort     = 0
-        let g:bufExplorerShowUnlisted    = 1    " Do not show unlisted buffers.
-        let g:bufExplorerSortBy          ='fullpath' " name,number,mru,fullpath,extension
-        let g:bufExplorerShowDirectories = 1    " Show directories.
-        let g:bufExplorerFindActive      = 0    " Do not go to active window.
-        let g:bufExplorerShowDirectories = 0    " Don't show directories.
-        let g:bufExplorerSplitBelow      = 1    " Split new window below current.
-        let g:bufExplorerSplitRight      = 1    " Split right.
-
-    " }}}
-
-"   Bundle 'vim-scripts/taglist.vim'
-    "      'vim-scripts/taglist.vim' {{{
-        " let loaded_taglist = 1 " 0: activate / 1: do not load
-          let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-          let Tlist_File_Fold_Auto_Close = 1
-          let Tlist_Show_Menu = 1
-
-        " map <leader>t   :TlistToggle     <CR>
-        " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
-        " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
-    " }}}
-
-
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
-    """ Built in
-    """
-    " spec.vim: rpm spec files
-    " spec.vim:                 {{{
-    let spec_chglog_format = "%Y-%m-%d - Marcus Vinicius Ferreira <ferreira.mv@gmail.com>"
-    let spec_chglog_prepend = 1
-    let spec_chglog_release_info = 1
-"   map <buffer> <LocalLeader>c <Plug>SpecChangelog
-    " }}}
-
-    " TOhtml
-    " TOhtml                    {{{
-
-"2017: let g:html_use_encoding = 'UTF-8'
-"2017: let g:html_ignore_folding = 1
-
-    " }}}
-
-    " netrw
-    " netrw                     {{{
-    "   0: on, 1: off
-   "let g:loaded_netrw       = 1
-   "let g:loaded_netrwPlugin = 1
-    let g:netrw_liststyle    = 0
-   "let g:netrw_winsize      = 50
-
-    " 'p': preview windows split horizontally/vertically
-   "let g:netrw_preview      = 0
-
-    " horizontal split: above or below ?
-    "et g:netrw_alto         = 1
-    " vertical split: left or right ?
-    "et g:netrw_altv         = 1
-
-    "et g:netrw_banner       = 1
-   "let g:netrw_browse_split = 3
-    let g:netrw_cursor       = 4
-    "et g:netrw_home         = "~"
-    "et g:netrw_keepdir      = 1
-    let g:netrw_timefmt      = '%F %H:%M'
-    let g:netrw_sort_sequence = '[\/]$,*'
-    " }}}
 
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
