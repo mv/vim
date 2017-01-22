@@ -1,4 +1,6 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " Folding
 " ================
 "
@@ -22,5 +24,4 @@
     " Fold HTML tags
     nnoremap <leader>ft Vatzf
 
-" vim: set foldlevel=9
 

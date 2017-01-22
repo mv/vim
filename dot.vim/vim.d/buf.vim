@@ -1,4 +1,6 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " Buffers:
 " ========
     " Tips
@@ -31,6 +33,4 @@
     nmap <leader>bd :bprevious<CR>:bdelete #<CR>
     nmap <leader>bw :bprevious<CR>:bwipeout #<CR>
 
-
-" vim: set foldlevel=9
 

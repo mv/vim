@@ -1,7 +1,9 @@
+
+" vim:ft=vim:set foldlevel=9:
+
 """
 """ Mv: Status line
 """
-" vim: set foldlevel=9
 
     set laststatus=2   " always show statusline
 
@@ -124,6 +126,5 @@
     let g:mv_StatusLineHighlight = 0
 
     " }}}
-
 
 

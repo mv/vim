@@ -1,4 +1,6 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " FileTypes
 " =========
 
@@ -10,5 +12,4 @@
     " }}}
 
 
-" vim: set foldlevel=9
 

@@ -23,7 +23,8 @@
 					\ endif
 
     " }}}
+" vim:ft=vim:set foldlevel=9:
 
 
-" vim: set foldlevel=9
+
 

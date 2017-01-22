@@ -1,6 +1,8 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " VimCode
-" ================
+" =======
 
     " Set font according to system
     " ============================ "{{{
@@ -68,6 +70,4 @@
     " :0 put =range(1,15)
     " :for in in range(1,15) | put ='192.168.1.'.i | endfor
 
-
-" vim: set foldlevel=9
 

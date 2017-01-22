@@ -1,5 +1,5 @@
-" vim: set foldlevel=9
 
+" vim:ft=vim:set foldlevel=9:
 
 "   Bundle 'vim-scripts/taglist.vim'
     "      'vim-scripts/taglist.vim'

@@ -1,4 +1,5 @@
-" vim: set foldlevel=9
+
+" vim:ft=vim:set foldlevel=9:
 
     Plugin 'scrooloose/nerdtree'
 

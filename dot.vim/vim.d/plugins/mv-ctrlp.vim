@@ -1,4 +1,5 @@
 
+" vim:ft=vim:set foldlevel=9:
 
     " Python matcher for CtrlP
     Plugin 'FelikZ/ctrlp-py-matcher'

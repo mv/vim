@@ -1,6 +1,8 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " Windows
-" ================
+" =======
 
     set splitbelow          " sb: split new window below current window
     set splitright          " spr: split new window to the right
@@ -96,5 +98,4 @@
     " <C-W><S-L>: move split to right
     map <leader>gf <C-W><C-F><C-W><S-L>
 
-" vim: set foldlevel=9
 

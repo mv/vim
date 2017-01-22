@@ -1,4 +1,5 @@
-" vim: set foldlevel=9
+
+" vim:ft=vim:set foldlevel=9:
 
     Bundle 'nathanaelkane/vim-indent-guides'
     "      'nathanaelkane/vim-indent-guides'

@@ -1,9 +1,8 @@
 
-" FileTypes
-" =========
+" vim:ft=vim:set foldlevel=9:
 
     """
-    """ FileTypes:
+    """ FileTypes: shortcut to set filetype=
     """
 
     " Ref: https://github.com/henrik/dotfiles/blob/master/vimrc#L217-226
@@ -18,6 +17,4 @@
     command! Fr set filetype=ruby
     command! Ft set filetype=txt
 
-
-" vim: set foldlevel=9
 

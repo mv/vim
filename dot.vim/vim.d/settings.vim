@@ -1,4 +1,6 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " ferreira.mv[ at ]gmail.com
 "     file layout based on http://vi-improved.org/vimrc.php
 
@@ -94,5 +96,4 @@
     set viminfo='100,f1,<500,:50,@50,/50,h
     " }}}
 
-" vim: set foldlevel=9
 

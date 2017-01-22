@@ -101,8 +101,5 @@ endfor
 """
 "2017: set paste
 
-
-
-"
-" vim: set foldmarker={{{,}}} foldlevel=9 nospell:
+" vim:ft=vim:set foldlevel=9:
 

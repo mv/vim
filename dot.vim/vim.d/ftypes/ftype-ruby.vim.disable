@@ -1,4 +1,6 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " FileTypes
 " =========
 
@@ -8,7 +10,5 @@
         autocmd BufNewFile,BufRead Vagrantfile       setlocal filetype=ruby
         autocmd FileType           ruby              setlocal ts=2 sts=2 sw=2 et nowrap
     " }}}
-
-" vim: set foldlevel=9
 
 

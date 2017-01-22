@@ -1,6 +1,8 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " Commands
-" ================
+" ========
 
     """
     """ Typos:
@@ -25,6 +27,4 @@
     command! TabOn      set noexpandtab|retab!
     command! TabOff     set expandtab|retab!
 
-
-" vim: set foldlevel=9
 

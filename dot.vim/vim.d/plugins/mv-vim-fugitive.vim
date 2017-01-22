@@ -1,4 +1,5 @@
-" vim: set foldlevel=9
+
+" vim:ft=vim:set foldlevel=9:
 
     Bundle 'tpope/vim-fugitive'
     "      'tpope/vim-fugitive'
@@ -25,7 +26,5 @@
 
         " wipeout fugitive extra buffers
         autocmd BufReadPost fugitive://* set bufhidden=delete
-
-    " }}}
 
 

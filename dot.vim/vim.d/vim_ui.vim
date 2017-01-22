@@ -1,4 +1,6 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " Vim-UI
 " ======
 
@@ -137,7 +139,4 @@
 "   autocmd BufReadPost * lcd %:p:h | cd /work/mv-vim/
 "   autocmd BufReadPost * silent! lcd %:p:h
 
-
-
-" vim: set foldlevel=9
 

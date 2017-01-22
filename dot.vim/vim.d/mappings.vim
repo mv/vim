@@ -1,6 +1,8 @@
 
+" vim:ft=vim:set foldlevel=9:
+
 " Mappings
-" ================
+" ========
     " Tip: D  : command key
     "      D-S: command+shift key
 
@@ -246,6 +248,4 @@
     imap <C-F> <C-X><C-F>
     imap <C-L> <C-X><C-L>
 
-
-" vim: set foldlevel=9
 

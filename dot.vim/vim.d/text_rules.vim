@@ -1,3 +1,6 @@
+
+" vim:ft=vim:set foldlevel=9:
+
 " Text Rules
 " ==========
 
@@ -155,6 +158,4 @@
         endfunction
         "}}}
 
-
-" vim: set foldlevel=9
 

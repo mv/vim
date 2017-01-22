@@ -1,6 +1,7 @@
 
 " FileTypes
 " =========
+" vim:ft=vim:set foldlevel=9:
 
     " LogFiles                  {{{
         " goto end of file
@@ -19,5 +20,4 @@
        "autocmd FileType             sml setlocal makeprg=rlwrap\ sml\ -P\ full\ '%'
     " }}}
 
-" vim: set foldlevel=9
 
