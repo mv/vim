@@ -2,7 +2,7 @@
 " vim:ft=vim:set foldlevel=9:
 
 " Plugins
-" ================
+" ======
     " Tip:
     "     scriptnames     " List all sourced scripts
 
@@ -117,32 +117,6 @@
         let g:flake8_show_in_file=1
 
     "}}}
-
-
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
-    """ Takeshi Nishida
-    """
-"2017: Plugin 'L9'
-"2017: Plugin 'AutoComplPop'
-    "      'AutoComplPop'             " {{{
-
-    " Disable AutoComplPop.
-"       let g:acp_enableAtStartup        = 0
-
-        let g:acp_mappingDriven          = 0
-        let g:acp_ignorecaseOption       = 1
-        let g:acp_behaviorKeywordLength  = 2
-        let g:acp_behaviorFileLength     = 0
-
-        let g:acp_behavior = {'repeat': 1}
-
-        " nnoremap <leader>ae :AcpEnable <CR>
-        " nnoremap <leader>ad :AcpDisable <CR>
-        " nnoremap <leader>al :AcpLock <CR>
-        " nnoremap <leader>au :AcpUnlock <CR>
-
-    " }}}
 
 
 "2017: Plugin 'wincent/Command-T'
