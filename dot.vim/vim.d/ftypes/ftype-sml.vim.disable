@@ -1,0 +1,10 @@
+
+" vim:ft=vim:set foldlevel=9:
+
+    " SML
+    autocmd BufNewFile,BufRead *.sml setlocal filetype=sml
+    autocmd FileType             sml setlocal ts=4 sts=4 sw=4 et nowrap
+    autocmd FileType             sml setlocal makeprg=sml\ '%'
+   "autocmd FileType             sml setlocal makeprg=rlwrap\ sml\ -P\ full\ '%'
+
+
