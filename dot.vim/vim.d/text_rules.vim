@@ -103,7 +103,7 @@
 
     " C-A/C-X: increment/decrement
     " ============================
-    set nrformats=alpha,octal,hex
+    set nrformats-=octal    " ignore numbers start with '00' for <C-A> <C-X>
 
 
     " Moving:
