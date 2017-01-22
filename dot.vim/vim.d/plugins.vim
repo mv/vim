@@ -9,36 +9,36 @@
     """
     """ Themes
     """
-    Bundle 'wombat256.vim'
+    Plugin 'wombat256.vim'
 
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Syntax only
     """
-    Bundle "motus/pig.vim"
+    Plugin "motus/pig.vim"
 
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ best of the best
     """
-    Bundle 'airblade/vim-gitgutter'
-    Bundle 'mileszs/ack.vim'
-    Bundle 'AnsiEsc.vim'
-    Bundle 'Align'
+    Plugin 'airblade/vim-gitgutter'
+    Plugin 'mileszs/ack.vim'
+    Plugin 'AnsiEsc.vim'
+    Plugin 'Align'
     "      'Align'                    "
         let g:DrChipTopLvlMenu         = "Plugin."
         let g:alignnoremaps_euronumber = 1
     " }}}
 
-"   Bundle 'Lokaltog/vim-easymotion'
+"   Plugin 'Lokaltog/vim-easymotion'
 
 
     """
     """ Others....
     """
-"2017: Bundle 'sudo.vim'
+"2017: Plugin 'sudo.vim'
 
 
 
@@ -90,11 +90,11 @@
     """
     """ test
     """
-"   Bundle 'Valloric/YouCompleteMe'
-"   Bundle 'majutsushi/tagbar'
-"2017: Bundle 'tyru/open-browser.vim'
+"   Plugin 'Valloric/YouCompleteMe'
+"   Plugin 'majutsushi/tagbar'
+"2017: Plugin 'tyru/open-browser.vim'
 
-"2017: Bundle 'vimscripts/SQLUtilities'
+"2017: Plugin 'vimscripts/SQLUtilities'
     "      'vimscripts/SQLUtilities'    {{{
 
       let g:sqlutil_align_comma = 1
@@ -104,9 +104,9 @@
 
     " }}}
 
-"   Bundle 'vimscripts/dbext'
+"   Plugin 'vimscripts/dbext'
 
-"2017: Bundle 'nvie/vim-flake8'
+"2017: Plugin 'nvie/vim-flake8'
     "      'nvie/vim-flake8'          " {{{
 
         let g:flake8_cmd="/usr/local/bin/flake8"
@@ -122,8 +122,8 @@
     """
     """ Takeshi Nishida
     """
-"2017: Bundle 'L9'
-"2017: Bundle 'AutoComplPop'
+"2017: Plugin 'L9'
+"2017: Plugin 'AutoComplPop'
     "      'AutoComplPop'             " {{{
 
     " Disable AutoComplPop.
@@ -144,7 +144,7 @@
     " }}}
 
 
-"2017: Bundle 'wincent/Command-T'
+"2017: Plugin 'wincent/Command-T'
     "      'wincent/Command-T'        " {
         let g:CommandTMaxFiles=20000
         let g:CommandTMinHeight=5
@@ -162,7 +162,7 @@
         nnoremap <silent> <Leader>ctag :CommandTTag<CR>
     " }
 
-"2017: Bundle 'terryma/vim-multiple-cursors'
+"2017: Plugin 'terryma/vim-multiple-cursors'
 "          'terryma/vim-multiple-cursors' {{{
 
         let g:multi_cursor_use_default_mapping=0
@@ -182,7 +182,7 @@
 
 "   }}}
 
-"   Bundle 'mattn/zencoding-vim'
+"   Plugin 'mattn/zencoding-vim'
     "      'mattn/zencoding-vim'      " {{{
 
         " Turn it off:
@@ -235,15 +235,15 @@
 
     " }}}
 
-"2017: Bundle 'elzr/vim-json'
+"2017: Plugin 'elzr/vim-json'
     "      'elzr/vim-json'            " {
         let g:vim_json_syntax_conceal=0
         set conceallevel=0
     " }
 
 
-"2017: Bundle 'tpope/vim-markdown'
-"2017: Bundle 'nelstrom/vim-markdown-preview'
+"2017: Plugin 'tpope/vim-markdown'
+"2017: Plugin 'nelstrom/vim-markdown-preview'
     "      'nelstrom/vim-markdown-preview'     {{{
     nnoremap <silent> <Leader>mm :Mm<CR>
     "
@@ -252,20 +252,20 @@
     "
 
     " auto-close stuff: pick one
-"   Bundle 'jiangmiao/auto-pairs'
-"2017: Bundle 'Raimondi/delimitMate'
+"   Plugin 'jiangmiao/auto-pairs'
+"2017: Plugin 'Raimondi/delimitMate'
 "
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Mine
     """
-"   Bundle 'mv/mv-snipmate-snippets'
-"2017: Bundle 'mv/mv-vim-monit'
-"2017: Bundle 'mv/mv-vim-nagios'
-"2017: Bundle 'mv/mv-vim-nginx'
-"2017: Bundle 'mv/mv-vim-puppet'
-"2017: Bundle 'mv/vim-ir_black3'
+"   Plugin 'mv/mv-snipmate-snippets'
+"2017: Plugin 'mv/mv-vim-monit'
+"2017: Plugin 'mv/mv-vim-nagios'
+"2017: Plugin 'mv/mv-vim-nginx'
+"2017: Plugin 'mv/mv-vim-puppet'
+"2017: Plugin 'mv/vim-ir_black3'
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
@@ -282,8 +282,8 @@
         "let g:BASH_MapLeader               '\'
         "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
 
-        if ! len(glob( $HOME.'/.vim/bundle/bash-support/' ))
-            let g:BASH_Support_Root_Dir        = $HOME.'/.vim/bundle/'
+        if ! len(glob( $HOME.'/.vim/Plugin/bash-support/' ))
+            let g:BASH_Support_Root_Dir        = $HOME.'/.vim/Plugin/'
         endif
 
         " let g:BASH_Support_Root_Dir        = '/codework/bash/'
@@ -310,8 +310,8 @@
     "let g:Perl_PerlRegexSubstitution   = '$+'
     "let g:Perl_MapLeader               = '\'
 
-        if ! len(glob( $HOME.'/.vim/bundle/perl-support/' ))
-            let g:Perl_Support_Root_Dir        = $HOME.'/.vim/bundle/perl-support'
+        if ! len(glob( $HOME.'/.vim/Plugin/perl-support/' ))
+            let g:Perl_Support_Root_Dir        = $HOME.'/.vim/Plugin/perl-support'
         endif
 
         if ! len(glob("/codework/perl/"))
