@@ -7,7 +7,7 @@
    " Encoding:
    " =========
     scriptencoding  utf-8
-    set encoding=utf-8 nobomb       " BOM often causes trouble
+    set encoding=utf-8      " nobomb       " BOM often causes trouble
 
 
     " Case:
