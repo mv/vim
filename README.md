@@ -7,12 +7,9 @@ All plugins are enabled via vundle.
 
 To install:
 
-> bash force-install.sh
+> bash first-install.sh
 
-
-My plugin list:
-
-> vim ~/.vim/vim.d/plugins.vim
+It will replace `~/.vim` with a symbolic link to `dot.vim` dir.
 
 
 #### Files
@@ -22,10 +19,26 @@ and call all other settings.
 
 Remaining settings are in files inside `.vim/vim.d` directory.
 
+    mv-vim
+      +- dot.vim
+      |   +- bundle             # Vundle plugins
+      |   +- plugin             # standalone plugins
+      |   +- syntax             # standalone syntax files
+      |   +- vim.d              # my settings
+      |       +- ftypes         # my local ftype settings
+      |       +- plugins        # my local plugins settings
+      +- first-install.sh       # overwrites ~/.vim
+      +- vim-vundle-install.sh  # calls Vundle install in commandline
+
+
+#### MacVim
+
+Some plugins do need python and lua enabled in MacVim. If you are using
+homebrew:
+
+    brew install macvim --with-lua --with-python3 --with-cscope
+
 
 Mv
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mv/vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
