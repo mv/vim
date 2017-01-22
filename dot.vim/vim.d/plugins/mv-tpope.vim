@@ -4,17 +4,18 @@
     """ Tim Pope
     """
 
+    Plugin 'tpope/vim-repeat'
+
     " gc/gcc/gcu/gcap: <no leader>
     Plugin 'tpope/vim-commentary'
 
-    Plugin 'tpope/vim-repeat'
     Plugin 'tpope/vim-surround'
 
     " :help unimpaired
     Plugin 'tpope/vim-unimpaired'
 
-    " Plugin 'tpope/vim-speeddating'
-        let g:speeddating_no_mappings = 0
+    " {count}<C-A> / {count}<C-X>
+    Plugin 'tpope/vim-speeddating'
 
     Plugin 'tpope/vim-eunuch'
     " - Remove    : Delete a buffer and the file on disk simultaneously.
