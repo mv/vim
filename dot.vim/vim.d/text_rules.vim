@@ -113,19 +113,16 @@
 
     " Automatic Formating:
     " ===================
-    "     default: tcq vide 'help fo-table'
-    "     to use: 'gq'
+    " default: tcq    (vide 'help fo-table')
+    " default: vt     (when using empty .vimrc)
+    " default: croql  (Most of ft plugins default to 'setlocal fo=croql')
 
-    " ':set fo=qrn' is broken! Most of ft plugins default to
-    " 'setlocal fo=croql'. Using 'autocmd' to override.
-
-"2017: autocmd BufRead,BufReadPost,FileType *
-"2017:             \ set      formatoptions=qrc
+    " autocmd BufRead,BufReadPost,FileType *
+    "       \ set      formatoptions=qrc
     "                                |||
     "                                ||+--- auto-wrap comments
     "                                |+---- insert comment leader after <Enter>
     "                                +----- allow formatting using gq
-    "et formatoptions=qr
     "et formatoptions=cqno
     "                 |||+-- insert comment leader when using 'o' or 'O'
     "                 ||+--- recognize numbered lists
@@ -136,6 +133,12 @@
     "                 ||+--- auto-wrap comments
     "                 |+---- insert comment leader after <Enter>
     "                 +----- allow formatting using gq
+    "
+    set formatoptions+=qrj
+    "                  ||+--- remove comment leader when joining lines
+    "                  |+---- insert comment leader after <Enter>
+    "                  +----- allow formatting using gq
+
 
 
 
