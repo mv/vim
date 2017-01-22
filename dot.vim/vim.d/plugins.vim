@@ -34,34 +34,7 @@
 
 "   Bundle 'Lokaltog/vim-easymotion'
 
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
-    """ Tim Pope
-    """
-"2017: Bundle 'tpope/vim-repeat'
-"2017: Bundle 'tpope/vim-surround'
-"2017: Bundle 'tpope/vim-endwise'
-"2017: Bundle 'tpope/vim-unimpaired'
-"2017: Bundle 'tpope/vim-eunuch'
-"2017: Bundle 'tpope/vim-speeddating'
-    "      'tpope/vim-speeddating'    " {{{
-        let g:speeddating_no_mappings = 0
-    " }}}
 
-    " gc/gcc/gcap:
-"2017: Bundle 'tpope/vim-commentary'
-
-"   Bundle 'vim-ruby/vim-ruby'
-"   Bundle 'tpope/vim-rails'
-"   Bundle 'tpope/vim-bundler'
-
-"2017: Bundle 'tpope/vim-projectionist'
-
-"   Bundle 'tpope/vim-scriptease'
-"   Bundle 'tpope/vim-sensible'
-
-
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Others....
     """
