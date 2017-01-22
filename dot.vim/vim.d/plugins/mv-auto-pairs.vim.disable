@@ -1,0 +1,26 @@
+
+" vim:ft=vim:set foldlevel=9:
+
+" Too many options
+"
+" http://aftnn.org/post/75730734352/vim-auto-closers-compared
+"     https://github.com/Raimondi/delimitMate
+"     https://github.com/jiangmiao/auto-pairs
+"     https://github.com/kana/vim-smartinput
+"     https://github.com/vim-scripts/AutoClose
+"     https://github.com/Townk/vim-autoclose
+
+"   Plugin 'jiangmiao/auto-pairs'
+
+    nmap <Leader>ap :call AutoPairsToggle()<CR>
+
+    " Do not use '<M-p>'
+    let g:AutoPairsShortcutToggle = ''
+    " Do not use '<M-e>'
+    let g:AutoPairsShortcutFastWrap = ''
+    " Do not use '<M-n>'
+    let g:AutoPairsShortcutJump = ''
+    " Do not use '<M-b>'
+    let g:AutoPairsShortcutBackInsert = ''
+
+
