@@ -11,4 +11,6 @@
     let g:indent_guides_default_mapping = 1
     " :nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
 
+    nmap <Leader>ig <Plug>IndentGuidesToggle
+
 
