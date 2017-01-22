@@ -12,6 +12,8 @@
     Plugin 'tpope/vim-commentary'
 
     Plugin 'tpope/vim-surround'
+    Plugin 'tpope/vim-endwise'
+
 
     " :help unimpaired
     Plugin 'tpope/vim-unimpaired'
@@ -39,8 +41,6 @@
     " New files created with a shebang: line are automatically made executable.
     " New init scripts are automatically prepopulated with /etc/init.d/skeleton.
 
-
-    " Plugin 'tpope/vim-endwise'
 
     " Plugin 'tpope/vim-projectionist'
 
