@@ -10,18 +10,19 @@
     " 1: disable plugin
     " let g:loaded_ctrlp = 1
 
-
     let g:ctrlp_map = ''
     let g:ctrlp_cmd = 'CtrlP'
 
     let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+    let g:ctrlp_use_caching = 0
 
     map <leader>cp :CtrlP<CR>
     map <leader>cb :CtrlPBuffer<CR>
     map <leader>cf :CtrlPCurFile<CR>
     map <leader>cr :CtrlPRoot<CR>
     map <leader>cc :CtrlPClearCache<CR>
-    map <leader>cca :CtrlPClearAllCaches<CR>
+    map <leader>ca :CtrlPClearAllCaches<CR>
 
     " 'r' - the nearest ancestor of the current file that contains
     "       one of these directories or files: .git .hg .svn .bzr _darcs
