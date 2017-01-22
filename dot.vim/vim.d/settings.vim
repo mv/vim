@@ -20,9 +20,8 @@
 
 
     " Command Line Completion:
-"   set wildmenu                    " turn on command line completion wild style
-"   set wildmode=list:full          " command line complete using wildmenu
-    set wildmode=list:longest       " command line complete
+    set wildmenu                    " turn on command line completion wild style
+    set wildmode=list:longest       " command line complete using wildmenu
     set history=300                 " history size
 
 
