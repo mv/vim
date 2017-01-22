@@ -4,10 +4,10 @@
 " FileTypes
 " =========
 
-    " XML                       {{{
+    " XML
 
-        let g:xml_syntax_folding = 1
-        autocmd FileType    xml    setlocal foldmethod=syntax
+    let g:xml_syntax_folding = 1
+    autocmd FileType    xml    setlocal foldmethod=syntax
 
     " Ref: http://www.pixelbeat.org/settings/.vimrc
     " augroup html
@@ -15,6 +15,5 @@
     "     "Disable parenthesis matching as it's way too slow
     "     au BufRead *.html,*.xml NoMatchParen
     " augroup END
-    " }}}
 
 

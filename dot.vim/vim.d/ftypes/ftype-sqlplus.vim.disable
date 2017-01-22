@@ -6,10 +6,9 @@
 
     " SQL*Plus                  {{{
     " autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
-        "
     " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
     " autocmd BufRead *sql set errorformat=%E%l/%c%m,%C%m,%Z
-    " }}}
 
+    " }}}
 
 
