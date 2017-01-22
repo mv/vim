@@ -78,6 +78,7 @@
     " ¬       ac        U+00AC          not
     " ▸     25b8
     "
+    " set listchars=tab:▸\ ,trail:·,eol:¬,extends:>,precedes:<
     " also: look at ~/.gvimrc
     "
 
