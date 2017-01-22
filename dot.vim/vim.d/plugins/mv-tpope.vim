@@ -42,9 +42,13 @@
     " New init scripts are automatically prepopulated with /etc/init.d/skeleton.
 
 
-    " Plugin 'tpope/vim-projectionist'
-
-    " Plugin 'tpope/vim-scriptease'
     " Plugin 'tpope/vim-sensible'
+    " Plugin 'tpope/vim-git'
+    " Plugin 'tpope/vim-ragtag'
+    " Plugin 'tpope/vim-sleuth'
+    " Plugin 'tpope/vim-dispatch'
 
+    " Plugin 'tpope/vim-vinegar'      " netrw only
+      Plugin 'tpope/vim-obsession'
+      Plugin 'tpope/vim-characterize' "  い　き　気
 
