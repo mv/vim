@@ -22,10 +22,17 @@
     " Search:
     " =======
     set incsearch           " Highlight dynamically as they are typed.
-    set nohlsearch          " Highlight search terms: off on start
+    set nohlsearch          " Highlight search terms: disable on start
+
+    " type <esc> to toggle hlsearch
     nnoremap <esc> :set invhlsearch<CR><esc>
-                            " type <esc> to clear hlsearch
-"2017: set gdefault            " global search/replace by default
+
+    " Use <C-L> to clear the highlighting of :set hlsearch.
+    if maparg('<C-L>', 'n') ==# ''
+      nnoremap <silent> <C-L> :let @/ = ""<CR>
+    endif
+
+    "2017: set gdefault            " global search/replace by default
     set report=0            " report all lines changed
 
 
