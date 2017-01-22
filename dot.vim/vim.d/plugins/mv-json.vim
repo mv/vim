@@ -9,6 +9,6 @@
 
    " 0: disable conceal
    " 1: enable conceal: will hide double quotes
-	 let g:vim_json_syntax_conceal = 1
+	 let g:vim_json_syntax_conceal = 0
 
 
