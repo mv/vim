@@ -24,4 +24,3 @@
 "   " let g:neocomplete#force_omni_input_patterns.python = '[^. \t]\.\w*'
 
 
-
