@@ -24,9 +24,10 @@ Remaining settings are in files inside `.vim/vim.d` directory.
       |   +- bundle             # Vundle plugins
       |   +- plugin             # standalone plugins
       |   +- syntax             # standalone syntax files
-      |   +- vim.d              # my settings
-      |       +- ftypes         # my local ftype settings
-      |       +- plugins        # my local plugins settings
+      |   +- vim.d              #
+      |       +- after          # my system settings
+      |       +- ftplugin       # my ftypes
+      |       +- plugin         # my plugins settings
       +- first-install.sh       # overwrites ~/.vim
       +- vim-vundle-install.sh  # calls Vundle install in commandline
 

@@ -36,23 +36,23 @@ filetype indent plugin on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
-""" Mv: my settings
+""" Mv: my system settings
 """
-for f in split(glob('~/.vim/vim.d/*.vim'), '\n')
+for f in split(glob('~/.vim/vim.d/after/*.vim'), '\n')
   exe 'source' f
 endfor
 
 """
-""" Mv: my setting for ftypes
+""" Mv: my ftypes
 """
-for f in split(glob('~/.vim/vim.d/ftypes/*.vim'), '\n')
+for f in split(glob('~/.vim/vim.d/ftplugin/*.vim'), '\n')
   exe 'source' f
 endfor
 
 """
-""" Mv: local settings for plugins
+""" Mv: my plugins settings
 """
-for f in split(glob('~/.vim/vim.d/plugins/*.vim'), '\n')
+for f in split(glob('~/.vim/vim.d/plugin/*.vim'), '\n')
   exe 'source' f
 endfor
 
