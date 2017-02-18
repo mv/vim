@@ -11,10 +11,11 @@
     " instead of
     "   :set ft=html
     " Can tab-complete filetype.
-    command! -nargs=1 -complete=filetype F set filetype=<args>
+    command! F -nargs=1 -complete=filetype set filetype=<args>
 
     " Even quicker setting often-used filetypes.
-    command! Fr set filetype=ruby
     command! Ft set filetype=txt
+    command! Fr set filetype=ruby
+    command! Fr set filetype=python
 
 
