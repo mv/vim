@@ -135,14 +135,14 @@
     noremap Q gq
 
     " Underline header
-    map <leader>s= yypv$r=
-    map <leader>s- yypv$r-
-    map <leader>s+ yypv$r+
-    map <leader>s_ yypv$r_
-    map <leader>s^ yypv$r^
-    map <leader>s* yypv$r*
-    map <leader>s# yypv$r#
-    map <leader>s! yypv$r!
+    map <leader>s= yypv$r=x
+    map <leader>s- yypv$r-x
+    map <leader>s+ yypv$r+x
+    map <leader>s_ yypv$r_x
+    map <leader>s^ yypv$r^x
+    map <leader>s* yypv$r*x
+    map <leader>s# yypv$r#x
+    map <leader>s! yypv$r!x
 
     " Creating underline/overline headings for markup languages
     " Inspired by http://sphinx.pocoo.org/rest.html#sections
