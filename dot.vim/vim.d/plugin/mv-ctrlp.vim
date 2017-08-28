@@ -19,6 +19,7 @@
 
     map <leader>cp :CtrlP<CR>
     map <leader>cb :CtrlPBuffer<CR>
+    map <leader>cm :CtrlPMRUFiles<CR>
     map <leader>cf :CtrlPCurFile<CR>
     map <leader>cr :CtrlPRoot<CR>
     map <leader>cc :CtrlPClearCache<CR>
