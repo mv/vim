@@ -1,7 +1,7 @@
 
 " vim:ft=vim:set foldlevel=9:
 
-    Bundle 'tpope/vim-fugitive'
+    Plug 'tpope/vim-fugitive'
     "      'tpope/vim-fugitive'
 
         " git add %

@@ -1,7 +1,7 @@
 
 " vim:ft=vim:set foldlevel=9:
 
-    Plugin 'yggdroot/indentline'
+    Plug 'yggdroot/indentline'
 
       let g:indentLine_setColors = 1
     " let g:indentLine_char = '¦' " ASCII 166

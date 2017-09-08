@@ -7,7 +7,7 @@
 "         pip3 install jedi
 "
 
-    Plugin 'davidhalter/jedi-vim'
+    Plug 'davidhalter/jedi-vim'
 
 "   let g:pymode_python = 'python3'
 

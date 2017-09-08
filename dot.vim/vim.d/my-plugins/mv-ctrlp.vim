@@ -2,10 +2,10 @@
 " vim:ft=vim:set foldlevel=9:
 
     " Python matcher for CtrlP
-    Plugin 'FelikZ/ctrlp-py-matcher'
+    Plug 'FelikZ/ctrlp-py-matcher'
 
     " CtrlP
-    Plugin 'ctrlpvim/ctrlp.vim'
+    Plug 'ctrlpvim/ctrlp.vim'
 
     " 1: disable plugin
     " let g:loaded_ctrlp = 1

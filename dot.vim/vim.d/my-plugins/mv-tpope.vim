@@ -6,22 +6,22 @@
     """ Tim Pope
     """
 
-    Plugin 'tpope/vim-repeat'
+    Plug 'tpope/vim-repeat'
 
     " gc/gcc/gcu/gcap: <no leader>
-    Plugin 'tpope/vim-commentary'
+    Plug 'tpope/vim-commentary'
 
-    Plugin 'tpope/vim-surround'
-    Plugin 'tpope/vim-endwise'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-endwise'
 
 
     " :help unimpaired
-    Plugin 'tpope/vim-unimpaired'
+    Plug 'tpope/vim-unimpaired'
 
     " {count}<C-A> / {count}<C-X>
-    Plugin 'tpope/vim-speeddating'
+    Plug 'tpope/vim-speeddating'
 
-    Plugin 'tpope/vim-eunuch'
+    Plug 'tpope/vim-eunuch'
     " - Remove    : Delete a buffer and the file on disk simultaneously.
     " - Unlink    : Like :Remove, but keeps the now empty buffer.
     "
@@ -48,7 +48,7 @@
     " Plugin 'tpope/vim-sleuth'
     " Plugin 'tpope/vim-dispatch'
 
-    " Plugin 'tpope/vim-vinegar'      " netrw only
-      Plugin 'tpope/vim-obsession'
-      Plugin 'tpope/vim-characterize' "  い　き　気
+    " Plug 'tpope/vim-vinegar'      " netrw only
+      Plug 'tpope/vim-obsession'
+      Plug 'tpope/vim-characterize' "  い　き　気
 

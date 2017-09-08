@@ -91,7 +91,7 @@
     """ StatusLineHighlight
     """
 
-    Bundle 'vim-scripts/StatusLineHighlight'
+    Plug 'vim-scripts/StatusLineHighlight'
     " Turn it off:
     " let g:loaded_StatusLineHighlight = 1
 

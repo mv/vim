@@ -14,6 +14,7 @@ autoload
 bundle
 bundle.old
 sessions
+plugged
 
 # general
 .svn

@@ -10,14 +10,14 @@
     """
     """ Themes
     """
-    Plugin 'wombat256.vim'
+    Plug 'vim-scripts/wombat256.vim'
 
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
     """ Syntax only
     """
-    Plugin 'motus/pig.vim'
+    Plug 'motus/pig.vim'
 
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,11 +25,11 @@
     """ best of the best
     """
 
-    Plugin 'airblade/vim-gitgutter'
-    Plugin 'mileszs/ack.vim'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'mileszs/ack.vim'
 
-    Plugin 'AnsiEsc.vim'
-    Plugin 'Align'
+    Plug 'vim-scripts/AnsiEsc.vim'
+    Plug 'vim-scripts/Align'
     "      'Align'                    "
         let g:DrChipTopLvlMenu         = "Plugin."
         let g:alignnoremaps_euronumber = 1

@@ -14,7 +14,7 @@
 "
 
 
-   Plugin 'Shougo/neocomplete.vim'
+   Plug 'Shougo/neocomplete.vim'
 
     " must enable it
 	  let g:neocomplete#enable_at_startup = 1

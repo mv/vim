@@ -1,7 +1,7 @@
 
 " vim:ft=vim:set foldlevel=9:
 
-    Bundle 'bufexplorer.zip'
+    Plug 'vim-scripts/bufexplorer.zip'
 
     " ,be / ,bv / ,bs
     let g:bufExplorerSortBy          ='mru' " name,number,mru,fullpath,extension

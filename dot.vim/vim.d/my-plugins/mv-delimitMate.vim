@@ -10,7 +10,7 @@
 "     https://github.com/vim-scripts/AutoClose
 
 
-    Plugin 'raimondi/delimitmate'
+    Plug 'raimondi/delimitmate'
 
     " set to disable
     " let loaded_delimitMate = 1
