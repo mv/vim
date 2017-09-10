@@ -9,10 +9,8 @@
 "     https://val.markovic.io/articles/youcompleteme-a-fast-as-you-type-fuzzy-search-code-completion-engine-for-vim
 "     https://github.com/Valloric/YouCompleteMe
 "
-"     https://github.com/ervandew/supertab
 "     https://github.com/ajh17/VimCompletesMe
 "
-
 
    Plug 'Shougo/neocomplete.vim'
 
@@ -20,19 +18,19 @@
 	  let g:neocomplete#enable_at_startup = 1
 
     " behavior
+    let g:neocomplete#enable_auto_select = 0
+
     let g:neocomplete#enable_smart_case = 1
-    let g:neocomplete#enable_auto_select = 1
-    let g:neocomplete#enable_auto_delimiter = 1
+    let g:neocomplete#enable_camel_case = 1
     let g:neocomplete#enable_fuzzy_completion = 1
-    let g:neocomplete#enable_auto_close_preview = 1
+
+" 	let g:neocomplete#sources._ = ['buffer']
 
     " my mappings
     nmap <Leader>nc :NeoCompleteToggle<CR>
     nmap <Leader>ncc :NeoCompleteClean<CR>
 
-
     " Plugin key-mappings.
-    inoremap <expr><C-g> neocomplete#undo_completion()
     inoremap <expr><C-l> neocomplete#complete_common_string()
 
     " <TAB>: completion.
