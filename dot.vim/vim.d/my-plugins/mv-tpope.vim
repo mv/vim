@@ -48,7 +48,7 @@
     " Plugin 'tpope/vim-sleuth'
     " Plugin 'tpope/vim-dispatch'
 
-    " Plug 'tpope/vim-vinegar'      " netrw only
+      Plug 'tpope/vim-vinegar'
       Plug 'tpope/vim-obsession'
-      Plug 'tpope/vim-characterize' "  い　き　気
+"     Plug 'tpope/vim-characterize' "  い　き　気
 
