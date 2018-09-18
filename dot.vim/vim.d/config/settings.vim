@@ -12,8 +12,8 @@
     " Files:
     set fileformats=unix,dos,mac    " support all three, in this order
     set noautoread                  " do not load a modified file, unless requested
-    set noautowrite                 " NEVER write a file, unless requested
-    set noautowriteall              " idem
+    set autowrite                   " write to file when changing buffers
+    set autowriteall                " write to file when leaving Vim
     set writeany                    " write on readonly files
     set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png,*~,*.lo
                                     " ignore these list file extensions in glob()/expand()
@@ -31,22 +31,25 @@
 
 
     " Backup:
-"2017: set nobackup                    " [donot] make backup files
-"2017: set backupdir=/tmp              " where to put backup files
+"   set nobackup                    " [donot] make backup files
+    set backup
+    set backupdir=~/.vim/tmp        " where to put backup files
 
     " SwapFile:
-"2017: set noswapfile                  " do not use swap files (brave mode on!)
-"2017: set directory=/tmp              " where to put swap files in
+"   set noswapfile                  " do not use swap files (brave mode on!)
+    set swapfile
+    set directory=~/.vim/tmp        " where to put swap files in
+    set updatetime=2000             " write to swapfile after 'n' milliseconds
+    set updatecount=50              " write to swapfile after 'n' typed characters
+
     " Creating directories if they don't exist
-    " silent execute '!mkdir -p $HOME/.vimbackup'
-    " silent execute '!mkdir -p $HOME/.vimswap'
-    " silent execute '!mkdir -p $HOME/.vimviews'
+    silent execute '!mkdir -p $HOME/.vim/tmp'
 
     " Undo:
-"2017:     if has('persistent_undo')
-"2017:         set undofile                " keep a permanent undofile (vide :wundo/:rundo)
-"2017:         set undodir=/tmp
-"2017:     endif
+     if has('persistent_undo')
+         set undofile                " keep a permanent undofile (vide :wundo/:rundo)
+         set undodir=~/.vim/tmp
+     endif
 
     " ViewOptions:
     "     what is saved using mkview  (current window only) {{{
