@@ -11,11 +11,22 @@
 call plug#begin('~/.vim/bundle')
 
 """
-""" Mv: my system settings
+""" Mv: my vim settings
 """
-for f in split(glob('~/.vim/vim.d/after/*.vim'), '\n')
-  exe 'source' f
-endfor
+source ~/.vim/vim.d/config/buf.vim
+source ~/.vim/vim.d/config/commands.vim
+source ~/.vim/vim.d/config/compatible.vim.disable
+source ~/.vim/vim.d/config/folding.vim
+source ~/.vim/vim.d/config/ftypes.vim
+source ~/.vim/vim.d/config/mappings.vim
+source ~/.vim/vim.d/config/plugins.vim
+source ~/.vim/vim.d/config/settings.vim
+source ~/.vim/vim.d/config/status_line.vim
+source ~/.vim/vim.d/config/text_rules.vim
+source ~/.vim/vim.d/config/vim_code.vim
+source ~/.vim/vim.d/config/vim_ui.vim
+source ~/.vim/vim.d/config/win.vim
+
 
 """
 """ Mv: my ftypes
