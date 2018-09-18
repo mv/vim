@@ -27,6 +27,10 @@
 
     " search Highlight on/off
     nnoremap <leader>h   :set invhls<CR>
+    " type <esc> to toggle hlsearch
+    nnoremap <esc> :set invhlsearch<CR><esc>
+    " clear search register
+    nnoremap <leader>hc  :let @/ = ""<CR>
 
     " invisibles List on/off
     nnoremap <leader>l   :set invlist  <CR>

@@ -92,7 +92,7 @@
     "           |    |  +-- lines saved by each register
     "           |    +-- store file marks
     "           +-- number of files for which marks are kept
-    set viminfo='100,f1,<500,:50,@50,/50,h
+"   set viminfo='100,f1,<500,:50,@50,/50,h
     " }}}
 
 
