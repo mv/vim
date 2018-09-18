@@ -18,11 +18,13 @@
 	  let g:neocomplete#enable_at_startup = 1
 
     " behavior
-    let g:neocomplete#enable_auto_select = 0
+    let g:neocomplete#enable_auto_select = 1
 
     let g:neocomplete#enable_smart_case = 1
     let g:neocomplete#enable_camel_case = 1
     let g:neocomplete#enable_fuzzy_completion = 1
+
+"g:neocomplete#enable_auto_close_preview
 
 " 	let g:neocomplete#sources._ = ['buffer']
 
@@ -36,12 +38,16 @@
     " <TAB>: completion.
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+    " <CR>: completion.
+    inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
+
     " <C-h>, <BS>: close popup and delete backword char.
     inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
     inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
     " Close popup by <Space>.
-    inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+"   inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+"   iunmap <Space>
 
     " <CR>: close popup and save indent.
     inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
