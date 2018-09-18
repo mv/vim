@@ -24,8 +24,7 @@
     set incsearch           " Highlight dynamically as they are typed.
     set nohlsearch          " Highlight search terms: disable on start
 
-
-    "2017: set gdefault            " global search/replace by default
+    set gdefault            " global search/replace by default
     set report=0            " report all lines changed
 
 
@@ -107,8 +106,9 @@
         set gtl=%t              " guitablabel. See statusline flags.
         set gtt=%F              " guitabtooltip
 
-"       set guifont=Monaco:h13  " MacVim
-        set guifont=Monaco:h12  " MacVim
+"       set guifont=Monaco:h12  " MacVim
+"       set guifont=Monaco:h12  " MacVim
+        set guifont=Monaco:h15  " MacVim
         set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
         set transp=4            " background transparency
 
