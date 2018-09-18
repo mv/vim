@@ -13,34 +13,34 @@ call plug#begin('~/.vim/bundle')
 """
 """ Mv: my vim settings
 """
-source ~/.vim/vim.d/config/buf.vim
-source ~/.vim/vim.d/config/commands.vim
-source ~/.vim/vim.d/config/compatible.vim.disable
-source ~/.vim/vim.d/config/folding.vim
-source ~/.vim/vim.d/config/ftypes.vim
-source ~/.vim/vim.d/config/mappings.vim
-source ~/.vim/vim.d/config/plugins.vim
-source ~/.vim/vim.d/config/settings.vim
-source ~/.vim/vim.d/config/status_line.vim
-source ~/.vim/vim.d/config/status_line_hl.vim
-source ~/.vim/vim.d/config/text_rules.vim
-source ~/.vim/vim.d/config/vim_code.vim
-source ~/.vim/vim.d/config/vim_ui.vim
-source ~/.vim/vim.d/config/win.vim
+source ~/.vim/vim.d/settings/buf.vim
+source ~/.vim/vim.d/settings/commands.vim
+source ~/.vim/vim.d/settings/compatible.vim.disable
+source ~/.vim/vim.d/settings/folding.vim
+source ~/.vim/vim.d/settings/ftypes.vim
+source ~/.vim/vim.d/settings/mappings.vim
+source ~/.vim/vim.d/settings/plugins.vim
+source ~/.vim/vim.d/settings/settings.vim
+source ~/.vim/vim.d/settings/status_line.vim
+source ~/.vim/vim.d/settings/status_line_hl.vim
+source ~/.vim/vim.d/settings/text_rules.vim
+source ~/.vim/vim.d/settings/vim_code.vim
+source ~/.vim/vim.d/settings/vim_ui.vim
+source ~/.vim/vim.d/settings/win.vim
 
 
 """
 """ Mv: my ftypes
 """
-for f in split(glob('~/.vim/vim.d/ftplugin/*.vim'), '\n')
+for f in split(glob('~/.vim/vim.d/filetypes/*.vim'), '\n')
   exe 'source' f
 endfor
 
 """
-""" Mv: my plugins settings
+""" Mv: my plugins config
 """
 
-for f in split(glob('~/.vim/vim.d/my-plugins/*.vim'), '\n')
+for f in split(glob('~/.vim/vim.d/config/*.vim'), '\n')
   exe 'source' f
 endfor
 
