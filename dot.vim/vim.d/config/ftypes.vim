@@ -17,5 +17,6 @@
     command! Ft set filetype=txt
     command! Fr set filetype=ruby
     command! Fr set filetype=python
+    command! Fj set filetype=json
 
 
