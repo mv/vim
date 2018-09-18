@@ -10,12 +10,26 @@
     " 1: disable plugin
     " let g:loaded_ctrlp = 1
 
-    let g:ctrlp_map = ''        " keep original vim mapping untouched
+"   let g:ctrlp_map = ''        " keep original vim mapping untouched
     let g:ctrlp_cmd = 'CtrlP'
 
-    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-    let g:ctrlp_match_current_file = 1
-    let g:ctrlp_use_caching = 1
+    map <leader>cp :CtrlPRoot<CR>
+    map <leader>c. :CtrlP ../
+    map <leader>cf :CtrlPCurFile<CR>
+    map <leader>cm :CtrlPMRUFiles<CR>
+    map <leader>cb :CtrlPBuffer<CR>
+    map <leader>cc :CtrlPClearCache<CR>
+    map <leader>ca :CtrlPClearAllCaches<CR>
+
+    " default:
+    " let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+    let g:ctrlp_match_window = 'top,order:ttb,min:5,max:20,results:100'
+
+    " CtrlP root dir
+    let g:ctrlp_working_path_mode = 'ra'
+
+    " Do not jump to file if open in another place
+    let g:ctrlp_switch_buffer = 0
 
     " 0: search by pathname
     " 1: search by filename
@@ -27,20 +41,8 @@
     " Can be toggled on/off by pressing <c-r> inside the prompt.
     let g:ctrlp_regexp = 0
 
-    " default:
-    " let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
-    let g:ctrlp_match_window = 'top,order:ttb,min:5,max:20,results:100'
 
-    map <leader>cp :CtrlP ../
-    map <leader>cr :CtrlPRoot<CR>
-
-    map <leader>cf :CtrlPCurFile<CR>
-    map <leader>cm :CtrlPMRUFiles<CR>
-
-    map <leader>cb :CtrlPBuffer<CR>
-
-    map <leader>cc :CtrlPClearCache<CR>
-    map <leader>ca :CtrlPClearAllCaches<CR>
-
-    let g:ctrlp_working_path_mode = '0'
+    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+    let g:ctrlp_match_current_file = 1
+    let g:ctrlp_use_caching = 1
 
