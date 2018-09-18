@@ -10,9 +10,3 @@
 "set showbreak=…
 
 
-" after: set my colors
-"if g:mv_StatusLineHighlight == 0
-  " 2017: source ~/.vim/vim.d/status_line.vim
-  call StatusLineHL()
-"endif
-

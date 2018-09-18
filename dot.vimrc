@@ -21,8 +21,8 @@ source ~/.vim/vim.d/settings/ftypes.vim
 source ~/.vim/vim.d/settings/mappings.vim
 source ~/.vim/vim.d/settings/plugins.vim
 source ~/.vim/vim.d/settings/settings.vim
-source ~/.vim/vim.d/settings/status_line.vim
-source ~/.vim/vim.d/settings/status_line_hl.vim
+"ource ~/.vim/vim.d/settings/status_line.vim
+"ource ~/.vim/vim.d/settings/status_line_hl.vim
 source ~/.vim/vim.d/settings/text_rules.vim
 source ~/.vim/vim.d/settings/vim_code.vim
 source ~/.vim/vim.d/settings/vim_ui.vim
@@ -50,7 +50,6 @@ call plug#end()
 """
 """ Settings:
 """
-call StatusLineHL()
 silent! colorscheme wombat256mod
 
 """
