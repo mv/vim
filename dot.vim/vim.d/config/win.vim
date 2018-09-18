@@ -33,6 +33,11 @@
     nmap <leader>spj  :rightbelow split<CR>
 
     """
+    """ Help window on the righ
+    """
+    autocmd FileType help wincmd L
+
+    """
     """ Moving:
     """
     nmap <leader>spJ <C-W>J
