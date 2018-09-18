@@ -22,6 +22,7 @@ source ~/.vim/vim.d/config/mappings.vim
 source ~/.vim/vim.d/config/plugins.vim
 source ~/.vim/vim.d/config/settings.vim
 source ~/.vim/vim.d/config/status_line.vim
+source ~/.vim/vim.d/config/status_line_hl.vim
 source ~/.vim/vim.d/config/text_rules.vim
 source ~/.vim/vim.d/config/vim_code.vim
 source ~/.vim/vim.d/config/vim_ui.vim
@@ -49,8 +50,8 @@ call plug#end()
 """
 """ Settings:
 """
+call StatusLineHL()
 silent! colorscheme wombat256mod
-
 
 """
 """ Terminal Fix: force correct copy/paste
