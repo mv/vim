@@ -12,19 +12,19 @@
 "     https://github.com/ajh17/VimCompletesMe
 "
 
-   Plug 'Shougo/neocomplete.vim'
+  Plug 'Shougo/neocomplete.vim'
 
     " must enable it
 	  let g:neocomplete#enable_at_startup = 1
 
     " behavior
-    let g:neocomplete#enable_auto_select = 1
+    let g:neocomplete#enable_auto_select = 0
 
-    let g:neocomplete#enable_smart_case = 1
-    let g:neocomplete#enable_camel_case = 1
+    let g:neocomplete#enable_ignore_case = 1
+    let g:neocomplete#enable_smart_case  = 1
+    let g:neocomplete#enable_camel_case  = 1
     let g:neocomplete#enable_fuzzy_completion = 1
 
-"g:neocomplete#enable_auto_close_preview
 
 " 	let g:neocomplete#sources._ = ['buffer']
 
@@ -33,29 +33,17 @@
     nmap <Leader>ncc :NeoCompleteClean<CR>
 
     " Plugin key-mappings.
-    inoremap <expr><C-l> neocomplete#complete_common_string()
+"   inoremap <expr><C-l> neocomplete#complete_common_string()
 
     " <TAB>: completion.
-    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"   inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
     " <CR>: completion.
-    inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
+"   inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
 
     " <C-h>, <BS>: close popup and delete backword char.
-    inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-    inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-
-    " Close popup by <Space>.
-"   inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-"   iunmap <Space>
-
-    " <CR>: close popup and save indent.
-    inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-    function! s:my_cr_function()
-      return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-      " For no inserting <CR> key.
-      "return pumvisible() ? "\<C-y>" : "\<CR>"
-    endfunction
+"   inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+"   inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
     " Enable omni completion.
 "   autocmd FileType python     setlocal omnifunc=pythoncomplete#Complete
