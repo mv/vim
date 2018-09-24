@@ -5,6 +5,7 @@
 "     since   2008-12
 "     updated 2017-01
 "     updated 2017-09
+"     updated 2018-09
 "
 
 """  vim-plug
@@ -15,7 +16,7 @@ call plug#begin('~/.vim/bundle')
 """
 source ~/.vim/vim.d/settings/buf.vim
 source ~/.vim/vim.d/settings/commands.vim
-source ~/.vim/vim.d/settings/compatible.vim.disable
+"ource ~/.vim/vim.d/settings/compatible.vim.disable
 source ~/.vim/vim.d/settings/folding.vim
 source ~/.vim/vim.d/settings/ftypes.vim
 source ~/.vim/vim.d/settings/mappings.vim
