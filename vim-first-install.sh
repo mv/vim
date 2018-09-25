@@ -41,7 +41,7 @@ then
 fi
 
 ## Install plugins
-vim +BundleInstall +qall
+vim +PlugInstall +qall
 
 # vim:ft=sh:
 
