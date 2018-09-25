@@ -10,9 +10,9 @@
 "     https://github.com/vim-scripts/AutoClose
 "     https://github.com/Townk/vim-autoclose
 
-"   Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs'
 
-    nmap <Leader>ap :call AutoPairsToggle()<CR>
+"   nmap <Leader>ap :call AutoPairsToggle()<CR>
 
     " Do not use '<M-p>'
     let g:AutoPairsShortcutToggle = ''

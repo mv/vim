@@ -12,42 +12,42 @@
 "     https://github.com/ajh17/VimCompletesMe
 "
 
-  Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neocomplete.vim'
 
-    " must enable it
-	  let g:neocomplete#enable_at_startup = 1
+  " must enable it
+	let g:neocomplete#enable_at_startup = 1
 
-    " behavior
-    let g:neocomplete#enable_auto_select = 0
+  " behavior
+  let g:neocomplete#enable_auto_select = 0
 
-    let g:neocomplete#enable_ignore_case = 1
-    let g:neocomplete#enable_smart_case  = 1
-    let g:neocomplete#enable_camel_case  = 1
-    let g:neocomplete#enable_fuzzy_completion = 1
-
-
-" 	let g:neocomplete#sources._ = ['buffer']
-
-    " my mappings
-    nmap <Leader>nc :NeoCompleteToggle<CR>
-    nmap <Leader>ncc :NeoCompleteClean<CR>
-
-    """
-    """ Terminal mappings
-    """
-    " <TAB>: completion.
-    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-    " Enable omni completion.
-"   autocmd FileType python     setlocal omnifunc=pythoncomplete#Complete
-    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType markdown   setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType html       setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType css        setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType xml        setlocal omnifunc=xmlcomplete#CompleteTags
+  let g:neocomplete#enable_ignore_case = 1
+  let g:neocomplete#enable_smart_case  = 1
+  let g:neocomplete#enable_camel_case  = 1
+  let g:neocomplete#enable_fuzzy_completion = 1
 
 
-    " Using Jedi for python completion
-"   autocmd FileType python setlocal omnifunc=jedi#completions
+" let g:neocomplete#sources._ = ['buffer']
+
+  " my mappings
+  nmap <Leader>nc :NeoCompleteToggle<CR>
+  nmap <Leader>ncc :NeoCompleteClean<CR>
+
+  """
+  """ Terminal mappings
+  """
+  " <TAB>: completion.
+  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+  " Enable omni completion.
+" autocmd FileType python     setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType markdown   setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType html       setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css        setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType xml        setlocal omnifunc=xmlcomplete#CompleteTags
+
+
+  " Using Jedi for python completion
+" autocmd FileType python setlocal omnifunc=jedi#completions
 
 

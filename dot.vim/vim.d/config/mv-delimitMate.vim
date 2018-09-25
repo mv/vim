@@ -10,11 +10,11 @@
 "     https://github.com/vim-scripts/AutoClose
 
 
-    Plug 'raimondi/delimitmate'
+Plug 'raimondi/delimitmate'
 
-    " set to disable
-    " let loaded_delimitMate = 1
+  " set to disable
+  " let loaded_delimitMate = 1
 
-    nmap <Leader>dm :DelimitMateSwitch<CR>
+  nmap <Leader>dm :DelimitMateSwitch<CR>
 
 

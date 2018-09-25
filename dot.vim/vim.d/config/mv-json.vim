@@ -5,7 +5,7 @@
   "   https://github.com/elzr/vim-json/issues/23#issuecomment-40293049
   "
 
-   Plug 'elzr/vim-json'
+Plug 'elzr/vim-json'
 
    " 0: disable conceal
    " 1: enable conceal: will hide double quotes

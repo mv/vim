@@ -1,27 +1,27 @@
 
 " vim:ft=vim:set foldlevel=9:
 
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
-    """ Tim Pope
-    """
+"""
+""" Tim Pope
+"""
 
-    Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'  " gc/gcc/gcu/gcap: <no leader>
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-unimpaired'  " :help unimpaired
+Plug 'tpope/vim-speeddating' " {count}<C-A> / {count}<C-X>
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-obsession'
 
-    " gc/gcc/gcu/gcap: <no leader>
-    Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-sensible'
+"Plug 'tpope/vim-git'
+"Plug 'tpope/vim-ragtag'
+"Plug 'tpope/vim-sleuth'
+"Plug 'tpope/vim-dispatch'
+"Plug 'tpope/vim-characterize' "  い　き　気
 
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-endwise'
-
-
-    " :help unimpaired
-    Plug 'tpope/vim-unimpaired'
-
-    " {count}<C-A> / {count}<C-X>
-    Plug 'tpope/vim-speeddating'
-
-    Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-eunuch'
     " - Remove    : Delete a buffer and the file on disk simultaneously.
     " - Unlink    : Like :Remove, but keeps the now empty buffer.
     "
@@ -40,15 +40,4 @@
     " File type detection for sudo -e is based on original file name.
     " New files created with a shebang: line are automatically made executable.
     " New init scripts are automatically prepopulated with /etc/init.d/skeleton.
-
-
-    " Plugin 'tpope/vim-sensible'
-    " Plugin 'tpope/vim-git'
-    " Plugin 'tpope/vim-ragtag'
-    " Plugin 'tpope/vim-sleuth'
-    " Plugin 'tpope/vim-dispatch'
-
-      Plug 'tpope/vim-vinegar'
-      Plug 'tpope/vim-obsession'
-"     Plug 'tpope/vim-characterize' "  い　き　気
 

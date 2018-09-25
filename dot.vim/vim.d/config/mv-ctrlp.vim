@@ -1,14 +1,14 @@
 
 " vim:ft=vim:set foldlevel=9:
 
-    " Python matcher for CtrlP
-    Plug 'FelikZ/ctrlp-py-matcher'
+" Python matcher for CtrlP
+Plug 'FelikZ/ctrlp-py-matcher'
 
-    " CtrlP
-    Plug 'ctrlpvim/ctrlp.vim'
+" CtrlP
+Plug 'ctrlpvim/ctrlp.vim'
 
-    " 1: disable plugin
-    " let g:loaded_ctrlp = 1
+  " 1: disable plugin
+  " let g:loaded_ctrlp = 1
 
     let g:ctrlp_map = ''        " keep original vim mapping untouched
     let g:ctrlp_cmd = 'CtrlP'
