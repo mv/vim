@@ -25,9 +25,9 @@ Remaining settings are in files inside `.vim/vim.d` directory.
       |   +- plugin             # standalone plugins
       |   +- syntax             # standalone syntax files
       |   +- vim.d              #
-      |       +- after          # my system settings
-      |       +- ftplugin       # my ftypes
-      |       +- plugin         # my plugins settings
+      |       +- config         # my plugins settings
+      |       +- filetypes      # my ftypes
+      |       +- settings       # my system settings
       +- first-install.sh       # overwrites ~/.vim
       +- vim-vundle-install.sh  # calls Vundle install in commandline
 
@@ -47,15 +47,17 @@ Major keytrokes used:
     ,ap     Toggle - AutoPairs
     ,be     Windows - bufexplorer
 
-    ,cp     Toggle - CtrlP
-    ,cb     Toggle - CtrlP Buffer
-    ,cr     Toggle - CtrlP Root
-    ,cc     Toggle - CtrlP Clear Cache
-    ,ca     Toggle - CtrlP Clear All Caches
+    ,fr     Toggle - CtrlP Root
+    ,f.     Toggle - CtrlP ../
+    ,fb     Toggle - CtrlP Buffer
+    ,ff     Toggle - CtrlP File
+    ,fw     Toggle - CtrlP CWD
+    ,fcc    Toggle - CtrlP Clear Cache
+    ,fca    Toggle - CtrlP Clear All Caches
 
-    ,dm     Toggle - DelimitMate
-    ,ig     Toggle - IndentGuides
-    ,il     Toggle - IndentLines
+    ,,w     Easymotion
+    ,,b     Easymotion
+    ,,f     Easymotion
 
     ,nc     Toggle - NeoComplete
     ,ncc    Toggle - NeoComplete Clean Directory Cache
