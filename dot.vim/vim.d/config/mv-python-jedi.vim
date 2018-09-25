@@ -7,12 +7,12 @@
 "         pip3 install jedi
 "
 
-    Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 
 "   let g:pymode_python = 'python3'
 
     " Using Jedi for python completion
-    autocmd FileType python setlocal omnifunc=jedi#completions
+"   autocmd FileType python setlocal omnifunc=jedi#completions
 
     let g:jedi#completions_enabled    = 0
     let g:jedi#auto_vim_configuration = 0
