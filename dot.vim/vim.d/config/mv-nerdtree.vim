@@ -31,3 +31,19 @@ Plug 'scrooloose/nerdtree'
 " let g:nerdtree_tabs_no_startup_for_diff = 1
 
 
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+  " Symbols
+    let g:NERDTreeIndicatorMapCustom = {
+        \ "Modified"  : "✹",
+        \ "Staged"    : "✚",
+        \ "Untracked" : "✭",
+        \ "Renamed"   : "➜",
+        \ "Unmerged"  : "═",
+        \ "Deleted"   : "✖",
+        \ "Dirty"     : "✗",
+        \ "Clean"     : "✔︎",
+        \ 'Ignored'   : '☒',
+        \ "Unknown"   : "?"
+        \ }
+
