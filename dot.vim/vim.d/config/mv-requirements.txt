@@ -1,0 +1,12 @@
+
+" vim:ft=vim:set foldlevel=9:
+
+  " troubleshoot:
+  "   https://github.com/elzr/vim-json/issues/23#issuecomment-40293049
+  "
+
+Plug 'raimon49/requirements.txt.vim'
+
+    " Add 'freeze' to your .vimrc as a detection pattern
+    let g:requirements#detect_filename_pattern = 'freeze'
+
