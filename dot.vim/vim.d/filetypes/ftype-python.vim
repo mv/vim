@@ -11,4 +11,10 @@
 
 "   autocmd BufWritePost python      call Flake8()
 
+"   let g:syntastic_python_checkers = ['pylint', 'python']
+"   let g:syntastic_python_pylint_args = "--my --args --here"
+
+    " http://flake8.pycqa.org/en/latest/user/options.html
+    let g:syntastic_python_checkers = ['flake8']
+    let g:syntastic_python_flake8_args = "--ignore W391"
 
