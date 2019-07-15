@@ -27,4 +27,6 @@
     command! TabOn      set noexpandtab|retab!
     command! TabOff     set expandtab|retab!
 
+    " https://atom.io/packages/open-vim
+    command! OpenAtom !start atom %
 
