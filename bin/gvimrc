@@ -1,0 +1,6 @@
+
+
+""" vim-plug: end
+
+call plug#end()
+ 

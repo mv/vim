@@ -9,8 +9,6 @@
 "     updated 2020-06
 "
 
-"""  vim-plug
-"call plug#begin('~/.vim/bundle')
 
 """ temp fix
 let loaded_highlight="1"
@@ -18,6 +16,7 @@ let loaded_highlight="1"
 """ Start: workdir
 source $VIMRUNTIME/defaults.vim
 set runtimepath=~/work/vim2020/dot.vim,$VIMRUNTIME
+
 set nocompatible      " vim useful stuff
 set nohlsearch        " keep off last used search pattern
 
@@ -26,15 +25,12 @@ set nohlsearch        " keep off last used search pattern
 
 " set backup
 " set undofile
-" runtime! ~/work/vim2020/dot.vim/plugin/**/*.vim
 
-
+source ~/work/vim2020/dot.vim/plugin/20-vim-plug/vim-plug-load.vim
 
 """
 """ Settings:
 """
-
-" call plug#end()
 
 "ilent! colorscheme desert
 "ilent! colorscheme evening
