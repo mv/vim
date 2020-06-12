@@ -10,15 +10,9 @@
 "
 
 
-""" temp fix
-let loaded_highlight="1"
-
 """ Start: workdir
 source $VIMRUNTIME/defaults.vim
 set runtimepath=~/work/vim2020/dot.vim,$VIMRUNTIME
-
-set nocompatible      " vim useful stuff
-set nohlsearch        " keep off last used search pattern
 
 
 """ Custom: Mv
@@ -26,7 +20,9 @@ set nohlsearch        " keep off last used search pattern
 " set backup
 " set undofile
 
-source ~/work/vim2020/dot.vim/plugin/20-vim-plug/vim-plug-load.vim
+let mapleader=","
+
+source ~/work/vim2020/dot.vim/vim.d/vim-plug.vim
 
 """
 """ Settings:
@@ -34,5 +30,5 @@ source ~/work/vim2020/dot.vim/plugin/20-vim-plug/vim-plug-load.vim
 
 "ilent! colorscheme desert
 "ilent! colorscheme evening
-silent! colorscheme wombat256mod
+"ilent! colorscheme wombat256mod
 
