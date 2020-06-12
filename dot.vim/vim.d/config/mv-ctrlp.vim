@@ -11,35 +11,28 @@ Plug 'ctrlpvim/ctrlp.vim'
   " 1: disable plugin
   " let g:loaded_ctrlp = 1
 
-"   let g:ctrlp_map = ''        " keep original vim mapping untouched
-"   let g:ctrlp_cmd = 'CtrlP'
-
+  " my mappings
     map <leader>ff :CtrlP<CR>
     map <leader>fr :CtrlPRoot<CR>
+    map <leader>fc :CtrlPCurFile<CR>
+    map <leader>fw :CtrlPCurWD<CR>
+    "
     map <leader>fb :CtrlPBuffer<CR>
     map <leader>fm :CtrlPMRU<CR>
-    map <leader>fc :CtrlPCurFile<CR>
+
 
     map <leader>cp :CtrlP<CR>
     map <leader>cr :CtrlPRoot<CR>
-    map <leader>cb :CtrlPBuffer<CR>
-    map <leader>cm :CtrlPMRU<CR>
     map <leader>cf :CtrlPCurFile<CR>
     map <leader>cw :CtrlPCurWD<CR>
     map <leader>c. :CtrlP ../
+    "
+    map <leader>cb :CtrlPBuffer<CR>
+    map <leader>cm :CtrlPMRU<CR>
+
 
     map <leader>cc :CtrlPClearCache<CR>
     map <leader>ca :CtrlPClearAllCaches<CR>
-
-    " default:
-    " let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
-    let g:ctrlp_match_window = 'top,order:ttb,min:5,max:20,results:100'
-
-    " CtrlP root dir
-    let g:ctrlp_working_path_mode = 'ra'
-
-    " Do not jump to file if open in another place
-    let g:ctrlp_switch_buffer = 0
 
     " 0: search by pathname
     " 1: search by filename
@@ -51,45 +44,54 @@ Plug 'ctrlpvim/ctrlp.vim'
     " Can be toggled on/off by pressing <c-r> inside the prompt.
     let g:ctrlp_regexp = 0
 
+    " default:
+    " let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+    let g:ctrlp_match_window = 'top,order:ttb,min:20,max:20,results:20'
 
+    " CtrlP working dir
+    let g:ctrlp_working_path_mode = 'c'
+
+    " Do not jump to file if open in another place
+    let g:ctrlp_switch_buffer = 0
+
+    " Include current open file in the list of entries
     let g:ctrlp_match_current_file = 1
-    let g:ctrlp_use_caching = 1
 
+    let g:ctrlp_line_prefix = '> ' 
+
+    " My custom mappings
+    "   c-h : split below + :set splitbelow
+    "   c-l : split right + :set splitright
+    "   c-i : mark to open
     let g:ctrlp_prompt_mappings = {
-      \ 'PrtBS()':              ['<bs>', '<c-]>'],
+      \ 'PrtBS()':              ['<bs>' ],
       \ 'PrtDelete()':          ['<del>'],
       \ 'PrtDeleteWord()':      ['<c-w>'],
       \ 'PrtClear()':           ['<c-u>'],
       \ 'PrtSelectMove("j")':   ['<c-j>', '<down>'],
       \ 'PrtSelectMove("k")':   ['<c-k>', '<up>'],
-      \ 'PrtSelectMove("t")':   ['<Home>', '<kHome>'],
-      \ 'PrtSelectMove("b")':   ['<End>', '<kEnd>'],
-      \ 'PrtSelectMove("u")':   ['<PageUp>', '<kPageUp>'],
-      \ 'PrtSelectMove("d")':   ['<PageDown>', '<kPageDown>'],
       \ 'PrtHistory(-1)':       ['<c-n>'],
       \ 'PrtHistory(1)':        ['<c-p>'],
-      \ 'AcceptSelection("e")': ['<cr>', '<2-LeftMouse>'],
-      \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<c-s>'],
+      \ 'AcceptSelection("e")': ['<cr>' ],
+      \ 'AcceptSelection("h")': ['<c-h>', '<c-cr>'],
+      \ 'AcceptSelection("v")': ['<c-v>', '<c-l>' ],
       \ 'AcceptSelection("t")': ['<c-t>'],
-      \ 'AcceptSelection("v")': ['<c-v>', '<RightMouse>', '<c-l>', '<c-i>'],
       \ 'ToggleFocus()':        ['<s-tab>'],
       \ 'ToggleRegex()':        ['<c-r>'],
       \ 'ToggleByFname()':      ['<c-d>'],
-      \ 'ToggleType(1)':        ['<c-f>','<c-n>', '<c-up>'],
-      \ 'ToggleType(-1)':       ['<c-b>','<c-m>', '<c-down>'],
-      \ 'PrtExpandDir()':       ['<tab>'],
-      \ 'PrtInsert("c")':       ['<MiddleMouse>', '<insert>'],
+      \ 'ToggleType(1)':        ['<c-f>'],
+      \ 'ToggleType(-1)':       ['<c-b>'],
       \ 'PrtInsert()':          ['<c-\>'],
       \ 'PrtCurStart()':        ['<c-a>'],
       \ 'PrtCurEnd()':          ['<c-e>'],
-      \ 'PrtCurLeft()':         ['<c-h>', '<left>', '<c-^>'],
+      \ 'PrtCurLeft()':         ['<left>' ],
       \ 'PrtCurRight()':        ['<right>'],
       \ 'PrtClearCache()':      ['<F5>'],
       \ 'PrtDeleteEnt()':       ['<F7>'],
       \ 'CreateNewFile()':      ['<c-y>'],
-      \ 'MarkToOpen()':         ['<c-z>'],
+      \ 'MarkToOpen()':         ['<c-i>','<c-z>'],
       \ 'OpenMulti()':          ['<c-o>'],
-      \ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>'],
+      \ 'PrtExit()':            ['<esc>', '<c-c>'],
       \ }
 
 

@@ -5,10 +5,10 @@
 " =======
 
     set equalalways         " ea: resize all windows to same size to fit a new one
-"   set splitbelow          " sb: split new window below current window
-"   set splitright          " spr: split new window to the right
+    set splitbelow          " sb: split new window below current window
+    set splitright          " spr: split new window to the right
 
-"   nmap <leader>o   :only <CR>
+    nmap <leader>o   :only
 "   nmap <leader>sb  :set scrollbind<CR>
 "   nmap <leader>nsb :set noscrollbind<CR>
 
@@ -21,9 +21,9 @@
     """
     """ Creating:
     """
-    nmap <leader>osp  :split<CR>
     nmap <leader>vsp  :vsplit<CR>
-    nmap <leader>sp   :tab split<CR>
+    nmap <leader>sp   :split<CR>
+    nmap <leader>spt  :tab split<CR>
 
     " open file under cursor to new tab
     nmap <leader>tgf  <C-W>gf
