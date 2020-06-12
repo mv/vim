@@ -12,11 +12,14 @@ Plug 'vim-airline/vim-airline'
   " CtrlP colors
   let g:airline#extensions#ctrlp#color_template = 'replace' 
 
-  " 1: Enable Smarter tab line: buffers in tab line
+  " 1: tabline: buffers in tab line
   let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#formatter = 'unique_tail'
+  let g:airline#extensions#tabline#formatter = 'short_path'
   let g:airline#extensions#tabline#show_buffers = 1
   let g:airline#extensions#tabline#show_splits  = 1
+  let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
+  
+  let g:airline#extensions#tabline#show_close_button = 0
   let g:airline#extensions#tabline#left_sep = '▶'
   let g:airline#extensions#tabline#left_alt_sep = '|'
 
