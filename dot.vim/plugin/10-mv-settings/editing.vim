@@ -7,6 +7,9 @@
     "
     "
 
+  " show '@@@' if line is truncated
+  set display=truncate
+
 
   " CursorPosition: Come back to last position:
 " autocmd BufReadPost *   if line("'\"") > 0
