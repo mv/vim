@@ -8,6 +8,9 @@ Plug 'vim-airline/vim-airline'
 
   " replicate on top
 " let g:airline_statusline_ontop=1
+ 
+  " CtrlP colors
+  let g:airline#extensions#ctrlp#color_template = 'replace' 
 
   " 1: Enable Smarter tab line: buffers in tab line
   let g:airline#extensions#tabline#enabled = 1

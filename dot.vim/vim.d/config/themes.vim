@@ -24,14 +24,17 @@
   " statusbar: vim-airline
   Plug 'vim-airline/vim-airline-themes'
 
+
   " My theme
-  " :AirlineTheme sol
+" :AirlineTheme sol
+" :AirlineTheme deus
 " let g:airline_theme='dark'
 " let g:airline_theme='sol'
 " let g:airline_theme='base16_ocean'
-  let g:airline_theme='base16_oceanicnext'
+" let g:airline_theme='base16_oceanicnext'
 " let g:airline_theme='lucius'
 " let g:airline_theme='edge'
+  let g:airline_theme='deus'
 
 
 
