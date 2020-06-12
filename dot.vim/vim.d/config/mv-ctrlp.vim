@@ -19,6 +19,7 @@ Plug 'ctrlpvim/ctrlp.vim'
     "
     map <leader>fb :CtrlPBuffer<CR>
     map <leader>fm :CtrlPMRU<CR>
+    map <leader>fx :CtrlPMixed<CR>
 
 
     map <leader>cp :CtrlP<CR>
@@ -29,6 +30,7 @@ Plug 'ctrlpvim/ctrlp.vim'
     "
     map <leader>cb :CtrlPBuffer<CR>
     map <leader>cm :CtrlPMRU<CR>
+    map <leader>cx :CtrlPMixed<CR>
 
 
     map <leader>cc :CtrlPClearCache<CR>
@@ -56,8 +58,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 
     " Include current open file in the list of entries
     let g:ctrlp_match_current_file = 1
-
-    let g:ctrlp_line_prefix = '> ' 
 
     " My custom mappings
     "   c-h : split below + :set splitbelow
