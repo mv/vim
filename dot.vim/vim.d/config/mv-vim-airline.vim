@@ -38,7 +38,8 @@ Plug 'vim-airline/vim-airline'
   let g:airline#extensions#fugitiveline#enabled = 1
 
   " 5: csv.vim <https://github.com/chrisbra/csv.vim>
-" let g:airline#extensions#csv#enabled = 1
+  let g:airline#extensions#csv#enabled = 1
+  let g:airline#extensions#csv#column_display = 'Name' 
 
   " 6: python virtualenv
 " let g:airline#extensions#virtualenv#enabled = 1
