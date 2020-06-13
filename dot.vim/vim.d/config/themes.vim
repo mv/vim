@@ -34,7 +34,8 @@
 " let g:airline_theme='base16_oceanicnext'
 " let g:airline_theme='lucius'
 " let g:airline_theme='edge'
-  let g:airline_theme='deus'
+" let g:airline_theme='deus'
+  let g:airline_theme='cool'
 
 
 
