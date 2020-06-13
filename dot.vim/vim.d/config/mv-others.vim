@@ -27,6 +27,7 @@
       let g:DrChipTopLvlMenu         = "Plugin."
       let g:alignnoremaps_euronumber = 1
 
+    Plug 'chrisbra/Recover.vim'
     Plug 'chrisbra/csv.vim'
     let g:airline#extensions#csv#column_display = 'Name' 
 
