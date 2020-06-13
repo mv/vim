@@ -2,7 +2,7 @@
 " vim:ft=vim:set foldlevel=9:
 
 Plug 'tpope/vim-fugitive'
-
+  
   " git add %
 " map <leader>gw :Gwrite
   " git checkout % (revert to previous checked version)

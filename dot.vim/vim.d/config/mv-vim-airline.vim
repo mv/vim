@@ -35,7 +35,7 @@ Plug 'vim-airline/vim-airline'
 " let g:airline#extensions#quickfix#location_text = 'Location'
 
   " 4: fugitive.vim <https://github.com/tpope/vim-fugitive>
-" let g:airline#extensions#fugitiveline#enabled = 1
+  let g:airline#extensions#fugitiveline#enabled = 1
 
   " 5: csv.vim <https://github.com/chrisbra/csv.vim>
 " let g:airline#extensions#csv#enabled = 1

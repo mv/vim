@@ -25,9 +25,7 @@
     """ best of the best
     """
 
-    Plug 'mileszs/ack.vim'
-
-"   Plug 'airblade/vim-gitgutter'
+    Plug 'airblade/vim-gitgutter'
 
 "   Plug 'vim-scripts/AnsiEsc.vim'
 
