@@ -44,8 +44,6 @@ Plug 'vim-airline/vim-airline'
   " 6: python virtualenv
 " let g:airline#extensions#virtualenv#enabled = 1
  
-  " 7: cursormode <https://github.com/vheon/vim-cursormode>
-" let g:airline#extensions#cursormode#enabled = 1
 
   " Custom:
   " help-topic: airline-customization

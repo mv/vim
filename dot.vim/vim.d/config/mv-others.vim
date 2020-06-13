@@ -15,19 +15,12 @@
 
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     """
-    """ Syntax only
-    """
-"   Plug 'motus/pig.vim'
-
-
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    """
     """ best of the best
     """
 
     Plug 'airblade/vim-gitgutter'
 
-"   Plug 'vim-scripts/AnsiEsc.vim'
+    Plug 'vim-scripts/AnsiEsc.vim'
 
     Plug 'vim-scripts/Align'
     " 'Align'
