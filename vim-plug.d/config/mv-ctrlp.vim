@@ -19,6 +19,11 @@ Plug 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_mruf_max = 100
   let g:ctrlp_brief_prompt = 1             " <bs> on empty prompt exit CtrlP.
 
+" let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""|sort'
+" let g:ctrlp_user_command = 'gfind %s -type f -print0 | gsort -z'
+" let g:ctrlp_user_command = '/usr/local/bin/gfind %s -type f | /usr/local/bin/gsort'
+  let g:ctrlp_user_command = '~/work/mv-vim/bin/ctrlp-find.sh %s'
+
   " my mappings
     map <leader>ff :CtrlP<CR>
     map <leader>fr :CtrlPRoot<CR>
