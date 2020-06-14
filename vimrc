@@ -22,7 +22,10 @@ let mapleader=","
 """   vim-plug.d/                [via source + loop]
 """   vimrc                      [real .vimrc]
 
-let myvimrc = split(split(execute('scriptnames'), "\n")[0], ": ")[1]
+" Testing: $ vim -u myvimrc
+" let myvimrc = split(split(execute('scriptnames'), "\n")[0], ": ")[1]
+
+let myvimrc = "~/.vimrc"
 let workdir = fnamemodify(resolve(expand(myvimrc)), ":p:h")
 execute "set runtimepath=".workdir."/dot.vim"   .",$VIMRUNTIME"
 execute 'source'          .workdir."/vim-plug.d"."/mv-vim-plug.vim"
