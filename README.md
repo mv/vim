@@ -7,7 +7,7 @@ All plugins are enabled via vundle.
 
 To install:                             
 
-> bash first-install.sh
+> bash bin/vimrc-install.sh
 
 It will replace `~/.vim` with a symbolic link to `vimrc` file.
 
@@ -26,7 +26,7 @@ I have 2 type of settings: 1. the ones for Vim itself, 2. the others specific to
       |   +- colors             # standalone theme files
       |   +- help               # standalone help files
       |   +- syntax             # standalone syntax files
-      |   +- plugin             #
+      |   +- plugin            
       |       +- mv-vim         # my system settings
       |       +- ftype          # my ftypes
       |       +- config         # my config for native Vim plugins
@@ -45,7 +45,7 @@ Inside `.vimrc` all files from `dot.vim/` are loaded via the command
 commands available.
 
 After that, a second `source` command will execute the script that loads all
-`VimPLug` plugins.
+`VimPLug` plugins by file name.
 
 To check what scripts were loaded:
 
