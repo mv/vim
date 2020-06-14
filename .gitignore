@@ -15,6 +15,9 @@ bundle
 bundle.old
 sessions
 plugged
+old
+_old
+vim-plug.d/bundle
 
 # general
 .svn
