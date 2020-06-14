@@ -36,6 +36,12 @@ Plug 'ctrlpvim/ctrlp.vim'
     map <leader>cc :CtrlPClearCache<CR>
     map <leader>ca :CtrlPClearAllCaches<CR>
 
+
+    map <leader>cbm :CtrlPBookmarkDir<CR>
+    map <leader>cbk :CtrlPBookmarkDir<CR>
+    map <leader>cba :CtrlPBookmarkDirAdd ./
+
+
     " 0: search by pathname
     " 1: search by filename
     " Can be toggled on/off by pressing <c-d> inside the prompt.
