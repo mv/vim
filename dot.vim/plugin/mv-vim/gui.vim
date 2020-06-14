@@ -87,6 +87,8 @@
 	command! ToolBarOn  :set guioptions+=T<CR>
 	command! ToolBarOff :set guioptions-=T<CR>
 
+  	nnoremap <leader>sa :browse confirm saveas<CR>
+
 
     endif
 
