@@ -2,14 +2,22 @@
 " vim:ft=vim:set foldlevel=9:
 
 " Python matcher for CtrlP
-Plug 'FelikZ/ctrlp-py-matcher'
-    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" Plug 'FelikZ/ctrlp-py-matcher'
+"     let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 " CtrlP
 Plug 'ctrlpvim/ctrlp.vim'
 
   " 1: disable plugin
   " let g:loaded_ctrlp = 1
+  "
+  let g:ctrlp_open_new_file = 'v'          " default: vsplit
+  let g:ctrlp_open_multiple_files = '3vr'  " mark: open 3, vsplit, hide rest
+" let g:ctrlp_arg_map = 0                  " <c-o>/<c-y> + extra key
+  let g:ctrlp_max_files = 1000	           " protection against ~/
+  let g:ctrlp_max_depth = 10               " protection against ~/
+  let g:ctrlp_mruf_max = 100
+  let g:ctrlp_brief_prompt = 1             " <bs> on empty prompt exit CtrlP.
 
   " my mappings
     map <leader>ff :CtrlP<CR>
