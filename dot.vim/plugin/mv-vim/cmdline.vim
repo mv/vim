@@ -61,7 +61,7 @@
 " nnoremap <leader>WS :w !sudo tee % >/dev/null<CR>
 " cmap w!! w !sudo tee % >/dev/null<CR>
 "
-  nnoremap <leader>sa :browse confirm saveas
+  nnoremap <leader>sa :browse confirm saveas<CR>
 
   " reload current buffer
   nmap <leader>so   :so %

@@ -2,6 +2,7 @@
 " vim:ft=vim:set foldlevel=9:
 
 Plug 'tpope/vim-fugitive'
+   " 'tpope/vim-rhubarb'   # hub: Github
   
   " git add %
 " map <leader>gw :Gwrite

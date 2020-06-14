@@ -6,9 +6,9 @@ Plug 'jlanzarotta/bufexplorer'
   " ,bt / ,be / ,bv / ,bs
   let g:bufExplorerDisableDefaultKeyMapping = 0    " Do not disable mapping.
 
-  let g:bufExplorerFindActive       = 0     " Do not go to active window.
+  let g:bufExplorerFindActive       = 0       " Do not go to active window.
 
-  let g:bufExplorerSortBy           ='name' " name,number,mru,fullpath,extension
+  let g:bufExplorerSortBy           ='number' " name,number,mru,fullpath,extension
   let g:bufExplorerReverseSort      = 0
 
   " Show buffers only for the specific tab

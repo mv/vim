@@ -11,10 +11,10 @@
 """ Mv: my plugins config
 """
 
-call plug#begin('~/work/vim2020/dot.vim/vim.d/bundle')
+call plug#begin('~/work/vim2020/vim-plug.d/bundle')
 
-for f in split(glob('~/work/vim2020/dot.vim/vim.d/config/*.vim'), '\n')
-  exe 'source' f
+for f in split(glob('~/work/vim2020/vim-plug.d/config/*.vim'), '\n')
+  execute 'source' f
 endfor
 
 call plug#end()

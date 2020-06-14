@@ -22,13 +22,11 @@ set runtimepath=~/work/vim2020/dot.vim,$VIMRUNTIME
 
 let mapleader=","
 
-source ~/work/vim2020/dot.vim/vim.d/vim-plug.vim
+source ~/work/vim2020/vim-plug.d/mv-vim-plug.vim
 
 """
 """ Settings:
 """
 
-"ilent! colorscheme desert
-"ilent! colorscheme evening
 "ilent! colorscheme wombat256mod
 
