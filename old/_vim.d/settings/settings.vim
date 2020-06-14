@@ -33,22 +33,24 @@
     " Backup:
 "   set nobackup                    " [donot] make backup files
     set backup
-    set backupdir=~/.vim/tmp        " where to put backup files
+    set backupdir=~/tmp             " where to put backup files
 
     " SwapFile:
 "   set noswapfile                  " do not use swap files (brave mode on!)
     set swapfile
-    set directory=~/.vim/tmp        " where to put swap files in
+    set directory=~/tmp             " where to put swap files in
     set updatetime=2000             " write to swapfile after 'n' milliseconds
     set updatecount=50              " write to swapfile after 'n' typed characters
 
     " Creating directories if they don't exist
-    silent execute '!mkdir -p $HOME/.vim/tmp'
+"   silent execute '!mkdir -p $HOME/.vim/tmp'
+    silent execute '!mkdir -p $HOME/tmp'
 
     " Undo:
      if has('persistent_undo')
          set undofile                " keep a permanent undofile (vide :wundo/:rundo)
-         set undodir=~/.vim/tmp
+"        set undodir=~/.vim/tmp
+         set undodir=~/tmp
      endif
 
     " ViewOptions:
