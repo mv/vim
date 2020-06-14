@@ -17,8 +17,7 @@ It will replace `~/.vim` with a symbolic link to `vimrc` file.
 Main `.vimrc` is the shortest possible: just enough to find my
 settings and setup `VimPlug`.
 
-I have 2 type of settings: 1. the ones for Vim itself, 2. the
-others specific to the plugins installed.
+I have 2 type of settings: 1. the ones for Vim itself, 2. the others specific to the plugins installed.
 
 
     mv-vim
@@ -41,6 +40,22 @@ others specific to the plugins installed.
           +- plugin-install.sh  # calls VimPlug install in commandline
           +- vimrc-install.sh   # overwrites ~/.vim
 
+Inside `.vimrc` all files from `dot.vim/` are loaded via the command
+`runtime`. This will also trigger `autoload/plug.vim` and make `VimPLug`
+commands available.
+
+After that, a second `source` command will execute the script that loads all
+`VimPLug` plugins.
+
+To check what scripts were loaded:
+
+    # in the shell
+    $ gvim --startuptime vim.time.txt
+
+    # inside vim
+    :scriptnames
+    :Scriptnames   " if you have vim-scriptease installed
+
 
 #### MacVim
 
@@ -48,6 +63,14 @@ Some plugins do need python and lua enabled in MacVim. If you are using
 homebrew:
 
     brew install macvim --with-lua --with-python3 --with-cscope
+
+Or check for those with
+
+    # in the shell
+    $ vim --version
+
+    # inside vim
+    :version
 
 
 ## Workflow
