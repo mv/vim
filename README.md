@@ -33,7 +33,7 @@ others specific to the plugins installed.
       |       +- config         # my config for native Vim plugins
       |       +- extras         # standalone scripts
       |
-      |- vim-plug.d/            # plugins via vim-plug.d
+      +- vim-plug.d/            # plugins via vim-plug.d
       |   +- bundle             # installed plugins
       |   +- config             # my plugins config
       |   
