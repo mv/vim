@@ -123,6 +123,9 @@ Major keytrokes used:
     :Unlink    Like :Remove, but keeps the now empty buffer.
     :Chmod     Change the permissions of the current file.
 
+    # vim-obsession
+    :Obsess[!] Save my current session. `vim -S` to restore.
+
 
 Mv
 
