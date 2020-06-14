@@ -9,24 +9,25 @@
 "     updated 2020-06
 "
 
-
-""" Start: workdir
 source $VIMRUNTIME/defaults.vim
-set runtimepath=~/work/vim2020/dot.vim,$VIMRUNTIME
-
-
-""" Custom: Mv
-
-" set backup
-" set undofile
 
 let mapleader=","
 
-source ~/work/vim2020/vim-plug.d/mv-vim-plug.vim
 
-"""
-""" Settings:
-"""
+""" Start:
+""" ~/
+"""   .vimrc -> workdir/vimrc    [via ln -s]
+""" workdir/                     [git clone]
+"""   dot.vim/                   [via runtime]
+"""   vim-plug.d/                [via source + loop]
+"""   vimrc                      [real .vimrc]
 
-"ilent! colorscheme wombat256mod
+let myvimrc = split(split(execute('scriptnames'), "\n")[0], ": ")[1]
+let workdir = fnamemodify(resolve(expand(myvimrc)), ":p:h")
+execute "set runtimepath=".workdir."/dot.vim"   .",$VIMRUNTIME"
+execute 'source'          .workdir."/vim-plug.d"."/mv-vim-plug.vim"
+unlet workdir
+unlet myvimrc
+
+
 
