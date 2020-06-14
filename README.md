@@ -5,31 +5,41 @@
 
 All plugins are enabled via vundle.
 
-To install:
+To install:                             
 
 > bash first-install.sh
 
-It will replace `~/.vim` with a symbolic link to `dot.vim` dir.
+It will replace `~/.vim` with a symbolic link to `vimrc` file.
 
 
 #### Files
 
-Main `.vimrc` is the shortest possible: just enough to setup `vundle`
-and call all other settings.
+Main `.vimrc` is the shortest possible: just enough to find my
+settings and setup `VimPlug`.
 
-Remaining settings are in files inside `.vim/vim.d` directory.
+I have 2 type of settings: 1. the ones for Vim itself, 2. the
+others specific to the plugins installed.
+
 
     mv-vim
-      +- dot.vim
-      |   +- bundle             # Vundle plugins
-      |   +- plugin             # standalone plugins
+      +- dot.vim/               # my hand-made stuff
+      |   +- autoload           # bootstrap stuff
+      |   +- colors             # standalone theme files
+      |   +- help               # standalone help files
       |   +- syntax             # standalone syntax files
-      |   +- vim.d              #
-      |       +- config         # my plugins settings
-      |       +- filetypes      # my ftypes
-      |       +- settings       # my system settings
-      +- first-install.sh       # overwrites ~/.vim
-      +- vim-vundle-install.sh  # calls Vundle install in commandline
+      |   +- plugin             #
+      |       +- mv-vim         # my system settings
+      |       +- ftype          # my ftypes
+      |       +- config         # my config for native Vim plugins
+      |       +- extras         # standalone scripts
+      |
+      |- vim-plug.d/            # plugins via vim-plug.d
+      |   +- bundle             # installed plugins
+      |   +- config             # my plugins config
+      |   
+      +- bin/                   # bash stuff
+          +- plugin-install.sh  # calls VimPlug install in commandline
+          +- vimrc-install.sh   # overwrites ~/.vim
 
 
 #### MacVim
@@ -44,34 +54,39 @@ homebrew:
 
 Major keytrokes used:
 
-    ,ap     Toggle - AutoPairs
-    ,be     Windows - bufexplorer
+    \       :
+    ,sp     split below
+    ,vsp    split right
+    ,spt    split to new tab
+    ,rnu    toogle relative number
 
+    ,ace    Acp enable
+    ,acd    Acp disable
+
+    ,be     bufexplorer: in-place
+    ,bs     bufexplorer: above
+    ,bv     bufexplorer: right
+
+    ,ff     Toggle - CtrlP File
     ,fr     Toggle - CtrlP Root
     ,f.     Toggle - CtrlP ../
     ,fb     Toggle - CtrlP Buffer
-    ,ff     Toggle - CtrlP File
     ,fw     Toggle - CtrlP CWD
-    ,fcc    Toggle - CtrlP Clear Cache
-    ,fca    Toggle - CtrlP Clear All Caches
+    ,cc     Toggle - CtrlP Clear Cache
+    ,ca     Toggle - CtrlP Clear All Caches
 
-    ,,w     Easymotion
-    ,,b     Easymotion
-    ,,f     Easymotion
+    ,ext    netrw: TabExplore
+    ,exl    netrw: LeftExplore
 
-    ,nc     Toggle - NeoComplete
-    ,ncc    Toggle - NeoComplete Clean Directory Cache
 
-    ,nn     Toggle - NerdTree
-    ,nm     Toggle - NerdTree Mirror
-
+    # vim-commentary
     {Visual}gc
             comment/uncomment by selection - vim-commentary
     gc
     gc{motion}
             comment/uncomment by motion - vim-commentary
     gcc
-    gcc[count]
+    [count]gcc
             comment/uncomment by count  - vim-commentary
     gcu
             comment/uncomment adjancent unit - vim-commentary
@@ -80,46 +95,33 @@ Major keytrokes used:
             increase/decrease date - vim-speeddating
 
 
+    # vim-unimpaired
     [f      previous file in dir - TPope's Unimpaired
     ]f      next     file in dir - TPope's Unimpaired
+
+    [b      previous buffer
+    ]b      next     buffer
+
+    [n      previous diff mark
+    ]n      next     diff mark
 
     [e      current text line above
     ]e      current text line below
     [Space  insert blank line above
     ]Space  insert blank line below
 
-    [n      previous diff mark
-    ]n      next     diff mark
-
-    [oc  ]oc  toggle cursorline
-    [ou  ]ou  toggle cursorcolumn
-    [ox  ]ox  toggle cursorline and cursorcolumn
-    [oh  ]oh  toggle hlsearch
-    [ol  ]ol  toggle invlist
-    [on  ]on  toggle number
-    [or  ]or  toggle relativenumber
-    [or  ]or  toggle relativenumber
-
     [xx  ]xx  encode/decode XML
     [uu  ]uu  encode/decode URL
     [yy  ]yy  encode/decode C String
 
 
-    :Remove    Delete a buffer and the file on disk simultaneously.
-    :Unlink    Like :Remove, but keeps the now empty buffer.
-    :Move      Rename a buffer and the file on disk simultaneously.
-    :Rename    Like :Move, but relative to the current file's containing directory.
-    :Chmod     Change the permissions of the current file.
+    # vim-enuch
     :Mkdir     Create a directory, defaulting to the parent of the current file.
-    :Wall      Write every open window. Handy for kicking off tools like guard.
-    :SudoWrite Write a privileged file with sudo.
-    :SudoEdit  Edit a privileged file with sudo.
-    :Find      Run find and load the results into the quickfix list.
-    :Locate    Run locate and load the results into the quickfix list.
-    " New files created with a shebang: line are automatically made executable.
-    " New init scripts are automatically prepopulated with /etc/init.d/skeleton.
-
-
+    :Move      Rename a buffer and the file on disk simultaneously.
+    :Remove    Delete a buffer and the file on disk simultaneously.
+    :Rename    Like :Move, but relative to the current file's containing directory.
+    :Unlink    Like :Remove, but keeps the now empty buffer.
+    :Chmod     Change the permissions of the current file.
 
 
 Mv
