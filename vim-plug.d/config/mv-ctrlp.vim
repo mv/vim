@@ -13,16 +13,16 @@ Plug 'ctrlpvim/ctrlp.vim'
   "
   let g:ctrlp_open_new_file = 'v'          " default: vsplit
   let g:ctrlp_open_multiple_files = '3vr'  " mark: open 3, vsplit, hide rest
-" let g:ctrlp_arg_map = 0                  " <c-o>/<c-y> + extra key
   let g:ctrlp_max_files = 1000	           " protection against ~/
   let g:ctrlp_max_depth = 10               " protection against ~/
   let g:ctrlp_mruf_max = 100
   let g:ctrlp_brief_prompt = 1             " <bs> on empty prompt exit CtrlP.
+" let g:ctrlp_arg_map = 0                  " <c-o>/<c-y> + extra key
 
-" let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""|sort'
 " let g:ctrlp_user_command = 'gfind %s -type f -print0 | gsort -z'
+" let g:ctrlp_user_command = '~/work/mv-vim/bin/ctrlp-find.sh %s'
+" let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""|sort'
 " let g:ctrlp_user_command = '/usr/local/bin/gfind %s -type f | /usr/local/bin/gsort'
-  let g:ctrlp_user_command = '~/work/mv-vim/bin/ctrlp-find.sh %s'
 
   " my mappings
     map <leader>ff :CtrlP<CR>
