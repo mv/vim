@@ -10,10 +10,11 @@
   " command line completion:
   set wildmenu
   set wildchar=<Tab>
-  set wildmode=longest:list,full
   set wildmode=list
+  set wildmode=longest:list,full
 " set wildoptions=tagfile
   
+  set cmdheight=2     	  " commnad line initial height
 
   " command line window:
   "   :help usr_20.txt
@@ -25,7 +26,7 @@
   "   : CTRL-F
   "   / CTRL-F
   "   ? CTRL-F
-  set cmdwinheight=15     " initial height
+  set cmdwinheight=15     " command line window 
 
 
   " Command Line
@@ -57,14 +58,12 @@
   nnoremap <leader>wq :wq!<CR>
   nnoremap <leader>WQ :wq!<CR>
 
+  " reload current buffer
+  nmap <leader>so   :so %
+
 " nnoremap <leader>ws :w !sudo tee % >/dev/null<CR>
 " nnoremap <leader>WS :w !sudo tee % >/dev/null<CR>
 " cmap w!! w !sudo tee % >/dev/null<CR>
-"
-  nnoremap <leader>sa :browse confirm saveas<CR>
-
-  " reload current buffer
-  nmap <leader>so   :so %
 
 
   " Editing: vimrc

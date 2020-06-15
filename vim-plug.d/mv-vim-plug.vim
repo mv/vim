@@ -11,9 +11,11 @@
 """ Mv: my plugins config
 """
 
-call plug#begin('~/work/vim2020/vim-plug.d/bundle')
+let dir = fnamemodify(resolve(expand(myvimrc)), ":p:h") . "/vim-plug.d"
 
-for f in split(glob('~/work/vim2020/vim-plug.d/config/*.vim'), '\n')
+call plug#begin( dir . '/bundle')
+
+for f in split(glob( dir . '/config/*.vim'), '\n')
   execute 'source' f
 endfor
 
