@@ -21,6 +21,8 @@
 " ycm-core/YouCompleteMe
 " mattn/emmet-vim
 "   https://www.smashingmagazine.com/2013/03/goodbye-zen-coding-hello-emmet/
+" justinmk/vim-dirvish>
+" svermeulen/vim-easyclip
 " godlygeek/tabular
 " terryma/vim-multiple-cursors
 " flazz/vim-colorschemes
