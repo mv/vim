@@ -33,6 +33,9 @@
 
   Plug 'vim-scripts/AnsiEsc.vim'
 
+  Plug 'mtth/scratch.vim'
+  Plug 'ntpeters/vim-better-whitespace'
+
   Plug 'vim-scripts/Align'
   " DrChip's Align:
   "   :AlignCtrl =lp0P0I  separator '=', left, 0 spaces before, 0 after, ...
