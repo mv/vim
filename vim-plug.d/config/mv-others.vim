@@ -34,6 +34,30 @@
   Plug 'vim-scripts/AnsiEsc.vim'
 
   Plug 'mtth/scratch.vim'
+  " help scratch.txt
+  "
+
+" let g:scratch_disable = 1
+  let g:scratch_top = 1
+  let g:scratch_height = 15
+  let g:scratch_horizontal = 1
+  let g:scratch_persistence_file = '~/vim.scratch.md'
+  let g:scratch_filetype = 'markdown'
+
+  "
+  " mappings: do not use 'clear' option
+  let g:scratch_no_mappings = 1
+  nmap <leader>gs <plug>(scratch-insert-reuse)
+  nmap <leader>gS <plug>(scratch-insert-reuse)
+  xmap <leader>gs <plug>(scratch-selection-reuse)
+  xmap <leader>gS <plug>(scratch-selection-reuse)
+
+" let g:scratch_autohide = &hidden
+  " Automatically close scratch buffer window when leaving insert-mode.
+  let g:scratch_insert_autohide = 0
+
+
+
   Plug 'ntpeters/vim-better-whitespace'
   " :help better-whitespace
   "
