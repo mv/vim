@@ -35,6 +35,22 @@
 
   Plug 'mtth/scratch.vim'
   Plug 'ntpeters/vim-better-whitespace'
+  " :help better-whitespace
+  "
+  " let g:better_whitespace_enabled = 0
+  
+    " My default: always strip
+    let g:strip_whitespace_on_save = 1
+    let g:strip_whitespace_confirm = 0
+  
+    let g:better_whitespace_filetypes_blacklist =
+          \ ['diff', 'gitcommit', 'unite', 'qf', 'help', 'markdown']
+  
+    let g:better_whitespace_ctermcolor = 'red'
+  " let g:better_whitespace_guicolor   = '#FF0000' " red
+  " let g:better_whitespace_guicolor   = '#2aa198' " cyan
+    let g:better_whitespace_guicolor   = '#586e75' " base01
+  
 
   Plug 'vim-scripts/Align'
   " DrChip's Align:
@@ -49,5 +65,5 @@
 
   Plug 'chrisbra/Recover.vim'
   Plug 'chrisbra/csv.vim'
-    let g:airline#extensions#csv#column_display = 'Name' 
+    let g:airline#extensions#csv#column_display = 'Name'
 

@@ -5,7 +5,7 @@
 
   " put numbers on help windows
   autocmd BufRead  help set number
-  autocmd FileType help set number 
+  autocmd FileType help set number
   " help window on my righ
   autocmd FileType help wincmd L
 
