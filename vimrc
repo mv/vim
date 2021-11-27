@@ -32,5 +32,7 @@ execute 'source'          .workdir."/vim-plug.d"."/mv-vim-plug.vim"
 unlet workdir
 unlet myvimrc
 
-
+"
+set nu
+set nowrap sidescroll=1         " [no] wrap long lines
 
