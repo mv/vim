@@ -1,6 +1,70 @@
 
 " vim:ft=vim:set foldlevel=9:
 
+    " Text
+set ts=4 sts=4 sw=4 et
+set formatoptions=qtn2wla
+        "         |||||||
+        "         ||||||+- automatic formatting of paragraphs
+        "         |||||+-- long line do not break in insert mode if already longer
+        "         ||||+--- trailing whitespace as end of a paragraph
+        "         |||+---- indent as 2nd line of paragraph
+        "         ||+----- recognize numbered lists
+        "         |+------ auto-wrap text in textwidth
+        "         +------- allow formatting using gq
+        " :help fo-table
+
+
+
+" automatically breaks text and insert new line
+set textwidth=77
+set formatoptions=croql
+
+command! AutoFormatOn  :set formatoptions+=a
+command! AutoFormatOff :set formatoptions-=a
+
+" wrap long lines at textwidth but does not insert a newline
+set wrap
+
+" :help usr_25.txt
+
+" :help change.txt
+
+" :help wrap
+"       :set sidescroll=5
+"       :set listchars+=precedes:<,extends:>
+"  wrapmargin
+"  linebreak
+"  formatoptions
+"     a - autoformat
+"  paste
+"  thesaurus
+"  et
+"  CTRL-V<Tab>
+"  joinspaces
+"  fo-table
+"
+"  	  1	    2         3
+"12345678901234567890123456789012345
+"I taught programming for a
+"while. One time, I was stopped
+"by the Fort Worth police,
+"because my homework was too
+"hard. True story.
+"
+"I taught programming for a
+"while. One time, I was stopped
+"by the Fort Worth police,
+"because my homework was too
+"hard. True Story.
+
+
+
+"Besides SQLServer/Postgres..... do they use other databases....?" what else
+"can
+
+
+
     " Editing
     " =======================
     " K = inverted J: join current line to the one below
