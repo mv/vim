@@ -18,7 +18,8 @@
 }
 
 ## Force link
-ln -snf ${PWD}/vimrc  ${HOME}/.vimrc
+ln -snf ${PWD}/dot.vim ${HOME}/.vim
+ln -snf ${PWD}/vimrc   ${HOME}/.vimrc
 echo "Linked:"
 /bin/ls -l ~/.vimrc
 echo
