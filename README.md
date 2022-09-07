@@ -1,4 +1,3 @@
-
 ## My Vim Files
 
 #### Install
@@ -7,9 +6,11 @@ All plugins are enabled via vundle.
 
 To install:                             
 
-> bash bin/vimrc-install.sh
+> bash -x bin/vimrc-install.sh
+> bash -x bin/plugin-install.sh
 
-It will replace `~/.vim` with a symbolic link to `vimrc` file.
+It will replace `~/.vimrc` with a symbolic link to `vimrc` Files
+and `~/.vim/` dir with a symbolic link to `dot.vim/` dir.
 
 
 #### Files
