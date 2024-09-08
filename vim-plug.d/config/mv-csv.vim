@@ -11,6 +11,7 @@
   let g:csv_start = 1
   let g:csv_end = 100
 
+  " do not hide delimiter
   let g:csv_no_conceal = 1
   let g:csv_hiGroup = 'Folded'
   let g:csv_highlight_column = 'y'
@@ -18,5 +19,5 @@
 
   let g:csv_comment = '#'
 
-  let g:airline#extensions#csv#column_display = 'Name' 
+  let g:airline#extensions#csv#column_display = 'Name'
 

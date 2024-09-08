@@ -45,6 +45,4 @@
 
 
   Plug 'chrisbra/Recover.vim'
-  Plug 'chrisbra/csv.vim'
-    let g:airline#extensions#csv#column_display = 'Name' 
 
