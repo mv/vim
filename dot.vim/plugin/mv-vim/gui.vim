@@ -59,8 +59,8 @@
 
 	" MacVim
 "       set guifont=Monaco:h12 
-"       set guifont=Monaco:h15 
-        set guifont=Menlo:h15  
+        set guifont=Monaco:h15 
+"       set guifont=Menlo:h15  
 
         set winaltkeys=no       " wak: no ALT keys for menus
 

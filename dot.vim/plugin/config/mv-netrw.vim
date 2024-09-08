@@ -37,7 +37,7 @@
     let g:netrw_timefmt   = '%F %H:%M'
     let g:netrw_sizestyle = 'H' 
     let g:netrw_sort_sequence = '[\/]$,*'
-    let g:netrw_winsize = 25
+    let g:netrw_winsize = 20
     let g:netrw_wiw = 10
     " set cul/cuc
     let g:netrw_cursor    = 4
@@ -52,8 +52,8 @@
 
     " Mappings:
     "   open Explore window
-    map <leader>exl  :Lexplore<CR>
-    map <leader>ext  :Texplore<CR>
+    map <leader>lex  :Lexplore<CR>
+    map <leader>tex  :Texplore<CR>
 
     " Options:
     "   open a new file
