@@ -7,6 +7,7 @@
 "     updated 2017-09
 "     updated 2018-09
 "     updated 2020-06
+"     updated 2024-09
 "
 
 source $VIMRUNTIME/defaults.vim
